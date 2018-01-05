@@ -1,0 +1,1014 @@
+idRef {
+  id: "51fd857d6434313b0b9efc72"
+}
+ui_name: "New Flat Vidphone"
+nodes {
+  idRef {
+    id: "51fd85876434313b0b9efc78"
+  }
+  index: 0
+  text: "Campaign Time: Day $(scene.currentDay) Hour: $(scene.currentHour) Minute: $(scene.currentMinute)\nPlease make a selection from the main menu:"
+  branches {
+    responseText: "{{CC}}Place a call{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Check messages{{/CC}}"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "{{CC}}VidShopping{{/CC}}"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "{{CC}}Turn off the vid-phone{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521704733930384812003c30"
+  }
+  index: 1
+  text: "Please choose a contact to call:"
+  branches {
+    responseText: "{{CC}}Call the Monorail Lonestar Captain about your date{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "hasDateWithCaptain"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Call Rickshaw the Rigger{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "madeDriverFriend"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "gotDriverIntel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter2complete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Call Rickshaw the Rigger{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "madeDriverFriend"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter2complete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Start Conversation"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "521751243930385c02003b06"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5216e72e3930384812003b26"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Back to main menu{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521704893930384812003c36"
+  }
+  index: 2
+  text: "After a few seconds a recorded video message is played: \"I am currently on duty, please try again later!\""
+  branches {
+    responseText: "{{CC}}Try another time{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521704903930384812003c3c"
+  }
+  index: 3
+  text: "There is no answer."
+  branches {
+    responseText: "{{CC}}Try another time{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5216f4d93930384812003b5d"
+  }
+  index: 4
+  text: "Away messages:"
+  branches {
+    responseText: "{{GM}}Day: $(scene.currentDay) Hour: $(scene.currentHour) Minute: $(scene.rickshawCall){{/GM}}\n{{CC}}Caller: Rickshaw the Rigger{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter3started"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "madeDriverEnemy"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_knowRickshawHideout"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5224ccd86434319c0299ecb2"
+    }
+  }
+  branches {
+    responseText: "{{GM}}Day: $(scene.currentDay) Hour: $(scene.currentHour) Minute: $(scene.currentMinute){{/GM}}\n{{CC}}Caller: UKNOWN ERROR IN PEER-LOOKUP{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter3started"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_gatherIntelAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{GM}}Day: $(scene.currentDay) Hour: $(scene.currentHour) Minute: $(scene.rickshawCall){{/GM}}\n{{CC}}Caller: Rickshaw the Rigger{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter3started"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "madeDriverFriend"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_knowRickshawHideout"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 7
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5224cce86434319c0299ecb3"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Back to main menu{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "52174d533930385c02003978"
+  }
+  index: 5
+  text: "Hoi, chummer! Remember me? You came to see me at the Monorail Station once and asked me some questions about some guy with a strange accent... I\'m Rickshaw the Rigger.\n\nI know we didn\'t exactly become friends or anything, but I have this urgent matter that needs to be dealt with here and I\'d thought you\'d might be my go-to person for this... I got your contact details from a... friend of mine...\n\nI have a proposition that\'s right up your alley, chummer. Ping me at the attached contact details!"
+  branches {
+    responseText: "{{CC}}Call her back{{/CC}}"
+    actions {
+      ops {
+        functionName: "Start Conversation"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "521751243930385c02003b06"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5216e72e3930384812003b26"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Back to messages{{/CC}}"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5216e72e3930384812003b26"
+  }
+}
+nodes {
+  idRef {
+    id: "521769c2393038440f001f4b"
+  }
+  index: 6
+  text: "{{GM}}Your terminal seems to malfunction for a couple of seconds...{{/GM}}"
+  branches {
+    responseText: "{{CC}}Re-open the message{{/CC}}"
+    actions {
+      ops {
+        functionName: "Start Conversation"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "52175dfd393038440f001805"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "521706cf3930384812003d38"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "52174f5e3930385c020039f9"
+  }
+  index: 7
+  text: "Hoi, chummer! It\'s Rickshaw the Rigger.\n\nI have this urgent matter that needs to be dealt with here and I\'d thought you\'d might be my go-to person for this...\n\nI have a proposition that\'s right up your alley, chummer. Ping me!"
+  branches {
+    responseText: "{{CC}}Call her back{{/CC}}"
+    actions {
+      ops {
+        functionName: "Start Conversation"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "521751243930385c02003b06"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5216e72e3930384812003b26"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Back to messages{{/CC}}"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5216e72e3930384812003b26"
+  }
+}
+nodes {
+  idRef {
+    id: "521704b13930384812003c43"
+  }
+  index: 8
+  text: "{{CC}}Please make a selection from these available products:{{/CC}}"
+  branches {
+    responseText: "{{CC}}Order 3x High Medkit for home delivery{{/CC}} {{GM}}(stash) (1000Y){{/GM}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1000
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Add Item to Stash"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "HealthPack_hi"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Item to Stash"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "HealthPack_hi"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Item to Stash"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "HealthPack_hi"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 1000
+        }
+      }
+    }
+    nextNodeIndex: 9
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "522605d7393038c413007083"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Back to main menu{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521704c93930384812003c46"
+  }
+  index: 9
+  text: "Delivery successful! Thank you!"
+  branches {
+    responseText: "Thanks!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "currentDay"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_day"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "currentHour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "currentMinute"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}

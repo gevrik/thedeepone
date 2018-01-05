@@ -1,0 +1,8 @@
+id: "or_packSmokes"
+type: ItemType_QuestItem
+uirep {
+  name: "Pack of Smokes"
+  description: "Unhealthy... but soooo good!"
+}
+credentials: 0
+sorting_group: "Quest"

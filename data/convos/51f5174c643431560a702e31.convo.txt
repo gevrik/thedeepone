@@ -1,0 +1,82 @@
+idRef {
+  id: "51f5174c643431560a702e31"
+}
+ui_name: "Secret Lab Boss"
+nodes {
+  idRef {
+    id: "51f51757643431560a702e37"
+  }
+  index: 0
+  text: "As the last of the gangers dies an eerie silence sets over the laboratory. This run is over, time to head back to the Market."
+  branches {
+    responseText: "Return to the Underground Market."
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Rooftop Market"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f48c98643431c709169917"
+  }
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 1000
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "amountMissions"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

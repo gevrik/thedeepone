@@ -1,0 +1,547 @@
+idRef {
+  id: "5315de4b326437f003000f2f"
+}
+ui_name: "ch05-lemsky"
+nodes {
+  idRef {
+    id: "5315de59326437f003000f35"
+  }
+  index: 0
+  text: "Annie! It\'s good to see you! You seem different!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315deb7326437f003000f3c"
+  }
+  index: 1
+  text: "Hi, Lemsky! Yeah... I\'ve lost my shy!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315decd326437f003000f3f"
+  }
+  index: 2
+  text: "You will have to tell me about everything that happened to you, some of us thought you were dead... And now that you are back... It\'s not safe here in Dunwich for you, Annie! They are looking for you!"
+  branches {
+    responseText: "I\'m sorry to interrupt, but we are kinda short on time here..."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Who are you talking about? Who are \"they\"?"
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315df43326437f003000f45"
+  }
+  index: 3
+  text: "Yeah, true! Lemsky, you got a couple of drones that I could borrow? Some that pack some firepower!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315df69326437f003000f48"
+  }
+  index: 4
+  text: "Sure, the drones that you are looking for should be on the shelves - you can have them, free of charge!"
+  branches {
+    responseText: "Great! We\'ll take them!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "techDrones"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Get some drones for Annie"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e043326437f003000f55"
+  }
+  index: 5
+  text: "You should hurry up, the longer you hang around town the more likely you are to be seen by one of them!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e05b326437f003000f58"
+  }
+  index: 6
+  text: "Take care of yourselves out there!"
+  branches {
+    responseText: "Can I ask you about something?"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315de5d326437f003000f38"
+  }
+  index: 7
+  text: "What can I help you with?"
+  branches {
+    responseText: "I\'m a friend of Annie\'s!"
+    conditions {
+      ops {
+        functionName: "Compare Actor Team"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "techDrones"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "You don\'t look like you are from around here..."
+    nextNodeIndex: 15
+    onlyOnce: true
+    idRef {
+      id: "5315e3a1326437f003000fff"
+    }
+  }
+  branches {
+    responseText: "Can I see what you have for sale?"
+    nextNodeIndex: 17
+  }
+  branches {
+    responseText: "I would like to get some Cyberware!"
+    nextNodeIndex: 18
+  }
+  branches {
+    responseText: "I\'m leaving!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315df99326437f003000f4b"
+  }
+  index: 8
+  text: "Ohhhh... Are you? Has she sent you here? Smart girl, it\'s not safe for her here in Dunwich... They are looking for her!"
+  branches {
+    responseText: "Who are \"they\"?"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Annie needs a few drones, some that pack a punch if you know what I mean..."
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "5315e366326437f003000ffd"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315dfd9326437f003000f4f"
+  }
+  index: 9
+  text: "Well, this Esoteric Order of Dagon of course! Ever since Annie and her parents disappeared they have been asking around if anyone has seen her... Creeps me out..."
+  branches {
+    responseText: "Tell me everything you know about this order..."
+    nextNodeIndex: 10
+    onlyOnce: true
+    idRef {
+      id: "5315e37c326437f003000ffe"
+    }
+  }
+  branches {
+    responseText: "Okay, lets talk about something else..."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e0fc326437f003000f78"
+  }
+  index: 10
+  text: "Hmm... Not much, chum - I try to stay out of this whole cult thing and try to avoid the locals unless they\'re customers... You will have to ask someone who is closer to the order or a member themselves."
+  branches {
+    responseText: "Any idea where to look for someone like that?"
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Okay, I understand... About that other thing..."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e18e326437f003000f7b"
+  }
+  index: 11
+  text: "Won\'t be easy for a stranger to poke around in order affairs... I dunno, chum - maybe you can find some info on them somewhere here in this town..."
+  branches {
+    responseText: "I guess I will have to look around!"
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "Does the Order have some kind of matrix system?"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e277326437f003000f81"
+  }
+  index: 12
+  text: "Yeah, there are some flats in the north-eastern corner of this district, maybe you can check them out..."
+  branches {
+    responseText: "Thanks, I might have a look! Can I ask you something else?"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e23e326437f003000f7f"
+  }
+  index: 13
+  text: "No, chum... This whole town is kinda backwards when it comes to technology! I didn\'t know when I bought the shop here a couple of years ago! Business is not going so well, as you can see..."
+  branches {
+    responseText: "Drek! Guess we\'ll have to find another way of digging up some info on this Order!"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e31a326437f003000fd4"
+  }
+  index: 14
+  text: "In this town you\'re bound to turn up something sooner or later if you keep digging for it!"
+  branches {
+    responseText: "True, can I ask you about something else?"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e3a3326437f003001001"
+  }
+  index: 15
+  text: "I\'m not! Glad that you notice! I bought this shop some years ago... Worst decision of my life, but hey, what can I do..."
+  branches {
+    responseText: "And you don\'t have any problems with the residents?"
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e3e6326437f003001004"
+  }
+  index: 16
+  text: "Nope, but I keep to myself and only speak with these people when they come here as customers...\n\nThe previous owner was an Ork, I heard he disappeared under mysterious circumstances - report said he was last seen walking into the woods outside of town... I stay faaar away from those!"
+  branches {
+    responseText: "Hmm... Interesting! Lets talk about something else..."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e4a6326437f0030010a5"
+  }
+  index: 17
+  text: "Sure thing, chum! Have a look! Buy as much as you want! I have a little bit of everything!"
+  branches {
+    responseText: "Wiz!"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5315dcf8326437f003000ef3"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315e6cd3264372c06001a85"
+  }
+  index: 18
+  text: "Null sweat, chum! I\'ve got the best stuff!"
+  branches {
+    responseText: "Show me!"
+    actions {
+      ops {
+        functionName: "Open Cyberware Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5315dcf8326437f003000ef3"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 7
+}

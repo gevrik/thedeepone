@@ -1,0 +1,1246 @@
+idRef {
+  id: "530a39de3264375013004357"
+}
+ui_name: "ch04-ev2_carThiefEvent"
+nodes {
+  idRef {
+    id: "530a3a133264375013004361"
+  }
+  index: 0
+  text: "{{GM}}You see a young goth girl that seems to be out-of-luck scrounging around a very expensive car in the parking lot. She notices you approaching and looks over her shoulder towards you.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Call out to the thief{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Casually walk onto the parking lot, seemingly unintersted in the thief{{/CC}}"
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3a753264375013004365"
+  }
+  index: 1
+  text: "What\'s up, chummer?"
+  branches {
+    responseText: "This is Hotel Security! What are you doing here?\n{{CC}}Charisma: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Listen, sweetheart - you better tell me who you\'re selling the stuff you steal from here to!\n{{CC}}Strength: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "I know what you\'re doing here, you need to stop before anything bad happens to you!\n{{CC}}Etiquette: Street{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 18
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "Stop, thief! I\'ve got you!"
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3bd73264375013004384"
+  }
+  index: 2
+  text: "Drek! I mean... I\'ve done nothing wrong, just here to take a look at those nice cars!"
+  branches {
+    responseText: "Don\'t hold me for a fool! I know what you are doing here!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I see! Well, nothing to see here anymore, get out!"
+    nextNodeIndex: 17
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3e0132643750130043fb"
+  }
+  index: 3
+  text: "Are you going to call the Stars? Please, no! I have a small child and can\'t go into the clink! "
+  branches {
+    responseText: "Don\'t worry, I won\'t call the Stars if you tell me who you\'re selling the stolen stuff to!"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3e4e32643750130043fe"
+  }
+  index: 4
+  text: "Erm, I can\'t do that - they would kill me!"
+  branches {
+    responseText: "WHO would kill you?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3e603264375013004401"
+  }
+  index: 5
+  text: "These guys there, behind you!"
+  branches {
+    responseText: "What the frag???"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "530a3f2d326437c41100428c"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "530a40e1326437c41100428d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "530a41b5326437c41100428e"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "530a41d6326437c41100428f"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "530a4277326437c411004291"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530a432a326437c4110042eb"
+  }
+  index: 6
+  text: "Lori... Lori... we gave you so many chances, but you keep messing it up! Can\'t even steal from a damn parking lot car without getting caught by some dumb-ass securities! The boss won\'t be happy about this, we\'re supposed to bring you in!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "530a3f2d326437c41100428c"
+  }
+  actions {
+    ops {
+      functionName: "Add Camera Point of Interest (Actors)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "530a3f2d326437c41100428c"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        float_value: 2
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "gangersAppeared"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530a4368326437c4110042ee"
+  }
+  index: 7
+  text: "But... but... It\'s not my fault!"
+  branches {
+    responseText: "Let the girl alone! You can deal with me if you want to!"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "{{CC}}Remain silent{{/CC}}"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isHiredGun"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "530a286f3264375013004291"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "cower"
+            }
+            args {
+              string_value: "cower"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Camera Point of Interest (Actors)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "530a286f3264375013004291"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        float_value: 2
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530a439b326437c411004323"
+  }
+  index: 8
+  text: "And who might you be? The saviour of the virgin maid? Hahahaaha! Lori, I\'ll get to you when I\'m done with these clowns!"
+  branches {
+    responseText: "{{CC}}Get ready to fight!{{/CC}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isHiredGun"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "530a286f3264375013004291"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "cower"
+            }
+            args {
+              string_value: "cower"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "530a3f2d326437c41100428c"
+  }
+  actions {
+    ops {
+      functionName: "Add Camera Point of Interest (Actors)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "530a3f2d326437c41100428c"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        float_value: 2
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530a43e7326437c411004327"
+  }
+  index: 9
+  text: "Hmm... okay, okay - I will come with ya - just don\'t hurt me!"
+  branches {
+    responseText: "{{CC}}Let the girl alone! Deal with me if you have to!{{/CC}}"
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Remain silent{{/CC}}"
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a4465326437c411004367"
+  }
+  index: 10
+  text: "The girl starts to head towards the Hired Gun Boss and together they leave onto the Downtown streets..."
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "530a286f3264375013004291"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isHiredGun"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "530a286f3264375013004291"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "530a4baf326437c411004542"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "isHiredGun"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "530a4baf326437c411004542"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "530a4ede326437c411004666"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Suspend Team\'s Turn"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "didntHelpThief"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530a3c073264375013004386"
+  }
+  index: 11
+  text: "Slot this! Erm - I meant - I don\'t know what you are talking about! I\'m only here to look at this nice car!"
+  branches {
+    responseText: "Are you deaf or dumb? Or both? Do I have to hurt you?"
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "Aha! Well then, time for you to get out of here!"
+    nextNodeIndex: 17
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3d3232643750130043ae"
+  }
+  index: 12
+  text: "No! Please don\'t hurt me! What do you want from me?"
+  branches {
+    responseText: "I\'ll let you go if you tell me who you\'re selling the stolen stuff to!"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3c1a3264375013004388"
+  }
+  index: 13
+  text: "Am I this obvious? Oh, I mean - I\'m just here to look at the nice cars!"
+  branches {
+    responseText: "Sure, and that\'s why you are carrying around a wirecutter, eh? I know how this works... You can\'t fool me!"
+    nextNodeIndex: 14
+  }
+  branches {
+    responseText: "Right - but I think you should leave right now!"
+    nextNodeIndex: 17
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3ea0326437501300440a"
+  }
+  index: 14
+  text: "Drek... So now what do you propose I should do?"
+  branches {
+    responseText: "Tell me who you\'re selling the stuff to and I\'ll take care of it!"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3c60326437501300438b"
+  }
+  index: 15
+  text: "Thief! Outrageous! I\'m just here to look at the nice cars!"
+  branches {
+    responseText: "Don\'t try to fool me! I know why you\'re here!"
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3c81326437501300438e"
+  }
+  index: 16
+  text: "Ha! I\'ve done nothing wrong! You can search me if you want!"
+  branches {
+    responseText: "Hmm... Okay, but don\'t let me see you here again!"
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3ca93264375013004391"
+  }
+  index: 17
+  text: "{{GM}}The girl seems to be very nervous right now and quickly heads out of the parking lot onto the Downtown streets.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Continue{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Actor In Passive Mode"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "530a286f3264375013004291"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Patrol"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "530a286f3264375013004291"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (PatrolRoute)"
+            args {
+              string_value: "530a4baf326437c411004542"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Trigger"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "530a4ede326437c411004666"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "didntHelpThief"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a3ab93264375013004367"
+  }
+  index: 18
+  text: "{{GM}}The girl thinks that you are not interested in her and finally manages to open the car. You see her rummaging through interior, grabbing something from the passenger seat and then quickly heading out of the parking lot. As she passes through the gate, she quickly looks over her shoulder to see if someone is following her.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Continue{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Actor In Passive Mode"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "530a286f3264375013004291"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Patrol"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "530a286f3264375013004291"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (PatrolRoute)"
+            args {
+              string_value: "530a4baf326437c411004542"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Trigger"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "530a4ede326437c411004666"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "didntHelpThief"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

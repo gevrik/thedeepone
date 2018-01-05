@@ -1,0 +1,44 @@
+id: "BF RC2 Ability"
+uirep {
+  icon: "icon_burst"
+  name: "Burst Fire RC2"
+  description: "3 attacks in one round. -20% to hit on each attack due to recoil. RC 2."
+}
+anim_action: AnimAction_Attack
+apCostMod: 0
+prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO > 2"
+damageBucket {
+  successEntries {
+    weight: 0.25
+    value: 2
+  }
+  successEntries {
+    weight: 0.25
+    value: 1.75
+  }
+  successEntries {
+    weight: 0.5
+    value: 1.5
+  }
+  failureEntries {
+    weight: 0.5
+    value: 1
+  }
+  failureEntries {
+    weight: 0.5
+    value: 0.75
+  }
+}
+attackRatingMod: -20
+offensiveAbility: true
+ammoCost: 3
+repetition: 3
+fxrep {
+  preActionFxName: ""
+  actionFxName: "GunBurstFireActionEmpty"
+  postActionFxName: ""
+  hitReactionFxName: "GunBurstHitReaction"
+  missReactionFxName: "GunBurstMissReaction"
+}
+toHitFunction: "actorWeaponAttackToHit"
+damageFunction: "weaponDamage"

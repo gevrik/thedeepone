@@ -1,0 +1,2748 @@
+triggers {
+  name: "UI_OpenStash"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51be1731623331041800390e"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Open Equip Screen"
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51f4254c643431dd08e50a0f"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "DTH_Cultist"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Team Survival Percentage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 100
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Investigate what happened"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Discuss the assault with Coyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "51f445ee6434312909169a34"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "51f445ee6434312909169a34"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51f459bd6434312909169b7a"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "DLG_CoyoteDebrief"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51f445ee6434312909169a34"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Goal"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Discuss the assault with Coyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "51f461566434312909169bbe"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "51f445ee6434312909169a34"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51f463f66434312909169c0e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "DLG_CoyoteBrief"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51f445ee6434312909169a34"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Goal"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Coyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "51f4467e6434312909169a35"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "51f445ee6434312909169a34"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51f465916434312909169c10"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "afterFight"
+  events {
+    ops {
+      functionName: "On Goal Update"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Discuss the assault with Coyote"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51f445ee6434312909169a34"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fb6375643431e3059ef895"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onMapLoad"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The Union\'s basement is completely deserted. You hear some noises coming from the back."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_day"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            call_value {
+              functionName: "Append (string)"
+              args {
+                call_value {
+                  functionName: "Append (string)"
+                  args {
+                    call_value {
+                      functionName: "Append (string)"
+                      args {
+                        call_value {
+                          functionName: "Append (string)"
+                          args {
+                            call_value {
+                              functionName: "Convert (int) to (string)"
+                              args {
+                                call_value {
+                                  functionName: "Get Story Variable (int)"
+                                  args {
+                                    string_value: "51f4026a643431dd08e509ff"
+                                  }
+                                  args {
+                                    string_value: "ch02_minute"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          args {
+                            string_value: " Minute: "
+                          }
+                        }
+                      }
+                      args {
+                        call_value {
+                          functionName: "Convert (int) to (string)"
+                          args {
+                            call_value {
+                              functionName: "Get Story Variable (int)"
+                              args {
+                                string_value: "51f4026a643431dd08e509ff"
+                              }
+                              args {
+                                string_value: "ch02_hour"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    string_value: " Hour: "
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Convert (int) to (string)"
+                  args {
+                    call_value {
+                      functionName: "Get Story Variable (int)"
+                      args {
+                        string_value: "51f4026a643431dd08e509ff"
+                      }
+                      args {
+                        string_value: "ch02_day"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          args {
+            string_value: "Day: "
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fb6475643431e3059ef8bd"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "flavorText"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "51fb6608643431e3059ef8be"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "It is strange to see the place like this. You can hear Coyote cussing under her breath further on."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fb6629643431e3059ef8bf"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onPlayerDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Do not die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fbe4c36434312b08fa4d13"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onCoyoteDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "51f445ee6434312909169a34"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t let Coyote die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fbe5196434312b08fa4d14"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onNewTurn"
+  events {
+    ops {
+      functionName: "On New Round"
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewHour"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52084f986434312102fc4339"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onNewHour"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewHour"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 60
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewDay"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520850006434312102fc433a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckNewDay"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewDay"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 24
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_day"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "d1_atmHacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5208d8b8643431790313c39a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCrateTrigger"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "521b70603930384410003c9c"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "521b70d13930384410003c9f"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You see something shiny in one of the crates!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "itemsFound"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkAllItemsFound"
+          }
+        }
+      }
+      args {
+        float_value: 0.01
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521b70903930384410003c9d"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onbarTrigger"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "521b70d93930384410003ca0"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "521b71393930384410003ca3"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You notice that the cash register looks untouched..."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521b70f53930384410003ca1"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onUseBar"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "521b71393930384410003ca3"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 500
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You find some nuyen in the register!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "521b71393930384410003ca3"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "itemsFound"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkAllItemsFound"
+          }
+        }
+      }
+      args {
+        float_value: 0.01
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521b71cb3930384410003ca6"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onSkullTrigger"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "521b72643930384410003cab"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "521b724d3930384410003ca8"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You spot something amongst the pile of bones!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "itemsFound"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkAllItemsFound"
+          }
+        }
+      }
+      args {
+        float_value: 0.01
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521b727d3930384410003cac"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDroneTrigger"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "521b72d73930384410003cad"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "d71aac65323539840600253f"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You notice something is stuck in the locker door!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "itemsFound"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkAllItemsFound"
+          }
+        }
+      }
+      args {
+        float_value: 0.01
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521b72ff3930384410003caf"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "eventCheckAllItemsFound"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkAllItemsFound"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "itemsFound"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Take a close look around the Union\'s basement"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5222166a393038780e0073ec"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+regions {
+  name: "New Region"
+  position {
+    x: -96
+    y: 7
+    width: 22
+    height: -40
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "51f44bee6434312909169a76"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0
+    g: 0
+    b: 0.49803922
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: "Seattle-Set3-Combat"
+  default_music: "Seattle-Set3-Stealth"
+  loop_combat_music: true
+  loop_default_music: true
+}
+regions {
+  name: "flavorText"
+  position {
+    x: -90
+    y: -18
+    width: 9
+    height: 4
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "51fb6608643431e3059ef8be"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "crateTrigger"
+  position {
+    x: -87
+    y: -31
+    width: 4
+    height: 4
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521b70603930384410003c9c"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "barTrigger"
+  position {
+    x: -96
+    y: -28
+    width: 6
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521b70d93930384410003ca0"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "skullTrigger"
+  position {
+    x: -98
+    y: -23
+    width: 4
+    height: 4
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521b72643930384410003cab"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "droneTrigger"
+  position {
+    x: -83
+    y: -11
+    width: 4
+    height: 4
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521b72d73930384410003cad"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: -94
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51f443336434312909169a31"
+  }
+  lod: 0
+  character_instance {
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -78
+    y: 0
+    z: -25
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "51f445ee6434312909169a34"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Conversation
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Story/CoyoteUgly"
+    character_sheet_id: "Story_Coyote_Lv4"
+    character_mod {
+      stats {
+        body: 3
+        quickness: 3
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 2
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 2
+        close_combat: 1
+        throwing_weapons: 3
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 2
+        rifle: 0
+        shotgun: 2
+        smg: 0
+        edged: 1
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Sh 3 Enfield AS-7 TDO"
+    }
+    equipment {
+      prefab_name: "Pi 3 Ruger Super Warhawk TDO"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade (HE Phosphorus)"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "DocWagonGold"
+    }
+    team_id: "Civilians"
+    char_name: "Coyote"
+    GeneralTags: "isCoyote"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_left_arm: "Obvious Cyberarm"
+    portrait {
+      filename: "NPC_HumanFemale_CoyoteHealed"
+    }
+    description_bio: "Part time runner, full time badass. Product of the streets who mixes a mean cocktail."
+    karma: 203
+    hiring_cost_override: 1200
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -92
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  displayName: "Thugs1"
+  idRef {
+    id: "51f449546434312909169a58"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Standard/HumanMaleStreetSamurai"
+    character_sheet_id: "Generic_Lv6_Human_Melee"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Guard - Seek And Destroy"
+    }
+    equipment {
+      prefab_name: "Sword 2 Katana TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Street Thug"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    karma: 105
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -92
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  displayName: "Thugs2"
+  idRef {
+    id: "51f44edb6434312909169aab"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Standard/HumanMaleStreetSamurai"
+    character_sheet_id: "Generic_Lv6_Human_Melee"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Guard - Seek And Destroy"
+    }
+    equipment {
+      prefab_name: "Sword 2 Katana TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Street Thug"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    karma: 105
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -92
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  displayName: "Thugs3"
+  idRef {
+    id: "51f450ed6434312909169ad3"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Standard/HumanMaleStreetSamurai"
+    character_sheet_id: "Generic_Lv6_Human_Melee"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Guard - Seek And Destroy"
+    }
+    equipment {
+      prefab_name: "Sword 2 Katana TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Street Thug"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+    karma: 105
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -93
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  displayName: "Cultist"
+  idRef {
+    id: "51f458f86434312909169b50"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanMale"
+    character_sheet_id: "Lvl6_Human_Mage"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "Spell Powerbolt 3"
+    }
+    equipment {
+      prefab_name: "Spell Heal Wound"
+    }
+    equipment {
+      prefab_name: "Spell Manaball 3"
+    }
+    equipment {
+      prefab_name: "Spell Ball Lightning 1"
+    }
+    equipment {
+      prefab_name: "Spell Fireball 2"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Flash)"
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    equipment {
+      prefab_name: "Spell Armor 3"
+    }
+    equipment {
+      prefab_name: "Spell Aim 3"
+    }
+    equipment {
+      prefab_name: "Pi 3 Ruger Super Warhawk TDO"
+    }
+    equipment {
+      prefab_name: "MageDark"
+    }
+    team_id: "Gangers"
+    char_name: "Cloaked Figure"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s2h6b4"
+    karma: 6
+    hiring_cost_override: 3100
+    hiring_tag: "Mage"
+    id: "Lvl6_Human_Mage"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "itemsFound"
+    typeName: "int"
+  }
+}
+mapEvents: "checkNewHour"
+mapEvents: "checkNewDay"
+mapEvents: "checkAllItemsFound"
+goals {
+  name: "Talk to Coyote"
+  type: GoalType_Primary
+  status: GoalStatus_Started
+  description: "Talk to Coyote to learn what happened to the Union."
+}
+goals {
+  name: "Investigate what happened"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+  description: "Find out what caused the commotion."
+}
+goals {
+  name: "Discuss the assault with Coyote"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+  description: "A cloaked figure and a few thugs invaded the safehouse. Talk to Coyote about this."
+}
+goals {
+  name: "Head to the Market"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+  description: "Coyote told you to meet her at the Market on the rooftop of the Royale. She gave you half of her last run\'s income to buy some gear while she finds out who hired the gangers that assaulted you."
+}
+goals {
+  name: "Do not die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Don\'t let Coyote die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Take a close look around the Union\'s basement"
+  type: GoalType_Secondary
+  status: GoalStatus_Started
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "The Seamstress Union"
+parentStory: ""
+scene_title: "The Seamstress Union"
+scene_subtitle: "In the Safehouse"
+scene_synopsis: "You took the first connection to Seattle and headed straight to the Union. Coyote looked very troubled and you want to know what\'s up.\n\nAs you arrive in front of the club you notice that it is fully boarded-up with metal plates. There is no way for you to get inside through any of the usual entrances.\n\nYou remember the secret passage in the side alley next to the club which allows access to the Safehouse basement."
+scene_image: "loadingimage_c08-s3"
+scene_continue_button_skip: false
+scene_restore_runner_health: true
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: false
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Gangers"
+  affiliation: 1
+  affiliation: 0
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "LoneStar"
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Civilians"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+character_roster {
+}
+show_hiring_screen_on_scene_load: false
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 0
+hiring_minimum_karma: 0
+hiring_maximum_karma: 0
+roster_overrides {
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: false

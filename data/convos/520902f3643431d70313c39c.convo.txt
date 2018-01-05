@@ -1,0 +1,52 @@
+idRef {
+  id: "520902f3643431d70313c39c"
+}
+ui_name: "ch02_lonestarDistrict"
+roots {
+  responseText: "{{CC}}Talk to the Lonestar Captain{{/CC}}"
+  nextNodeIndex: -1
+}
+roots {
+  responseText: "{{CC}}Attack the Lonestar Captain{{/CC}}"
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: -1
+}
+roots {
+  responseText: "{{CC}}Do nothing{{/CC}}"
+  nextNodeIndex: -1
+}

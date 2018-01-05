@@ -1,0 +1,181 @@
+idRef {
+  id: "5314ff063264374c070023ad"
+}
+ui_name: "ch05-annieAngry"
+nodes {
+  idRef {
+    id: "5314ff0d3264374c070023b3"
+  }
+  index: 0
+  text: "So how does it feel to be stoopid, eh?"
+  branches {
+    responseText: "Look, Annie - I\'m sorry..."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "It was worth a shot!"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314ff373264374c070023b7"
+  }
+  index: 1
+  text: "You won\'t be getting off the hook that easily, chummer!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314ff513264374c070023ba"
+  }
+  index: 2
+  text: "I will never forgive you for what you have done..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314ff663264374c070023bd"
+  }
+  index: 3
+  text: "But we can be allies until this thing here is over!"
+  branches {
+    responseText: "Okay!"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "And then?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314ffef3264374c070023d2"
+  }
+  index: 4
+  text: "I will need to get myself some drones and gather some intel..."
+  branches {
+    responseText: "Hmm... Okay - but how?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315003e3264374c070023d5"
+  }
+  index: 5
+  text: "There\'s a tech store in town, and I think my parent\'s house might hold some clues about who we need to find. I\'ve uploaded both locations to your PDA, so we can check them out whenever you\'re ready..."
+  branches {
+    responseText: "Okay."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Get some drones for Annie"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Investigate Annie\'s House"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5314ff8f3264374c070023c1"
+  }
+  index: 6
+  text: "We\'ll see... But I will make sure that you pay a price for what you did to Coyote!"
+  branches {
+    responseText: "We\'ll see..."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314ffcb3264374c070023c4"
+  }
+  index: 7
+  text: "I can\'t believe you, chummer... Just wait till this is over..."
+  branches {
+    responseText: "Huh?"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

@@ -1,0 +1,2131 @@
+triggers {
+  name: "onMapStart"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Environmental Effect Amount"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "EnvironmentalEffects"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 500
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            call_value {
+              functionName: "Append (string)"
+              args {
+                call_value {
+                  functionName: "Append (string)"
+                  args {
+                    call_value {
+                      functionName: "Append (string)"
+                      args {
+                        call_value {
+                          functionName: "Append (string)"
+                          args {
+                            call_value {
+                              functionName: "Convert (int) to (string)"
+                              args {
+                                call_value {
+                                  functionName: "Get Story Variable (int)"
+                                  args {
+                                    string_value: "51f4026a643431dd08e509ff"
+                                  }
+                                  args {
+                                    string_value: "ch02_minute"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          args {
+                            string_value: " Minute: "
+                          }
+                        }
+                      }
+                      args {
+                        call_value {
+                          functionName: "Convert (int) to (string)"
+                          args {
+                            call_value {
+                              functionName: "Get Story Variable (int)"
+                              args {
+                                string_value: "51f4026a643431dd08e509ff"
+                              }
+                              args {
+                                string_value: "ch02_hour"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    string_value: " Hour: "
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Convert (int) to (string)"
+                  args {
+                    call_value {
+                      functionName: "Get Story Variable (int)"
+                      args {
+                        string_value: "51f4026a643431dd08e509ff"
+                      }
+                      args {
+                        string_value: "ch02_day"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          args {
+            string_value: "Day: "
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkDay"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fc5695643431a20826557d"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "checkSpot"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "51fc5f3864343143098fb569"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Attribute"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BaseOrCurrent"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "ActorAttributes"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You notice someone following you. The person just jumped over the fence behind you."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51fc604364343143098fb56b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "awareOfZoex"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gather information about your stalker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fc5f7564343143098fb56a"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "checkTalk"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "51fc658d64343151098fb495"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "51fc616864343143098fb56c"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "The station is currently under lockdown for a Lonestar investigation!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fc65be64343151098fb496"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "checkZoexComplete"
+  events {
+    ops {
+      functionName: "On Conversation Complete"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "metZoex"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "zoexGone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Kill Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "51fc604364343143098fb56b"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DeathMethod"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "zoexGone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fc9b1b643431ab098fb4f2"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "checkOverview"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "51fd3dbb6434311d0a8d4261"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "There are several people here, the Homeless Dwarf looks like he is always here, though. You might want to question him first."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 5
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fd3dd76434311d0a8d4262"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onConversationEnd"
+  events {
+    ops {
+      functionName: "On Conversation Complete"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "finishedCop"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "finishedDriver"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "finishedDwarf"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "finishedGanger"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "investigationDone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "investigationDone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gather information about the stranger that attacked you in the Union"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "monorailComplete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Head back to the Market to discuss your findings with Coyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fd59306434310f0b8fb66f"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onLoot"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "3869f3b33961638c0e003c0e"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 250
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "Someone has carelessly thrown away a credstick with 250Y on it."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "3869f3b33961638c0e003c0e"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520193d96434312a07a404b5"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onNewTurn"
+  events {
+    ops {
+      functionName: "On New Round"
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewHour"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52084f986434312102fc4339"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onNewHour"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewHour"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 60
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewDay"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520850006434312102fc433a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckNewDay"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewDay"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 24
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_day"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "d1_atmHacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5208d8b8643431790313c39a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckDay"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkDay"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        int_value: 18
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Ambient Light Color"
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (CameraRegion)"
+          args {
+            string_value: "51fc5851643431a208265580"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521eb7383930385409001cd0"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+regions {
+  name: "New Region"
+  position {
+    x: -28
+    y: 25
+    width: 39
+    height: 18
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "51fc5851643431a208265580"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50588238
+    g: 0.50588238
+    b: 0.50588238
+    a: 1
+  }
+  ambient_light_color {
+    r: 0
+    g: 0
+    b: 0.49803922
+    a: 1
+  }
+  ambience_template: "barrens-day"
+  combat_music: "Seattle-Set7-Combat"
+  default_music: "Seattle-Set6-Ominous"
+  loop_combat_music: true
+  loop_default_music: true
+}
+regions {
+  name: "checkIfSpot"
+  position {
+    x: -21
+    y: 28
+    width: 5
+    height: 18
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "51fc5f3864343143098fb569"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "checkIfCopTalk"
+  position {
+    x: -10
+    y: 28
+    width: 10
+    height: 6
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "51fc658d64343151098fb495"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "checkOverview"
+  position {
+    x: -15
+    y: 28
+    width: 4
+    height: 17
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "51fd3dbb6434311d0a8d4261"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: -23
+    y: 0
+    z: 31
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51fc5715643431a20826557e"
+  }
+  lod: 0
+  character_instance {
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -27
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51fc604364343143098fb56b"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51fc9631643431ab098fb494"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Lonestar_Lv6_Human_Mage"
+    equipment_sheet_id: "Boss_Jessica_c21_Gear"
+    character_mod {
+      stats {
+        body: 3
+        quickness: 1
+        strength: 0
+        charisma: 0
+        intelligence: 1
+        willpower: 3
+        essence: 0
+        magic: 3
+        hp: 0
+        ap: 1
+        armor: 4
+        force: 0
+        morale: 24
+        discipline: 0
+        awareness: 24
+        perception: 20
+        authority: 0
+        protect_tether_range: 5
+        move_speed: 0
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: 7
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 5
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 7
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 6
+        rifle: 7
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "MageDark"
+    }
+    equipment {
+      prefab_name: "Pi 3 Ruger Thunderbolt"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    team_id: "Civilians"
+    char_name: "Your Stalker"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: "pc_humanfemale_01c_shavedhead"
+    }
+    karma: 329
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -6
+    y: 0
+    z: 27
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "51fc616864343143098fb56c"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51fc765a64343151098fb69e"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Lonestar/HumanFemaleLonestarCaptain"
+    character_sheet_id: "Lonestar_Lv6_Captain"
+    equipment_sheet_id: "Lonestar_Captain_High"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Lonestar Captain"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_humanfemale_02b_detective"
+    }
+    karma: 113
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 1
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_W
+  displayName: "homeless"
+  idRef {
+    id: "51fc627c64343143098fb56d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51fc674164343151098fb497"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Homeless/DwarfMaleHomelessJacket"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 24
+        discipline: 0
+        awareness: 24
+        perception: 0
+        authority: 0
+        protect_tether_range: 5
+        move_speed: 6
+      }
+      skills {
+      }
+      specializations {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Homeless Dwarf"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_dwarfmale_00_faceless"
+    }
+    karma: 6
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -5
+    y: 0
+    z: 36
+  }
+  orientation: ORIENTATION_S
+  displayName: "Rickshaw Driver"
+  idRef {
+    id: "51fc644e64343151098fb493"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51fc87896434318f098fb698"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/ElfFemale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 24
+        discipline: 0
+        awareness: 24
+        perception: 0
+        authority: 0
+        protect_tether_range: 5
+        move_speed: 6
+      }
+      skills {
+      }
+      specializations {
+      }
+    }
+    equipment {
+      prefab_name: "Outfit_SINless"
+    }
+    team_id: "Civilians"
+    char_name: "Rickshaw Driver"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_elffemale_00_faceless"
+    }
+    karma: 6
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 6
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51fd46316434311d0a8d4266"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkMale"
+    character_sheet_id: "Generic_Lv6_Human_Melee"
+    character_mod {
+      stats {
+        body: 4
+        quickness: 1
+        strength: 2
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 20
+        ap: 2
+        armor: 8
+        force: 0
+        morale: 10
+        discipline: 0
+        awareness: 10
+        perception: 0
+        authority: 0
+        protect_tether_range: 2
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 4
+        close_combat: 4
+        throwing_weapons: 2
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 3
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 1
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 6
+        smg: 0
+        edged: 3
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeCautious
+      attackRandom: AttackStyle_AllEqual
+    }
+    equipment {
+      prefab_name: "DeckerFedora"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "Sh 3 Enfield AS-7"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Flash)"
+    }
+    equipment {
+      prefab_name: "Sword 3 Katana"
+    }
+    team_id: "Civilians"
+    char_name: "Brain-Eaters Ganger"
+    pc_spawn_number: -1
+    cyberware_jack: "Datajack"
+    cyberware_body: "Dermal Plating Mk 2"
+    cyberware_right_arm: "Obvious Cyberarm 2"
+    portrait {
+      filename: "backer_orkmale_thomascommerford"
+    }
+    portrait_code_override: "s1h2b2"
+    karma: 264
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "awareOfZoex"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "zoexGone"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "finishedDwarf"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "finishedCop"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "finishedDriver"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "finishedGanger"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "investigationDone"
+    typeName: "bool"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "currentTurn"
+    typeName: "int"
+  }
+}
+mapEvents: "checkNewHour"
+mapEvents: "checkNewDay"
+mapEvents: "checkDay"
+goals {
+  name: "Gather information about the stranger that attacked you in the Union"
+  type: GoalType_Primary
+  status: GoalStatus_Started
+}
+goals {
+  name: "Gather Information from the Lonestar Captain"
+  type: GoalType_Secondary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Gather information from the Homeless Dwarf"
+  type: GoalType_Secondary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Gather information from the Rickshaw Driver"
+  type: GoalType_Secondary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Gather information about your stalker"
+  type: GoalType_Secondary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Gain information from the Brain-Eaters Ganger"
+  type: GoalType_Secondary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Investigate the Ritual Chamber in the sewers"
+  type: GoalType_Secondary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Head back to the Market to discuss your findings with Coyote"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "Barrens Massacre"
+parentStory: ""
+scene_title: "The Monorail Station"
+scene_subtitle: "Fishing for clues..."
+scene_synopsis: "The mage that attacked you in the basement of the Seamstress Union was reported to have an out-of-town accent. Many new arrivals of the Barrens take the Monorail to get here.\n\nThe usual low-lives of the Barrens should have seen someone. And if the stranger talked to anyone, his squelching voice might have drawn some attention.\n\nA monorail train clunks along loudly as you arrive at the station."
+scene_image: "loadingimage_c03-s1"
+scene_continue_button_skip: false
+scene_restore_runner_health: false
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: false
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Gangers"
+  affiliation: 1
+  affiliation: 0
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "LoneStar"
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Civilians"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+character_roster {
+}
+show_hiring_screen_on_scene_load: false
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 0
+hiring_minimum_karma: 0
+hiring_maximum_karma: 0
+roster_overrides {
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: false

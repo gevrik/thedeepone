@@ -1,0 +1,8 @@
+id: "or_keycard"
+type: ItemType_QuestItem
+uirep {
+  name: "Employee Keycard"
+  description: "This is an employee keycard that allows access to some employee-only sections of the office."
+}
+credentials: 0
+sorting_group: "Quest"

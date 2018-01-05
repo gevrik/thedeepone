@@ -1,0 +1,1604 @@
+triggers {
+  name: "onMapStart"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "51ffc4ae643431bf03b51199"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "51ffc600643431bf03b5119c"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            call_value {
+              functionName: "Append (string)"
+              args {
+                call_value {
+                  functionName: "Append (string)"
+                  args {
+                    call_value {
+                      functionName: "Append (string)"
+                      args {
+                        call_value {
+                          functionName: "Append (string)"
+                          args {
+                            call_value {
+                              functionName: "Convert (int) to (string)"
+                              args {
+                                call_value {
+                                  functionName: "Get Story Variable (int)"
+                                  args {
+                                    string_value: "51f4026a643431dd08e509ff"
+                                  }
+                                  args {
+                                    string_value: "ch02_minute"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          args {
+                            string_value: " Minute: "
+                          }
+                        }
+                      }
+                      args {
+                        call_value {
+                          functionName: "Convert (int) to (string)"
+                          args {
+                            call_value {
+                              functionName: "Get Story Variable (int)"
+                              args {
+                                string_value: "51f4026a643431dd08e509ff"
+                              }
+                              args {
+                                string_value: "ch02_hour"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    string_value: " Hour: "
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Convert (int) to (string)"
+                  args {
+                    call_value {
+                      functionName: "Get Story Variable (int)"
+                      args {
+                        string_value: "51f4026a643431dd08e509ff"
+                      }
+                      args {
+                        string_value: "ch02_day"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          args {
+            string_value: "Day: "
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkDay"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51ffc4d6643431bf03b5119b"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onPlayerDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fbe4c36434312b08fa4d13"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onCoyoteDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "51ffc4ae643431bf03b51199"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t let Coyote die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fbe5196434312b08fa4d14"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onAnnieDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "51ffc600643431bf03b5119c"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t let Annie die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51ff8eac643431680306db15"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onGangerDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Team Survival Percentage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 100
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gain access to the Brain-Eaters Headquarter"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Enter the Brain-Eaters Headquarter"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51ffcafe643431bf03b5119d"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onNewTurn"
+  events {
+    ops {
+      functionName: "On New Round"
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewHour"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52084f986434312102fc4339"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onNewHour"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewHour"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 60
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewDay"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520850006434312102fc433a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckNewDay"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewDay"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 24
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_day"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "d1_atmHacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5208d8b8643431790313c39a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckDay"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkDay"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        int_value: 18
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Ambient Light Color"
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (CameraRegion)"
+          args {
+            string_value: "51ffb9f1643431bf03b5117e"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521eb7383930385409001cd0"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+regions {
+  name: "New Region"
+  position {
+    x: -27
+    y: 31
+    width: 78
+    height: 50
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "51ffb9f1643431bf03b5117e"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0
+    g: 0
+    b: 0.49803922
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: 22
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "51ffbae2643431bf03b51191"
+  }
+  lod: 0
+  character_instance {
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 40
+  }
+  orientation: ORIENTATION_S
+  displayName: "Brain-Eaters Hotshot"
+  idRef {
+    id: "51ffbb46643431bf03b51192"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Lvl6_Human_Decker"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "CyberdeckExcalibur"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "DeckerFedora"
+    }
+    equipment {
+      prefab_name: "AR 3 Colt M23 TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Brain-Eaters Hotshot"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait_code_override: "s6h5"
+    karma: 148
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -3
+    y: 0
+    z: 43
+  }
+  orientation: ORIENTATION_S
+  displayName: "Brain-Eaters Wizkid"
+  idRef {
+    id: "51ffbd39643431bf03b51193"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/DwarfMale"
+    character_sheet_id: "Lvl6_Human_Rigger"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "DeckerFedora"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "DroneAttackS_Guardian"
+    }
+    equipment {
+      prefab_name: "DroneAttackS_Guardian"
+    }
+    equipment {
+      prefab_name: "Pi 1 Ceska Black Scorpion TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Brain-Eaters Wizkid"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_jack: "Datajack"
+    cyberware_right_leg: "Obvious Cyberleg 2"
+    portrait_code_override: "s4h3b6"
+    karma: 149
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -8
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  displayName: "Brain-Eaters Controller"
+  idRef {
+    id: "51ffbeae643431bf03b51196"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkFemale"
+    character_sheet_id: "Lvl6_Ork_Rigger"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "DeckerFedora"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "DroneSupportS_Wolfhound"
+    }
+    equipment {
+      prefab_name: "Spell Heal 4"
+    }
+    equipment {
+      prefab_name: "Pi 2 Browning Max-Power TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Brain-Eaters Controller"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_jack: "Datajack"
+    cyberware_right_leg: "Obvious Cyberleg 2"
+    portrait_code_override: "s5h6"
+    karma: 143
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 23
+    y: 0
+    z: 48
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "51ffc4ae643431bf03b51199"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Story/CoyoteUgly"
+    character_sheet_id: "Coyote_Buffed"
+    equipment_sheet_id: "Story_Coyote_Lv5"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+    }
+    team_id: "Shadowrunners"
+    char_name: "Coyote"
+    GeneralTags: "isCoyote"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_left_arm: "Obvious Cyberarm"
+    portrait {
+      filename: "NPC_HumanFemale_CoyoteHealed"
+    }
+    description_bio: "Part time runner, full time badass. Product of the streets who mixes a mean cocktail."
+    karma: 167
+    hiring_cost_override: 1200
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 25
+    y: 0
+    z: 48
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "51ffc600643431bf03b5119c"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Annie_Evolved"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        is_fearless: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeCautious
+      attackRandom: AttackStyle_AllEqual
+    }
+    equipment {
+      prefab_name: "RiggerHawaiianShirt"
+    }
+    equipment {
+      prefab_name: "DroneAttackS_Guardian"
+    }
+    equipment {
+      prefab_name: "DroneSupportS_Wolfhound"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    team_id: "Shadowrunners"
+    char_name: "Annie"
+    pc_spawn_number: -1
+    ai_ignores: false
+    hiring_type: HiringType_None
+    cyberware_jack: "Datajack"
+    portrait {
+      filename: "backer_humanfemale_grahamwilliams_tsilonsiereht"
+    }
+    portrait_code_override: "s6h1c4"
+    karma: 312
+    hiring_cost_override: 1000
+  }
+}
+mapEvents: "checkNewHour"
+mapEvents: "checkNewDay"
+mapEvents: "checkDay"
+goals {
+  name: "Gain access to the Brain-Eaters Headquarter"
+  type: GoalType_Primary
+  status: GoalStatus_Started
+}
+goals {
+  name: "Don\'t die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Don\'t let Coyote die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Don\'t let Annie die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Enter the Brain-Eaters Headquarter"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "BEHQ Entrance"
+parentStory: ""
+scene_title: "Brain-Eaters Headquarter Entrance"
+scene_subtitle: "Get out or get in?"
+scene_synopsis: "The Brain-Eaters have their HQ near the planeyard. You had no problems finding it. You notice that the front of the building lacks most of vehicles that their leaders drive around... Were they warned?\n\nThere are lights on in the building, so someone must be at home... Now you just need to get in and help Annie to a Matrix Jack-In point."
+scene_image: "loadingimage_c10-s1"
+scene_continue_button_skip: false
+scene_restore_runner_health: false
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: false
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Gangers"
+  affiliation: 1
+  affiliation: 0
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "LoneStar"
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Civilians"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+character_roster {
+}
+show_hiring_screen_on_scene_load: false
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 0
+hiring_minimum_karma: 0
+hiring_maximum_karma: 0
+roster_overrides {
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: false

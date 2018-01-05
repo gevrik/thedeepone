@@ -1,0 +1,634 @@
+idRef {
+  id: "530919fa3264376808004d07"
+}
+ui_name: "ch04-helly"
+nodes {
+  idRef {
+    id: "53091a023264376808004d0d"
+  }
+  index: 0
+  text: "{{GM}}The massive hound growls at you... it is quite menacing!{{/GM}}"
+  branches {
+    responseText: "{{CC}}Try to pet it{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Take a closer look{{/CC}}"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "{{CC}}Ignore the hound{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53091b8b3264376808004d29"
+  }
+  index: 1
+  text: "{{GM}}As you approach the hound it seems to relax, but when you try to touch it, the hound jumps back and growls at you. It seems like he doesn\'t like to be pet. It growls at the computer terminal next to it.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53091be03264376808004d2d"
+  }
+  index: 2
+  text: "Well, that\'s about all I can take... I better hope this thing is worth the trouble..."
+  branches {
+    responseText: "Well, look at the bright side, at least now we have a watchdog for your hideout!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Well, it was your run, so don\'t look at me like that! {{CC}}ask about Johnson{{/CC}}"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "53091c243264376808004d31"
+  }
+  index: 3
+  text: "Ha! One hell of a watchdog! Literally..."
+  branches {
+    responseText: "You and your puns..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "53091c543264376808004d45"
+  }
+  index: 4
+  text: "Well yeah, and guess what... the Johnson is not answering my calls or messages... We might have to investigate what happened to him..."
+  branches {
+    responseText: "Sure, we could do that..."
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "I think we should keep him and forget about the Johnson..."
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Maybe we can talk about this another time?"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "53091e2c3264376808004d96"
+  }
+  index: 5
+  text: "Okay... The Johnson usually hangs out in a small bar in the Barrens, I\'ll get us there in no time, just get to the van when you are ready..."
+  branches {
+    responseText: "Will do!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_findHellyJohnson"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_metHelly"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Investigate the Johnson that owes you Nuyen for the last run"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "53091d733264376808004d8d"
+  }
+  index: 6
+  text: "No frekkin way! I\'m allergic to these things... We will get rid of it, understood?"
+  branches {
+    responseText: "Well, if you don\'t want him here, I can keep him in my personal hideout?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Ok, so let us find that Johnson of yours..."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "53091dbd3264376808004d91"
+  }
+  index: 7
+  text: "No, I want the Nuyen for this run, if you are not going to help, I\'m going to find this Johnson myself, but then I will also keep 75% of the money..."
+  branches {
+    responseText: "You\'re kidding, right?"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Okay, fine by me, find your Johnson and I\'ll keep looking for Annie..."
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "No, I\'ll help you, don\'t worry..."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "53091e8c3264376808004d9e"
+  }
+  index: 8
+  text: "I never kid when it comes to Nuyen! So, are you in or out?"
+  branches {
+    responseText: "I\'m in!"
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I\'m out, I\'ll see you later, Rickshaw!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_metHelly"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "53091ed93264376808004da3"
+  }
+  index: 9
+  text: "Ok, I will be back in a bit! 75% - I told you!"
+  branches {
+    responseText: "Sure... bye!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_metHelly"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "53091c7b3264376808004d47"
+  }
+  index: 10
+  text: "{{GM}}This hellhound looks like most others of its kind, but there is something strange about it - you just can\'t put your finger on it right now... There\'s a big red collar around its neck, and it seems like there is some kind of device attached to it, but you would have to get closer to the hound to investigate it.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Get closer...{{/CC}}"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Step back...{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53092191326437680800509c"
+  }
+  index: 11
+  text: "{{GM}}The hound growls at you as you approach...{{/GM}}"
+  branches {
+    responseText: "{{CC}}Use the Sensory Control Upgrade on Helly{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch04-sensoryUpgradeModule"
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_hellyJhonnyDone"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 12
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e24e132643754010074f3"
+  }
+  index: 12
+  text: "{{GM}}The hound starts to convulse for a few moments, then it starts coughing like a Human! After a few seconds of coughing, it seems to relax again!{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e255732643754010074f6"
+  }
+  index: 13
+  text: "Oh my, dear! That hurt for a moment!"
+  branches {
+    responseText: "I can\'t believe it!"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e258232643754010074f9"
+  }
+  index: 14
+  text: "You better believe it, chummer! And thanks a lot for saving me!"
+  branches {
+    responseText: "Erm... You\'re welcome, I guess..."
+    nextNodeIndex: 15
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e23da3264375401007491"
+  }
+  index: 15
+  text: "I guess I really owe you, chummer! I mean, I don\'t know how much use I will be to you in this form, but I will do my best!"
+  branches {
+    responseText: "We\'ll have to talk about all of this later, when we are done with this nightmare!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_findHellyJohnson"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_findHellyJohnson"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_hellyJhonnyDone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 11
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_hellyJhonnyDone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 15
+}

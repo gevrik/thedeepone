@@ -1,0 +1,546 @@
+idRef {
+  id: "530cdc1d326437f41300265f"
+}
+ui_name: "ch04-ev2_snEmployee"
+nodes {
+  idRef {
+    id: "530cdc2d326437f413002665"
+  }
+  index: 0
+  text: "What are you doing in my home!?!? Get the frakk out!"
+  branches {
+    responseText: "I really need your help with something!\n{{CC}}Charisma: 7{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 7
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Our employee, Sense/Net, sent me to get something from you!\n{{CC}}Etiquette: Corp{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 13
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "Shut yer flap, drekhead!\n{{CC}}Strength: 7{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 7
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "{{CC}}Kill the Sense/Net employee{{/CC}}"
+    actions {
+      ops {
+        functionName: "Kill Actor"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "530c97d0326437cc0f0087b1"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "DeathMethod"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Oops! Wrong apartment!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530cdd82326437f413002685"
+  }
+  index: 1
+  text: "Wow - you seem totally out of your head! What\'s up, chummer?"
+  branches {
+    responseText: "This company you work for - Sense/Net - they have kidnapped one of my friends and are about to torture him! He has done nothing wrong..."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530cddb9326437f413002688"
+  }
+  index: 2
+  text: "I hear ya! But how can I help? I only work in telesales!"
+  branches {
+    responseText: "I just need your employee access card and it will be fine!"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530cdde7326437f41300268b"
+  }
+  index: 3
+  text: "Hmm... Yeah - sure - I\'ll help! I don\'t like this company anyways! These drones they have as guards, they scare me, one day one of these things is going to go postal and kill us all!"
+  branches {
+    responseText: "Thanks! You might want to consider writing some applications in the near future, because Sense/Net is going down!"
+    actions {
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch04-empSenseNetAC"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530cde2f326437f41300268e"
+  }
+  index: 4
+  text: "What?!? Uh... Look - I haven\'t stolen anything! I just borrowed that soycaf machine!"
+  branches {
+    responseText: "It\'s not about the soycaf machine! There\'s been an incident at the office, and the boss asked us to collect all of the employee access cards from you guys and tell you to stay home and not come to work until you receive a mail that everything is clear again!"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530cde84326437f413002691"
+  }
+  index: 5
+  text: "Erm... Ok, sure - can you tell me what happened?"
+  branches {
+    responseText: "Thanks! No, I can\'t tell you what happened - that is strictly confidential!"
+    actions {
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch04-empSenseNetAC"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530cdea1326437f413002694"
+  }
+  index: 6
+  text: "What? I mean, ok - I don\'t want any trouble, chummers. Take whatever you want!"
+  branches {
+    responseText: "Your employee access card for Sense/Net, please!!!"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530cdece326437f413002697"
+  }
+  index: 7
+  text: "Erm - what?!? My access card? Sure - there you go - just don\'t hurt me!"
+  branches {
+    responseText: "Thanks! Stay at home!"
+    actions {
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch04-empSenseNetAC"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530cdef3326437f41300269a"
+  }
+  index: 8
+  text: "You quickly dispatch of the civilian... This won\'t go down well with Lonestar, though. You find the employee\'s access card on the fancy room divider."
+  branches {
+    responseText: "{{CC}}Take the card{{/CC}}"
+    actions {
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch04-empSenseNetAC"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_starThreat"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Arithmetic (int)"
+          args {
+            call_value {
+              functionName: "Get Story Variable (int)"
+              args {
+                string_value: "51f4026a643431dd08e509ff"
+              }
+              args {
+                string_value: "ch02_starThreat"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Arithmetic Ops"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_lonestarLevel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Arithmetic (int)"
+          args {
+            call_value {
+              functionName: "Get Story Variable (int)"
+              args {
+                string_value: "51f4026a643431dd08e509ff"
+              }
+              args {
+                string_value: "ch02_lonestarLevel"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Arithmetic Ops"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

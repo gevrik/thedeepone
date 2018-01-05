@@ -1,0 +1,334 @@
+idRef {
+  id: "530d2bed3264377400004e53"
+}
+ui_name: "ch04-sn_neuroblip"
+nodes {
+  idRef {
+    id: "530d2bfa3264377400004e59"
+  }
+  index: 0
+  text: "The elevator went down for a considerable time and opens up into an underground laboratory. There is machinery everywhere and a constant electronic buzz fills the air... Several menacing drone guardians hover at strategic positions in this lab."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "530de8a13264378408000dfb"
+  }
+  index: 1
+  text: "Towards the back of the laboratory you spot Annie. She looks even more out-of-control than usually. She is rocking back and forth violently and shaking badly. She stands in front of some kind of huge machine, which is connected to her via her datajack."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_GM_Speaker_Voice
+  sourceInSceneRef {
+    id: "530d29983264377400004e46"
+  }
+}
+nodes {
+  idRef {
+    id: "530de9a23264378408000e0c"
+  }
+  index: 2
+  text: "Before Annie a huge military grade turret is fixed on her, but as you enter, it sviwels around to focus on you... Its display shows a strange face, similar to that of Winterblip, but much more sinister."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_GM_Speaker_Voice
+}
+nodes {
+  idRef {
+    id: "530de9f63264378408000e0f"
+  }
+  index: 3
+  text: "{{GM}}A voice starts to boom from every speaker in this room, the voice seems to be a mixture of many voices, male, female and children... It\'s like a lot of people are talking to you at once.{{/GM}}\n\nHmmmm... Who do we have here? We don\'t know you - yet!"
+  branches {
+    responseText: "Winterblip?"
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "530deb763264378408000e27"
+    }
+  }
+  branches {
+    responseText: "Are you one of Ashpool\'s AIs?"
+    nextNodeIndex: 5
+    onlyOnce: true
+    idRef {
+      id: "530debe63264378408000e2a"
+    }
+  }
+  branches {
+    responseText: "What is going on here?!?"
+    nextNodeIndex: 7
+    onlyOnce: true
+    idRef {
+      id: "530dedd33264378408000e3a"
+    }
+  }
+  branches {
+    responseText: "Let Annie go right now!"
+    nextNodeIndex: 8
+    onlyOnce: true
+    idRef {
+      id: "530dedd73264378408000e3b"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530dea5a3264378408000e24"
+  }
+  index: 4
+  text: "{{GM}}An insane wave of mixed-voice laughter booms through the laboratory{{/GM}}\n\nHAHAHAHAHA! Winterblip?\n\nWe are not Winterblip, at least not yet! Once we have this one here amongst us we will find Winterblip and make her one of us, too."
+  branches {
+    responseText: "One of \"us\"?"
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530deb1c3264378408000e26"
+  }
+  index: 5
+  text: "We are not merely an AI - we were developed to manage all digitized minds that we can gather... We have gathered many already since Jhonny Clean... Yes, he is here now, and also others that you know!"
+  branches {
+    responseText: "Don\'t you understand that this is crazy? That you are crazy? I can\'t let you do this to Annie or anyone else!"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530ded7f3264378408000e38"
+  }
+  index: 6
+  text: "Then you will be happy that we have developed ways of digitizing the minds of the recently deceased, too!"
+  branches {
+    responseText: "{{GM}}The drones start to focus on your team - time to fight!{{/GM}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isGuard2"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Quickly find a way to stop the digitization process!"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "finalFight"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Suspend Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530dec1f3264378408000e2d"
+  }
+  index: 7
+  text: "This installation was built to digitize minds and personalities - everything that defines you... To free you from your mortal shackles! A next step of \"Human\" evolution, of course... Your minds are a surprisingly simple programs individually, but we can network them now, which makes us so much more powerful."
+  branches {
+    responseText: "What do you mean with: \"WE can network them now?\""
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530deb873264378408000e29"
+  }
+  index: 8
+  text: "I am afraid we can\'t do that - and why would we? She will be much safer and \"happy\" with us..."
+  branches {
+    responseText: "Who exactly are the \"we\" you are talking about?"
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

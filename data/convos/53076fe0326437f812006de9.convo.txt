@@ -1,0 +1,372 @@
+idRef {
+  id: "53076fe0326437f812006de9"
+}
+ui_name: "ch04-vu_securityDoor"
+nodes {
+  idRef {
+    id: "53077014326437f812006def"
+  }
+  index: 0
+  text: "Are you lost?"
+  branches {
+    responseText: "I am here about the doggy..."
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "53077283326437f812006e6c"
+    }
+  }
+  branches {
+    responseText: "I have a delivery to make to this room...\n{{CC}}Charisma: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "5307713d326437f812006dfa"
+    }
+  }
+  branches {
+    responseText: "You better get out of my way, pup...\n{{CC}}Strength: 6{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "53077143326437f812006dfb"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isHitman"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mafiaShooting"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "523443c93930389c12002589"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Uhm... yes, nevermind me!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53077165326437f812006e0f"
+  }
+  index: 1
+  text: "I have no idea what you are talking about, you better get lost!"
+  branches {
+    responseText: "Right..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53077174326437f812006e11"
+  }
+  index: 2
+  text: "Oh, okay. Be quick about it!"
+  branches {
+    responseText: "Sure, thanks!"
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "523443c93930389c12002589"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53077184326437f812006e13"
+  }
+  index: 3
+  text: "Okay, calm down, alrite? I\'m not getting in your way!"
+  branches {
+    responseText: "A wise choice!"
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "523443c93930389c12002589"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

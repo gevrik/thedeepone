@@ -1,0 +1,413 @@
+idRef {
+  id: "520e887f643431df0c9f05e5"
+}
+ui_name: "ch02_dagonInvestigator"
+nodes {
+  idRef {
+    id: "520e8888643431df0c9f05eb"
+  }
+  index: 0
+  text: "What are you doing here?"
+  branches {
+    responseText: "I am on a mission for DAGON... What are you doing here?"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520e88b3643431df0c9f05ee"
+  }
+  index: 1
+  text: "This is my mission, get out."
+  branches {
+    responseText: "Don\'t you want to share your information with me?\n{{CC}}Charisma: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "I will get the information I need, with or without your cooperation...\n{{CC}}Attack{{/CC}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Target Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "520e86a5643431df0c9f05e0"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "520e86bc643431df0c9f05e1"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "520e86c1643431df0c9f05e2"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Seek And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 5
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_accessBrotherComp"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Don\'t you think it would be wiser to exchange information?\n{{CC}}Willpower: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I don\'t think you are smart enough to break into this computer and get any information from it...\n{{CC}}Decking: 3{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I have done a lot of wetwork for DAGON CORP, you should tell me what you know, maybe I can help...\n{{CC}}DAGON Reputation: 3{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_dagonLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Okay, I\'m leaving..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520e8945643431df0c9f05fd"
+  }
+  index: 2
+  text: "Hmm, okay, you might be able to help... We\'ve found out that this DAGON employee who lives here is working for a rival company, supplying them with information... He wasn\'t at home when we came, but I guess if we could get into his computer then we might get some more information..."
+  branches {
+    responseText: "I will see what I can do!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_accessBrotherComp"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

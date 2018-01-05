@@ -1,0 +1,2071 @@
+triggers {
+  name: "onMapStart"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "51fbe3d56434312b08fa4d11"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "hideoutStarted"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            call_value {
+              functionName: "Append (string)"
+              args {
+                call_value {
+                  functionName: "Append (string)"
+                  args {
+                    call_value {
+                      functionName: "Append (string)"
+                      args {
+                        call_value {
+                          functionName: "Append (string)"
+                          args {
+                            call_value {
+                              functionName: "Convert (int) to (string)"
+                              args {
+                                call_value {
+                                  functionName: "Get Story Variable (int)"
+                                  args {
+                                    string_value: "51f4026a643431dd08e509ff"
+                                  }
+                                  args {
+                                    string_value: "ch02_minute"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          args {
+                            string_value: " Minute: "
+                          }
+                        }
+                      }
+                      args {
+                        call_value {
+                          functionName: "Convert (int) to (string)"
+                          args {
+                            call_value {
+                              functionName: "Get Story Variable (int)"
+                              args {
+                                string_value: "51f4026a643431dd08e509ff"
+                              }
+                              args {
+                                string_value: "ch02_hour"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    string_value: " Hour: "
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Convert (int) to (string)"
+                  args {
+                    call_value {
+                      functionName: "Get Story Variable (int)"
+                      args {
+                        string_value: "51f4026a643431dd08e509ff"
+                      }
+                      args {
+                        string_value: "ch02_day"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          args {
+            string_value: "Day: "
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fbe3fc6434312b08fa4d12"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onPlayerDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fbe4c36434312b08fa4d13"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onCoyoteDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "51fbe3d56434312b08fa4d11"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t let Coyote die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fbe5196434312b08fa4d14"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onOpenDoor"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "1e606c7b306466c42b0018d4"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51fc01646434312b08fa4d1a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51fc01736434312b08fa4d1b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You have triggered an alarm!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51fbe9ba6434312b08fa4d17"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Seek And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fc013d6434312b08fa4d19"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onGoalUpdate"
+  events {
+    ops {
+      functionName: "On Goal Update"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Return to the Market"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "51fc112b6434312b08fa4db1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fc11076434312b08fa4db0"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onGangerDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Team Survival Percentage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 100
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51fc01c96434312b08fa4d1c"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fc15816434312b08fa4de2"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onNewTurn"
+  events {
+    ops {
+      functionName: "On New Round"
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewHour"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52084f986434312102fc4339"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onNewHour"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewHour"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 60
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewDay"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520850006434312102fc433a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckNewDay"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewDay"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 24
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_day"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "d1_atmHacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5208d8b8643431790313c39a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+regions {
+  name: "New Region"
+  position {
+    x: -98
+    y: -8
+    width: 23
+    height: 52
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "51fbd9a6643431e3059f0068"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.26666668
+    g: 0.26666668
+    b: 0.26666668
+    a: 1
+  }
+  ambience_template: "tenement-quiet"
+  combat_music: "Seattle-Set6-Combat"
+  default_music: "Seattle-Set5-Legwork"
+  loop_combat_music: true
+  loop_default_music: false
+}
+patrolRoutes {
+  name: "New Patrol Route"
+  pathType: 1
+  nodes {
+    position {
+      x: -85
+      z: 6
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: -85
+      z: 12
+    }
+    index: 1
+  }
+  can_move_beyond_node: true
+  idRef {
+    id: "51fbe3816434312b08fa4d10"
+  }
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: -96
+    y: 0
+    z: 18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51fbdac8643431e3059f0069"
+  }
+  lod: 0
+  character_instance {
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -90
+    y: 0
+    z: 13
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51fbe2cb6434312b08fa4d0b"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkFemale"
+    character_sheet_id: "Lvl6_Troll_Samurai"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: -2
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Sh 3 Enfield AS-7 TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Stiletto Piercer"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s1h4"
+    karma: 163
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -91
+    y: 0
+    z: 25
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "51fbe2d96434312b08fa4d0c"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkFemale"
+    character_sheet_id: "Lvl6_Troll_Samurai"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: -2
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Sh 3 Enfield AS-7 TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Stiletto Piercer"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s1h4"
+    karma: 163
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -86
+    y: 0
+    z: 30
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "51fbe3146434312b08fa4d0d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/TrollMale"
+    character_sheet_id: "Lvl6_Troll_Shaman"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Spell Haste 1"
+    }
+    equipment {
+      prefab_name: "Bound Air Spirit 6"
+    }
+    equipment {
+      prefab_name: "Sh 1 Street Sweeper TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Stiletto Whistler"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s5h5b3t5"
+    karma: 138
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -86
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "51fbe3676434312b08fa4d0f"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/TrollFemale"
+    character_sheet_id: "Lvl6_Ork_Adept"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 1
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 1
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 1
+        unarmed: 1
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Sword 3 JadeSword TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Pookie"
+    patrolRoute: "New Patrol Route"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_right_arm: "Obvious Cyberarm 2"
+    cyberware_left_leg: "Obvious Cyberleg 2"
+    portrait {
+      filename: "pc_trollfemale_00_faceless"
+    }
+    portrait_code_override: "s5h0c0b0c0t1"
+    karma: 198
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -96
+    y: 0
+    z: 19
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51fbe3d56434312b08fa4d11"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Story/CoyoteUgly"
+    character_sheet_id: "Coyote_Buffed"
+    equipment_sheet_id: "tdo_coyoteNew"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    team_id: "Shadowrunners"
+    char_name: "Coyote"
+    GeneralTags: "isCoyote"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Forced
+    cyberware_left_arm: "Obvious Cyberarm"
+    portrait {
+      filename: "NPC_HumanFemale_CoyoteHealed"
+    }
+    description_bio: "Part time runner, full time badass. Product of the streets who mixes a mean cocktail."
+    karma: 167
+    hiring_cost_override: 0
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -93
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  displayName: "Rotoki"
+  idRef {
+    id: "51fbe8696434312b08fa4d15"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkFemale"
+    character_sheet_id: "Lvl6_Troll_Shaman"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 0
+        force: 0
+        morale: 24
+        discipline: 0
+        awareness: 19
+        perception: 20
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeBoss
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Spell Fog"
+    }
+    equipment {
+      prefab_name: "Spell Haste 1"
+    }
+    equipment {
+      prefab_name: "Bound Air Spirit 6"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Sh 1 Ganger Shotgun TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Rotoki"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s4h1"
+    karma: 138
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -91
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_E
+  displayName: "Piercer 3"
+  idRef {
+    id: "51fbe9ba6434312b08fa4d17"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkFemale"
+    character_sheet_id: "Lvl6_Troll_Samurai"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: -2
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Sh 3 Enfield AS-7 TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Stiletto Piercer"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s1h4"
+    karma: 163
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -75
+    y: 0
+    z: 18
+  }
+  orientation: ORIENTATION_N
+  displayName: "Whistler 2"
+  idRef {
+    id: "51fc01646434312b08fa4d1a"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/TrollMale"
+    character_sheet_id: "Lvl6_Troll_Shaman"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "Spell Fog"
+    }
+    equipment {
+      prefab_name: "Bound Toxic Spirit 6"
+    }
+    equipment {
+      prefab_name: "Spell Haste 1"
+    }
+    equipment {
+      prefab_name: "Bound Air Spirit 6"
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    equipment {
+      prefab_name: "Sh 1 Ganger Shotgun TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Stiletto Whistler"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s5h5b3t5"
+    karma: 138
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -77
+    y: 0
+    z: 18
+  }
+  orientation: ORIENTATION_N
+  displayName: "Piercer2"
+  idRef {
+    id: "51fc01736434312b08fa4d1b"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkFemale"
+    character_sheet_id: "Lvl6_Troll_Samurai"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: -2
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Sh 3 Enfield AS-7 TDO"
+    }
+    team_id: "Gangers"
+    char_name: "Stiletto Piercer"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s1h4"
+    karma: 163
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -85
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  displayName: "Annie"
+  idRef {
+    id: "51fc01c96434312b08fa4d1c"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51fc0cbe6434312b08fa4d1d"
+      turnToFace: false
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Generic_Lv6_Human_Melee"
+    character_mod {
+      stats {
+        body: -1
+        quickness: 3
+        strength: -3
+        charisma: 0
+        intelligence: 14
+        willpower: -1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 0
+        force: 0
+        morale: 24
+        discipline: 0
+        awareness: 24
+        perception: -20
+        authority: 0
+        protect_tether_range: 5
+        move_speed: 0
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -2
+        close_combat: 5
+        throwing_weapons: -4
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 3
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 6
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Non-Combatant"
+      attitude: AttitudeCautious
+      attackRandom: AttackStyle_BestOnly
+    }
+    equipment {
+      prefab_name: "RiggerHawaiianShirt"
+    }
+    team_id: "Civilians"
+    char_name: "Annie"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_jack: "Datajack"
+    portrait {
+      filename: "backer_humanfemale_grahamwilliams_tsilonsiereht"
+    }
+    portrait_code_override: "s6h1c4"
+    karma: 334
+    hiring_cost_override: 1000
+  }
+}
+mapEvents: "checkNewHour"
+mapEvents: "checkNewDay"
+goals {
+  name: "Don\'t die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Don\'t let Coyote die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+  description: "Don\'t let Coyote die!"
+}
+goals {
+  name: "Find Annie"
+  type: GoalType_Primary
+  status: GoalStatus_Started
+}
+goals {
+  name: "Return to the Market"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "Stiletto Hideout"
+parentStory: ""
+scene_title: "The Rusted Stiletto Hideout"
+scene_subtitle: "Annie are you okay?"
+scene_synopsis: "The Rusted Stilettos are holding the girl Annie in this building. The joint is  a typical BTL factory, totally run-down and in dire need of fresh air.\n\nYou do not know where the girl is, but as there seems to be no negotiating with the Stilettos she is your only hope of finding out what happened in the Seamstress Union.\n\nCoyote steadies her shotgun as you enter the BTL shack..."
+scene_image: "loadingimage_c12-s1"
+scene_continue_button_skip: false
+scene_restore_runner_health: false
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: false
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Gangers"
+  affiliation: 1
+  affiliation: 0
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "LoneStar"
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Civilians"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+character_roster {
+}
+show_hiring_screen_on_scene_load: false
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 0
+hiring_minimum_karma: 0
+hiring_maximum_karma: 0
+roster_overrides {
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: false

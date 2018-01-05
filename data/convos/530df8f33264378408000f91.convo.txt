@@ -1,0 +1,336 @@
+idRef {
+  id: "530df8f33264378408000f91"
+}
+ui_name: "ch04-Annie"
+nodes {
+  idRef {
+    id: "530df8fa3264378408000f97"
+  }
+  index: 0
+  text: "Annie is still visibly shaken by the procedure that the AI imposed on her... But something is different, her actions seem to be more controlled and as you approach her, she slumps into your arms..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_AnnieFound"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530df9523264378408000f9b"
+  }
+  index: 1
+  text: "Thanks... I guess! Please don\'t kill me like you killed her...\n\n{{GM}}Annie loses consciousness{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530df97f3264378408000f9e"
+  }
+  index: 2
+  text: "What is she talking about?"
+  branches {
+    responseText: "{{CC}}Ingore Rickshaw, put your coat around Annie and leave the building - call Dr. Hansen on the way out{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch03_hideout"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Ingore Rickshaw, put your coat around Annie and leave the building - head to your Rickshaw\'s hideout{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch03_hideout"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Lie to Rickshaw{{/CC}}"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "{{CC}}Tell Rickshaw about Coyote{{/CC}}"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "530a02b03264370c0b003bc3"
+  }
+}
+nodes {
+  idRef {
+    id: "530dfa323264378408000fa4"
+  }
+  index: 3
+  text: "{{GM}}Rickshaw looks at you expecting an explanation{{/GM}}"
+  branches {
+    responseText: "I don\'t know what she is talking about, she must be delirious... Lets get out of this place and head back to the hideout!"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I don\'t know what she is talking about, she must be delirious... I have someone that I need to see with her, now... (call Dr. Hansen on the way out of Sense/Net Archives)"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "530a02b03264370c0b003bc3"
+  }
+}
+nodes {
+  idRef {
+    id: "530dfa9b3264378408000fa8"
+  }
+  index: 4
+  text: "{{GM}}Rickshaw is visibly disturbed by what you tell her - her eyes become narrower as she focusses you with her judging gaze...{{/GM}}\n\nWell, let\'s get out of here first - then we talk more about this! So where are we going?"
+  branches {
+    responseText: "Lets go to your hideout!"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch03_hideout"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I have to see Dr. Hansen, lets go!"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch03_hideout"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "530a02b03264370c0b003bc3"
+  }
+}
+nodes {
+  idRef {
+    id: "530dfb7a3264378408000fc4"
+  }
+  index: 5
+  text: "Annie is still visibly shaken by the procedure that the AI imposed on her... But something is different, her actions seem to be more controlled and as you approach her, she slumps into your arms. Coyote will be happy that she is still alive!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_AnnieFound"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530dfbc13264378408000fc7"
+  }
+  index: 6
+  text: "Thanks... I knew you would come!\n\n{{GM}}Annie loses consciousness{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530dfbd93264378408000fca"
+  }
+  index: 7
+  text: "Awww - how nice! Juck! Can we get out of here now? Please!?!?"
+  branches {
+    responseText: "Yes, lets go to your hideout!"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch03_hideout"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "530a02b03264370c0b003bc3"
+  }
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 5
+}

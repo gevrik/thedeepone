@@ -1,0 +1,1018 @@
+idRef {
+  id: "520f79b9643431a601a40a59"
+}
+ui_name: "or_testee"
+nodes {
+  idRef {
+    id: "520f79bf643431a601a40a5f"
+  }
+  index: 0
+  text: "Oh, dude! I am so nervous... Have a trial day here today, just waiting for my instructor... I was so nervous this morning I totally forgot to eat something, and now I\'m getting really hungry..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor Wander Range"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Order Actor to Move To (Point)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Current Location of Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f7a45643431a601a40a6a"
+  }
+  index: 1
+  text: "I\'m really hungry... Are you here for a trial, too - or what?"
+  branches {
+    responseText: "What trial day?"
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "520f90aa643431d5015d1393"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Offer a caramel snack bar{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "or_caramelSnack"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "520f7f4a643431a601a40b18"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Offer a peanut snack bar{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "or_peanutSnack"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "elevatorLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "520f8268643431a601a40c65"
+    }
+  }
+  branches {
+    responseText: "I have to leave..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f7a45643431a601a40a6d"
+  }
+  index: 2
+  text: "Oh this company has its roots in Europe, they do these trial days for potential new employees. Have to work for a whole day so they can test how good you are..."
+  branches {
+    responseText: "I see..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f7add643431a601a40a84"
+  }
+  index: 3
+  text: "Thanks, dude!\n\n{{GM}}The junior programmer munches away on the caramel snack bar{{/GM}}"
+  branches {
+    responseText: "You\'re welcome..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "or_caramelSnack"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f7b5e643431a601a40a9b"
+  }
+  index: 4
+  text: "Thanks, dude!\n\n{{GM}}The junior programmer munches away on the peanut snack bar{{/GM}}\n\nOh my! Was that a peanut snack bar? I\'m allergic to peanuts!\n\n{{GM}}You can literally watch as the young programmer\'s neck starts to swell to the size of a baloon. He starts to choke and chortle...{{/GM}}"
+  branches {
+    responseText: "Someone better help this guy! {{CC}}Shout{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "helpedTestee"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Actor)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "520f7450643431a601a4092e"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Actor)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "520d6269643431040ba28a0f"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "receptionistDistracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Offer the soda{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "or_soda"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "or_peanutSnack"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Animation State Of Actor To Animation Modifier"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "AnimationState"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (AnimationModifiers)"
+          args {
+            string_value: "mentalPatient_headbanging"
+          }
+          args {
+            string_value: "headBanging"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f7c3e643431a601a40aa1"
+  }
+  index: 5
+  text: "{{GM}}The young programmer gulps down the soda and seems to recover from his allergic reaction{{/GM}}\n\nWow, thanks - you saved my life... But damn, I can\'t do my trial day like this! You know what?\n\nCould you do this for me? I mean, do this trial day for me... I will give you my keycard for the elevator..."
+  branches {
+    responseText: "Sure. I\'ll do it!\n{{CC}}Decking: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "I don\'t know. I don\'t think I\'m able to do it, I\'ve got no clue about decking or rigging..."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "or_soda"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Animation State Of Actor To Animation Modifier"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "AnimationState"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (AnimationModifiers)"
+          args {
+            string_value: "relaxed"
+          }
+          args {
+            string_value: "calm"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f7df3643431a601a40af7"
+  }
+  index: 6
+  text: "Ok! In that case I will head home and clean up! Thanks, dude - I owe you one!"
+  branches {
+    responseText: "Don\'t mention it!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "helpedTestee"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Target Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "520f862a643431a601a40d4b"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "or_keycard"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gain access to the elevator"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "elevatorLevel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Actor Skill"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "BaseOrCurrent"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "ActorSkills"
+              }
+              args {
+                int_value: 5
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f7ce5643431a601a40abb"
+  }
+  index: 7
+  text: "It\'s really easy... erm.. if you take this thing... you can research everything they ask of you in an instant without them noticing - at least for a few times! You can do it if you use this thing!"
+  branches {
+    responseText: "Nice... This will be useful."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "or_researchDevice"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f7d3f643431a601a40abe"
+  }
+  index: 8
+  text: "Thanks! I\'ll be heading home to clean up!"
+  branches {
+    responseText: "Do that..."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "helpedTestee"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Target Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "520f862a643431a601a40d4b"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "or_keycard"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gain access to the elevator"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "elevatorLevel"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

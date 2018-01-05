@@ -1,0 +1,177 @@
+idRef {
+  id: "52070208643431901472672f"
+}
+ui_name: "the_extraction_final"
+nodes {
+  idRef {
+    id: "520702166434319014726735"
+  }
+  index: 0
+  text: "Did my parents send you? I am so glad you came! I really have to watch the live interview with Mercurial on the holo! Let\'s get out of here!"
+  branches {
+    responseText: "... Sure, kid. Stay behind us!"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Rescue the prisoner"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "520703336434319014726743"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "5205b486643431940f7c3df1"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52070e796434319014726761"
+  }
+  index: 1
+  text: "Not so fast! She is mine. Her rich father is going to pay a nice ransom for her. You will be eaten by worms while I spend the Nuyen!"
+  branches {
+    responseText: "Bring it on!"
+    actions {
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "finalEnc"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Clear Camera Points of Interest"
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "520703336434319014726743"
+  }
+  actions {
+    ops {
+      functionName: "Add Camera Point of Interest (Actors)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "520703336434319014726743"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Eliminate the Overseer"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

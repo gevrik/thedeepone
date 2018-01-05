@@ -1,0 +1,2082 @@
+idRef {
+  id: "5230bc40393038d00e00009c"
+}
+ui_name: "ch04-techran"
+nodes {
+  idRef {
+    id: "5230bc48393038d00e0000a2"
+  }
+  index: 0
+  text: "{{GM}}The Elf observes you carefully as you approach. His face shows both hate and despair in equal amounts.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Animation State Of Actor To Animation Modifier"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "AnimationState"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5230ba7b393038d00e00009a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (AnimationModifiers)"
+          args {
+            string_value: "relaxed"
+          }
+          args {
+            string_value: "calm"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5230def3393038d00e00015c"
+  }
+  index: 1
+  text: "What do you want? If you want a coffin you\'ll have to wait! As you can see one of my guests is a homicidal maniac..."
+  branches {
+    responseText: "What the frag happened here?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Sure, I\'ll talk to you later!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230df3e393038d00e000160"
+  }
+  index: 2
+  text: "I dunno! I was in the office for half an hour, and when I came back into the lobby I found the dead girl here!\n\nI checked the entrance door logs to see if someone had come or gone while I was in the office, but that was a negative...\n\nSo it must\'ve been one of these guys over there... I called Lonestar, they told me to assemble everyone in the lobby and not to let anyone leave - but I\'m not playing the hero here, I locked them inside the coffin area!"
+  branches {
+    responseText: "Lonestar will take your coffin hotel apart..."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I have a question about one of your long-term guests..."
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "I couldn\'t be bothered less..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230dfdc393038d00e000165"
+  }
+  index: 3
+  text: "I know, but what am I gonna do? I\'m no slottin Sherlock or something like that!"
+  branches {
+    responseText: "I can find out who did this before Lonestar even arrive..."
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "Well, good luck with this then!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230e067393038d00e00016b"
+  }
+  index: 4
+  text: "Hmm, really? Yeah, you look like you do this kinda stuff a lot..."
+  branches {
+    responseText: "And if I can find out who did it before the star arrives you\'ll answer my questions?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230e0ad393038d00e00016e"
+  }
+  index: 5
+  text: "Sure, sure! Fine. I\'ll unlock the door to the coffins for you so you can take a look around before we start accusing people blindly..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230e0da393038d00e000173"
+  }
+  index: 6
+  text: "Once you want to accuse one of the suspects come talk to me again!"
+  branches {
+    responseText: "Okay, I will be back!"
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specified Point (2D)"
+            args {
+              float_value: -7
+            }
+            args {
+              float_value: 29
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "accessOpen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find out who murdered the girl before Lonestar arrives!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Animation State Of Actor To Animation Modifier"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "AnimationState"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5230ba7b393038d00e00009a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (AnimationModifiers)"
+          args {
+            string_value: "bouncer"
+          }
+          args {
+            string_value: "bouncer"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5230dffe393038d00e000167"
+  }
+  index: 7
+  text: "I\'m afraid that will have to wait until this whole drekstorm has settled down..."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230e1e4393038d00e0001a6"
+  }
+  index: 8
+  text: "Do you want to accuse one of the suspects?"
+  branches {
+    responseText: "Yes!"
+    actions {
+      ops {
+        functionName: "Start Conversation"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "5230c848393038d00e0000b5"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5230ba7b393038d00e00009a"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Not yet!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52311617393038bc14000160"
+  }
+  index: 9
+  text: "Fragging, slotting drek! They\'re going to close down the coffin hotel! I know it! Thanks for nothing..."
+  branches {
+    responseText: "I would like to rent a coffin!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_coffinRented"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "Will you answer my questions now?"
+    nextNodeIndex: 12
+    onlyOnce: true
+    idRef {
+      id: "5231d0a0393038781a000f9f"
+    }
+  }
+  branches {
+    responseText: "I need to look at your server room..."
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "I will talk to you later!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231d0a6393038781a000fa1"
+  }
+  index: 10
+  text: "Hmm, okay! That will be 25 nuyen per day, to be paid up-front!"
+  branches {
+    responseText: "Here are your nuyen!\n{{CC}}Pay 25 nuyen{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 25
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 25
+        }
+      }
+    }
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Hmm, maybe later..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231d145393038781a000fd5"
+  }
+  index: 11
+  text: "Thank you. Your room is #13, in the northeastern corner of the hotel. Enjoy your stay! Refreshments..."
+  branches {
+    responseText: "Ya, ya, I get it!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231d05a393038781a000f9d"
+  }
+  index: 12
+  text: "Sorry, I can\'t give out confidential information about our guests! And if you do not want to rent a coffin I would like to ask you to leave!"
+  branches {
+    responseText: "It\'s fine, I\'m leaving!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231eee1393038781a00133f"
+  }
+  index: 13
+  text: "Yeah, I don\'t think that is going to happen!"
+  branches {
+    responseText: "How about if I give you 500 nuyen?"
+    nextNodeIndex: 14
+  }
+  branches {
+    responseText: "Look, either you grant me access or I\'m going to break every bone in your body!\n{{CC}}Strength: 7{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 7
+        }
+      }
+    }
+    nextNodeIndex: 15
+    onlyOnce: true
+    idRef {
+      id: "5231fb72393038781a0018fe"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Well, we don\'t want your supervisors to hear about what happened here tonight, right?\n{{CC}}Charisma: 7{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 7
+        }
+      }
+    }
+    nextNodeIndex: 15
+    onlyOnce: true
+    idRef {
+      id: "5231fb75393038781a0018ff"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I could have a look at your system and tell you about any weak spots!\n{{CC}}Intelligence: 8{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 8
+        }
+      }
+    }
+    nextNodeIndex: 15
+    onlyOnce: true
+    idRef {
+      id: "5231fb77393038781a001900"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231ef01393038781a001342"
+  }
+  index: 14
+  text: "Not even if you give me 500 million nuyen... I built this system and I\'m not letting anyone inside!"
+  branches {
+    responseText: "You sure? How about 2,500 nuyen?\n{{CC}}Offer 2,500 nuyen{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2500
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 2500
+        }
+      }
+    }
+    nextNodeIndex: 15
+    onlyOnce: true
+    idRef {
+      id: "5231fb6d393038781a0018fd"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231f025393038781a0013b9"
+  }
+  index: 15
+  text: "Hmm... Okay! But you promise to only stay in the public areas?"
+  branches {
+    responseText: "Okay, thanks!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "serverRoomOpen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52311668393038bc14000183"
+  }
+  index: 16
+  text: "That was some amazing detective work! I owe you, $(l.sir)! If you ever need a good Decker, let me know. I can\'t fight very well, but there\'s no ICE that I can\'t melt. So, how can I help you?"
+  branches {
+    responseText: "I am looking for someone who rented a coffin here!"
+    nextNodeIndex: 17
+  }
+  branches {
+    responseText: "Can you give me access to all of the coffins in the hotel? I need to take a look around..."
+    nextNodeIndex: 18
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Can I access your server room, please?"
+    nextNodeIndex: 22
+  }
+  branches {
+    responseText: "I will talk to you later!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "main_terchanHire"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5231c5673930384c11003062"
+  }
+  index: 17
+  text: "Oh, another murderer?"
+  branches {
+    responseText: "Yes, exactly..."
+    nextNodeIndex: 18
+  }
+  branches {
+    responseText: "Not exactly..."
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231c5923930384c11003066"
+  }
+  index: 18
+  text: "Ok! Sure thing then, chummer! Here\'s the skeleton card for all of the coffins, you can take a look around as long as you want!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_coffinHFullAcc"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "ch04-chSkeletonKey"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52320e07393038d405000f8d"
+  }
+  index: 19
+  text: "Do you want me to deck for ya? I can show you what I can do!"
+  branches {
+    responseText: "Sure!"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Control"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PlayerOrAI"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "5230ba7b393038d00e00009a"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "CyberdeckExcalibur"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "No, thanks!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231c5b33930384c11003068"
+  }
+  index: 20
+  text: "Hmm, okay... I won\'t ask any more questions then. Here\'s the skeleton card for all coffins, take a look around and take as much time as you need!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 21
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_coffinHFullAcc"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "ch04-chSkeletonKey"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52320e4a393038d405000f96"
+  }
+  index: 21
+  text: "Do you want me to deck for ya? I can show you what I can do!"
+  branches {
+    responseText: "Sure!"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Control"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PlayerOrAI"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "5230ba7b393038d00e00009a"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "CyberdeckExcalibur"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "No, thanks!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231f0bc393038781a001481"
+  }
+  index: 22
+  text: "Hmm, okay... Why not... But stick to the public areas! I built the rest of the system and it is dangerous in there... I can get very mad if I catch you in the secured areas - you can forget about me working for you if I do catch you!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 23
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "serverRoomOpen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52320ec3393038d405000ff3"
+  }
+  index: 23
+  text: "Or do you want me to deck for you? I would like to test the defenses of my system..."
+  branches {
+    responseText: "Sure!"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Control"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PlayerOrAI"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "5230ba7b393038d00e00009a"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "CyberdeckExcalibur"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5230ba7b393038d00e00009a"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Maybe later!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231f766393038781a00162c"
+  }
+  index: 24
+  text: "So, $(l.name) - will you let me know the next time you need a Decker? I\'m sure I can help you out if you need the help!"
+  branches {
+    responseText: "I want to rent a coffin!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_coffinRented"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Maybe... I\'ll think about it."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5231f815393038781a001634"
+  }
+  index: 25
+  text: "Can I help you with something else?"
+  branches {
+    responseText: "I want to rent a coffin!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_coffinRented"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Not right now..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "accessOpen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "accessOpen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Goal"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find out who murdered the girl before Lonestar arrives!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 8
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "accessOpen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "caseSolved"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_motelInvestigated"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Goal"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find out who murdered the girl before Lonestar arrives!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 9
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "accessOpen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "caseSolved"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_motelInvestigated"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 16
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_motelInvestigated"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "accessOpen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "main_terchanHire"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 24
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_motelInvestigated"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "accessOpen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "main_terchanHire"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 25
+}

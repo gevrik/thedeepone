@@ -1,0 +1,8 @@
+id: "Shadowball"
+type: ItemType_QuestItem
+uirep {
+  name: "Shadowball"
+  description: "The Shadowball! Bring it to the touchdown zone of the enemy team to score!"
+}
+credentials: 0
+sorting_group: "Quest"

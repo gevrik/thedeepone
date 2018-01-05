@@ -1,0 +1,8 @@
+id: "or_peanutSnack"
+type: ItemType_QuestItem
+uirep {
+  name: "Peanut Snack Bar"
+  description: "A tasty peanut and chocolate snack bar!"
+}
+credentials: 0
+sorting_group: "Quest"

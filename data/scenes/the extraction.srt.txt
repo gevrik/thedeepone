@@ -1,0 +1,9010 @@
+triggers {
+  name: "onPlayerDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52054d8e6434310c0ea522ba"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onPlayersSpottedDwarf"
+  events {
+    ops {
+      functionName: "On Actor Awareness of Another Actor"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Alarm State"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Tag for Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HasOrHasNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "alarmDwarf"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "dwarfAlarm"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Intruders! Alarm the others!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52054f9a6434310c0ea522bd"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Interact with Object"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52054f9a6434310c0ea522bd"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "52055b326434310c0ea522c7"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52054f416434310c0ea522bc"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Interact with Object"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52054f416434310c0ea522bc"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "52055b326434310c0ea522c7"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "dwarfAlarm"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "52054f9a6434310c0ea522bd"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Going for the alarm!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "52054f416434310c0ea522bc"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Going for the alarm!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5205599d6434310c0ea522c3"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onAlarmActivated"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "52055b326434310c0ea522c7"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "5206a03c643431aa13cd386d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52055d176434310c0ea522c8"
+  }
+  elseActions {
+    ops {
+      functionName: "Set Alarm State"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The alarm goes off!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "props"
+          }
+          args {
+            string_value: "Alarm2"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors Within Area"
+          args {
+            call_value {
+              functionName: "Area: Region"
+              args {
+                call_value {
+                  functionName: "Get Map Item (Region)"
+                  args {
+                    string_value: "5205b74d643431940f7c3df7"
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t set off the alarms!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onPlayersSpottedElf"
+  events {
+    ops {
+      functionName: "On Actor Awareness of Another Actor"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Alarm State"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "52055ee36434310c0ea522cb"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "elfAlarm"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "I will try to get to the alarm console!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52055ee36434310c0ea522cb"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Interact with Object"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52055ee36434310c0ea522cb"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "52055b326434310c0ea522c7"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "elfAlarm"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520571cd643431440e188b06"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onAlarmDeactivate"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "alarmDeactivate"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Alarm State"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Alarm State"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Clear Actor Orders"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Move To (Start Position)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52057262643431440e188b07"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onPlayersSpottedDwarfShaman"
+  events {
+    ops {
+      functionName: "On Actor Awareness of Another Actor"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Alarm State"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "52055d8f6434310c0ea522c9"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "dwarfShamanCalled"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Call for help"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52055d8f6434310c0ea522c9"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "dwarfShamanCalled"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "INCOMING!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5205744f643431440e188b08"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onConsoleUsed"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "52069f22643431aa13cd3852"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "52069f34643431aa13cd3854"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52069f30643431aa13cd3853"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onSecDoorHackedMatrix"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206b9a9643431aa13cd38fc"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "secDoorHacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "secDoorHacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The door to the factory is now open!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5206ba50643431aa13cd3900"
+  }
+  elseActions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "secDoorHacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The door to the factory is now closed!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onMatrixPart1"
+  events {
+    ops {
+      functionName: "On Camera Region Activated"
+      args {
+        call_value {
+          functionName: "Get Map Item (CameraRegion)"
+          args {
+            string_value: "5206b91e643431aa13cd38f9"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "part1ICspawned"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5206bb18643431aa13cd3901"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5206bb76643431aa13cd3903"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5206bb96643431aa13cd3904"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "part1ICspawned"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "This system was just created for the secured door that leads to the factory. The IC are relatively harmelss for an experienced Decker."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "520561046434310c0ea522d0"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5205b5be643431940f7c3df5"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "hack1ambush"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "5206e60564343107147267ec"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5206bc2b643431aa13cd3905"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDwarfShamanCredstick"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "3c0547f53064346412002ce6"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 275
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "3c0547f53064346412002ce6"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The Dwarf Overseer had a credstick worth 250Y hidden in this drawer!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5206d1b9643431aa13cd3924"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onIC2Spawn"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5206df9a64343107147267a0"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5206d7ca6434310714726704"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5206d7ca6434310714726706"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5206d7ca6434310714726700"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5206dfd864343107147267a1"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onIC3Spawn"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5206df76643431071472679f"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5206deec643431071472679b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5206df20643431071472679d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5206df45643431071472679e"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5206e0a364343107147267d3"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDatastoreUsed"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206d869643431071472673b"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "5206e12264343107147267d4"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5206e19f64343107147267e6"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onPrison1Hacked"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206debd6434310714726799"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "prison1Hacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "Prison 1 is now open! You notice an enemy Decker jack-in. \"What are you doing in my system? Nevermind, I will take care of you!\""
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206debd6434310714726799"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206db296434310714726783"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52070bae643431901472674b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52070bae643431901472674b"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5206e22b64343107147267e7"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onPrison2Hacked"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206db296434310714726783"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "prison2Hacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "Prison 2 is now open! You notice an enemy Decker jack-in. \"What are you doing in my system? Nevermind, I will take care of you!\""
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206db296434310714726783"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206debd6434310714726799"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52070bae643431901472674b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52070bae643431901472674b"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5206e29d64343107147267e8"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onMapStart"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 1
+          }
+          args {
+            int_value: 100
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: 50
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "correctCell"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52055e436434310c0ea522ca"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5206ff2864343190147266f7"
+  }
+  elseActions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "correctCell"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5205b4db643431940f7c3df2"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor near Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5206fe4b64343190147266f6"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5205b4db643431940f7c3df2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onRndCons"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51c4c62e6434318f02e83db4"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "rndCons"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 0
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "giveRndCons"
+          }
+        }
+      }
+      args {
+        float_value: 0.01
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520705d26434319014726746"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "rndCons0"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "giveRndCons"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "rndCons"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "HealthPack_hi"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51c4c62e6434318f02e83db4"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520706e16434319014726747"
+  }
+  elseActions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "DroneRepairKit_hi"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51c4c62e6434318f02e83db4"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onDetermineAlarmReward"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "determineRewardAlarm"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Goal"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t set off the alarms!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "determineRewardKills"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t set off the alarms!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5207115f6434319014726791"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "determineRewardKills"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDetermineKillsReward"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "determineRewardKills"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Team Survival Percentage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 100
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Kill all enemy runners"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 5000
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520711e96434319014726792"
+  }
+  elseActions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Kill all enemy runners"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 5000
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onBossDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "520703336434319014726743"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "5207105a6434319014726783"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "520703336434319014726743"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520713646434319014726793"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onWrongPrison1"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206debd6434310714726799"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "correctCell"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Rescue the prisoner"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "520715796434319014726795"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520715246434319014726794"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onWrongPrison2"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5206db296434310714726783"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "correctCell"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Rescue the prisoner"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "520715796434319014726795"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5207161964343190147267a3"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDeterminePayback"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "determineFailurePayback"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Nuyen"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: 9000
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: -9000
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5207165364343190147267a4"
+  }
+  elseActions {
+    ops {
+      functionName: "No Effect"
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onPlayerMatrixDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Team Survival Percentage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 100
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Matrix"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t let the Decker die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5207a45b643431a615726706"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDisturbeCouple"
+  events {
+    ops {
+      functionName: "On Actor Awareness of Another Actor"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Evaluate Tag for Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HasOrHasNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "isDisturbed"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Alarm State"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "I told you guys not to disturb the two of us... Hey, who are you? Drek!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5207bb63643431950116989d"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onNewTurn"
+  events {
+    ops {
+      functionName: "On New Round"
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewHour"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52084f986434312102fc4339"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onNewHour"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewHour"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 60
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewDay"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520850006434312102fc433a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckNewDay"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewDay"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 24
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_day"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "d1_atmHacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "run_ZT_complete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5208d8b8643431790313c39a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onMapStart"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            call_value {
+              functionName: "Append (string)"
+              args {
+                call_value {
+                  functionName: "Append (string)"
+                  args {
+                    call_value {
+                      functionName: "Append (string)"
+                      args {
+                        call_value {
+                          functionName: "Append (string)"
+                          args {
+                            call_value {
+                              functionName: "Convert (int) to (string)"
+                              args {
+                                call_value {
+                                  functionName: "Get Story Variable (int)"
+                                  args {
+                                    string_value: "51f4026a643431dd08e509ff"
+                                  }
+                                  args {
+                                    string_value: "ch02_minute"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          args {
+                            string_value: " Minute: "
+                          }
+                        }
+                      }
+                      args {
+                        call_value {
+                          functionName: "Convert (int) to (string)"
+                          args {
+                            call_value {
+                              functionName: "Get Story Variable (int)"
+                              args {
+                                string_value: "51f4026a643431dd08e509ff"
+                              }
+                              args {
+                                string_value: "ch02_hour"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    string_value: " Hour: "
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Convert (int) to (string)"
+                  args {
+                    call_value {
+                      functionName: "Get Story Variable (int)"
+                      args {
+                        string_value: "51f4026a643431dd08e509ff"
+                      }
+                      args {
+                        string_value: "ch02_day"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          args {
+            string_value: "Day: "
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52172b2f393038b812004e7e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onModPickup"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51c3ad9f643431a105f7f913"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "randomMod"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 1
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkMod1"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51c3ad9f643431a105f7f913"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea4bd3930387007000f62"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckMod1"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkMod1"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "randomMod"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "mods_weapon"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You have found a weapon module!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea54d3930387007000f63"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkMod2"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckMod2"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkMod2"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "randomMod"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "mods_armor"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You have found an armor module!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea5993930387007000f64"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onDoorExit"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "fa1cc511306466ac190013a3"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "52223a80393038e80d004225"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52223ad6393038e80d004235"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCoyoteResearch"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkCoyoteResearch"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteResearch"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteResearch"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fdb4046434315c0b8fccb4"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "checkResearchDone"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkResearchDone"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteResearch"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteFoundChamber"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51ffce95643431bf03b513a2"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+regions {
+  name: "Alarm1"
+  position {
+    x: -14
+    y: -22
+    width: 19
+    height: 30
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5205b74d643431940f7c3df7"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "MatrixCamera"
+  position {
+    x: 64
+    y: 1
+    width: 38
+    height: 32
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "5206b91e643431aa13cd38f9"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "camera"
+  position {
+    x: -67
+    y: -67
+    width: 108
+    height: 115
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "5206c370643431aa13cd3906"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "MatrixCamera1"
+  position {
+    x: 128
+    y: -4
+    width: 56
+    height: 36
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "5206daa56434310714726741"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "IC trigger 3"
+  position {
+    x: 152
+    y: 7
+    width: 4
+    height: 14
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5206df76643431071472679f"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "IC trigger 2"
+  position {
+    x: 159
+    y: 7
+    width: 26
+    height: 6
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5206df9a64343107147267a0"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+patrolRoutes {
+  name: "Entrance Patrol"
+  pathType: 1
+  nodes {
+    position {
+      x: -9
+      z: 3
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: -9
+      z: -5
+    }
+    index: 1
+  }
+  nodes {
+    position {
+      x: -6
+      z: -7
+    }
+    index: 2
+  }
+  nodes {
+    position {
+      x: -4
+      z: -11
+    }
+    index: 3
+  }
+  can_move_beyond_node: true
+  idRef {
+    id: "520552576434310c0ea522c1"
+  }
+}
+patrolRoutes {
+  name: "Hack 1 Ambush"
+  pathType: 1
+  nodes {
+    position {
+      x: -26
+      z: -6
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: -9
+      z: -6
+    }
+    index: 1
+  }
+  can_move_beyond_node: true
+  idRef {
+    id: "5206e60564343107147267ec"
+  }
+}
+patrolRoutes {
+  name: "Troll Mage Balcony"
+  pathType: 1
+  nodes {
+    position {
+      x: -40
+      z: -35
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: -27
+      z: -36
+    }
+    index: 1
+  }
+  can_move_beyond_node: true
+  idRef {
+    id: "5206e6e664343107147267ed"
+  }
+}
+patrolRoutes {
+  name: "Dwarf Samurai"
+  pathType: 1
+  nodes {
+    position {
+      x: -29
+      z: -61
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: -30
+      z: -51
+    }
+    index: 1
+  }
+  nodes {
+    position {
+      x: -25
+      z: -46
+    }
+    index: 2
+  }
+  nodes {
+    position {
+      x: -38
+      z: -47
+    }
+    index: 3
+  }
+  can_move_beyond_node: true
+  idRef {
+    id: "5206e74664343107147267ee"
+  }
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: -30
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520548336434310c0ea522b3"
+  }
+  lod: 0
+  character_instance {
+    character_mod {
+      archetypeName: "Player"
+    }
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -62
+  }
+  orientation: ORIENTATION_S
+  displayName: "Dwarf Samurai"
+  idRef {
+    id: "52054b026434310c0ea522b8"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/DwarfMale"
+    character_sheet_id: "Lvl7_Dwarf_Samurai"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade (Phosphorus)"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "SamuraiTrenchcoat"
+    }
+    equipment {
+      prefab_name: "ar SSC aresmplmg"
+    }
+    team_id: "LoneStar"
+    char_name: "Dwarf Samurai"
+    patrolRoute: "Dwarf Samurai"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_eyes: "Vision Magnification Eyes"
+    cyberware_body: "Dermal Plating Mk 1"
+    cyberware_left_leg: "Obvious Cyberleg"
+    portrait_code_override: "s1h2b6"
+    karma: 200
+    hiring_cost_override: 3500
+    hiring_tag: "Samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -24
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "alarmDwarf"
+  displayName: "Dwarf Adept"
+  idRef {
+    id: "52054ece6434310c0ea522bb"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/DwarfFemale"
+    character_sheet_id: "Lvl7_Dwarf_Adept"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Killing Hands"
+    }
+    equipment {
+      prefab_name: "Mana Fist"
+    }
+    equipment {
+      prefab_name: "Stride"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Flash)"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Kamikaze"
+    }
+    equipment {
+      prefab_name: "AdeptCombatvest"
+    }
+    equipment {
+      prefab_name: "Sword 3 JadeSword TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Dwarf Adept"
+    GeneralTags: "alarmDwarf"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait_code_override: "s1h2"
+    karma: 203
+    hiring_cost_override: 3500
+    hiring_tag: "Adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -30
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "alarmDwarf"
+  displayName: "Dwarf Decker"
+  idRef {
+    id: "52054f416434310c0ea522bc"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/DwarfMale"
+    character_sheet_id: "Lvl6_Dwarf_Decker"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: -1
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 1
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 1
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "CyberdeckVirtuaX"
+    }
+    equipment {
+      prefab_name: "Grenade (Phosphorus)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "Pi 2 Ares Predator TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Dwarf Decker"
+    GeneralTags: "alarmDwarf"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_jack: "Datajack"
+    portrait_code_override: "s2h6b4"
+    karma: 220
+    hiring_cost_override: 2800
+    hiring_tag: "Decker"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -8
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_W
+  GeneralTags: "alarmDwarf"
+  displayName: "Dwarf Rigger"
+  idRef {
+    id: "52054f9a6434310c0ea522bd"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/DwarfFemale"
+    character_sheet_id: "Lvl6_Dwarf_Rigger"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: -1
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 1
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 1
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_med"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_med"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "DroneSupportB_RoboDoc"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Frag)"
+    }
+    equipment {
+      prefab_name: "DroneAttackA_SteelLynx"
+    }
+    equipment {
+      prefab_name: "RiggerFlightsuit"
+    }
+    equipment {
+      prefab_name: "SMG 1 Beretta Model 70 TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Dwarf Rigger"
+    GeneralTags: "alarmDwarf"
+    patrolRoute: "Entrance Patrol"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    cyberware_left_arm: "Obvious Cyberarm 2"
+    portrait_code_override: "s6h5"
+    karma: 6
+    hiring_cost_override: 3200
+    hiring_tag: "Rigger"
+    id: "Lvl6_Dwarf_Rigger"
+  }
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: -30
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520551b06434310c0ea522be"
+  }
+  lod: 0
+  character_instance {
+    character_mod {
+      archetypeName: "Player"
+    }
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 1
+  }
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: -31
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520551b86434310c0ea522bf"
+  }
+  lod: 0
+  character_instance {
+    character_mod {
+      archetypeName: "Player"
+    }
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 2
+  }
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: -31
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520551c26434310c0ea522c0"
+  }
+  lod: 0
+  character_instance {
+    character_mod {
+      archetypeName: "Player"
+    }
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 3
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_N
+  displayName: "Dwarf Shaman"
+  idRef {
+    id: "52055d8f6434310c0ea522c9"
+  }
+  lod: 0
+  character_instance {
+    character_sheet_id: "Lvl6_Dwarf_Shaman"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 1
+        spirit_summoning: 1
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 1
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "Spell Slow 3"
+    }
+    equipment {
+      prefab_name: "Spell Mana Static"
+    }
+    equipment {
+      prefab_name: "Spell Shadow"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Flash)"
+    }
+    equipment {
+      prefab_name: "Pi 2 Ares Predator"
+    }
+    equipment {
+      prefab_name: "Spell Haste 4"
+    }
+    equipment {
+      prefab_name: "Bound Air Spirit 6"
+    }
+    team_id: "LoneStar"
+    char_name: "New Actor"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    karma: 6
+    hiring_cost_override: 2900
+    hiring_set_randomizer: "dwarf_shaman"
+    hiring_tag: "Shaman"
+    id: "Lvl6_Dwarf_Shaman"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -48
+    y: 0
+    z: -47
+  }
+  orientation: ORIENTATION_S
+  displayName: "Elf Adept"
+  idRef {
+    id: "52055e436434310c0ea522ca"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/ElfFemale"
+    character_sheet_id: "Lvl7_Elf_Adept"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Killing Hands"
+    }
+    equipment {
+      prefab_name: "Stride"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Flash)"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "AdeptNinja"
+    }
+    team_id: "LoneStar"
+    char_name: "Elf Adept"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s4h3"
+    karma: 6
+    hiring_cost_override: 3000
+    hiring_tag: "Adept"
+    id: "Lvl6_Elf_Adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 10
+  }
+  orientation: ORIENTATION_N
+  displayName: "Elf Decker"
+  idRef {
+    id: "52055ee36434310c0ea522cb"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/ElfFemale"
+    character_sheet_id: "Lvl6_Elf_Decker"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 1
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 1
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "CyberdeckVirtuaX"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Flash)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Flash)"
+    }
+    equipment {
+      prefab_name: "Outfit_Corporate Salaryman"
+    }
+    equipment {
+      prefab_name: "Pi 2 Browning Max-Power TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Elf Decker"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    cyberware_right_leg: "Obvious Cyberleg"
+    portrait_code_override: "s3h6"
+    karma: 6
+    hiring_cost_override: 2800
+    hiring_tag: "Decker"
+    id: "Lvl6_Elf_Decker"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -39
+    y: 0
+    z: -43
+  }
+  orientation: ORIENTATION_N
+  displayName: "Elf Mage"
+  idRef {
+    id: "52055f8f6434310c0ea522cd"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/ElfMale"
+    character_sheet_id: "Lvl6_Elf_Mage"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 1
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "Spell Powerbolt 3"
+    }
+    equipment {
+      prefab_name: "Spell Manabolt 3"
+    }
+    equipment {
+      prefab_name: "Spell Armor 3"
+    }
+    equipment {
+      prefab_name: "Spell Flamethrower 3"
+    }
+    equipment {
+      prefab_name: "Spell Blindness"
+    }
+    equipment {
+      prefab_name: "Spell Weaken Armor 3"
+    }
+    equipment {
+      prefab_name: "Spell Aim 3"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "MageSlick"
+    }
+    equipment {
+      prefab_name: "Pi 3 Ruger Super Warhawk TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Elf Mage"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s3h6b3"
+    karma: 6
+    hiring_cost_override: 3100
+    hiring_tag: "Mage"
+    id: "Lvl6_Elf_Mage"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -8
+    y: 0
+    z: 12
+  }
+  orientation: ORIENTATION_S
+  displayName: "Elf Samurai"
+  idRef {
+    id: "52055fd86434310c0ea522ce"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/ElfFemale"
+    character_sheet_id: "Lvl6_Elf_Samurai"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 1
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 1
+        unarmed: 1
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "Grenade (Phosphorus)"
+    }
+    equipment {
+      prefab_name: "SamuraiTrenchcoat"
+    }
+    equipment {
+      prefab_name: "Sword 3 JadeSword TDO"
+    }
+    equipment {
+      prefab_name: "Pi 1 Ceska Black Scorpion TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Elf Samurai"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_eyes: "Vision Magnification Eyes 2"
+    cyberware_body: "Wired Reflexes"
+    cyberware_right_arm: "Obvious Cyberarm 2"
+    portrait_code_override: "s6h3"
+    karma: 6
+    hiring_cost_override: 3000
+    hiring_tag: "Samurai"
+    id: "Lvl6_Elf_Samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 12
+  }
+  orientation: ORIENTATION_S
+  displayName: "Elf Shaman"
+  idRef {
+    id: "520560596434310c0ea522cf"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/ElfMale"
+    character_sheet_id: "Lvl6_Elf_Shaman"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 1
+        spirit_summoning: 1
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 1
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "Spell Haste 4"
+    }
+    equipment {
+      prefab_name: "Spell Shadow"
+    }
+    equipment {
+      prefab_name: "Spell Silence 1"
+    }
+    equipment {
+      prefab_name: "Spell Slow 3"
+    }
+    equipment {
+      prefab_name: "Bound Earth Spirit 6"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "ShamanTotemCoat"
+    }
+    equipment {
+      prefab_name: "Pi 1 Ceska Black Scorpion TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Elf Shaman"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s2h5b5"
+    karma: 6
+    hiring_cost_override: 2900
+    hiring_tag: "Shaman"
+    id: "Lvl6_Elf_Shaman"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "hack1ambush"
+  displayName: "Human Adept"
+  idRef {
+    id: "520561046434310c0ea522d0"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Lvl6_Human_Adept"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 1
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 1
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 1
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Killing Hands"
+    }
+    equipment {
+      prefab_name: "Mana Fist"
+    }
+    equipment {
+      prefab_name: "Stride"
+    }
+    equipment {
+      prefab_name: "Counterstrike 1"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "AdeptStealth"
+    }
+    equipment {
+      prefab_name: "Sword 3 JadeSword TDO"
+    }
+    equipment {
+      prefab_name: "Pi 1 Ceska Black Scorpion TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Human Adept"
+    GeneralTags: "hack1ambush"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s6h1"
+    karma: 6
+    hiring_cost_override: 3000
+    hiring_tag: "Adept"
+    id: "Lvl6_Human_Adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -12
+    y: 0
+    z: -19
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "isDisturbed"
+  displayName: "Human Decker"
+  idRef {
+    id: "520561bb6434310c0ea522d1"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanMale"
+    character_sheet_id: "Lvl6_Human_Decker"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 1
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 1
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 1
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "CyberdeckVirtuaX"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "SMG 3 SCK Model 100 TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Human Decker"
+    GeneralTags: "isDisturbed"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    portrait_code_override: "s5h5b5"
+    karma: 6
+    hiring_cost_override: 2800
+    hiring_tag: "Decker"
+    id: "Lvl6_Human_Decker"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -21
+  }
+  orientation: ORIENTATION_E
+  displayName: "Human Mage"
+  idRef {
+    id: "520562046434310c0ea522d2"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Lvl6_Human_Mage"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 1
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Spell Powerbolt 3"
+    }
+    equipment {
+      prefab_name: "Spell Heal Wound"
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    equipment {
+      prefab_name: "Spell Manaball 3"
+    }
+    equipment {
+      prefab_name: "Spell Ball Lightning 1"
+    }
+    equipment {
+      prefab_name: "Spell Fireball 2"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Flash)"
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    equipment {
+      prefab_name: "Spell Armor 3"
+    }
+    equipment {
+      prefab_name: "Spell Aim 3"
+    }
+    equipment {
+      prefab_name: "MageRedRidingHood"
+    }
+    equipment {
+      prefab_name: "Pi 3 Ruger Super Warhawk TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Human Mage"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s2h5"
+    karma: 6
+    hiring_cost_override: 3100
+    hiring_tag: "Mage"
+    id: "Lvl6_Human_Mage"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -23
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  displayName: "Human Rigger"
+  idRef {
+    id: "5205b259643431940f7c3deb"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanMale"
+    character_sheet_id: "Lvl6_Human_Rigger"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 1
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 1
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 1
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "DroneAttackA_SteelLynx"
+    }
+    equipment {
+      prefab_name: "Grenade (Phosphorus)"
+    }
+    equipment {
+      prefab_name: "DroneSupportA_Sundowner"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "RiggerGolden"
+    }
+    equipment {
+      prefab_name: "AR 2 HK G12A3z"
+    }
+    team_id: "LoneStar"
+    char_name: "Human Rigger"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    portrait_code_override: "s3h2b3"
+    karma: 6
+    hiring_cost_override: 3200
+    hiring_tag: "Rigger"
+    id: "Lvl6_Human_Rigger"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -35
+    y: 0
+    z: -61
+  }
+  orientation: ORIENTATION_S
+  displayName: "Human Samurai"
+  idRef {
+    id: "5205b323643431940f7c3ded"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Lvl6_Human_Samurai"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 1
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Grenade (Phosphorus)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "Jazz"
+    }
+    equipment {
+      prefab_name: "SamuraiMilitary"
+    }
+    equipment {
+      prefab_name: "Sh 3 Defiance T-250"
+    }
+    equipment {
+      prefab_name: "Pi 3 Ruger Super Warhawk TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Human Samurai"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_eyes: "Vision Magnification Eyes 2"
+    cyberware_body: "Bone Lacing Kevlar"
+    cyberware_right_arm: "Obvious Cyberarm 2"
+    karma: 6
+    hiring_cost_override: 3000
+    hiring_tag: "Samurai"
+    id: "Lvl6_Human_Samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -30
+    y: 0
+    z: -64
+  }
+  orientation: ORIENTATION_N
+  displayName: "Ork Adept"
+  idRef {
+    id: "5205b383643431940f7c3dee"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkFemale"
+    character_sheet_id: "Lvl6_Ork_Adept"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 1
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 1
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 1
+        unarmed: 1
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Grenade (Smoke)"
+    }
+    equipment {
+      prefab_name: "Stride"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Flash)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "AdeptStreetMonk"
+    }
+    equipment {
+      prefab_name: "Sword 3 JadeSword TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Ork Adept"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s4h3"
+    karma: 6
+    hiring_cost_override: 3000
+    hiring_tag: "Adept"
+    id: "Lvl6_Ork_Adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -26
+  }
+  orientation: ORIENTATION_N
+  displayName: "Ork Mage"
+  idRef {
+    id: "5205b3e3643431940f7c3def"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkMale"
+    character_sheet_id: "Lvl6_Ork_Mage"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 1
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "Spell Weaken Armor 3"
+    }
+    equipment {
+      prefab_name: "Spell Armor 3"
+    }
+    equipment {
+      prefab_name: "Spell Powerbolt 3"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "Spell Flamethrower 3"
+    }
+    equipment {
+      prefab_name: "Spell Fireball 2"
+    }
+    equipment {
+      prefab_name: "Spell Confusion"
+    }
+    equipment {
+      prefab_name: "Spell Ball Lightning 2"
+    }
+    equipment {
+      prefab_name: "MageDark"
+    }
+    equipment {
+      prefab_name: "Pi 3 Colt Manhunter TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Ork Mage"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s1h4b2"
+    karma: 6
+    hiring_cost_override: 3100
+    hiring_tag: "Mage"
+    id: "Lvl6_Ork_Mage"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -20
+    y: 0
+    z: -31
+  }
+  orientation: ORIENTATION_E
+  displayName: "Ork Rigger"
+  idRef {
+    id: "5205b435643431940f7c3df0"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkFemale"
+    character_sheet_id: "Lvl6_Ork_Rigger"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 1
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 1
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 1
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "DroneSupportA_Sundowner"
+    }
+    equipment {
+      prefab_name: "DroneAttackA_SteelLynx"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "RiggerToolbelt"
+    }
+    equipment {
+      prefab_name: "Sh 3 Enfield AS-7 TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Ork Rigger"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    portrait_code_override: "s1h6"
+    karma: 6
+    hiring_cost_override: 3200
+    hiring_tag: "Rigger"
+    id: "Lvl6_Ork_Rigger"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -27
+    y: 0
+    z: -39
+  }
+  orientation: ORIENTATION_W
+  GeneralTags: "finalEnc"
+  displayName: "Ork Shaman"
+  idRef {
+    id: "5205b486643431940f7c3df1"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkMale"
+    character_sheet_id: "Lvl6_Ork_Shaman"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 1
+        spirit_summoning: 1
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 1
+        edged: 0
+        unarmed: 0
+        spirit_control: 1
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    equipment {
+      prefab_name: "Spell Slow 1"
+    }
+    equipment {
+      prefab_name: "Bound Air Spirit 6"
+    }
+    equipment {
+      prefab_name: "Spell Haste 3"
+    }
+    equipment {
+      prefab_name: "ShamanPendant"
+    }
+    equipment {
+      prefab_name: "SMG 2 Ingram Smartgun TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Ork Shaman"
+    GeneralTags: "finalEnc"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s6h2b1"
+    karma: 6
+    hiring_cost_override: 2900
+    hiring_tag: "Shaman"
+    id: "Lvl6_Ork_Shaman"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -21
+    y: 0
+    z: -62
+  }
+  orientation: ORIENTATION_S
+  displayName: "Troll Decker"
+  idRef {
+    id: "5205b4db643431940f7c3df2"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/TrollFemale"
+    character_sheet_id: "Lvl6_Troll_Decker"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 1
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 1
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 1
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 1
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    equipment {
+      prefab_name: "CyberdeckVirtuaX"
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    equipment {
+      prefab_name: "DeckerStreet"
+    }
+    equipment {
+      prefab_name: "Pi 1 Fichetti Security 500 TDO"
+    }
+    equipment {
+      prefab_name: "Sword 2 Axe TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Troll Decker"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    uninjurable: false
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    portrait_code_override: "s1h4t5"
+    karma: 6
+    hiring_cost_override: 2800
+    hiring_tag: "Decker"
+    id: "Lvl6_Troll_Decker"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -41
+    y: 0
+    z: -35
+  }
+  orientation: ORIENTATION_S
+  displayName: "Troll Mage"
+  idRef {
+    id: "5205b531643431940f7c3df3"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/TrollMale"
+    character_sheet_id: "Lvl6_Troll_Mage"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 1
+        throwing_weapons: 1
+        spellcasting: 1
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 1
+        edged: 1
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Spell Powerbolt 3"
+    }
+    equipment {
+      prefab_name: "Spell Heal Wound"
+    }
+    equipment {
+      prefab_name: "Spell Acid Stream 2"
+    }
+    equipment {
+      prefab_name: "Spell Fireball 2"
+    }
+    equipment {
+      prefab_name: "Spell Manaball 3"
+    }
+    equipment {
+      prefab_name: "Spell Stunball 1"
+    }
+    equipment {
+      prefab_name: "Spell Distraction 3"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Frag)"
+    }
+    equipment {
+      prefab_name: "MageCasual"
+    }
+    equipment {
+      prefab_name: "Sword 2 Axe TDO"
+    }
+    equipment {
+      prefab_name: "SMG 1 Uzi III TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Troll Mage"
+    patrolRoute: "Troll Mage Balcony"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s4h6b2t3"
+    karma: 6
+    hiring_cost_override: 3100
+    hiring_tag: "Mage"
+    id: "Lvl6_Troll_Mage"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -25
+    y: 0
+    z: -52
+  }
+  orientation: ORIENTATION_S
+  displayName: "Troll Rigger"
+  idRef {
+    id: "5205b580643431940f7c3df4"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/TrollFemale"
+    character_sheet_id: "Lvl6_Troll_Rigger"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 1
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 1
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 1
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 1
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "Grenade (Phosphorus)"
+    }
+    equipment {
+      prefab_name: "DroneAttackA_SteelLynx"
+    }
+    equipment {
+      prefab_name: "Grenade (Phosphorus)"
+    }
+    equipment {
+      prefab_name: "DroneSupportA_Sundowner"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit_hi"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "RiggerFlightsuit"
+    }
+    equipment {
+      prefab_name: "Sword 3 JadeSword TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Troll Rigger"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    portrait_code_override: "s6h3t5"
+    karma: 6
+    hiring_cost_override: 3200
+    hiring_tag: "Rigger"
+    id: "Lvl6_Troll_Rigger"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "hack1ambush"
+  displayName: "Troll Samurai"
+  idRef {
+    id: "5205b5be643431940f7c3df5"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/TrollFemale"
+    character_sheet_id: "Lvl6_Troll_Samurai"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 1
+        shotgun: 1
+        smg: 1
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Grenade (Phosphorus)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "SamuraiPunk"
+    }
+    equipment {
+      prefab_name: "AR 3 Colt M23"
+    }
+    equipment {
+      prefab_name: "Sh 3 Defiance T-250 TDO"
+    }
+    equipment {
+      prefab_name: "Pi 3 Colt Manhunter TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Troll Samurai"
+    GeneralTags: "hack1ambush"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_eyes: "Vision Magnification Eyes 2"
+    cyberware_left_leg: "Obvious Cyberleg"
+    portrait_code_override: "s3h4t2"
+    karma: 6
+    hiring_cost_override: 3000
+    hiring_tag: "Samurai"
+    id: "Lvl6_Troll_Samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -37
+    y: 0
+    z: -54
+  }
+  orientation: ORIENTATION_S
+  displayName: "Troll Shaman"
+  idRef {
+    id: "5205b600643431940f7c3df6"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/TrollMale"
+    character_sheet_id: "Lvl6_Troll_Shaman"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 1
+        spirit_summoning: 1
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 1
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 1
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Spell Silence 1"
+    }
+    equipment {
+      prefab_name: "Spell Slow 3"
+    }
+    equipment {
+      prefab_name: "Spell Slo-Mo"
+    }
+    equipment {
+      prefab_name: "Spell Mana Static"
+    }
+    equipment {
+      prefab_name: "Bound Air Spirit 6"
+    }
+    equipment {
+      prefab_name: "ShamanSkirted"
+    }
+    equipment {
+      prefab_name: "Sh 2 Mossberg CMDT TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Troll Shaman"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait_code_override: "s3h4b4t2"
+    karma: 6
+    hiring_cost_override: 2900
+    hiring_tag: "Shaman"
+    id: "Lvl6_Troll_Shaman"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 75
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_W
+  displayName: "IC 1 M 1"
+  idRef {
+    id: "5206bb18643431aa13cd3901"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Matrix/MatrixICE_white_melee"
+    character_sheet_id: "IC_Lv6_White_Ranged"
+    equipment_sheet_id: "IC White Melee High"
+    character_mod {
+      stats {
+        hp: 155
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    team_id: "LoneStar"
+    char_name: "White IC"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 87
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_W
+  displayName: "IC 1 M 2"
+  idRef {
+    id: "5206bb76643431aa13cd3903"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Matrix/MatrixICE_white_melee"
+    character_sheet_id: "IC_Lv6_White_Ranged"
+    equipment_sheet_id: "IC White Melee High"
+    character_mod {
+      stats {
+        hp: 155
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    team_id: "LoneStar"
+    char_name: "White IC"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 81
+    y: 0
+    z: 22
+  }
+  orientation: ORIENTATION_W
+  displayName: "IC 1 S 1"
+  idRef {
+    id: "5206bb96643431aa13cd3904"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Matrix/SpiritESPShield"
+    character_sheet_id: "IC_Lv6_White_Ranged"
+    equipment_sheet_id: "IC White Support High"
+    character_mod {
+      stats {
+        hp: 155
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    team_id: "LoneStar"
+    char_name: "White Sentry IC"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 176
+    y: 0
+    z: 19
+  }
+  orientation: ORIENTATION_W
+  displayName: "IC 2 M 2"
+  idRef {
+    id: "5206d7ca6434310714726700"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Matrix/MatrixICE_white_melee"
+    character_sheet_id: "IC_Lv6_White_Ranged"
+    equipment_sheet_id: "IC White Melee High"
+    character_mod {
+      stats {
+        hp: 155
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    team_id: "LoneStar"
+    char_name: "White IC"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 169
+    y: 0
+    z: 21
+  }
+  orientation: ORIENTATION_W
+  displayName: "IC 2 S 1"
+  idRef {
+    id: "5206d7ca6434310714726704"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Matrix/SpiritESPShield"
+    character_sheet_id: "IC_Lv6_White_Ranged"
+    equipment_sheet_id: "IC White Support High"
+    character_mod {
+      stats {
+        hp: 155
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    team_id: "LoneStar"
+    char_name: "White Sentry IC"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 163
+    y: 0
+    z: 19
+  }
+  orientation: ORIENTATION_W
+  displayName: "IC 2 M 1"
+  idRef {
+    id: "5206d7ca6434310714726706"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Matrix/MatrixICE_white_melee"
+    character_sheet_id: "IC_Lv6_White_Ranged"
+    equipment_sheet_id: "IC White Melee High"
+    character_mod {
+      stats {
+        hp: 155
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    team_id: "LoneStar"
+    char_name: "White IC"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 146
+    y: 0
+    z: 10
+  }
+  orientation: ORIENTATION_S
+  displayName: "IC 3 M 2"
+  idRef {
+    id: "5206deec643431071472679b"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Matrix/MatrixICE_white_melee"
+    character_sheet_id: "IC_Lv6_White_Ranged"
+    equipment_sheet_id: "IC White Melee High"
+    character_mod {
+      stats {
+        hp: 155
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    team_id: "LoneStar"
+    char_name: "White IC"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 141
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  displayName: "IC 3 S 2"
+  idRef {
+    id: "5206df20643431071472679d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Matrix/SpiritESPShield"
+    character_sheet_id: "IC_Lv6_White_Ranged"
+    equipment_sheet_id: "IC White Support High"
+    character_mod {
+      stats {
+        hp: 155
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    team_id: "LoneStar"
+    char_name: "White Sentry IC"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 137
+    y: 0
+    z: 22
+  }
+  orientation: ORIENTATION_S
+  displayName: "IC 3 CL 1"
+  idRef {
+    id: "5206df45643431071472679e"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Matrix/SpiritESPAssassin"
+    character_sheet_id: "IC_Lv6_White_Ranged"
+    equipment_sheet_id: "IC White ChargeLaser High"
+    character_mod {
+      stats {
+        hp: 255
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    team_id: "LoneStar"
+    char_name: "White Sparky IC"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -47
+    y: 0
+    z: -53
+  }
+  orientation: ORIENTATION_E
+  displayName: "Rich_Kid"
+  idRef {
+    id: "5206fe4b64343190147266f6"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "52070208643431901472672f"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Non-Combatant"
+      attitude: AttitudeCautious
+    }
+    equipment {
+      prefab_name: "RiggerTrenchcoat"
+    }
+    team_id: "Civilians"
+    char_name: "Rich Kid"
+    pc_spawn_number: -1
+    uninjurable: true
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s3h6"
+    karma: 6
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -39
+  }
+  orientation: ORIENTATION_W
+  GeneralTags: "finalEnc"
+  displayName: "Overseer"
+  idRef {
+    id: "520703336434319014726743"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanMale"
+    character_sheet_id: "Lvl6_Merc_Human_CyberWarrior"
+    character_mod {
+      stats {
+        body: 4
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 2
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 2
+        force: 0
+        morale: 24
+        discipline: 0
+        awareness: 19
+        perception: 20
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: 2
+        close_combat: 0
+        throwing_weapons: 2
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 2
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 2
+        rifle: 2
+        shotgun: 0
+        smg: 2
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeBoss
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "SamuraiBunny"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Flash)"
+    }
+    equipment {
+      prefab_name: "Grenade 3 (Frag)"
+    }
+    equipment {
+      prefab_name: "SMG 3 HK HK227 TDO"
+    }
+    team_id: "LoneStar"
+    char_name: "Factory Overseer"
+    GeneralTags: "finalEnc"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    cyberware_body: "Dermal Plating Mk 2"
+    portrait {
+      filename: ""
+    }
+    portrait_code_override: "s4h4b2"
+    karma: 276
+    hiring_set_randomizer: "human_samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 160
+    y: 0
+    z: 13
+  }
+  orientation: ORIENTATION_N
+  displayName: "enemy decker"
+  idRef {
+    id: "52070bae643431901472674b"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanMale"
+    character_sheet_id: "Persona_Lv4_Decker"
+    equipment_sheet_id: "NPC Decker Mid"
+    character_mod {
+      stats {
+        hp: 225
+        morale: 24
+        awareness: 24
+        protect_tether_range: 5
+        move_speed: 6
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "Factory Decker"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Matrix
+    portrait {
+      filename: ""
+    }
+    dimension_name: "Matrix"
+    karma: 46
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "dwarfAlarm"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "elfAlarm"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "dwarfShamanCalled"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "secDoorHacked"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "secDoorHacked2"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "part1ICspawned"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "prison1Hacked"
+    typeName: "bool"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "prison2Hacked"
+    typeName: "bool"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "correctCell"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "rndCons"
+    typeName: "int"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "freeKid"
+    typeName: "bool"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "randomMod"
+    typeName: "int"
+  }
+}
+mapEvents: "alarmDeactivate"
+mapEvents: "giveRndCons"
+mapEvents: "determineRewardAlarm"
+mapEvents: "determineRewardKills"
+mapEvents: "determineFailurePayback"
+mapEvents: "checkNewHour"
+mapEvents: "checkNewDay"
+mapEvents: "checkMod1"
+mapEvents: "checkMod2"
+mapEvents: "checkCoyoteResearch"
+mapEvents: "checkResearchDone"
+goals {
+  name: "Don\'t die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Rescue the prisoner"
+  type: GoalType_Primary
+  status: GoalStatus_Started
+}
+goals {
+  name: "Don\'t set off the alarms!"
+  type: GoalType_Secondary
+  status: GoalStatus_Started
+}
+goals {
+  name: "Eliminate the Overseer"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Kill all enemy runners"
+  type: GoalType_Secondary
+  status: GoalStatus_Started
+}
+goals {
+  name: "Don\'t let the Decker die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "The Extraction"
+parentStory: ""
+scene_title: "BTL Factory Extraction Site"
+scene_subtitle: "Into the Factory"
+scene_synopsis: "Mr. Johnson has tasked your team to extract a rich corper\'s daughter from a BTL Factory that is run by a group of ex-Shadowrunners. The Factory is in one of the worst parts of the Barrens and intel suggests that there are at least 20 enemies in the area.\n\nAccording to our contact the girl is held in one of two prisons. You will need a Decker to hack the factory\'s security system and find out in which prison cell she is kept in. You will only be able to open one of the cell doors before their system goes on total lockdown - so choose wisely!"
+scene_image: "loadingimage_c09-s1"
+scene_continue_button_skip: false
+scene_restore_runner_health: false
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: true
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Gangers"
+  affiliation: 1
+  affiliation: 0
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "LoneStar"
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Civilians"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+scene_dimensions {
+  dimension_name: "Matrix"
+  initial_alarm_state: 0
+  turns_per_round: 3
+}
+character_roster {
+}
+show_hiring_screen_on_scene_load: true
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 3
+hiring_minimum_karma: 0
+hiring_maximum_karma: 8
+hire_from_content_pack: "51f4026a643431dd08e509ff"
+roster_overrides {
+  roster_entries {
+    reference_id: "tdo_bozman"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_gangLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "killedRRBoss"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "51f4026a643431dd08e509ff"
+  }
+  roster_entries {
+    reference_id: "tdo_DagonAgentSam"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_dagonLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "killDagonAgent"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "51f4026a643431dd08e509ff"
+  }
+  roster_entries {
+    reference_id: "tdo_hire_deckerTerchan"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "main_terchanHire"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "51f4026a643431dd08e509ff"
+  }
+  roster_entries {
+    reference_id: "tdo_rickshaw"
+    hiring_conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_zeitgeistPayload"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_rickshawResearch"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    hiring_cost: -1
+    content_pack_source: "51f4026a643431dd08e509ff"
+  }
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: true
+can_move_outside_camera_regions: true

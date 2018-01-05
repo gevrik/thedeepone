@@ -1,0 +1,954 @@
+idRef {
+  id: "520ad0a764343101031891c2"
+}
+ui_name: "ch02_meryll"
+nodes {
+  idRef {
+    id: "520ad0af64343101031891c8"
+  }
+  index: 0
+  text: "Hoi there! Looking for a good time?"
+  branches {
+    responseText: "I would like some information..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_tippedMeryll"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "521b0e8f3930388812002b08"
+    }
+  }
+  branches {
+    responseText: "I would like some information!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_tippedMeryll"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Tip the girl 10Y{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_tippedMeryll"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 10
+        }
+      }
+    }
+    nextNodeIndex: 12
+    onlyOnce: true
+    idRef {
+      id: "521b0eb33930388812002b09"
+    }
+  }
+  branches {
+    responseText: "Looks like your brother has left town... Some DAGON Ninja was investigating his flat..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "willHelpMeryll"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_accessBrotherComp"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 13
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "No, I\'m leaving..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ad12764343101031891cf"
+  }
+  index: 1
+  text: "Do I look like a city guide? Pay for some fun or stop wasting my time!"
+  branches {
+    responseText: "Oh, okay."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ad12964343101031891d1"
+  }
+  index: 2
+  text: "Sure, ask away, honey."
+  branches {
+    responseText: "What do you know about the Riffruffers?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowsAboutRR"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520bafa56434318004c58b6c"
+    }
+  }
+  branches {
+    responseText: "Can you tell me something about the museum?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutMuseum"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520ad611643431010318932a"
+    }
+  }
+  branches {
+    responseText: "Tell me about DAGON CORP."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutDagonCorp"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Let\'s talk about something else."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "What do you know about Ashpool?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520bb00b6434318004c58b8e"
+    }
+  }
+  branches {
+    responseText: "What can you tell me about Dr. Armitage?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutArmitage"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 9
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520bb1ff6434318004c58c3f"
+    }
+  }
+  branches {
+    responseText: "What do you know about Dr. Hansen?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutHansen"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ad27864343101031891f4"
+  }
+  index: 3
+  text: "They\'re alright. Used to be a bunch of middle-class workers before DAGON CORP moved into town and bought up their old employers. Seems like DAGON don\'t like the Metas because now they are all jobless and causing trouble."
+  branches {
+    responseText: "I see. Thanks. About the other thing..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ad2c664343101031891f8"
+  }
+  index: 4
+  text: "Do I look like I could tell you about the museum?"
+  branches {
+    responseText: "Hmm, not really - but maybe..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ad2e964343101031891fc"
+  }
+  index: 5
+  text: "Big huge corp, don\'t know too much about them! My brother that damn fool works for them. He does some work-from-home stuff via the Matrix."
+  branches {
+    responseText: "I see, thank you. Another question..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Why is your brother a \"damn fool\"?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "willHelpMeryll"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_accessBrotherComp"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ad3576434310103189201"
+  }
+  index: 6
+  text: "I hate him! He wouldn\'t lend me any more Nuyen last time I asked him. Told me to get a real job!"
+  branches {
+    responseText: "Want me to pay him a visit?\n{{CC}}Green Moon Reputation: 2{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_jayceLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Not my problem - but there was something else..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Sorry about that... but about that other topic..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ad3d06434310103189208"
+  }
+  index: 7
+  text: "The damn idiot deserves it, but please don\'t hurt him... Maybe just scare him or break something that he loves? Something like that... He lives in the Housing Projects in the East of the district."
+  branches {
+    responseText: "Okay, you got it."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "willHelpMeryll"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Pay Meryll\'s brother a visit"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520bafa96434318004c58b75"
+  }
+  index: 8
+  text: "Who is that, some kind of celebrity?"
+  branches {
+    responseText: "No... whatever! I have another question."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520bafd06434318004c58b83"
+  }
+  index: 9
+  text: "A Doctor in town? I didn\'t even know that we had a hospital in this district!"
+  branches {
+    responseText: "Oookay... About that other topic..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520bb0096434318004c58b8a"
+  }
+  index: 10
+  text: "Ha! That topic falls under client-patient confidentiality..."
+  branches {
+    responseText: "Ah, so he is one of your customer... errr, patients, yes?"
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Fair enough..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520bb09f6434318004c58b90"
+  }
+  index: 11
+  text: "Well, yeah... but I have many patients in this town... But Alex is special, you know... he has some kind of mutations, scaly skin and these bulging eyes... Many people would say he\'s not very pretty, but there is something about that man..."
+  branches {
+    responseText: "Oh, yes? That is a very good piece of information. Thank you. I have one more question..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "knowHansenMutations"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520ad1bd64343101031891e2"
+  }
+  index: 12
+  text: "Oooh, thanks! You rich or what?"
+  branches {
+    responseText: "Just looking out for my girls..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_tippedMeryll"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 10
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f622f643431a601a404ae"
+  }
+  index: 13
+  text: "Really?!? I hope he is okay. He is an ass, but I don\'t want anything to happen to him..."
+  branches {
+    responseText: "I don\'t really care..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Maybe I can find your brother?"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f6282643431a601a40506"
+  }
+  index: 14
+  text: "Maybe... But let\'s wait a little while, he might show up... I might have an idea of where he went. I will contact you if I need your help with that!"
+  branches {
+    responseText: "Sounds good."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

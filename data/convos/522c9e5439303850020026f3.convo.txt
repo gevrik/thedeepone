@@ -1,0 +1,20 @@
+idRef {
+  id: "522c9e5439303850020026f3"
+}
+ui_name: "run_ZTJason"
+nodes {
+  idRef {
+    id: "522c9e5d39303850020026f9"
+  }
+  index: 0
+  text: "You should turn around while you still can! You won\'t get past us..."
+  branches {
+    responseText: "We shall see!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

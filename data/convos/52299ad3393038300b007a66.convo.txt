@@ -1,0 +1,888 @@
+idRef {
+  id: "52299ad3393038300b007a66"
+}
+ui_name: "ch04-housesMerchant"
+nodes {
+  idRef {
+    id: "52299aee393038300b007a70"
+  }
+  index: 0
+  text: "What the frag are you doing in my house? Get out, now!"
+  branches {
+    responseText: "I am here to collect the nuyen!"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobFaction"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Of course, if you pay up... If not, I might have to \"renovate\" your house...\n{{CC}}Strength: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobFaction"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "You know, it is not very smart not to pay our \"friends\" the money they need to protect your assets...\n{{CC}}Charisma: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobFaction"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I am here to collect the nuyen..."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobFaction"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 7
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Of course, if you pay up... If not, I might have to \"renovate\" your house!\n{{CC}}Strength: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobFaction"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 9
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "You know, it is not very smart not to pay our \"friends\" the money they need to protect your assets!\n{{CC}}Charisma: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobFaction"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 11
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I will be right back!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52299d8e393038300b007aa6"
+  }
+  index: 1
+  text: "Still haven\'t learned your lesson, have you?\n\nGUYS?!? I\'VE GOT COMPANY IN HERE!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52299beb393038300b007a87"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52299ca3393038300b007a88"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52299d7f393038300b007a9b"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52299dbf393038300b007aa9"
+  }
+  index: 2
+  text: "What\'s the problem, ahh - I see! Get $(l.him) guys!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52299beb393038300b007a87"
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52299f81393038300b007aef"
+  }
+  index: 3
+  text: "Still haven\'t learned your lesson, have you?\n\nGUYS?!? I NEED HELP IN HERE!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52299beb393038300b007a87"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52299ca3393038300b007a88"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52299f81393038300b007af2"
+  }
+  index: 4
+  text: "What\'s the problem, ahh - I see! Get $(l.him) guys!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52299beb393038300b007a87"
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52299fa4393038300b007af9"
+  }
+  index: 5
+  text: "Still haven\'t learned your lesson, have you?\n\nGUYS?!? I NEED HELP IN HERE!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52299beb393038300b007a87"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "52299ca3393038300b007a88"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52299fa4393038300b007afc"
+  }
+  index: 6
+  text: "What\'s the problem, ahh - I see! Get $(l.him) guys!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52299beb393038300b007a87"
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5229dc91393038700600494c"
+  }
+  index: 7
+  text: "Still haven\'t learned your lesson, have you?\n\nGUYS?!? I\'VE GOT COMPANY IN HERE!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5229dad3393038600d00310a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5229db0c393038600d00310b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5229db39393038600d00310c"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5229dc91393038700600494f"
+  }
+  index: 8
+  text: "What\'s the problem, ahh - I see! Get $(l.him) guys!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52299beb393038300b007a87"
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5229dcc7393038700600496e"
+  }
+  index: 9
+  text: "Still haven\'t learned your lesson, have you?\n\nGUYS?!? I NEED HELP IN HERE!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5229dad3393038600d00310a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5229db0c393038600d00310b"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5229dcc73930387006004971"
+  }
+  index: 10
+  text: "What\'s the problem, ahh - I see! Get $(l.him) guys!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52299beb393038300b007a87"
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5229dce73930387006004994"
+  }
+  index: 11
+  text: "Still haven\'t learned your lesson, have you?\n\nGUYS?!? I NEED HELP IN HERE!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5229dad3393038600d00310a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5229dad3393038600d00310a"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5229dce73930387006004997"
+  }
+  index: 12
+  text: "What\'s the problem, ahh - I see! Get $(l.him) guys!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52299beb393038300b007a87"
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

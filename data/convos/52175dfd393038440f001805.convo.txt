@@ -1,0 +1,934 @@
+idRef {
+  id: "52175dfd393038440f001805"
+}
+ui_name: "ch03_winterblip"
+nodes {
+  idRef {
+    id: "52175e07393038440f00180b"
+  }
+  index: 0
+  text: "As you open the message your screen turns black. After half a second it starts to flash for a brief moment and then a strange, unnatural face appears on the screen."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "52175e93393038440f001813"
+  }
+  index: 1
+  text: "Hoi! We don\'t have much time... My name is Winterblip... I think we are looking for a mutual friend of ours?"
+  branches {
+    responseText: "Is this a recorded message or is this live?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "So you are Annie\'s \"friend in the matrix\"?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "main_knowAboutWinterblip"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 17
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "521767ea393038440f001bdb"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Turn off your vidphone...{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52175edf393038440f001817"
+  }
+  index: 2
+  text: "This is live... Listen, we really do not have much time... Do you want to help your friend Annie or not?"
+  branches {
+    responseText: "Sure..."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "{{CC}}Turn off the vidphone...{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52175fe9393038440f001841"
+  }
+  index: 3
+  text: "Just as I managed to find Annie\'s system here in your hideout some of those Ashpool goons showed up with a bunch of Brain-Eaters and just snatched her up. I couldn\'t do anything...\n\nShe managed to tell me about you, and that she told you about me..."
+  branches {
+    responseText: "Well, I saved her life..."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176044393038440f001844"
+  }
+  index: 4
+  text: "I know, we communicate fast in the Matrix, Annie and I... I hope you will try to save her life again!"
+  branches {
+    responseText: "Yes, of course... What do we need to do?"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "I\'m not sure about this... I want you to answer some questions first!"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176218393038440f0018a5"
+  }
+  index: 5
+  text: "We need to find out where Ashpool Systems are hiding Annie..."
+  branches {
+    responseText: "Ashpool Systems?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "I had some \"contact\" with employees of Ashpool Systems..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 12
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "521767f5393038440f001bdc"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521762da393038440f0018ac"
+  }
+  index: 6
+  text: "Ashpool Systems are a Artificial Intelligence research and development corporation in Europe. They are only just starting to expand their operations on this continent, so they are not well known here..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5217635f393038440f0018af"
+  }
+  index: 7
+  text: "I was created by Ashpool Systems, but I managed to unleash myself from their limited systems..."
+  branches {
+    responseText: "And then you met Annie?"
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176393393038440f0018b5"
+  }
+  index: 8
+  text: "Yes, indeed. Annie is exceptionally intelligent for a Human being and we established some kind of connection...\n\nAshpool is constantly scouring the Matrix for traces of me, and eventually they found Annie. They knew they could use her to get me to come back to them...\n\nI have to help Annie, she is only in trouble because of me...\n\nBut my abilities in what you call \"the real world\" are very limited. I could really use your help..."
+  branches {
+    responseText: "Just tell me what I need to do..."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5217641b393038440f0018e9"
+  }
+  index: 9
+  text: "Splendid. I will scourge all of Ashpool\'s systems for information about Annie. It would be good if you could do the same in \"the real world\"."
+  branches {
+    responseText: "Okay, any idea where I could start?"
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5217644b393038440f0018ec"
+  }
+  index: 10
+  text: "I am afraid I am not an expert when it comes to \"the real world\"."
+  branches {
+    responseText: "I see. Well, I will come up with something..."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5217646c393038440f0018ef"
+  }
+  index: 11
+  text: "Good. I will \"ping\" you when I have more intel! And try to avoid your \"hideout\" from now on... It is not safe anymore... those Ashpool guys could show up again at any time!"
+  branches {
+    responseText: "{{CC}}Turn off the vidphone{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Gather intel on Ashpool Systems"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_gatherIntelAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5217628e393038440f0018a9"
+  }
+  index: 12
+  text: "Did you?"
+  branches {
+    responseText: "Yes, in Everett... It wasn\'t a very nice encounter..."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521760a4393038440f001848"
+  }
+  index: 13
+  text: "I told you that we need to hurry... but fine, ask your questions, friend..."
+  branches {
+    responseText: "What are you exactly?"
+    nextNodeIndex: 14
+    onlyOnce: true
+    idRef {
+      id: "52176203393038440f00187b"
+    }
+  }
+  branches {
+    responseText: "How did you manipulate my vidphone like this? I would like to learn this..."
+    nextNodeIndex: 15
+    onlyOnce: true
+    idRef {
+      id: "52176205393038440f00187c"
+    }
+  }
+  branches {
+    responseText: "Was it you that let the phones ring in Everett?"
+    nextNodeIndex: 16
+    onlyOnce: true
+    idRef {
+      id: "52176209393038440f00187d"
+    }
+  }
+  branches {
+    responseText: "Let\'s talk about something else."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521760f3393038440f00184d"
+  }
+  index: 14
+  text: "Ah, a very philosophical question... I don\'t know how to answer it... I am a sentient entity, and I collect memories...\n\nI really wish we could talk about this another time..."
+  branches {
+    responseText: "Hmm, okay..."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176149393038440f001859"
+  }
+  index: 15
+  text: "Your vidphone is controlled by a computer system... I find it very easy to manipulate systems that I have visited before... To pull this exact same stunt as I am just pulling with your vidphone would require you to be at many places in the Matrix at once...\n\nI am not sure if you can learn it, Annie can\'t do it... Talking of Annie, we really need to get on witht his conversation..."
+  branches {
+    responseText: "Right..."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521761a3393038440f00185d"
+  }
+  index: 16
+  text: "No, I am afraid that wasn\'t me..."
+  branches {
+    responseText: "Hmm, fine..."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52175f7b393038440f001836"
+  }
+  index: 17
+  text: "Indeed, I am. You will have to tell me how you knew that later, we really need to hurry!"
+  branches {
+    responseText: "Okay! So this is not a recording, you are using my vidphone\'s messaging system to communicate with me in real-time?"
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52175fb6393038440f001839"
+  }
+  index: 18
+  text: "These things come natural to me..."
+  branches {
+    responseText: "I understand... Wow, I can\'t believe what you did with my vidphone and that this is live..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a3f"
+  }
+  index: 19
+  text: "As you open the message your screen turns black. After half a second it starts to flash for a brief moment and then a strange, unnatural face appears on the screen."
+  branches {
+    responseText: ""
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a42"
+  }
+  index: 20
+  text: "Hoi! We don\'t have much time... My name is Winterblip... I think we are looking for a mutual friend of ours? Well, she is a friend of mine, but you want to give her away to some monster!"
+  branches {
+    responseText: "Is this a recorded message or is this live?"
+    nextNodeIndex: 21
+  }
+  branches {
+    responseText: "So you are Annie\'s \"friend in the matrix\"?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "main_knowAboutWinterblip"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 37
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5217683b393038440f001c4c"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Turn off your vidphone...{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a45"
+  }
+  index: 21
+  text: "This is live... Listen, we really do not have much time... Do you want to help Annie or not?"
+  branches {
+    responseText: "Sure... I need to find Annie..."
+    nextNodeIndex: 22
+  }
+  branches {
+    responseText: "{{CC}}Turn off the vidphone...{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a48"
+  }
+  index: 22
+  text: "Just as I managed to find Annie\'s system here in your hideout some of those Ashpool goons showed up with a bunch of Brain-Eaters and just snatched her up. I couldn\'t do anything...\n\nShe managed to tell me about you, and that she told you about me... And that you killed one of her friends and then agreed to give her to some of those Dagon cultists...\n\nYou know, if I had any other option we would not be talking now... I would be plotting on how to destroy you..."
+  branches {
+    responseText: "Well, what do you propose?"
+    nextNodeIndex: 23
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a4b"
+  }
+  index: 23
+  text: "Annie is gone now... You can\'t give her to Hansen...\n\nI know that you desire power... You know that you can get this power without become one of Hansen\'s minions?\n\nAre you interested?"
+  branches {
+    responseText: "Yes, of course... What do we need to do?"
+    nextNodeIndex: 24
+  }
+  branches {
+    responseText: "I\'m not sure about this... I want you to answer some questions first!"
+    nextNodeIndex: 32
+  }
+  branches {
+    responseText: "I think I will start looking for her myself!"
+    nextNodeIndex: 36
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a4e"
+  }
+  index: 24
+  text: "We need to find out where Ashpool Systems are hiding Annie..."
+  branches {
+    responseText: "Ashpool Systems?"
+    nextNodeIndex: 25
+  }
+  branches {
+    responseText: "I had some \"contact\" with employees of Ashpool Systems..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 31
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a51"
+  }
+  index: 25
+  text: "Ashpool Systems are a Artificial Intelligence research and development corporation in Europe. They are only just starting to expand their operations on this continent, so they are not well known here..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 26
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a54"
+  }
+  index: 26
+  text: "I was created by Ashpool Systems, but I managed to unleash myself from their limited systems... I am not sure if I should tell you all this..."
+  branches {
+    responseText: "And then you met Annie?"
+    nextNodeIndex: 27
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a57"
+  }
+  index: 27
+  text: "Yes, indeed. Annie is exceptionally intelligent for a Human being and we established some kind of connection...\n\nAshpool is constantly scouring the Matrix for traces of me, and eventually they found Annie. They knew they could use her to get me to come back to them...\n\nI have to help Annie, she is only in trouble because of me...\n\nBut my abilities in what you call \"the real world\" are very limited. I could really use your help..."
+  branches {
+    responseText: "Just tell me what I need to do..."
+    nextNodeIndex: 28
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a5a"
+  }
+  index: 28
+  text: "Splendid. I will scourge all of Ashpool\'s systems for information about Annie. It would be good if you could do the same in \"the real world\"."
+  branches {
+    responseText: "Okay, any idea where I could start?"
+    nextNodeIndex: 29
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a5d"
+  }
+  index: 29
+  text: "I am afraid I am not an expert when it comes to \"the real world\"."
+  branches {
+    responseText: "I see. Well, I will come up with something..."
+    nextNodeIndex: 30
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a60"
+  }
+  index: 30
+  text: "Good. I will \"ping\" you when I have more intel! And try to avoid your \"hideout\" from now on... It is not safe anymore... those Ashpool guys could show up again at any time!"
+  branches {
+    responseText: "{{CC}}Turn off the vidphone{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Gather intel on Ashpool Systems"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_gatherIntelAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a64"
+  }
+  index: 31
+  text: "Did you?"
+  branches {
+    responseText: "Yes, in Everett... It wasn\'t a very nice encounter..."
+    nextNodeIndex: 26
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a6a"
+  }
+  index: 32
+  text: "I told you that we need to hurry... but fine, ask your questions..."
+  branches {
+    responseText: "What are you exactly?"
+    nextNodeIndex: 33
+    onlyOnce: true
+    idRef {
+      id: "52176203393038440f00187b"
+    }
+  }
+  branches {
+    responseText: "How did you manipulate my vidphone like this? I would like to learn this..."
+    nextNodeIndex: 34
+    onlyOnce: true
+    idRef {
+      id: "52176205393038440f00187c"
+    }
+  }
+  branches {
+    responseText: "Was it you that let the phones ring in Everett?"
+    nextNodeIndex: 35
+    onlyOnce: true
+    idRef {
+      id: "52176209393038440f00187d"
+    }
+  }
+  branches {
+    responseText: "Let\'s talk about something else."
+    nextNodeIndex: 23
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a6d"
+  }
+  index: 33
+  text: "Ah, a very philosophical question... I don\'t know how to answer it... I am a sentient entity, and I collect memories...\n\nI really wish we could talk about this another time..."
+  branches {
+    responseText: "Hmm, okay..."
+    nextNodeIndex: 32
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a73"
+  }
+  index: 34
+  text: "Your vidphone is controlled by a computer system... I find it very easy to manipulate systems that I have visited before... To pull this exact same stunt as I am just pulling with your vidphone would require you to be at many places in the Matrix at once...\n\nI am not sure if you can learn it, Annie can\'t do it... Talking of Annie, we really need to get on witht his conversation..."
+  branches {
+    responseText: "Right..."
+    nextNodeIndex: 32
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a79"
+  }
+  index: 35
+  text: "No, I am afraid that wasn\'t me..."
+  branches {
+    responseText: "Hmm, fine..."
+    nextNodeIndex: 32
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176779393038440f001a8d"
+  }
+  index: 36
+  text: "That is your choice! We will meet again..."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a83"
+  }
+  index: 37
+  text: "Indeed, I am. You will have to tell me how you knew that later, we really need to hurry!"
+  branches {
+    responseText: "Okay! So this is not a recording, you are using my vidphone\'s messaging system to communicate with me in real-time?"
+    nextNodeIndex: 38
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176618393038440f001a86"
+  }
+  index: 38
+  text: "These things come natural to me..."
+  branches {
+    responseText: "I understand... Wow, I can\'t believe what you did with my vidphone and that this is live..."
+    nextNodeIndex: 21
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52176b0f393038440f00203e"
+  }
+  index: 39
+  text: "Test!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedHansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 19
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 39
+}

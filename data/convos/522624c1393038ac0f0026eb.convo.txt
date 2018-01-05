@@ -1,0 +1,166 @@
+idRef {
+  id: "522624c1393038ac0f0026eb"
+}
+ui_name: "main_PlayerClick"
+nodes {
+  idRef {
+    id: "522624cd393038ac0f0026f1"
+  }
+  index: 0
+  text: "What do you want to do?"
+  branches {
+    responseText: "{{CC}}Nanobot PDA{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_nanoSelf"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Start Conversation"
+        args {
+          call_value {
+            functionName: "Get Map Item (Conversation)"
+            args {
+              string_value: "52227dd23930382c1100150d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Active Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Exit Combat Mode{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Enable/Disable Manual Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Enter Combat Mode{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Enable/Disable Manual Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Nothing{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

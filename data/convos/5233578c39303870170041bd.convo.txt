@@ -1,0 +1,1853 @@
+idRef {
+  id: "5233578c39303870170041bd"
+}
+ui_name: "ch04-vu_thug1"
+nodes {
+  idRef {
+    id: "5233579939303870170041c3"
+  }
+  index: 0
+  text: "Huh, huh... Nice van!"
+  branches {
+    responseText: "Stay away from it!"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "There\'s 50 nuyen for you if it\'s still like it is right now when I come back!\n{{CC}}Etiquette: Street{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 18
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 50
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 50
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "{{CC}}Ignore the thugs{{/CC}}"
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5233506f393038c8140041c9"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c92393038701700428b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "52335076393038c8140041ca"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c92393038701700428b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "523350ac393038c8140041cb"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c92393038701700428b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5233506f393038c8140041c9"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "repairing"
+            }
+            args {
+              string_value: "repairing"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "52335076393038c8140041ca"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "repairing"
+            }
+            args {
+              string_value: "repairing"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "523350ac393038c8140041cb"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "repairing"
+            }
+            args {
+              string_value: "repairing"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Suspend Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5233590c39303870170041c8"
+  }
+  index: 1
+  text: "Uh-huh... And if we don\'t?"
+  branches {
+    responseText: "Then I will be very angry with you..."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isThug"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isThug"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "causedThugTrouble"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Deal with the thugs"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5233596339303870170041ce"
+  }
+  index: 2
+  text: "Uh-huh! We\'re not scared of you, this is our turf! You guys go back into your van and go away, now!"
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isThug"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isThug"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "causedThugTrouble"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Deal with the thugs"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You really don\'t want any trouble with me, believe me...\n{{CC}}Strength: 6{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I\'m a regular in the Velvet Underground... The Giovannis won\'t be happy about you guys messing with my ride...\n{{CC}}Charisma: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "{{CC}}Here\'s 100 nuyen for you guys, now leave us alone...{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 100
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "{{CC}}Ignore the thugs{{/CC}}"
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5233506f393038c8140041c9"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c92393038701700428b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "52335076393038c8140041ca"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c92393038701700428b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "523350ac393038c8140041cb"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c92393038701700428b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5233506f393038c8140041c9"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "repairing"
+            }
+            args {
+              string_value: "repairing"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "52335076393038c8140041ca"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "repairing"
+            }
+            args {
+              string_value: "repairing"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "523350ac393038c8140041cb"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "repairing"
+            }
+            args {
+              string_value: "repairing"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Suspend Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52335b76393038701700421d"
+  }
+  index: 3
+  text: "Hmm... Okay! We don\'t want no trouble with you either! You cool chum!"
+  branches {
+    responseText: "That\'s a wise decision... now slot it!"
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5233506f393038c8140041c9"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c313930387017004258"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "52335076393038c8140041ca"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c313930387017004258"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "523350ac393038c8140041cb"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c313930387017004258"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Suspend Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "thugsPeaceful"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52335b96393038701700421f"
+  }
+  index: 4
+  text: "Oh, okay! Let\'s slot and run, guys!"
+  branches {
+    responseText: "And don\'t come back!"
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5233506f393038c8140041c9"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c313930387017004258"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "52335076393038c8140041ca"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c313930387017004258"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "523350ac393038c8140041cb"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c313930387017004258"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Suspend Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "thugsPeaceful"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52335bbb3930387017004221"
+  }
+  index: 5
+  text: "Sure, for 100 nuyen you be left alone!"
+  branches {
+    responseText: "Have a nice rest of your day..."
+    actions {
+      ops {
+        functionName: "Set Actor In Passive Mode"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isThug"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Actor Wander Range"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isThug"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+      ops {
+        functionName: "Suspend Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "thugsPeaceful"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5233592939303870170041ca"
+  }
+  index: 6
+  text: "You got it, chum! We be bodyguards for your nice van till you come back!"
+  branches {
+    responseText: "Cool!"
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5233506f393038c8140041c9"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c92393038701700428b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "52335076393038c8140041ca"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c92393038701700428b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "523350ac393038c8140041cb"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Random Point Within Region"
+            args {
+              call_value {
+                functionName: "Get Map Item (Region)"
+                args {
+                  string_value: "52335c92393038701700428b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5233506f393038c8140041c9"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "bouncer"
+            }
+            args {
+              string_value: "bouncer"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "52335076393038c8140041ca"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "bouncer"
+            }
+            args {
+              string_value: "bouncer"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "523350ac393038c8140041cb"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "bouncer"
+            }
+            args {
+              string_value: "bouncer"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Suspend Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "thugsPeaceful"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

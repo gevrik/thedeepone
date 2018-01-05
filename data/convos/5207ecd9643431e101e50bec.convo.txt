@@ -1,0 +1,644 @@
+idRef {
+  id: "5207ecd9643431e101e50bec"
+}
+ui_name: "ch02_coyote_flat"
+nodes {
+  idRef {
+    id: "5207f409643431e101e50c95"
+  }
+  index: 0
+  text: "Hoi, chummer. You doin\' fine?"
+  branches {
+    responseText: "I\'m okay. And you?"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207f43c643431e101e50c98"
+  }
+  index: 1
+  text: "All is good! What is going on?"
+  branches {
+    responseText: "I want to talk to Annie."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207f463643431e101e50c9b"
+  }
+  index: 2
+  text: "Well, she is always connected to the Matrix now. She spiced up this Matrix Jack-In point we took off the gangers and upgraded the system. You can access it from my Cyberterminal if you want. Or we can turn on the Matrix display unit and talk to her this way..."
+  branches {
+    responseText: "Thanks, I will jack-in myself."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Let\'s get her on the display!"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207f4cb643431e101e50c9f"
+  }
+  index: 3
+  text: "Ooookay!"
+  branches {
+    responseText: "Talk to you later, Coyote."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAnnieMatrix"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5207f4f3643431e101e50ca1"
+  }
+  index: 4
+  text: "Sure..."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "5207dd966434319501169904"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5207e0306434319501169967"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAnnieMatrix"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5207f5d3643431e101e50ceb"
+  }
+  index: 5
+  text: "Hoi, chum. What\'s cookin?"
+  branches {
+    responseText: "About that coffee..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "CoyoteDate"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I would like to talk to Annie via your Cyberterminal."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Not much. Talk to you later, Coyote."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207f661643431e101e50cf6"
+  }
+  index: 6
+  text: "{{GM}}Coyote blushes{{/GM}}\n\nErm, yeah... about that. I totally want to go, but I am currently swamped with digging up some intel on some new BTL hole that needs to be wiped from the face of the Earth...\n\nCan I get a rain-check on this one?"
+  branches {
+    responseText: "Of course. Let\'s talk about another thing."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52175bf9393038440f0017a2"
+  }
+  index: 7
+  text: "Drek! Look at this place! Someone must\'ve found it... Where is Annie?!?"
+  branches {
+    responseText: "I don\'t know, Coyote... Let\'s see if we can find some clues..."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "A friend of mine called and told me that she received a message from Annie... We should go to visit her..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_knowRickshawHideout"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "521779c5393038440f002495"
+    }
+  }
+  branches {
+    responseText: "I had a message from Annie\'s AI friend on my vidphone... It told me that some Ashpool Systems goons grabbed Annie from our flat! It asked me to gather some information on that corp... Shall we do that?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_gatherIntelAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 11
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "521780333930380005003bb3"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52175d3e393038440f0017da"
+  }
+  index: 8
+  text: "I think I will stay here and clean up the place - it\'s much too dirty! I actually don\'t know if we should stay here... These people that took Annie could come back!"
+  branches {
+    responseText: "You are right, we should both leave... Rickshaw has a hideout that I am sure we can use... Let\'s go..."
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "No, let\'s stay here and see if they come back..."
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52175db0393038440f0017de"
+  }
+  index: 9
+  text: "Ok, I am ready."
+  branches {
+    responseText: "Great!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52175dbf393038440f0017e1"
+  }
+  index: 10
+  text: "Okay, so I will stay and clean up the place... And you check with your friend. Let me know what you find out! I don\'t think I can rest until I know that Annie is safe!"
+  branches {
+    responseText: "Will do!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521779d1393038440f0024a3"
+  }
+  index: 11
+  text: "I think I will stay here and clean up the place - it\'s much too dirty! I actually don\'t know if we should stay here... These people that took Annie could come back!"
+  branches {
+    responseText: "You are right, we should both leave... Rickshaw has a hideout that I am sure we can use... Let\'s go..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_knowRickshawHideout"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 12
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "No, let\'s stay here and see if they come back..."
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521779d1393038440f0024a6"
+  }
+  index: 12
+  text: "Who is Rickshaw? Oh, you can tell me later... Ok, I am ready."
+  branches {
+    responseText: "Great!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521779d1393038440f0024aa"
+  }
+  index: 13
+  text: "Okay, so I will stay and clean up the place... And you check your connections. Let me know what you find out! I don\'t think I can rest until I know that Annie is safe!"
+  branches {
+    responseText: "Will do!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAnnieMatrix"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "chapter2complete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAnnieMatrix"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "chapter2complete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 5
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "chapter2complete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 7
+}

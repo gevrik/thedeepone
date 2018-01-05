@@ -1,0 +1,109 @@
+idRef {
+  id: "521e47f9393038580900009c"
+}
+ui_name: "ec_defeat"
+nodes {
+  idRef {
+    id: "521e47ff39303858090000a2"
+  }
+  index: 0
+  text: "You killed too many of the security guards. Even if you would plant the explosives, there will be a major investigation which would reveal the explosives before the cargo is shipped...\n\nMr. Johnson is not very amused about the outcome of this run...\n\nYou can return to the Underground Market!"
+  branches {
+    responseText: "{{CC}}Return to the Market{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Rooftop Market"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "ec_passcard"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Maintenance"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

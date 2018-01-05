@@ -1,0 +1,8 @@
+id: "ch04-chSkeletonKey"
+type: ItemType_QuestItem
+uirep {
+  name: "Coffin Hotel Skeleton Key"
+  description: "This skeleton keycard allows access to all coffings in Ye Old Coffin Motel in Tacoma Industrial District!"
+}
+credentials: 0
+sorting_group: "Quest"

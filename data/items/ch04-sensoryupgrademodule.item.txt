@@ -1,0 +1,8 @@
+id: "ch04-sensoryUpgradeModule"
+type: ItemType_QuestItem
+uirep {
+  name: "Sensory Upgrade Module"
+  description: "You found this module in the the Sense/Net archives. It can be used on morphs to give them more sensory abilities."
+}
+credentials: 0
+sorting_group: "Quest"

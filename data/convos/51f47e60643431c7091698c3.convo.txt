@@ -1,0 +1,40 @@
+idRef {
+  id: "51f47e60643431c7091698c3"
+}
+ui_name: "Weapon Vendor"
+nodes {
+  idRef {
+    id: "51f47e69643431c7091698c9"
+  }
+  index: 0
+  text: "Need something to put big holes into stuff?"
+  branches {
+    responseText: "Sounds good. Show me your wares."
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51f47e21643431c7091698c2"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Not at the moment."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f47e21643431c7091698c2"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

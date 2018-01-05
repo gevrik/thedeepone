@@ -1,0 +1,309 @@
+idRef {
+  id: "51fc9631643431ab098fb494"
+}
+ui_name: "Zoex Spotted"
+nodes {
+  idRef {
+    id: "51fc9640643431ab098fb49a"
+  }
+  index: 0
+  text: "What are you looking at?"
+  branches {
+    responseText: "Have you been following me?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Hoi. I noticed that you have been following me? Wouldn\'t it be easier if we\'d just exchange contact details and make it a date?\n{{CC}}Charisma: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc604364343143098fb56b"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "metZoex"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc980a643431ab098fb4a3"
+  }
+  index: 1
+  text: "Me? Following you? Who do you think you are. Sorry, I am busy - I have a Monorail to catch."
+  branches {
+    responseText: "Hmm. Maybe I was mistaken."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc604364343143098fb56b"
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gather information about your stalker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc973a643431ab098fb49e"
+  }
+  index: 2
+  text: "Very funny, very funny. I haven\'t followed you. Why would I?"
+  branches {
+    responseText: "I know that you have been tailing me. No need to deny it. You should stay away from me - you might get hurt.\n{{CC}}Willpower: 3{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Hmm, yes - maybe I\'m just a little on edge. Sorry about that."
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Gather information about your stalker"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc604364343143098fb56b"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc97bb643431ab098fb4a1"
+  }
+  index: 3
+  text: "Is that supposed to be a threat. Cute! You are not as dumb as you look. My name is Zoex, remember it well! Until next time, chummer."
+  branches {
+    responseText: "{{GM}}Zoex quickly runs towards the station, dodges into an alley and is gone.{{/GM}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc604364343143098fb56b"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "suspiciousZoex"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gather information about your stalker"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc98c5643431ab098fb4b4"
+  }
+  index: 4
+  text: "I know the feeling. Bye. {{GM}}The woman disappears in the crowd that is gathered in front of the station.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc604364343143098fb56b"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

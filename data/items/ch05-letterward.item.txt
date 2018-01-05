@@ -1,0 +1,8 @@
+id: "ch05-letterWard"
+type: ItemType_QuestItem
+uirep {
+  name: "Letter"
+  description: "This is an old fashioned letter, written in valuable red ink... or could it be blood? It reads:\n\n\"Wilbur,\n\nI expect you to return your daughter ASAP! You know that we have plans for her! May Dagon and Hydra guide you on your mission to find her...\n\nOnce you have her, use the tunnels below the factory to bring her to me, at once!\n\n- Dexter Ward\""
+}
+credentials: 0
+sorting_group: "Quest"

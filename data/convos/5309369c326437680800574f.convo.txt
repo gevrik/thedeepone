@@ -1,0 +1,894 @@
+idRef {
+  id: "5309369c326437680800574f"
+}
+ui_name: "ch04-jr_dealer"
+nodes {
+  idRef {
+    id: "530936b23264376808005759"
+  }
+  index: 0
+  text: "{{GM}}The Dwarf grins at you knowingly...{{/GM}}\n\nSooo, what can I do for you today?"
+  branches {
+    responseText: "Can I see what you\'re selling?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Is Mr. Johnson around?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "knowJohnsonFlat"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "It\'s fine, I\'m just looking around..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530936df326437680800575c"
+  }
+  index: 1
+  text: "I knew it! Sure, have a look..."
+  branches {
+    responseText: "Thanks!"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "530935eb326437680800574d"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5309399932643768080057dd"
+  }
+  index: 2
+  text: "Ey? Johnson? Oh... No, he ain\'t around..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530941c7326437a011006702"
+  }
+  index: 3
+  text: "{{GM}}You notice someone at the end of the club who has become very interested in your conversation as the Dwarf mentions Mr. Johnson{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53094040326437a0110066bc"
+  }
+}
+nodes {
+  idRef {
+    id: "530941c7326437a011006705"
+  }
+  index: 4
+  text: "Listen, Stunty... Where is he? I\'ve finished a job for him and it seems like he\'s avoiding me..."
+  branches {
+    responseText: "Please excuse my friend\'s manners, she is very angry... We just want to close our deal with Johnson and everything will be fine!\n{{CC}}Charisma: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 5
+    onlyOnce: true
+    idRef {
+      id: "53093bc53264376808005852"
+    }
+  }
+  branches {
+    responseText: "Here\'s some Nuyen to make you remember where he is?\n{{CC}}Bribe: 100 Nuyen{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    nextNodeIndex: 11
+    onlyOnce: true
+    idRef {
+      id: "53093bc93264376808005853"
+    }
+  }
+  branches {
+    responseText: "What she said!"
+    nextNodeIndex: 17
+    onlyOnce: true
+    idRef {
+      id: "53093b9e326437680800580f"
+    }
+  }
+  branches {
+    responseText: "Let him be, Rickshaw!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53092b1f3264376808005554"
+  }
+}
+nodes {
+  idRef {
+    id: "530941c7326437a011006708"
+  }
+  index: 5
+  text: "Yeah, that\'s right... so rude! You should buy some of my product to take the edge off, my friend!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530941c7326437a01100670b"
+  }
+  index: 6
+  text: "Hmpf..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53092b1f3264376808005554"
+  }
+}
+nodes {
+  idRef {
+    id: "530941c7326437a01100670e"
+  }
+  index: 7
+  text: "But you\'re out of luck, I haven\'t seen Johnson around today... He usually is here all the time, so that\'s odd."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530941c7326437a011006711"
+  }
+  index: 8
+  text: "Drek! I told you he\'s avoiding us! How are we going to get rid of this thing?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53092b1f3264376808005554"
+  }
+}
+nodes {
+  idRef {
+    id: "53094212326437a01100674e"
+  }
+  index: 9
+  text: "{{GM}}The person at the end of the club looks like he is talking into some sort fo comlink before he heads for the exit of the club...{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53094040326437a0110066bc"
+  }
+}
+nodes {
+  idRef {
+    id: "53094212326437a011006751"
+  }
+  index: 10
+  text: "I can tell you where he lives, it\'s not far, just two houses down the road from here. Apartment number 3, you can\'t miss it, just follow the trail of flies!"
+  branches {
+    responseText: "Ok, thanks!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "knowJohnsonFlat"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Investigate the Johnson that owes you Nuyen for the last run"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Visit Mr. Johnson in his apartment"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Order Actor to Move To (Prop)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53094040326437a0110066bc"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5309318b3264376808005740"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Prop Visible"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "530944c5326437a01100685d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "530944a7326437a01100685b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Prop Visible"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "530944b7326437a01100685c"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5309468e326437a01100693c"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "53094759326437a01100693d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "53094767326437a01100693e"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "530947a2326437a01100693f"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530941c7326437a011006718"
+  }
+  index: 11
+  text: "Sure, I\'ll take that!"
+  branches {
+    responseText: "So, where is he then?"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 100
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530941c7326437a01100671b"
+  }
+  index: 12
+  text: "You\'re out of luck, I haven\'t seen Johnson around today... He usually is here all the time, so that\'s odd."
+  branches {
+    responseText: "You take our Nuyen and then don\'t deliver?"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530941c7326437a01100671e"
+  }
+  index: 13
+  text: "Nooo, I wouldn\'t do that! I can tell you where he lives, it\'s not far, just two houses down the road from here. Apartment number 3, you can\'t miss it, just follow the trail of flies!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094323326437a0110067ca"
+  }
+  index: 14
+  text: "Looks like we might be able to get rid of this thing!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53092b1f3264376808005554"
+  }
+}
+nodes {
+  idRef {
+    id: "53094338326437a0110067cf"
+  }
+  index: 15
+  text: "{{GM}}The person at the end of the club looks like he is talking into some sort fo comlink before he heads for the exit of the club...{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53094040326437a0110066bc"
+  }
+}
+nodes {
+  idRef {
+    id: "53094346326437a0110067d4"
+  }
+  index: 16
+  text: "That\'s all I can tell you. Tell him to get his ass over here if you catch him at home!"
+  branches {
+    responseText: "Ok, thanks!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "knowJohnsonFlat"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Investigate the Johnson that owes you Nuyen for the last run"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Visit Mr. Johnson in his apartment"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Order Actor to Move To (Prop)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53094040326437a0110066bc"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5309318b3264376808005740"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "530944a7326437a01100685b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Prop Visible"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "530944c5326437a01100685d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Prop Visible"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "530944b7326437a01100685c"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DoesOrDoesNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5309468e326437a01100693c"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "53094759326437a01100693d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "53094767326437a01100693e"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "530947a2326437a01100693f"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530941c7326437a011006722"
+  }
+  index: 17
+  text: "You guys need to learn some manners!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

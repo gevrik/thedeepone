@@ -1,0 +1,1899 @@
+idRef {
+  id: "51fb7657643431e3059ef96f"
+}
+ui_name: "Coyote Market"
+nodes {
+  idRef {
+    id: "51fb7669643431e3059ef975"
+  }
+  index: 0
+  text: "Hoi, $(l.name). How do you like my bar?"
+  branches {
+    responseText: "I know this place from way back. Had a little run-in with some Renaraku goons because one of my team mates ratted us out... Sam was here, too."
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb76cd643431e3059ef97e"
+  }
+  index: 1
+  text: "Sam? I haven\'t thought of him since... \n\n{{GM}}Coyote\'s expression becomes dark...{{/GM}}\n\nToo many people we know die or disappear on us, chummer!\n\nBut hey, we got something to do... remember?"
+  branches {
+    responseText: "Sure. The Johnson has kept me busy while you were reaching out to your street contacts. Did you get some valuable intel?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb7829643431e3059ef9a0"
+  }
+  index: 2
+  text: "Sure did! But drek, this stuff is confusing..."
+  branches {
+    responseText: "Start from the beginning..."
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb7871643431e3059ef9a3"
+  }
+  index: 3
+  text: "That\'s the problem, there is no beginning. Nobody knows what happened to the Union. Was just boarded up over night a few nights ago by some private contractor company. Word on the street is that our chummers in the Union were babysitting a little girl called Annie."
+  branches {
+    responseText: "A little girl? Did you find out why they were babysitting her?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb7906643431e3059ef9a6"
+  }
+  index: 4
+  text: "They were protecting her or something... Can you believe that? Whatever happened, our chummers didn\'t succeed. The girl is now being held by the Rusted Stilettos in the Redmond Barrens."
+  branches {
+    responseText: "The Rusted Stilettos?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Ahh, the gang made up of Trolls and Orks? They are total lunatics, no?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 6
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb7b0c643431e3059ef9e6"
+  }
+  index: 5
+  text: "The Rusted Stilettos are mostly composed of Orks and Trolls. Many have horrific mutations and they\'re nigh-on psychotic from their exposure to radiation in the Barrens and heavy drugs."
+  branches {
+    responseText: "Nasty gang from the sound of it..."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb7af6643431e3059ef9e4"
+  }
+  index: 6
+  text: "{{CC}}Coyote smiles{{/CC}}\nIndeed, you know your turf, chummer!"
+  branches {
+    responseText: "Ha! Some of their guys and I butted some heads together a while back..."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteAffection"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fb7eed643431e3059efa5a"
+  }
+  index: 7
+  text: "The Rusted Stilettos can easily be identified by their shocking mutations, their overall insanity and their red jackets.\n\nAlso their members are not merely considered insane, they deal heavyly in BTLs and even managed the change from chip to direct download trade. Believe me, I\'ve busted up one or two of their studios in my time...\n\nCurrently they are in a gang war with their long-time enemies, the Red Hot Nukes."
+  branches {
+    responseText: "Who are the Nukes?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "The Dwarf  gang?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 9
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "The Dwarf gang that is led by the former Runner with the handle Grinder?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 10
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb8163643431e3059efae4"
+  }
+  index: 8
+  text: "A gang of Dwarfs, also based in the Barrens.\n\nThey are led by a Dwarven adept, a former shadowrunner - called Grinder - who hates corps and sees himself as a neo-anarchist."
+  branches {
+    responseText: "You didn\'t lie when you said you know your gangs!"
+    nextNodeIndex: 11
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb81e0643431e3059efaff"
+  }
+  index: 9
+  text: "You\'re right again, chummer! Butted some heads with them too? {{CC}}Her smile widens even more{{/CC}}"
+  branches {
+    responseText: "Ha! No, just know them from roaming the streets."
+    nextNodeIndex: 11
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb8254643431e3059efb03"
+  }
+  index: 10
+  text: "{{CC}}Coyote winks at you{{/CC}} Impressive! You know these streets as well as I do, it seems. Kindred spirits?"
+  branches {
+    responseText: "Hopefully not of the insect kind... {{CC}}You wink back at Coyote{{/CC}}"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteAffection"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fb833e643431e3059efb42"
+  }
+  index: 11
+  text: "Their initiation rite consists of having to defuse a bomb built by Grinder. If the newcomer succeeds, he\'s in. If not, then the blast usually kills the poor sod."
+  branches {
+    responseText: "So the mage in the Union\'s basement hired the Stilettos?"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "51fb83e9643431e3059efbaa"
+  }
+  index: 12
+  text: "Nope. Now it starts to get confusing and that\'s why it also took me so long...\n\nI had to contact everyone I know to find out who hired the guys from the basement. You know they weren\'t \"professionals\", pretty easy to despense of...\n\nThe gangers in the basement were recruits of the Brain Eaters, a relatively new gang in the Barrens."
+  branches {
+    responseText: "Now I understand what you meant with confusing... Anything else?"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb850e643431e3059efbf3"
+  }
+  index: 13
+  text: "One of their members told me that this guy just showed up, all cloaked up in this ritual robe, face hidden.\n\nHad some kind of speech-impediment, always talking in slurs and squelches. He also had an out-of-town accent. The gangers were laughing at him for that before he showed them the Nuyen... Told them it was a rescue mission.\n\nSeems like the Stilettos were faster, which was not so good for our friends in the Union. I wonder what happened?\n\n{{CC}}Her face turns solemn again{{/CC}}"
+  branches {
+    responseText: "Don\'t worry, we\'ll find out what happened. Any other leads?"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb8604643431e3059efc1b"
+  }
+  index: 14
+  text: "NIBS! So what do you wanna do?"
+  branches {
+    responseText: "We should visit the Stilettos, if they took the girl from the Union they can tell us what happened. And if I don\'t like what they\'ll tell us we\'ll switch to revenge mode!"
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "We should find out more about the guy who attacked us in the basement. If he had an out-of-town accent we might want to check the local Monorail station."
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fb8e75643431e3059efce8"
+  }
+  index: 15
+  text: "Sounds good, $(l.name). I knew you would have a great idea.\n\nI know the location where they keep the girl, it\'s an old building.\n\nTalk to me again when you are ready to leave."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Coyote to find out what she uncovered"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Tell Coyote when you are ready to leave"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Go to the Stilettos Hideout"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Go to the Monorail Station"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fb8f13643431e3059efd14"
+  }
+  index: 16
+  text: "Now we\'re talking. A little investigation work is always fun! Nah, not really!\n\nTalk to me again when you are ready to leave for the Monorail station."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Coyote to find out what she uncovered"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Coyote to find out what she uncovered"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Tell Coyote when you are ready to leave"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Go to the Stilettos Hideout"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Go to the Monorail Station"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fb91f0643431e3059efdc6"
+  }
+  index: 17
+  text: "I am ready for some action, $(l.name)! I got plenty of ammo and an attitude! What are we doing next?"
+  branches {
+    responseText: "I want to head to the Rusted Stiletto hideout. Maybe we can talk some sense into the gangers.\n\nIf not, we\'ll shoot our way through and try to find the girl Annie."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "hideoutStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 18
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc3e3b643431a208265284"
+  }
+  index: 18
+  text: "Sounds good. I\'m game!"
+  branches {
+    responseText: "Let\'s go! {{CC}}start mission{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "hideoutStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Stiletto Hideout Entrance"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Just one more second!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd716e6434313b0b9ef897"
+  }
+  index: 19
+  text: "Listen, $(l.name). I have been thinking about the girl. She is not doing any better, still out of her mind most of the time. I don\'t think this is the right place for her.\n\nI have gotten  us two cheap flats, they right opposite of each other, so that should be fine. They are relatively secure, if we don\'t go spreading the word of our new hideout...\n\nYou can always come back here to shop and tinker, or to take on runs for Johnson, but I really think we need to hide Annie somewhere else. This is getting much too hot!"
+  branches {
+    responseText: "You are right. Can you show me the place?"
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd725d6434313b0b9ef89a"
+  }
+  index: 20
+  text: "Of course. I am happy that you agree. Are you ready to go?"
+  branches {
+    responseText: "Let\'s go."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "newFlat"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Talk to Coyote about Annie"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 21
+  }
+  branches {
+    responseText: "Not yet. Wait a second."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd729f6434313b0b9ef89e"
+  }
+  index: 21
+  text: "Great. It\'s not far."
+  branches {
+    responseText: "Okay!"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "New Home Sweet Home"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "52015a08643431de06d7d57a"
+  }
+  index: 22
+  text: "I am ready for some action, $(l.name)! What are we doing next?"
+  branches {
+    responseText: "We should find out more about our attacker. Let us head to the Monorail Station."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "busStationStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 23
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "52015a08643431de06d7d582"
+  }
+  index: 23
+  text: "Hmm. You know what? I just got an important call and I need to do something. Can you take this on by yourself? We are not expecting any trouble at the station, are we? You know I don\'t like this whole investigation business at all... Call me if there is trouble!"
+  branches {
+    responseText: "It\'s fine, I will take care of it! {{CC}}start mission{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "busStationStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Barrens Massacre"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I just need to do something else first."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "52015ab2643431de06d7d5ce"
+  }
+  index: 24
+  text: "I am ready for some action, $(l.name)! What are we doing next?"
+  branches {
+    responseText: "I want to head to the Rusted Stiletto hideout. Maybe we can talk some sense into the gangers. If not, we\'ll shoot our way through and try to find the girl Annie."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "hideoutStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 25
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "We should find out more about our attacker. Let us head to the Monorail Station."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "busStationStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 26
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "52015ab2643431de06d7d5d1"
+  }
+  index: 25
+  text: "Sounds good. I\'m game!"
+  branches {
+    responseText: "Let\'s go! {{CC}}start mission{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "hideoutStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Stiletto Hideout Entrance"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Just one more second!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "52015aca643431de06d7d5db"
+  }
+  index: 26
+  text: "Hmm. You know what? I just got an important call and I need to do something. Can you take this on by yourself? We are not expecting any trouble at the station, are we? I hate this investigation drek!"
+  branches {
+    responseText: "It\'s fine, I will take care of it! {{CC}}start mission{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "busStationStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Barrens Massacre"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I just need to do something else first."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "annieFound"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "monorailComplete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 17
+  hideIfUnavailable: true
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "monorailComplete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "annieFound"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 19
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "monorailComplete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "annieFound"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 22
+  hideIfUnavailable: true
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "annieFound"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "monorailComplete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 24
+  hideIfUnavailable: true
+}

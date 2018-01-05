@@ -1,0 +1,559 @@
+idRef {
+  id: "530a21a832643724030010e8"
+}
+ui_name: "ch04-ev2_parklotGuard"
+nodes {
+  idRef {
+    id: "530a21d732643724030010f2"
+  }
+  index: 0
+  text: "Hoi, chummers, are you the backup I ordered?"
+  branches {
+    responseText: "We are not securities..."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Yes, we are... So, what\'s up?\n{{CC}}Charisma: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "Nope, and we are leaving now."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a223432643724030010f7"
+  }
+  index: 1
+  text: "Oh - kay! You look like security! Oh well, guess I\'ll have to wait for my real backup then!"
+  branches {
+    responseText: "Maybe we can help you with your problem?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "See ya!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a229932643724030010fb"
+  }
+  index: 2
+  text: "Hmm... It\'s official company business... But - I\'ve been waiting so long for my backup that I\'m getting kinda desperate here...\n\nI don\'t have anything to offer you guys, though - this job doesn\'t pay very well and I don\'t have anything else of value I\'m afraid..."
+  branches {
+    responseText: "Do you have access to the Hotel?"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "In that case I\'m not wasting my time with this!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a22ee32643724030010ff"
+  }
+  index: 3
+  text: "Well, erm - yeah, via the side entrance only. Sometimes I have to pick up or deliver the keys to rooms, but I can only access the elevator with my card, not the rooms! If you help me, you can \"borrow\" my access card!"
+  branches {
+    responseText: "Ok, fine! That\'s a deal. So what\'s the problem?"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Let me think about it!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a233e3264372403001103"
+  }
+  index: 4
+  text: "Those gangers have been cutting holes into the fence again and been stealing from the cars. I\'m already getting into trouble because of this and I can\'t lose my job now!"
+  branches {
+    responseText: "We will take care of those gangers..."
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "On second thought, I can\'t really help you right now!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a23bc3264372403001109"
+  }
+  index: 5
+  text: "Well we\'ve fragged a couple of them already, but they are still coming back... I guess as long as they\'re able to sell their loot to that fencer they\'ll still be coming! Have to rip out the weed by its roots, if you know what I\'m talking about..."
+  branches {
+    responseText: "Hmm, off-ing some shopkeeper in this part of town will not go unnoticed... Very dangerous... The Star will take notice, and we can\'t have any of that!"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Fine. Consider it done! But you\'ll owe us!"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a245e326437240300110c"
+  }
+  index: 6
+  text: "True, but as long as this guy is in business, the parking lot will be subject to plundering from those gangers... I don\'t care how you do it, just get rid of these guys!"
+  branches {
+    responseText: "We will be back!"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Help the parking lot guard by stopping the thieves"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a24b43264372403001110"
+  }
+  index: 7
+  text: "Sure, sure! Anything - just get rid of those gangers!"
+  branches {
+    responseText: "Ok - we will be back in a bit!"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Help the parking lot guard by stopping the thieves"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a6f9d326437580c00458f"
+  }
+  index: 8
+  text: "Wow! I heard what you did, and I want to thank you! Here, have my access card and keep it as long as you want! Now that this fence is dead I will keep my job, most def! Thanks, again!"
+  branches {
+    responseText: "Thanks for the card!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_parkingComplete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch04-hotelAccessMercer"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Talk to the guard about the fence"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a70b4326437580c00460d"
+  }
+  index: 9
+  text: "Thanks again for the help, chummer!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_fenceKilled"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_fenceKilled"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_parkingComplete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 8
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_fenceKilled"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_parkingComplete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 9
+}

@@ -1,0 +1,107 @@
+idRef {
+  id: "530a0cff3264372403000f62"
+}
+ui_name: "main_everett2Exit"
+nodes {
+  idRef {
+    id: "530a0d163264372403000f6a"
+  }
+  index: 0
+  text: "Where do you want to go?"
+  branches {
+    responseText: "{{CC}}Go to my Hideout{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch02_home"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Go to the Underground Market{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Rooftop Market"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Go to the Everett Station District{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch02_everett_d1"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Go to Rickshaw\'s Hideout{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch03_hideout"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Go to Tacoma{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch03_tacoma"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Stay here{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  nextNodeIndex: 0
+}

@@ -1,0 +1,374 @@
+idRef {
+  id: "530d1f35326437800900662b"
+}
+ui_name: "ch04-sn_hackerTerminal"
+nodes {
+  idRef {
+    id: "530d1f3f3264378009006631"
+  }
+  index: 0
+  text: "ZEITGEIST OS - WELCOME!\n\nPlease choose an operation:"
+  branches {
+    responseText: "{{CC}}Flatline Project{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Exit{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "530d1f823264378009006635"
+  }
+  index: 1
+  text: "Please choose a file:"
+  branches {
+    responseText: "{{CC}}Test Subject: Jhonny Clean{{/CC}}"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Test Subject: Annie Whataley{{/CC}}"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "{{CC}}Other Test Subjects{{/CC}}"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "530d1fc8326437800900663a"
+  }
+  index: 2
+  text: "Jhonny Clean was our first successful mind transfer! The subject had shown great promise for neural tranfsfusion and allowed us this great break-through.\n\nThe flatline was stored in the archive until we used it as another test for our Morph program.\n\nThe flatline was successfully transferred onto a freshly grown Hellhound clone. Since we did not want to overload the Morph in this first test, we left out the Sensory Control Upgrade, which can be used to enable vocal cords usage on the hellhound morph. The upgrade is currently stored in the Sense/Net archive.\n\nWe have also generated a fail-safe device for the neurologic control systems that were set in place on the Morph. The Sensory Control Override module can be used to reset the control systems on the Hellhound Morph. The override module is currently stored in the Sense/Net archive."
+  branches {
+    responseText: "{{CC}}Back to main menu{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Back to file list{{/CC}}"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Retrieve the Flatline from the Sense/Net Storage Facility"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_flatlineFound"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_knowsHellyIsClean"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_knowsAboutFlatline"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find the Sensory Control Override Module"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find the Sensory Upgrade Module"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Investigate Sense/Net"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530d21003264378009006668"
+  }
+  index: 3
+  text: "Annie Whataley was originally brought in for research on her physiological anomalies, but our scanners were unable to find anything particularily out of place in the girl - nothing that we would not have gathered from her medical files already. Because of these results she is now scheduled for digitization in the Sense/Net archive basement facility."
+  branches {
+    responseText: "{{CC}}Back to main menu{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Back to file list{{/CC}}"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find Annie"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Investigate Sense/Net"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "530d21a73264378009006676"
+  }
+  index: 4
+  text: "All other test subjects that were brought in have been digitized after the Jhonny Clean success and have been sold to a number of our worldwide clients."
+  branches {
+    responseText: "{{CC}}Back to main menu{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Back to file list{{/CC}}"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  nextNodeIndex: 0
+}

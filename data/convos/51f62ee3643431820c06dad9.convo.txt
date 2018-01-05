@@ -1,0 +1,33 @@
+idRef {
+  id: "51f62ee3643431820c06dad9"
+}
+ui_name: "Shadowball Defeat"
+nodes {
+  idRef {
+    id: "51f62ef1643431820c06dadf"
+  }
+  index: 0
+  text: "We beat you!"
+  branches {
+    responseText: "We will win next time!"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Rooftop Market"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

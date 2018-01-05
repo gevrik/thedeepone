@@ -1,0 +1,560 @@
+idRef {
+  id: "521d0cfb3930385407000f42"
+}
+ui_name: "ec_data1"
+nodes {
+  idRef {
+    id: "521d0d013930385407000f48"
+  }
+  index: 0
+  text: "SHIPPING MANIFEST FOR WAREHOUSE 1"
+  branches {
+    responseText: "{{CC}}Browse data{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Modify Dimension Heat"
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Matrix"
+            }
+          }
+        }
+        args {
+          float_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Browse data{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Dismiss data{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521d0d8c3930385407000f50"
+  }
+  index: 1
+  text: "{{CC}}You have raised the alarm state of the system{{/CC}}\n\nCustomer: <confidential - not for your eyes>\nDestination: Boston\nCargo Type: Military Equipment"
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521d0dea3930385407000f57"
+  }
+  index: 2
+  text: "Customer: Renraku\nDestination: Boston\nCargo Type: Military Equipment"
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521d0ea23930385407000f65"
+  }
+  index: 3
+  text: "SHIPPING MANIFEST FOR WAREHOUSE 1"
+  branches {
+    responseText: "{{CC}}Browse data{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Modify Dimension Heat"
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Matrix"
+            }
+          }
+        }
+        args {
+          float_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Browse data{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Dismiss data{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521d0ea23930385407000f68"
+  }
+  index: 4
+  text: "{{CC}}You have raised the alarm state of the system{{/CC}}\n\nCustomer: <confidential - not for your eyes>\nDestination: Hong Kong\nCargo Type: Magical Goods"
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521d0ea23930385407000f6b"
+  }
+  index: 5
+  text: "Customer: Wuxing Inc.\nDestination: Hong Kong\nCargo Type: Magical Goods"
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521d10113930385407000f8b"
+  }
+  index: 6
+  text: "SHIPPING MANIFEST FOR WAREHOUSE 1"
+  branches {
+    responseText: "{{CC}}Browse data{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Modify Dimension Heat"
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Matrix"
+            }
+          }
+        }
+        args {
+          float_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 7
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Browse data{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Dismiss data{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521d10113930385407000f8e"
+  }
+  index: 7
+  text: "{{CC}}You have raised the alarm state of the system{{/CC}}\n\nCustomer: <confidential - not for your eyes>\nDestination: Munich\nCargo Type: Military Equipment"
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "521d10113930385407000f91"
+  }
+  index: 8
+  text: "Customer: Saeder-Krupp Heavy Industries\nDestination: Munich\nCargo Type: Military Equipment"
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "wh1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "wh2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "wh1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 3
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "wh2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 6
+}

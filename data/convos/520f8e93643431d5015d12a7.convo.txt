@@ -1,0 +1,37 @@
+idRef {
+  id: "520f8e93643431d5015d12a7"
+}
+ui_name: "or_guard0"
+nodes {
+  idRef {
+    id: "520f8e9a643431d5015d12ad"
+  }
+  index: 0
+  text: "Don\'t cause any trouble!"
+  branches {
+    responseText: "Okay!"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I came here to kick ass and chew bubblegum, and I am all out of bubblegum... {{CC}}Attack guards{{/CC}}"
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "bubblegum"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

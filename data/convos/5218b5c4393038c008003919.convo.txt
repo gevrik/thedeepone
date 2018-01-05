@@ -1,0 +1,426 @@
+idRef {
+  id: "5218b5c4393038c008003919"
+}
+ui_name: "ch03_zeitgeistGuardian"
+nodes {
+  idRef {
+    id: "5218b5ce393038c00800391f"
+  }
+  index: 0
+  text: "Please state your intentions!"
+  branches {
+    responseText: "I would like to enter the Zeitgeist Robotics office building..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_uwWarEnded"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I would like to enter the Zeitgeist Robotics office building..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_uwWarEnded"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_accessToOffice"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_zeitgeistPayload"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Can you tell me something about Zeitgeist Robotics?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Erm... Nothing... I\'m leaving!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5218b60f393038c008003923"
+  }
+  index: 1
+  text: "Request denied!"
+  branches {
+    responseText: "Why?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5218b645393038c008003926"
+  }
+  index: 2
+  text: "Office is under lockdown due to heavy fighting between local Triad and Yakuza groups."
+  branches {
+    responseText: "What if I stop those organizations from fighting each other?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5218b69b393038c008003929"
+  }
+  index: 3
+  text: "Lockdown would be lifted and your request would be granted."
+  branches {
+    responseText: "Okay, I will take care of those guys... Tell me where they are and I\'m gone..."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5218b6c7393038c00800392c"
+  }
+  index: 4
+  text: "Both Triad and Yakuza have one Controller that coordinates their operation... Both Controllers and all remaining Triad and Yakuza thugs need to be eliminated for lockdown to be lifted.\n\nAs long as one of their Controllers is still alive more Triad and Yakuza thugs will appear and lockdown will be upheld..."
+  branches {
+    responseText: "Got it! Let\'s do this!"
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "startWar"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "warStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I have changed my mind. See you later!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521a252d393038cc1300492f"
+  }
+  index: 5
+  text: "Request granted! Please enjoy your stay in Tacoma!"
+  branches {
+    responseText: "Thanks..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch03_accessToOffice"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "521a256a393038cc13004946"
+  }
+  index: 6
+  text: "With pleasure! Zeitgeist Robotics is a leading supplier of drones and robots for all purposes.\n\nZeitgeist Robotics offers European craftmanship for an affordable price! Why not visit our public Matrix system for more information on specific products?"
+  branches {
+    responseText: "Where can I access the Matrix?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Okay..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521a25d0393038cc1300494a"
+  }
+  index: 7
+  text: "There are several public terminals in our office building, you can\'t miss them! Have a nice day!"
+  branches {
+    responseText: "Thanks..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "522bef8c393038580a000326"
+  }
+  index: 8
+  text: "Please step back! This office is currently under lockdown!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "chapter4started"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "chapter4started"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 8
+}

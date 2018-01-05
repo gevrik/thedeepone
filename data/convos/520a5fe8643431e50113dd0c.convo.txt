@@ -1,0 +1,1779 @@
+idRef {
+  id: "520a5fe8643431e50113dd0c"
+}
+ui_name: "ch02_gangbossNew"
+nodes {
+  idRef {
+    id: "520a5ff8643431e50113dd12"
+  }
+  index: 0
+  text: "Wot do you want?"
+  branches {
+    responseText: "Tell me about your gang!"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Tell me about this DAGON CORP! {{CC}}mission{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutDagonCorp"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Kill a Runner hired by DAGON CORP"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 7
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "What can you tell me about the museum?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutMuseum"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520bac716434318004c58996"
+    }
+  }
+  branches {
+    responseText: "Can you tell me about the club in this district?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutClub"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 11
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520bac746434318004c58997"
+    }
+  }
+  branches {
+    responseText: "I heard that you guys have some kind of benefactor that funds your operations?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutGangBenefactor"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 12
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520ba8d96434318004c586cd"
+    }
+  }
+  branches {
+    responseText: "What do you know about Ashpool?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 13
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "So it has been Ashpool Systems that funds your operations?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutGangBenefactor"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 18
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "What can you tell me about Dr. Hansen?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutHansen"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 26
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Have I earned enough reputation with your gang so that you will help me to meet Dr. Hansen?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "knowHansenMutations"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_gangLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_accessToMuseum"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 29
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I\'m leaving..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a61e5643431e50113dd1d"
+  }
+  index: 1
+  text: "We are the Riffruffers! Only Metahumans are allowed to join!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowsAboutRR"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520a6268643431e50113dd28"
+  }
+  index: 2
+  text: "So tell me wot you wanna know?"
+  branches {
+    responseText: "Where did you come up with that name?"
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "520a7910643431550213c8b2"
+    }
+  }
+  branches {
+    responseText: "Why only Metahumans?"
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "520a791b643431550213c8b3"
+    }
+  }
+  branches {
+    responseText: "Can we talk about something else?"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a6268643431e50113dd2b"
+  }
+  index: 3
+  text: "Well, the suits in dis district always called us that anyway, so why not make it our gang name?"
+  branches {
+    responseText: "I understand."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a6297643431e50113dd36"
+  }
+  index: 4
+  text: "Most of dem Humies in dis town wouldn\'t even wanna join. They get all da nice jobs at dat damn CORP dat is runnin dis place!"
+  branches {
+    responseText: "Which corp?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a6a59643431550213c4d4"
+  }
+  index: 5
+  text: "Dey called DAGON CORP and dey only hire Humies... Dats why we decided to gang up and fight! Dey makin our lives miserable... Deir CEO is a very strange guy, not from around here... When he came here a couple of years ago he bought almost the whole town and then everything went downhill..."
+  branches {
+    responseText: "So you only created this gang to fight against this DAGON CORP?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutDagonCorp"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutStrangeCEO"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520a6ac3643431550213c4d7"
+  }
+  index: 6
+  text: "Pretty much... Wot can we do? We don\'t have jobs..."
+  branches {
+    responseText: "A vicious circle..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a6bba643431550213c54f"
+  }
+  index: 7
+  text: "They are a corp from hell! Dey only hire Humies... sometimes dey hire a Meta for the really bad jobs dat nobody wants... Dey running dis town and we don\'t like it! Most of dem civilians work for dem, in the warehouse... We pester dem wageslaves so dey don\'t go to work no more or leave town!\n\nWe don\'t want dem slaves to get hurt, but we want to hurt dat corp!"
+  branches {
+    responseText: "Maybe I can help you with that? {{CC}}mission{{/CC}}"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Okay, thanks."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a6c7a643431550213c580"
+  }
+  index: 8
+  text: "Hmm, you could! Deres dis guy who has been attacking my members, hired by dat corp! If you could take care of him for us dat be good - I can tell you the location..."
+  branches {
+    responseText: "Sure, tell me where and who and I\'ll take care of the rest!"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Hmm, maybe later..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a6e7c643431550213c5ac"
+  }
+  index: 9
+  text: "Great! If you can get rid of dat guy I\'ll tell my guys dat you\'re cool!"
+  branches {
+    responseText: "I won\'t disappoint you."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Kill a Runner hired by DAGON CORP"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "520a6ed5643431550213c5d5"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Last Created Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "5207fb3e6434310502cd3749"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Last Created Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor Wander Range"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Last Created Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 48
+      }
+    }
+    ops {
+      functionName: "Set Waypoint on Actor"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Last Created Actor"
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520a69e2643431550213c4b8"
+  }
+  index: 10
+  text: "Just old Humies with old books in dere... Nothing dat interests us..."
+  branches {
+    responseText: "Okay."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a6a15643431550213c4bb"
+  }
+  index: 11
+  text: "Dere\'s mostly Humies in dat place, we don\'t go dere often..."
+  branches {
+    responseText: "Okay."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a891b643431be0213c673"
+  }
+  index: 12
+  text: "Where did you hear that? I am the boss on the streets! It doesn\'t matter who we get our Nuyen for weapons and armor from..."
+  branches {
+    responseText: "Right..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ba5db6434318004c5861d"
+  }
+  index: 13
+  text: "Ashpool? Where have you heard dat name?"
+  branches {
+    responseText: "No need to play dumb. I know that you have been meeting with someone who works for Ashpool Systems. They have been financing your gang operations..."
+    nextNodeIndex: 14
+  }
+  branches {
+    responseText: "A little bird whispered it into my ear..."
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ba7196434318004c58624"
+  }
+  index: 14
+  text: "Ha! I like your direct approach... Well yeah, dey been financing us for a while... I don\'t really care, dey don\'t want anything in return, except for us to keep tabs on a few people in town..."
+  branches {
+    responseText: "Which people?"
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ba7cb6434318004c58627"
+  }
+  index: 15
+  text: "Two boring scientists... One of them is a local called Dr. Armitage. He works in the museum - almost never comes out. "
+  branches {
+    responseText: "And the other one?"
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ba8016434318004c5862a"
+  }
+  index: 16
+  text: "That one is an important manager in DAGON CORP: Dr. Alexander Hansen. Works and lives in the DAGON CORP tower, so we are having trouble keeping an eye on him at all times. Sometimes he goes to meet Dr. Armitage in dat museum... But there\'s always several bodyguards around him..."
+  branches {
+    responseText: "Thanks!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutHansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520ba8806434318004c5867e"
+  }
+  index: 17
+  text: "Dem little birds of yours need to be more careful! Dey been whispering about stuff dey shouldn\'t be whispering about!"
+  branches {
+    responseText: "Hmm... okay..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ba8d36434318004c586c9"
+  }
+  index: 18
+  text: "How do you know dat? You\'re a smart one, eh?"
+  branches {
+    responseText: "I have... visited your little Ashpool contact. They have been putting a lot of dough into your operation... Have you ever thought that they might have some exterior motives?"
+    nextNodeIndex: 19
+  }
+  branches {
+    responseText: "I am... do you want to tell me the whole story?"
+    nextNodeIndex: 23
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ba9aa6434318004c586d9"
+  }
+  index: 19
+  text: "I don\'t really care... Dey give us Nuyen and we can fight for what we believe is right... So far dey haven\'t asked for anything special..."
+  branches {
+    responseText: "So far, yes..."
+    nextNodeIndex: 20
+  }
+  branches {
+    responseText: "Can\'t you see that they are just using you?"
+    nextNodeIndex: 21
+  }
+  branches {
+    responseText: "Do you know who the big boss is at Ashpool? I mean the one who \"hired\" you guys..."
+    nextNodeIndex: 22
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520baa256434318004c586de"
+  }
+  index: 20
+  text: "You think dey will ask somefin big of us soon? Hmm.. Maybe I will tell him dat dey can\'t use us like that!"
+  branches {
+    responseText: "Maybe you should!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520baa466434318004c586e0"
+  }
+  index: 21
+  text: "Dat\'s fine. You know it is better to be used, but be able to fight than just sittin around in the bar and talking about fightin!"
+  branches {
+    responseText: "I kinda see the logic in that..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520baa666434318004c586e2"
+  }
+  index: 22
+  text: "No idea. I only had contact with the guy you... visited..."
+  branches {
+    responseText: "Hmm, okay..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520baaa76434318004c58752"
+  }
+  index: 23
+  text: "Not much to tell. One day dis guy approached me and told me that he liked wot we did! He asked if we wanted to go \"pro\" and offered to help us financially...\n\nHe gave us good gear and all he wanted in return is dat we keep an eye on some people for \'im."
+  branches {
+    responseText: "Which people?"
+    nextNodeIndex: 24
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520bab3f6434318004c5875e"
+  }
+  index: 24
+  text: "Two boring scientists... One of them is a local called Dr. Armitage. He works in the museum - almost never comes out. "
+  branches {
+    responseText: "And the other one?"
+    nextNodeIndex: 25
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520bab3f6434318004c58761"
+  }
+  index: 25
+  text: "That one is an important manager in DAGON CORP: Dr. Alexander Hansen. Works and lives in the DAGON CORP tower, so we are having trouble keeping an eye on him at all times. Sometimes he goes to meet Dr. Armitage in dat museum... But there\'s always several bodyguards around him..."
+  branches {
+    responseText: "Thanks!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutHansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520babef6434318004c588d2"
+  }
+  index: 26
+  text: "He is one top manager of DAGON CORP - very high up in dat food chain of dat corp. We tried to keep an eye on \'im, but it is no use, too many bodyguards and he almost spends all of \'is time in dat corp tower..."
+  branches {
+    responseText: "Okay, thanks."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Do you think there is a way to get to him in the tower?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "knowHansenMutations"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 27
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520e7c46643431df0c9efcb3"
+  }
+  index: 27
+  text: "Dat tower is very well protected, you would need an army! Sometimes Hansen goes to meet with Dr. Armitage in dat museum, dat would be the only time when you could get to him - but even then he is very well protected by lots of DAGON Agents..."
+  branches {
+    responseText: "You have an army..."
+    nextNodeIndex: 28
+  }
+  branches {
+    responseText: "Shame!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520e7d1f643431df0c9efd9c"
+  }
+  index: 28
+  text: "It would be suicide. Our equipment is good, but we lack dat training and discipline dat the DAGON Agents have... Maybe if there would be less of dem we could help you, but not as it is now.\n{{GM}}You need to eliminate more DAGON Agents before Boz will help you{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "If you kill enough DAGON Agents for the Riffruffers they will help you to get to Dr. Hansen!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520e7ff1643431df0c9f00e9"
+  }
+  index: 29
+  text: "Yeah, you been doin\' a lot of stuff for us Riffruffers - we will be happy to help you now dat dere are less DAGON Agents around... But dat tower is still too dangerous. My spies told me dat Dr. Hansen will meet Dr. Armitage tonight, in dat museum, to discuss some research results or sumfin like dat."
+  branches {
+    responseText: "How did you know that?"
+    nextNodeIndex: 30
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520e8086643431df0c9f00ed"
+  }
+  index: 30
+  text: "From Roy, the museum\'s security guard... He is a good friend of mine and Dr. Armitage talks to him a lot, must be lonely in dat museum all by himself..."
+  branches {
+    responseText: "Okay, fair enough - I don\'t really care, I just need to get to Hansen..."
+    nextNodeIndex: 31
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520e8128643431df0c9f0154"
+  }
+  index: 31
+  text: "I already told Roy about you, you just need to go to dat museum\'s back entrance and he will let you in!"
+  branches {
+    responseText: "Thanks."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_accessToMuseum"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find a way to talk to Dr. Hansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Dr. Hansen and Dr. Armitage in the Museum"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52139104643431be0b639759"
+  }
+  index: 32
+  text: "Dat was a mighty battle in dat museum! I watched it all again-and-again on dat vid dat your friend Annie recorded thru the eyes of your Samurai friend..."
+  branches {
+    responseText: "Yes, it was glorious..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521391b3643431be0b63975d"
+  }
+  index: 33
+  text: "Your friend Annie sent me an interesting vid... It shows how you killed your friend in dat museum and then talked with Dr. Hansen! We don\'t like turncoats..."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Actor Uninjurable"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "520845736434312102fc4322"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor Uninjurable"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "520840e56434312102fc4320"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor Uninjurable"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "520840ef6434312102fc4321"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "bossBuddy"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "bossBuddy"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "startedFightWithBuddies"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedHansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedHansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 32
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 33
+}

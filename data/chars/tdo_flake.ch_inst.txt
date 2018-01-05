@@ -1,0 +1,95 @@
+prefab_name: "Core/DwarfMale"
+character_sheet_id: "Lvl6_Dwarf_Rigger"
+character_mod {
+  stats {
+    body: 2
+    quickness: 0
+    strength: 0
+    charisma: 0
+    intelligence: 2
+    willpower: 0
+    essence: 0
+    magic: 0
+    hp: 0
+    ap: 0
+    armor: 2
+    force: 0
+    morale: 0
+    discipline: 0
+    awareness: 0
+    perception: 0
+    authority: 0
+    protect_tether_range: 0
+    move_speed: 0
+  }
+  skills {
+    ranged_combat: 1
+    close_combat: 0
+    throwing_weapons: 1
+    spellcasting: 0
+    decking: 0
+    conjuring: 0
+    spirit_summoning: 0
+    drone_control: 2
+    biotech: 2
+    dodge: 1
+    etiquette_corporate: 0
+    etiquette_security: 0
+    etiquette_gang: 0
+    etiquette_socialite: 0
+    chi_casting: 0
+    etiquette_shadowrunner: 0
+    etiquette_street: 0
+    etiquette_academic: 0
+  }
+  specializations {
+    pistol: 0
+    rifle: 0
+    shotgun: 0
+    smg: 0
+    edged: 0
+    unarmed: 0
+    spirit_control: 0
+    esp_control: 0
+    drone_combat: 2
+  }
+  archetypeName: "Player"
+  attitude: AttitudeCautious
+}
+equipment {
+  prefab_name: "DroneAttackS_Guardian"
+}
+equipment {
+  prefab_name: "DroneSupportS_Wolfhound"
+}
+equipment {
+  prefab_name: "Pi 3 Colt Manhunter TDO"
+}
+equipment {
+  prefab_name: "RiggerGolden"
+}
+equipment {
+  prefab_name: "HealthPack_hi"
+}
+equipment {
+  prefab_name: "DroneRepairKit_hi"
+}
+equipment {
+  prefab_name: "Grenade 2 (Flash)"
+}
+team_id: "Shadowrunners"
+char_name: "Flake"
+enabled_at_start: false
+pc_spawn_number: -1
+hiring_type: HiringType_Hireable
+cyberware_eyes: "cyber SSC vehiclecontrolrig1"
+cyberware_jack: "cyber SSC skillsoftdronecontrol1"
+portrait {
+  filename: "pc_dwarfmale_03b_eastasian"
+}
+description_bio: "Flake loves his drones more than anything in the world..."
+portrait_code_override: "s5h6c4"
+karma: 6
+hiring_cost_override: 1500
+hiring_tag: "Rigger"
+id: "tdo_flake"

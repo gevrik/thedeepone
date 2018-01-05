@@ -1,0 +1,254 @@
+minX: -156
+minZ: -59
+numX: 7
+numZ: 7
+props {
+  name: "pikePlace_decor_corpse03"
+  gridPoint {
+    x: -153
+    y: 0
+    z: -58
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ripper Victim"
+  idRef {
+    id: "51a67d386233312028000898"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_ItemPickup
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -152
+    y: 0
+    z: -55
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35cb643431b50ce82b85"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -154
+    y: 0
+    z: -55
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35cb643431b50ce82b86"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -152
+    y: 0
+    z: -57
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35cb643431b50ce82b87"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -156
+    y: 0
+    z: -55
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35cb643431b50ce82b88"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -154
+    y: 0
+    z: -57
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35cb643431b50ce82b89"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -152
+    y: 0
+    z: -59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35cb643431b50ce82b8a"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -156
+    y: 0
+    z: -57
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35cb643431b50ce82b8b"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -154
+    y: 0
+    z: -59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35cb643431b50ce82b8c"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -156
+    y: 0
+    z: -59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35cb643431b50ce82b8d"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_storage_futuristicCrate01"
+  gridPoint {
+    x: -156
+    y: 0
+    z: -59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e35f1643431b50ce82b8f"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "HealthPack_hi"
+      destroyOnPickup: true
+    }
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_clutter_smallCrate"
+  gridPoint {
+    x: -155
+    y: 0
+    z: -59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e36db643431b50ce82b92"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "DroneRepairKit_hi"
+      destroyOnPickup: true
+    }
+  }
+  lod: 0
+}
+props {
+  name: "docks_clutter_loneStarCorpse01"
+  gridPoint {
+    x: -156
+    y: 0
+    z: -58
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e38c9643431b50ce82b9a"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_ItemPickup
+  }
+  lod: 0
+}
+props {
+  name: "docks_clutter_loneStarCorpse02"
+  gridPoint {
+    x: -154
+    y: 0
+    z: -56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e38d3643431b50ce82b9c"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_ItemPickup
+  }
+  lod: 0
+}
+props {
+  name: "pikePlace_decor_corpse01"
+  gridPoint {
+    x: -152
+    y: 0
+    z: -56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e38c2643431b50ce82b98"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_ItemPickup
+  }
+  lod: 0
+}
+props {
+  name: "pikePlace_decor_corpse02"
+  gridPoint {
+    x: -152
+    y: 0
+    z: -58
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "520e38bc643431b50ce82b96"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_ItemPickup
+  }
+  lod: 0
+}

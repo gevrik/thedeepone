@@ -1,0 +1,631 @@
+idRef {
+  id: "51f485f2643431c7091698ed"
+}
+ui_name: "Mr Johnson"
+nodes {
+  idRef {
+    id: "51f485f9643431c7091698f3"
+  }
+  index: 0
+  text: "Hoi, chummer. Looking for a quick run? I\'ve got just the thing for you! So far you have completed $(scene.localAmountMissions) runs for me..."
+  branches {
+    responseText: "I want to go on a solo-run!"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "I would like a group-run!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Can I get some Decking stims?"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51f483b9643431c7091698eb"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "What\'s with this new sprawl sport called The Gauntlet?"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "Only looking around..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f483b9643431c7091698eb"
+  }
+}
+nodes {
+  idRef {
+    id: "5207a6d1643431a615726714"
+  }
+  index: 1
+  text: "Sure. I need solo runners for several runs. Are you looking for a specific job?"
+  branches {
+    responseText: "Any Secret Lab Runs available? {{CC}}start run{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "The Secret Lab"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Got a Funeral Party Run for me? {{CC}}start run{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "The Funeral"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Got a Saturday Night Firefight run for me? {{CC}}start run{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "barrens 9 blocks 2"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Any Drop-Offs lately? {{CC}}start run{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "The Drop-Off"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I would like an Explosive Cargo run! {{CC}}more info{{/CC}}"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "I don\'t care which Run, send me on a random one!"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RandomMission"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Random (int)"
+            args {
+              int_value: 1
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Hmm, can we talk about something else?"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f483b9643431c7091698eb"
+  }
+}
+nodes {
+  idRef {
+    id: "521d908c393038c406002993"
+  }
+  index: 2
+  text: "That\'s no problem, if you have the correct gear...  You need to be a decent enough decker to take this one on. You should have that old N00bs-R-Us deck, right?\n\nAnd if you don\'t have a datajack I have a one-time special offer of my custom Trode Mesh for 500 nuyen - they don\'t cost any essence to use, but they work like a datajack! Like I said, this is a one-time offer, so think quickly! I also sell some stims that might be of use to you...\n\nSo what do you say, are you up for this stealth run with decking action?"
+  branches {
+    responseText: "Can I get the trodes, please?"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 500
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "main_johnsonTrodes"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Open Cyberware Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51f483b9643431c7091698eb"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "main_johnsonTrodes"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Can I get some Decking stims?"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51f483b9643431c7091698eb"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I think I qualify for this run! {{CC}}start run{{/CC}}\n{{GM}}Decking: 4{{/GM}}\n{{GM}}Cyberdeck{{/GM}}"
+    conditions {
+      ops {
+        functionName: "Evaluate If Team Has Cyberdeck"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "run_explosiveCargo"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Maybe another time then!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f483b9643431c7091698eb"
+  }
+}
+nodes {
+  idRef {
+    id: "5207a738643431a61572672c"
+  }
+  index: 3
+  text: "Okay, no prob chummer! Here\'s the thing, though. I will give you some nuyen so you can hire your team, but if you fail the mission - and there always is an option to fail one of these missions - I will want my money back - in full! Got it?!? Group missions are tough and you will need a Decker to complete these missions - don\'t come running back to me saying that you forgot to bring a Decker with you on the Run... I wouldn\'t try these solo, I\'m not kidding!"
+  branches {
+    responseText: "Any Extractions available?"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "Any Office Runs available?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "So what is this Zombietown that I heard of?\n{{CC}}daily run{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "run_ZT_complete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Can we talk about something else?"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f483b9643431c7091698eb"
+  }
+}
+nodes {
+  idRef {
+    id: "5207a7ee643431a615726740"
+  }
+  index: 4
+  text: "You bet. This group of ex-Runners have opened a BTL Factory in the Barrens. To get the factory financed they keep kidnapping the children of rich corpers for ransom money. One of these corpers has just contacted me with the location of a BTL Factory that his daughter is being held in. I want you and your team to go into the Factory and extract the daughter. Security is tight in there, in real-space as well as in their Matrix system - you will need a Decker for this one. I sent you a message just now, read it while you are on the way to the factory, it includes more information.\n\n{{GM}}Don\'t forget to read the loading text carefully for further briefing on this run! This is a hard run, but the rewards are worth it.{{/GM}}"
+  branches {
+    responseText: "I\'ll do it! {{CC}}start run{{/CC}}"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Maybe another group run?"
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f483b9643431c7091698eb"
+  }
+}
+nodes {
+  idRef {
+    id: "5207a94e643431a61572677d"
+  }
+  index: 5
+  text: "Okay, here are the 9000Y advance for your team. I don\'t care if you spend it all, but if you fail this run you will pay me back in full, got it?!?"
+  branches {
+    responseText: "I won\'t disappoint you!"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "The Extraction"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f483b9643431c7091698eb"
+  }
+  actions {
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 9000
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520fe61164343161026cdd2e"
+  }
+  index: 6
+  text: "Yeah, I got one... You know these office runs are covert operations, right? You can just shoot anybody that stands in your way, but we will both have more profit if you remain unnoticed for as long as possible!\n\nIf you\'re not a Decker yourself, I would hire one! I won\'t give you an advance for this, but don\'t worry, completing the mission will be rewarding enough for two runners... If you\'re a Decker but can\'t fight very well, I suggest hiring a wetwork runner to help you escape or to protect you during hacks.\n\nDo you still want to take on an Office Run?"
+  branches {
+    responseText: "I\'ll manage... {{CC}}start run{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "The Office Run"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Hmm, maybe later."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f483b9643431c7091698eb"
+  }
+}
+nodes {
+  idRef {
+    id: "522f433e393038bc03000f80"
+  }
+  index: 7
+  text: "Alright, chummer... now we\'re talking! You know that we\'ve had some trouble with Ghouls recently... The Funeral Party run, the Gauntlet... it is clear that these increased number of Ghoul sightings can only mean that there are some other supernatural beings around..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "522f439b393038bc03000f83"
+  }
+  index: 8
+  text: "Some runners delivered reports of a small town a couple of helicopter hours away from here. From those reports we could conclude that the Ghouls are coming from this town... It is called Mordheim and it\'s nothing more than ruins these days, the Ghouls have made sure of that...\n\nBut there is one big mansion in the town that seems to have been untouched of all the chaos and carnage in Mordheim.\n\nI want you to assemble a team and check out this town, find out what is causing the Ghoul plague and eliminate it!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+}
+nodes {
+  idRef {
+    id: "522f4423393038bc03000f86"
+  }
+  index: 9
+  text: "I won\'t give you an advance for this one... If I can be honest with you, it\'s a black run... a suicide run... I\'m not going to advance nuyen for this one, but if you can make it, I will transfer 10,000 nuyen to your stick!\n\nSo what do you say?"
+  branches {
+    responseText: "I\'m in!"
+    actions {
+      ops {
+        functionName: "Open Hiring Screen and Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "run_zombieTown"
+            }
+          }
+        }
+        args {
+          string_value: "Do you want to go to Mordheim?"
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Too risky!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52242ddf3930388c0e007d46"
+  }
+  index: 10
+  text: "Oh! The Gauntlet! It\'s a lot of carnage, so it\'s a lot of fun! We have an organizer of The Gauntlet here on the Market, it\'s an Ork called Knucklez.\n\nThere is a proper league for The Gauntlet, and currently there are many, and I mean many many sponsors looking for good runners who survive the carnage!\n\nI can offer you 100 nuyen per kill in the Gauntlet, and if you manage to rise up in the ranks maybe even more!\n\nWhat do you say?"
+  branches {
+    responseText: "Sure, why not!"
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "I will think about it..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52242e663930388c0e007d4a"
+  }
+  index: 11
+  text: "Ok, then go talk to Knucklez - he will tell you what The Gauntlet is all about!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

@@ -1,0 +1,149 @@
+idRef {
+  id: "530787d5326437f8120070dd"
+}
+ui_name: "ch04-vu_officeComputer"
+nodes {
+  idRef {
+    id: "530787f6326437f8120070e7"
+  }
+  index: 0
+  text: "This old computer is not connected to the matrix and is only used internally for bookkeeping and security communications. You quickly browse all available information and gather that the hitmen are guarding a crate in the middle room of the third floor. They have been ordered to shoot anyone who enters the room without proper clearance."
+  branches {
+    responseText: "{{GM}}Hack the security system{{/GM}}\n{{CC}}Decking: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Logout{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5307890a326437f8120070eb"
+  }
+  index: 1
+  text: "You hack into the system and issue a new order. It says that the crate is to be picked up by a new associate of the family (you) and that all guards should stand down!"
+  branches {
+    responseText: "{{CC}}Logout{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "computerHacked"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "keyDropped"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "523443c93930389c12002589"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  nextNodeIndex: 0
+}

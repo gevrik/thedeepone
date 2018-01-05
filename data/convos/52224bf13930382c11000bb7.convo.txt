@@ -1,0 +1,237 @@
+idRef {
+  id: "52224bf13930382c11000bb7"
+}
+ui_name: "ch03_nanos"
+nodes {
+  idRef {
+    id: "52224bf93930382c11000bbd"
+  }
+  index: 0
+  text: "You discover a small package in the pile that catches your attention. Inside the package you find an injector system, the label reads: \"Nanobots MX-101 Protoype\""
+  branches {
+    responseText: "{{CC}}Take the injector{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Leave{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "52224cb13930382c11000bc1"
+  }
+  index: 1
+  text: "It is very light, you can\'t see what is inside the injector tube, but it looks like it is made for private application."
+  branches {
+    responseText: "{{CC}}Inject it into your body{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_nanoSelf"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Inject it into Rickshaw\'s body{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_nanoRick"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "522233ca393038e80d0041e4"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "{{CC}}Pocket the injector{{/CC}}"
+    actions {
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch03_nanos"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "52224d1f3930382c11000bd1"
+  }
+  index: 2
+  text: "You hardly feel the injection..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "522253f43930382c11000c5b"
+  }
+  index: 3
+  text: "A strange sensation fills your head..."
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Open Cyberware Screen From Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "52224ba73930382c11000bb5"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "522233ca393038e80d0041e4"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52226a293930382c11000dba"
+  }
+  index: 4
+  text: "You quickly poke Rickshaw with the injector..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "52226a3f3930382c11000dbd"
+  }
+  index: 5
+  text: "What the frag!?! Are you crazy?!?\n\nHang on, this feels kinda good! Wow, what is this stuff? I can hear those drones \"thinking\"!!! Dreeeeeeeek!!!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5222750f3930382c11000f3d"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

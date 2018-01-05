@@ -1,0 +1,177 @@
+idRef {
+  id: "521d7469393038c4060026d8"
+}
+ui_name: "ec_startTalk"
+nodes {
+  idRef {
+    id: "521d7483393038c4060026e3"
+  }
+  index: 0
+  text: "Hey, Carl... listen...\n\nWe have some very important shipments in the next 12 hours, so make sure your guys stay out of the warehouses until I tell you that everything is safe again!\n\nUnderstood?!?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521b47d93930384c07001af0"
+  }
+}
+nodes {
+  idRef {
+    id: "521d74c6393038c4060026e7"
+  }
+  index: 1
+  text: "Sure, don\'t worry, I\'ll tell my guys to stay outside and fix up stuff here... We sure have enough machinery that needs fixing around here!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  sourceInSceneRef {
+    id: "521b41b23930384c07001aee"
+  }
+}
+nodes {
+  idRef {
+    id: "521d751d393038c4060026ea"
+  }
+  index: 2
+  text: "Good, and tell them to stay out of the computer system, it has been reinforced while we\'re preparing these important deliveries for shipping..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521b47d93930384c07001af0"
+  }
+}
+nodes {
+  idRef {
+    id: "521d7530393038c4060026ee"
+  }
+  index: 3
+  text: "Sure thing! Ha, most of my guys don\'t even know how to turn on the computer in our office!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521b41b23930384c07001aee"
+  }
+}
+nodes {
+  idRef {
+    id: "521e1c79393038a40b006f00"
+  }
+  index: 4
+  text: "Neither do I... but I know how to point my rifle at things and how to pull the trigger..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  sourceInSceneRef {
+    id: "521b47d93930384c07001af0"
+  }
+}
+nodes {
+  idRef {
+    id: "521e1ca1393038a40b006f03"
+  }
+  index: 5
+  text: "Of course you do!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521b41b23930384c07001aee"
+  }
+}
+nodes {
+  idRef {
+    id: "521e1cc0393038a40b006f15"
+  }
+  index: 6
+  text: "So everything\'s understood?!?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  sourceInSceneRef {
+    id: "521b47d93930384c07001af0"
+  }
+}
+nodes {
+  idRef {
+    id: "521e1ccb393038a40b006f18"
+  }
+  index: 7
+  text: "Crystal!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  sourceInSceneRef {
+    id: "521b41b23930384c07001aee"
+  }
+}
+nodes {
+  idRef {
+    id: "521e1cd4393038a40b006f1b"
+  }
+  index: 8
+  text: "Fine, I\'ll start my patrol then!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521b47d93930384c07001af0"
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "521b47d93930384c07001af0"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "521b486a3930384c07001af1"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "521e4f5f3930385809000187"
+  }
+  index: 9
+  text: "I wish this shift was over already and I could go watch the illusionist show!"
+  sourceInSceneRef {
+    id: "521b41b23930384c07001aee"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

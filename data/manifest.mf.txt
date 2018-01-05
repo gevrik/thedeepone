@@ -1,0 +1,4104 @@
+entries {
+  name: "abilities/adaptive coloration.ab.bytes"
+  size: 214
+}
+entries {
+  name: "abilities/ap boost.ab.bytes"
+  size: 158
+}
+entries {
+  name: "abilities/bf ability.ab.bytes"
+  size: 349
+}
+entries {
+  name: "abilities/bf rc1 ability.ab.bytes"
+  size: 343
+}
+entries {
+  name: "abilities/bf rc2 ability.ab.bytes"
+  size: 343
+}
+entries {
+  name: "abilities/bf rc3 ability.ab.bytes"
+  size: 343
+}
+entries {
+  name: "abilities/called shot disarm.ab.bytes"
+  size: 344
+}
+entries {
+  name: "abilities/called shot eye.ab.bytes"
+  size: 365
+}
+entries {
+  name: "abilities/called shot head.ab.bytes"
+  size: 314
+}
+entries {
+  name: "abilities/called shot leg.ab.bytes"
+  size: 400
+}
+entries {
+  name: "abilities/conjure heal barrier.ab.bytes"
+  size: 120
+}
+entries {
+  name: "abilities/control rig jackin.ab.bytes"
+  size: 209
+}
+entries {
+  name: "abilities/cyberarm medkit.ab.bytes"
+  size: 162
+}
+entries {
+  name: "abilities/diagnostic repair.ab.bytes"
+  size: 235
+}
+entries {
+  name: "abilities/double ability.ab.bytes"
+  size: 312
+}
+entries {
+  name: "abilities/edit pain.ab.bytes"
+  size: 183
+}
+entries {
+  name: "abilities/fa ability.ab.bytes"
+  size: 328
+}
+entries {
+  name: "abilities/fa rc1 ability.ab.bytes"
+  size: 335
+}
+entries {
+  name: "abilities/fa rc2 ability.ab.bytes"
+  size: 335
+}
+entries {
+  name: "abilities/fa rc3 ability.ab.bytes"
+  size: 335
+}
+entries {
+  name: "abilities/meatshot.ab.bytes"
+  size: 402
+}
+entries {
+  name: "abilities/narcoject ss.ab.bytes"
+  size: 493
+}
+entries {
+  name: "abilities/pin down.ab.bytes"
+  size: 421
+}
+entries {
+  name: "abilities/quick aim.ab.bytes"
+  size: 398
+}
+entries {
+  name: "abilities/sa ability.ab.bytes"
+  size: 270
+}
+entries {
+  name: "abilities/samplepistolability.ab.bytes"
+  size: 384
+}
+entries {
+  name: "abilities/shaman heal spells.ab.bytes"
+  size: 286
+}
+entries {
+  name: "abilities/shoot (snipe).ab.bytes"
+  size: 353
+}
+entries {
+  name: "abilities/silenced bf ability.ab.bytes"
+  size: 363
+}
+entries {
+  name: "abilities/silenced bf rc1 ability.ab.bytes"
+  size: 369
+}
+entries {
+  name: "abilities/silenced bf rc2 ability.ab.bytes"
+  size: 369
+}
+entries {
+  name: "abilities/silenced bf rc3 ability.ab.bytes"
+  size: 369
+}
+entries {
+  name: "abilities/silenced called shot disarm.ab.bytes"
+  size: 370
+}
+entries {
+  name: "abilities/silenced called shot eye.ab.bytes"
+  size: 391
+}
+entries {
+  name: "abilities/silenced called shot head.ab.bytes"
+  size: 340
+}
+entries {
+  name: "abilities/silenced called shot leg.ab.bytes"
+  size: 439
+}
+entries {
+  name: "abilities/silenced fa ability.ab.bytes"
+  size: 362
+}
+entries {
+  name: "abilities/silenced fa rc1 ability.ab.bytes"
+  size: 353
+}
+entries {
+  name: "abilities/silenced fa rc2 ability.ab.bytes"
+  size: 353
+}
+entries {
+  name: "abilities/silenced fa rc3 ability.ab.bytes"
+  size: 353
+}
+entries {
+  name: "abilities/silenced meatshot.ab.bytes"
+  size: 430
+}
+entries {
+  name: "abilities/silenced pin down.ab.bytes"
+  size: 439
+}
+entries {
+  name: "abilities/silenced sa ability.ab.bytes"
+  size: 320
+}
+entries {
+  name: "abilities/silenced ss ability.ab.bytes"
+  size: 325
+}
+entries {
+  name: "abilities/smartlink marktarget.ab.bytes"
+  size: 435
+}
+entries {
+  name: "abilities/ss ability.ab.bytes"
+  size: 270
+}
+entries {
+  name: "abilities/take aim.ab.bytes"
+  size: 298
+}
+entries {
+  name: "abilities/taser.ab.bytes"
+  size: 328
+}
+entries {
+  name: "chars/annie_evolved.ch_sht.bytes"
+  size: 283
+}
+entries {
+  name: "chars/brain-eaters controller.ch_sht.bytes"
+  size: 244
+}
+entries {
+  name: "chars/brain-eaters hotshot.ch_sht.bytes"
+  size: 243
+}
+entries {
+  name: "chars/brain-eaters wizkid.ch_sht.bytes"
+  size: 240
+}
+entries {
+  name: "chars/coyote_buffed.ch_sht.bytes"
+  size: 266
+}
+entries {
+  name: "chars/cultist mage.ch_sht.bytes"
+  size: 255
+}
+entries {
+  name: "chars/cultist sniper.ch_sht.bytes"
+  size: 251
+}
+entries {
+  name: "chars/lvl7_dwarf_adept.ch_inst.bytes"
+  size: 434
+}
+entries {
+  name: "chars/lvl7_dwarf_adept.ch_sht.bytes"
+  size: 255
+}
+entries {
+  name: "chars/lvl7_dwarf_decker.ch_inst.bytes"
+  size: 476
+}
+entries {
+  name: "chars/lvl7_dwarf_decker.ch_sht.bytes"
+  size: 238
+}
+entries {
+  name: "chars/lvl7_dwarf_rigger.ch_sht.bytes"
+  size: 240
+}
+entries {
+  name: "chars/lvl7_dwarf_samurai.ch_inst.bytes"
+  size: 425
+}
+entries {
+  name: "chars/lvl7_dwarf_samurai.ch_sht.bytes"
+  size: 257
+}
+entries {
+  name: "chars/lvl7_elf_adept.ch_sht.bytes"
+  size: 235
+}
+entries {
+  name: "chars/merchant_magic_heal_high.eq_sht.bytes"
+  size: 101
+}
+entries {
+  name: "chars/merchant_magic_heal_low.eq_sht.bytes"
+  size: 49
+}
+entries {
+  name: "chars/merchant_magic_heal_mid.eq_sht.bytes"
+  size: 74
+}
+entries {
+  name: "chars/merchant_magic_reg_low.eq_sht.bytes"
+  size: 44
+}
+entries {
+  name: "chars/merchant_magic_reg_mid.eq_sht.bytes"
+  size: 64
+}
+entries {
+  name: "chars/ssc all cyberware.eq_sht.bytes"
+  size: 1945
+}
+entries {
+  name: "chars/ssc cyberarms.eq_sht.bytes"
+  size: 271
+}
+entries {
+  name: "chars/ssc outfits 1.eq_sht.bytes"
+  size: 850
+}
+entries {
+  name: "chars/ssc outfits 3.eq_sht.bytes"
+  size: 850
+}
+entries {
+  name: "chars/ssc outfits 6.eq_sht.bytes"
+  size: 850
+}
+entries {
+  name: "chars/ssc outfits 8.eq_sht.bytes"
+  size: 850
+}
+entries {
+  name: "chars/ssc_alpha_grade_cyberware_merchant.eq_sht.bytes"
+  size: 2346
+}
+entries {
+  name: "chars/ssc_beta_grade_cyberware_merchant.eq_sht.bytes"
+  size: 2277
+}
+entries {
+  name: "chars/ssc_cyberware_merchant.eq_sht.bytes"
+  size: 1947
+}
+entries {
+  name: "chars/ssc_cyberware_merchant_basic.eq_sht.bytes"
+  size: 1459
+}
+entries {
+  name: "chars/ssc_delta_grade_cyberware_merchant.eq_sht.bytes"
+  size: 2346
+}
+entries {
+  name: "chars/tdo_annie.ch_inst.bytes"
+  size: 448
+}
+entries {
+  name: "chars/tdo_annieevo.ch_inst.bytes"
+  size: 433
+}
+entries {
+  name: "chars/tdo_annieevoninv.ch_inst.bytes"
+  size: 433
+}
+entries {
+  name: "chars/tdo_annieevonod.ch_inst.bytes"
+  size: 391
+}
+entries {
+  name: "chars/tdo_anniematrix.ch_inst.bytes"
+  size: 415
+}
+entries {
+  name: "chars/tdo_ashpoolmage.ch_inst.bytes"
+  size: 371
+}
+entries {
+  name: "chars/tdo_ashpoolrifler.ch_inst.bytes"
+  size: 363
+}
+entries {
+  name: "chars/tdo_ashpoolrifler.eq_sht.bytes"
+  size: 120
+}
+entries {
+  name: "chars/tdo_becontroller.ch_inst.bytes"
+  size: 430
+}
+entries {
+  name: "chars/tdo_behotshot.ch_inst.bytes"
+  size: 389
+}
+entries {
+  name: "chars/tdo_bonedancer.ch_inst.bytes"
+  size: 355
+}
+entries {
+  name: "chars/tdo_bozman.ch_inst.bytes"
+  size: 491
+}
+entries {
+  name: "chars/tdo_carnivalmaster.ch_inst.bytes"
+  size: 254
+}
+entries {
+  name: "chars/tdo_ch04_suspect.ch_sht.bytes"
+  size: 239
+}
+entries {
+  name: "chars/tdo_coyote.ch_inst.bytes"
+  size: 381
+}
+entries {
+  name: "chars/tdo_coyotenew.eq_sht.bytes"
+  size: 191
+}
+entries {
+  name: "chars/tdo_cultistmage.eq_sht.bytes"
+  size: 92
+}
+entries {
+  name: "chars/tdo_cultmagebalanced.eq_sht.bytes"
+  size: 97
+}
+entries {
+  name: "chars/tdo_dagonagentsam.ch_inst.bytes"
+  size: 422
+}
+entries {
+  name: "chars/tdo_dagonmage.ch_inst.bytes"
+  size: 386
+}
+entries {
+  name: "chars/tdo_dagonrifler.ch_inst.bytes"
+  size: 364
+}
+entries {
+  name: "chars/tdo_dagonrifler.eq_sht.bytes"
+  size: 117
+}
+entries {
+  name: "chars/tdo_deepone.ch_inst.bytes"
+  size: 337
+}
+entries {
+  name: "chars/tdo_flake.ch_inst.bytes"
+  size: 550
+}
+entries {
+  name: "chars/tdo_ghoul.ch_inst.bytes"
+  size: 232
+}
+entries {
+  name: "chars/tdo_ghoulweapon.eq_sht.bytes"
+  size: 36
+}
+entries {
+  name: "chars/tdo_hansen.ch_inst.bytes"
+  size: 360
+}
+entries {
+  name: "chars/tdo_hansenbg.ch_inst.bytes"
+  size: 377
+}
+entries {
+  name: "chars/tdo_helly.ch_inst.bytes"
+  size: 331
+}
+entries {
+  name: "chars/tdo_hire_adeptuncleenzo.ch_inst.bytes"
+  size: 466
+}
+entries {
+  name: "chars/tdo_hire_adeptzemke.ch_inst.bytes"
+  size: 606
+}
+entries {
+  name: "chars/tdo_hire_deckerkrash.ch_inst.bytes"
+  size: 617
+}
+entries {
+  name: "chars/tdo_hire_deckerterchan.ch_inst.bytes"
+  size: 484
+}
+entries {
+  name: "chars/tdo_hire_magewooqui.ch_inst.bytes"
+  size: 604
+}
+entries {
+  name: "chars/tdo_lonestar_captain.eq_sht.bytes"
+  size: 99
+}
+entries {
+  name: "chars/tdo_lvl6traceic.ch_inst.bytes"
+  size: 178
+}
+entries {
+  name: "chars/tdo_melee.eq_sht.bytes"
+  size: 33
+}
+entries {
+  name: "chars/tdo_merchantweapons.eq_sht.bytes"
+  size: 1856
+}
+entries {
+  name: "chars/tdo_officeguardshotgun.eq_sht.bytes"
+  size: 107
+}
+entries {
+  name: "chars/tdo_pistol.eq_sht.bytes"
+  size: 71
+}
+entries {
+  name: "chars/tdo_rickshaw.ch_inst.bytes"
+  size: 483
+}
+entries {
+  name: "chars/tdo_riflelow.eq_sht.bytes"
+  size: 92
+}
+entries {
+  name: "chars/tdo_shannon.ch_inst.bytes"
+  size: 498
+}
+entries {
+  name: "chars/tdo_shotgun.eq_sht.bytes"
+  size: 73
+}
+entries {
+  name: "chars/tdo_smg.eq_sht.bytes"
+  size: 43
+}
+entries {
+  name: "chars/tdo_start.eq_sht.bytes"
+  size: 39
+}
+entries {
+  name: "chars/tdo_stilettopiercer.ch_inst.bytes"
+  size: 296
+}
+entries {
+  name: "chars/tdo_stilettoslasher.ch_inst.bytes"
+  size: 184
+}
+entries {
+  name: "chars/tdo_stilettostitcher.ch_inst.bytes"
+  size: 412
+}
+entries {
+  name: "chars/tdo_stilettowhistler.ch_inst.bytes"
+  size: 378
+}
+entries {
+  name: "chars/tdo_terchan.ch_sht.bytes"
+  size: 232
+}
+entries {
+  name: "chars/tdo_triadcontroller.ch_inst.bytes"
+  size: 319
+}
+entries {
+  name: "chars/tdo_triadwarrior.ch_inst.bytes"
+  size: 327
+}
+entries {
+  name: "chars/tdo_uncleenzo.ch_sht.bytes"
+  size: 255
+}
+entries {
+  name: "chars/tdo_wageslave.ch_inst.bytes"
+  size: 155
+}
+entries {
+  name: "chars/tdo_winterblipmeat.ch_inst.bytes"
+  size: 256
+}
+entries {
+  name: "chars/tdo_yakcontroller.ch_inst.bytes"
+  size: 298
+}
+entries {
+  name: "chars/tdo_yakwarrior.ch_inst.bytes"
+  size: 311
+}
+entries {
+  name: "chars/tdo_zg_guarddrone.ch_inst.bytes"
+  size: 331
+}
+entries {
+  name: "chars/tdo_zoex.ch_inst.bytes"
+  size: 365
+}
+entries {
+  name: "chars/tfo_bewizkid.ch_inst.bytes"
+  size: 463
+}
+entries {
+  name: "convos/51f438fe643431290916990c.convo.bytes"
+  size: 2560
+}
+entries {
+  name: "convos/51f4467e6434312909169a35.convo.bytes"
+  size: 3144
+}
+entries {
+  name: "convos/51f461566434312909169bbe.convo.bytes"
+  size: 2212
+}
+entries {
+  name: "convos/51f476e16434312909169cc1.convo.bytes"
+  size: 458
+}
+entries {
+  name: "convos/51f478cc6434312909169cd5.convo.bytes"
+  size: 296
+}
+entries {
+  name: "convos/51f47ba26434312909169ce6.convo.bytes"
+  size: 352
+}
+entries {
+  name: "convos/51f47d06643431c7091698ac.convo.bytes"
+  size: 294
+}
+entries {
+  name: "convos/51f47e60643431c7091698c3.convo.bytes"
+  size: 326
+}
+entries {
+  name: "convos/51f485f2643431c7091698ed.convo.bytes"
+  size: 8121
+}
+entries {
+  name: "convos/51f5174c643431560a702e31.convo.bytes"
+  size: 552
+}
+entries {
+  name: "convos/51f56081643431000b7c3c5d.convo.bytes"
+  size: 505
+}
+entries {
+  name: "convos/51f568ae643431000b7c3cc2.convo.bytes"
+  size: 504
+}
+entries {
+  name: "convos/51f5854f643431000b7c3cf4.convo.bytes"
+  size: 503
+}
+entries {
+  name: "convos/51f62ee3643431820c06dad9.convo.bytes"
+  size: 199
+}
+entries {
+  name: "convos/51fb7657643431e3059ef96f.convo.bytes"
+  size: 15940
+}
+entries {
+  name: "convos/51fbb16d643431e3059effa9.convo.bytes"
+  size: 3785
+}
+entries {
+  name: "convos/51fc0cbe6434312b08fa4d1d.convo.bytes"
+  size: 2329
+}
+entries {
+  name: "convos/51fc112b6434312b08fa4db1.convo.bytes"
+  size: 2972
+}
+entries {
+  name: "convos/51fc674164343151098fb497.convo.bytes"
+  size: 7347
+}
+entries {
+  name: "convos/51fc765a64343151098fb69e.convo.bytes"
+  size: 7952
+}
+entries {
+  name: "convos/51fc87896434318f098fb698.convo.bytes"
+  size: 6714
+}
+entries {
+  name: "convos/51fc9631643431ab098fb494.convo.bytes"
+  size: 2456
+}
+entries {
+  name: "convos/51fd46316434311d0a8d4266.convo.bytes"
+  size: 6662
+}
+entries {
+  name: "convos/51fd63f26434310f0b8fb73d.convo.bytes"
+  size: 5803
+}
+entries {
+  name: "convos/51fd7b4d6434313b0b9efbdd.convo.bytes"
+  size: 40709
+}
+entries {
+  name: "convos/51fd857d6434313b0b9efc72.convo.bytes"
+  size: 7276
+}
+entries {
+  name: "convos/51ff73be643431680306dacb.convo.bytes"
+  size: 2569
+}
+entries {
+  name: "convos/51ff9100643431680306db1b.convo.bytes"
+  size: 360
+}
+entries {
+  name: "convos/51ffb4d7643431bf03b50fff.convo.bytes"
+  size: 2378
+}
+entries {
+  name: "convos/52001cf6643431bf03b523f9.convo.bytes"
+  size: 6677
+}
+entries {
+  name: "convos/52069f34643431aa13cd3854.convo.bytes"
+  size: 516
+}
+entries {
+  name: "convos/5206a03c643431aa13cd386d.convo.bytes"
+  size: 595
+}
+entries {
+  name: "convos/5206e12264343107147267d4.convo.bytes"
+  size: 921
+}
+entries {
+  name: "convos/52070208643431901472672f.convo.bytes"
+  size: 1328
+}
+entries {
+  name: "convos/5207105a6434319014726783.convo.bytes"
+  size: 716
+}
+entries {
+  name: "convos/520715796434319014726795.convo.bytes"
+  size: 506
+}
+entries {
+  name: "convos/5207dd966434319501169904.convo.bytes"
+  size: 8484
+}
+entries {
+  name: "convos/5207ecd9643431e101e50bec.convo.bytes"
+  size: 5439
+}
+entries {
+  name: "convos/5207f12d643431e101e50c1a.convo.bytes"
+  size: 1510
+}
+entries {
+  name: "convos/520819806434312102fc4125.convo.bytes"
+  size: 5072
+}
+entries {
+  name: "convos/520820b06434312102fc4259.convo.bytes"
+  size: 263
+}
+entries {
+  name: "convos/520826a06434312102fc4271.convo.bytes"
+  size: 776
+}
+entries {
+  name: "convos/520853b36434312102fc433b.convo.bytes"
+  size: 4323
+}
+entries {
+  name: "convos/520902f3643431d70313c39c.convo.bytes"
+  size: 373
+}
+entries {
+  name: "convos/52090d0c643431d70313c3d1.convo.bytes"
+  size: 21392
+}
+entries {
+  name: "convos/520a1c6f643431030213c42f.convo.bytes"
+  size: 2057
+}
+entries {
+  name: "convos/520a5fe8643431e50113dd0c.convo.bytes"
+  size: 15170
+}
+entries {
+  name: "convos/520a7f20643431550213c9be.convo.bytes"
+  size: 10477
+}
+entries {
+  name: "convos/520a9592643431be0213c917.convo.bytes"
+  size: 5403
+}
+entries {
+  name: "convos/520a9ada643431be0213ca42.convo.bytes"
+  size: 928
+}
+entries {
+  name: "convos/520ab6df6434310103188b1e.convo.bytes"
+  size: 6676
+}
+entries {
+  name: "convos/520ac4036434310103188f01.convo.bytes"
+  size: 5775
+}
+entries {
+  name: "convos/520ad0a764343101031891c2.convo.bytes"
+  size: 6991
+}
+entries {
+  name: "convos/520ae8786434313a03188cd4.convo.bytes"
+  size: 9814
+}
+entries {
+  name: "convos/520b682c6434312a04c5816c.convo.bytes"
+  size: 4318
+}
+entries {
+  name: "convos/520bb7886434318004c590d6.convo.bytes"
+  size: 429
+}
+entries {
+  name: "convos/520d6578643431040ba28a14.convo.bytes"
+  size: 5352
+}
+entries {
+  name: "convos/520d7658643431040ba28eeb.convo.bytes"
+  size: 1527
+}
+entries {
+  name: "convos/520d8432643431040ba28f76.convo.bytes"
+  size: 4583
+}
+entries {
+  name: "convos/520e409f643431b50ce82bae.convo.bytes"
+  size: 691
+}
+entries {
+  name: "convos/520e887f643431df0c9f05e5.convo.bytes"
+  size: 3008
+}
+entries {
+  name: "convos/520e9008643431df0c9f07a8.convo.bytes"
+  size: 2272
+}
+entries {
+  name: "convos/520f7203643431a601a408ec.convo.bytes"
+  size: 2438
+}
+entries {
+  name: "convos/520f79b9643431a601a40a59.convo.bytes"
+  size: 6740
+}
+entries {
+  name: "convos/520f8b12643431d5015d128d.convo.bytes"
+  size: 1670
+}
+entries {
+  name: "convos/520f8e93643431d5015d12a7.convo.bytes"
+  size: 300
+}
+entries {
+  name: "convos/520fb85c643431fe016cdc58.convo.bytes"
+  size: 2491
+}
+entries {
+  name: "convos/520ff90164343161026cdde3.convo.bytes"
+  size: 1975
+}
+entries {
+  name: "convos/520ffb8e64343161026cde0d.convo.bytes"
+  size: 2830
+}
+entries {
+  name: "convos/520fffe964343161026cdee0.convo.bytes"
+  size: 3466
+}
+entries {
+  name: "convos/52100a8d64343161026ce0ed.convo.bytes"
+  size: 2488
+}
+entries {
+  name: "convos/52100b1064343161026ce103.convo.bytes"
+  size: 1725
+}
+entries {
+  name: "convos/521024fc64343161026ce2f6.convo.bytes"
+  size: 1482
+}
+entries {
+  name: "convos/521285a864343199074f325f.convo.bytes"
+  size: 10498
+}
+entries {
+  name: "convos/5212a32764343199074f3a37.convo.bytes"
+  size: 1799
+}
+entries {
+  name: "convos/5212a5d164343199074f3b08.convo.bytes"
+  size: 3252
+}
+entries {
+  name: "convos/5212aae464343199074f3c7f.convo.bytes"
+  size: 3033
+}
+entries {
+  name: "convos/5213896f643431be0b639659.convo.bytes"
+  size: 2385
+}
+entries {
+  name: "convos/521569413930386c0e002773.convo.bytes"
+  size: 10550
+}
+entries {
+  name: "convos/521577a43930386c0e002a41.convo.bytes"
+  size: 1781
+}
+entries {
+  name: "convos/521578993930386c0e002b09.convo.bytes"
+  size: 3183
+}
+entries {
+  name: "convos/5216d2a13930387c0b000233.convo.bytes"
+  size: 3060
+}
+entries {
+  name: "convos/5216ea843930384812003b27.convo.bytes"
+  size: 26382
+}
+entries {
+  name: "convos/5216f1dc3930384812003b32.convo.bytes"
+  size: 1561
+}
+entries {
+  name: "convos/521751243930385c02003b06.convo.bytes"
+  size: 3143
+}
+entries {
+  name: "convos/52175dfd393038440f001805.convo.bytes"
+  size: 11878
+}
+entries {
+  name: "convos/52178e8d3930380005003daa.convo.bytes"
+  size: 1498
+}
+entries {
+  name: "convos/52178fd63930380005003dd2.convo.bytes"
+  size: 1295
+}
+entries {
+  name: "convos/5217912d3930380005003e13.convo.bytes"
+  size: 2328
+}
+entries {
+  name: "convos/5218b5c4393038c008003919.convo.bytes"
+  size: 3376
+}
+entries {
+  name: "convos/5218e4453930380408000f72.convo.bytes"
+  size: 816
+}
+entries {
+  name: "convos/5219f4163930382c12000f4b.convo.bytes"
+  size: 6169
+}
+entries {
+  name: "convos/521b00fc39303888120026a7.convo.bytes"
+  size: 389
+}
+entries {
+  name: "convos/521b1803393038a0100066bd.convo.bytes"
+  size: 4757
+}
+entries {
+  name: "convos/521b4d02393038441000390e.convo.bytes"
+  size: 2446
+}
+entries {
+  name: "convos/521cdc183930385409002305.convo.bytes"
+  size: 1272
+}
+entries {
+  name: "convos/521d0cfb3930385407000f42.convo.bytes"
+  size: 3356
+}
+entries {
+  name: "convos/521d10893930385407000fdc.convo.bytes"
+  size: 3368
+}
+entries {
+  name: "convos/521d11a539303854070010ca.convo.bytes"
+  size: 3356
+}
+entries {
+  name: "convos/521d1260393038540700118c.convo.bytes"
+  size: 3368
+}
+entries {
+  name: "convos/521d7469393038c4060026d8.convo.bytes"
+  size: 1727
+}
+entries {
+  name: "convos/521d8558393038c40600280f.convo.bytes"
+  size: 5199
+}
+entries {
+  name: "convos/521d8c07393038c406002919.convo.bytes"
+  size: 1633
+}
+entries {
+  name: "convos/521e1dd0393038a40b006f32.convo.bytes"
+  size: 1624
+}
+entries {
+  name: "convos/521e47f9393038580900009c.convo.bytes"
+  size: 825
+}
+entries {
+  name: "convos/521e49e639303858090000d3.convo.bytes"
+  size: 2705
+}
+entries {
+  name: "convos/521e6f293930380c110026cd.convo.bytes"
+  size: 2149
+}
+entries {
+  name: "convos/5221f8fa643431cb0a794ca3.convo.bytes"
+  size: 714
+}
+entries {
+  name: "convos/52223a80393038e80d004225.convo.bytes"
+  size: 538
+}
+entries {
+  name: "convos/52224bf13930382c11000bb7.convo.bytes"
+  size: 1919
+}
+entries {
+  name: "convos/52226cf13930382c11000e47.convo.bytes"
+  size: 4908
+}
+entries {
+  name: "convos/522277ec3930382c11001131.convo.bytes"
+  size: 5695
+}
+entries {
+  name: "convos/52227dd23930382c1100150d.convo.bytes"
+  size: 11899
+}
+entries {
+  name: "convos/522283393930382c11001667.convo.bytes"
+  size: 375
+}
+entries {
+  name: "convos/52232c533930387811002eae.convo.bytes"
+  size: 1861
+}
+entries {
+  name: "convos/5223374d3930387811002f31.convo.bytes"
+  size: 384
+}
+entries {
+  name: "convos/52234a32393038480d002f4b.convo.bytes"
+  size: 1861
+}
+entries {
+  name: "convos/52236efc393038480d0031b2.convo.bytes"
+  size: 572
+}
+entries {
+  name: "convos/52237074393038480d0031c8.convo.bytes"
+  size: 1086
+}
+entries {
+  name: "convos/5224151d3930388c0e007cba.convo.bytes"
+  size: 1053
+}
+entries {
+  name: "convos/52242e873930388c0e007d79.convo.bytes"
+  size: 1170
+}
+entries {
+  name: "convos/5225f8fc393038c413006e5f.convo.bytes"
+  size: 919
+}
+entries {
+  name: "convos/522624c1393038ac0f0026eb.convo.bytes"
+  size: 958
+}
+entries {
+  name: "convos/522637b7393038ac0f002fed.convo.bytes"
+  size: 1164
+}
+entries {
+  name: "convos/52263e78393038ac0f00320e.convo.bytes"
+  size: 5789
+}
+entries {
+  name: "convos/52264ed2393038ac0f00346c.convo.bytes"
+  size: 5783
+}
+entries {
+  name: "convos/52299ad3393038300b007a66.convo.bytes"
+  size: 6226
+}
+entries {
+  name: "convos/522c9e5439303850020026f3.convo.bytes"
+  size: 180
+}
+entries {
+  name: "convos/522fa30c3930389812000125.convo.bytes"
+  size: 281
+}
+entries {
+  name: "convos/5230bc40393038d00e00009c.convo.bytes"
+  size: 14223
+}
+entries {
+  name: "convos/5230c848393038d00e0000b5.convo.bytes"
+  size: 4356
+}
+entries {
+  name: "convos/5230e533393038d00e0001fb.convo.bytes"
+  size: 582
+}
+entries {
+  name: "convos/5230f08a393038d00e0002cd.convo.bytes"
+  size: 4297
+}
+entries {
+  name: "convos/5230f1fb393038d00e00031f.convo.bytes"
+  size: 3020
+}
+entries {
+  name: "convos/5231e066393038781a001147.convo.bytes"
+  size: 415
+}
+entries {
+  name: "convos/5231e1af393038781a0011fe.convo.bytes"
+  size: 1261
+}
+entries {
+  name: "convos/5231ed15393038781a0012e4.convo.bytes"
+  size: 606
+}
+entries {
+  name: "convos/52321241393038d405001108.convo.bytes"
+  size: 3757
+}
+entries {
+  name: "convos/5233578c39303870170041bd.convo.bytes"
+  size: 11118
+}
+entries {
+  name: "convos/523364173930387017004473.convo.bytes"
+  size: 10303
+}
+entries {
+  name: "convos/523376443930387017004b34.convo.bytes"
+  size: 1864
+}
+entries {
+  name: "convos/530754de326437f812006b72.convo.bytes"
+  size: 2601
+}
+entries {
+  name: "convos/53076fe0326437f812006de9.convo.bytes"
+  size: 2316
+}
+entries {
+  name: "convos/530783e6326437f812007051.convo.bytes"
+  size: 1604
+}
+entries {
+  name: "convos/530787d5326437f8120070dd.convo.bytes"
+  size: 1341
+}
+entries {
+  name: "convos/530919fa3264376808004d07.convo.bytes"
+  size: 5712
+}
+entries {
+  name: "convos/5309369c326437680800574f.convo.bytes"
+  size: 6758
+}
+entries {
+  name: "convos/530937b53264376808005769.convo.bytes"
+  size: 900
+}
+entries {
+  name: "convos/530949b8326437a0110069c5.convo.bytes"
+  size: 6646
+}
+entries {
+  name: "convos/530a0cff3264372403000f62.convo.bytes"
+  size: 700
+}
+entries {
+  name: "convos/530a21a832643724030010e8.convo.bytes"
+  size: 4790
+}
+entries {
+  name: "convos/530a39de3264375013004357.convo.bytes"
+  size: 9597
+}
+entries {
+  name: "convos/530a4b55326437c4110044bf.convo.bytes"
+  size: 845
+}
+entries {
+  name: "convos/530b0e193264375811006e62.convo.bytes"
+  size: 9219
+}
+entries {
+  name: "convos/530b4bff326437ac09003e07.convo.bytes"
+  size: 15715
+}
+entries {
+  name: "convos/530cdc1d326437f41300265f.convo.bytes"
+  size: 4273
+}
+entries {
+  name: "convos/530ce28b326437f413002755.convo.bytes"
+  size: 2330
+}
+entries {
+  name: "convos/530d1f35326437800900662b.convo.bytes"
+  size: 3586
+}
+entries {
+  name: "convos/530d2bed3264377400004e53.convo.bytes"
+  size: 3858
+}
+entries {
+  name: "convos/530df8f33264378408000f91.convo.bytes"
+  size: 3198
+}
+entries {
+  name: "convos/530e20863264375401006cf5.convo.bytes"
+  size: 7743
+}
+entries {
+  name: "convos/5314b6513264370810006e6b.convo.bytes"
+  size: 7402
+}
+entries {
+  name: "convos/5314fadc3264374c07002215.convo.bytes"
+  size: 5947
+}
+entries {
+  name: "convos/5314ff063264374c070023ad.convo.bytes"
+  size: 1459
+}
+entries {
+  name: "convos/53159f7a326437300e002216.convo.bytes"
+  size: 7048
+}
+entries {
+  name: "convos/5315de4b326437f003000f2f.convo.bytes"
+  size: 5465
+}
+entries {
+  name: "convos/5315f46a3264372c06002053.convo.bytes"
+  size: 946
+}
+entries {
+  name: "items/ar 1 ak98 (smartlink) tdo.item.bytes"
+  size: 510
+}
+entries {
+  name: "items/ar 1 ak98 tdo.item.bytes"
+  size: 455
+}
+entries {
+  name: "items/ar 1 semopal vz88v (smartlink) tdo.item.bytes"
+  size: 579
+}
+entries {
+  name: "items/ar 1 semopal vz88v tdo.item.bytes"
+  size: 524
+}
+entries {
+  name: "items/ar 2 fn har (smartlink) tdo.item.bytes"
+  size: 571
+}
+entries {
+  name: "items/ar 2 fn har tdo.item.bytes"
+  size: 550
+}
+entries {
+  name: "items/ar 2 hk g12a3z (smartlink) tdo.item.bytes"
+  size: 603
+}
+entries {
+  name: "items/ar 2 hk g12a3z tdo.item.bytes"
+  size: 548
+}
+entries {
+  name: "items/ar 3 ares alpha (smartlink) tdo.item.bytes"
+  size: 576
+}
+entries {
+  name: "items/ar 3 ares alpha tdo.item.bytes"
+  size: 521
+}
+entries {
+  name: "items/ar 3 colt m23 (smartlink) tdo.item.bytes"
+  size: 592
+}
+entries {
+  name: "items/ar 3 colt m23 tdo.item.bytes"
+  size: 537
+}
+entries {
+  name: "items/ar 3 walther ma 2100 (sl) tdo.item.bytes"
+  size: 572
+}
+entries {
+  name: "items/ar ssc ak97.item.bytes"
+  size: 519
+}
+entries {
+  name: "items/ar ssc aresmplmg.item.bytes"
+  size: 519
+}
+entries {
+  name: "items/ar ssc coltm22a2.item.bytes"
+  size: 519
+}
+entries {
+  name: "items/ar ssc czechvz88v.item.bytes"
+  size: 403
+}
+entries {
+  name: "items/ar ssc fn-har.item.bytes"
+  size: 385
+}
+entries {
+  name: "items/ar ssc fn-mag5.item.bytes"
+  size: 515
+}
+entries {
+  name: "items/ar ssc hkg12a3z.item.bytes"
+  size: 411
+}
+entries {
+  name: "items/ar ssc m107gphmg.item.bytes"
+  size: 518
+}
+entries {
+  name: "items/ar ssc narcojectrifle.item.bytes"
+  size: 398
+}
+entries {
+  name: "items/ar ssc rangerarmssm-3.item.bytes"
+  size: 533
+}
+entries {
+  name: "items/ar ssc ruger100.item.bytes"
+  size: 522
+}
+entries {
+  name: "items/ar ssc ruger750.item.bytes"
+  size: 505
+}
+entries {
+  name: "items/ar ssc ruger950.item.bytes"
+  size: 514
+}
+entries {
+  name: "items/ar ssc rugersporter1022.item.bytes"
+  size: 497
+}
+entries {
+  name: "items/ar ssc waltherma2100.item.bytes"
+  size: 572
+}
+entries {
+  name: "items/arm1 ssc adeptcombatvest.item.bytes"
+  size: 177
+}
+entries {
+  name: "items/arm1 ssc adeptninja.item.bytes"
+  size: 162
+}
+entries {
+  name: "items/arm1 ssc adeptstarter.item.bytes"
+  size: 145
+}
+entries {
+  name: "items/arm1 ssc adeptstealth.item.bytes"
+  size: 174
+}
+entries {
+  name: "items/arm1 ssc adeptstreetmonk.item.bytes"
+  size: 187
+}
+entries {
+  name: "items/arm1 ssc classlessstarter.item.bytes"
+  size: 160
+}
+entries {
+  name: "items/arm1 ssc deckerfab.item.bytes"
+  size: 150
+}
+entries {
+  name: "items/arm1 ssc deckerfedora.item.bytes"
+  size: 161
+}
+entries {
+  name: "items/arm1 ssc deckerjacket.item.bytes"
+  size: 161
+}
+entries {
+  name: "items/arm1 ssc deckerstarter.item.bytes"
+  size: 165
+}
+entries {
+  name: "items/arm1 ssc deckerstreet.item.bytes"
+  size: 167
+}
+entries {
+  name: "items/arm1 ssc magecasual.item.bytes"
+  size: 153
+}
+entries {
+  name: "items/arm1 ssc magedark.item.bytes"
+  size: 148
+}
+entries {
+  name: "items/arm1 ssc mageredridinghood.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/arm1 ssc mageslick.item.bytes"
+  size: 162
+}
+entries {
+  name: "items/arm1 ssc magestarter.item.bytes"
+  size: 160
+}
+entries {
+  name: "items/arm1 ssc magetraditional.item.bytes"
+  size: 187
+}
+entries {
+  name: "items/arm1 ssc riggerflightsuit.item.bytes"
+  size: 189
+}
+entries {
+  name: "items/arm1 ssc riggergolden.item.bytes"
+  size: 156
+}
+entries {
+  name: "items/arm1 ssc riggerhawaiianshirt.item.bytes"
+  size: 188
+}
+entries {
+  name: "items/arm1 ssc riggerstarter.item.bytes"
+  size: 172
+}
+entries {
+  name: "items/arm1 ssc riggertoolbelt.item.bytes"
+  size: 180
+}
+entries {
+  name: "items/arm1 ssc riggertrenchcoat.item.bytes"
+  size: 170
+}
+entries {
+  name: "items/arm1 ssc samuraibunny.item.bytes"
+  size: 166
+}
+entries {
+  name: "items/arm1 ssc samuraimilitary.item.bytes"
+  size: 181
+}
+entries {
+  name: "items/arm1 ssc samuraipunk.item.bytes"
+  size: 169
+}
+entries {
+  name: "items/arm1 ssc samuraistarter.item.bytes"
+  size: 177
+}
+entries {
+  name: "items/arm1 ssc samuraitrenchcoat.item.bytes"
+  size: 182
+}
+entries {
+  name: "items/arm1 ssc shamanpendant.item.bytes"
+  size: 183
+}
+entries {
+  name: "items/arm1 ssc shamanskirted.item.bytes"
+  size: 172
+}
+entries {
+  name: "items/arm1 ssc shamantotemcoat.item.bytes"
+  size: 177
+}
+entries {
+  name: "items/arm1 ssc shamanurban.item.bytes"
+  size: 169
+}
+entries {
+  name: "items/arm3 ssc adeptcombatvest.item.bytes"
+  size: 191
+}
+entries {
+  name: "items/arm3 ssc adeptninja.item.bytes"
+  size: 176
+}
+entries {
+  name: "items/arm3 ssc adeptstarter.item.bytes"
+  size: 159
+}
+entries {
+  name: "items/arm3 ssc adeptstealth.item.bytes"
+  size: 188
+}
+entries {
+  name: "items/arm3 ssc adeptstreetmonk.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/arm3 ssc classlessstarter.item.bytes"
+  size: 174
+}
+entries {
+  name: "items/arm3 ssc deckerfab.item.bytes"
+  size: 164
+}
+entries {
+  name: "items/arm3 ssc deckerfedora.item.bytes"
+  size: 175
+}
+entries {
+  name: "items/arm3 ssc deckerjacket.item.bytes"
+  size: 175
+}
+entries {
+  name: "items/arm3 ssc deckerstarter.item.bytes"
+  size: 179
+}
+entries {
+  name: "items/arm3 ssc deckerstreet.item.bytes"
+  size: 181
+}
+entries {
+  name: "items/arm3 ssc magecasual.item.bytes"
+  size: 167
+}
+entries {
+  name: "items/arm3 ssc magedark.item.bytes"
+  size: 162
+}
+entries {
+  name: "items/arm3 ssc mageredridinghood.item.bytes"
+  size: 209
+}
+entries {
+  name: "items/arm3 ssc mageslick.item.bytes"
+  size: 176
+}
+entries {
+  name: "items/arm3 ssc magestarter.item.bytes"
+  size: 174
+}
+entries {
+  name: "items/arm3 ssc magetraditional.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/arm3 ssc riggerflightsuit.item.bytes"
+  size: 203
+}
+entries {
+  name: "items/arm3 ssc riggergolden.item.bytes"
+  size: 170
+}
+entries {
+  name: "items/arm3 ssc riggerhawaiianshirt.item.bytes"
+  size: 202
+}
+entries {
+  name: "items/arm3 ssc riggerstarter.item.bytes"
+  size: 186
+}
+entries {
+  name: "items/arm3 ssc riggertoolbelt.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/arm3 ssc riggertrenchcoat.item.bytes"
+  size: 184
+}
+entries {
+  name: "items/arm3 ssc samuraibunny.item.bytes"
+  size: 180
+}
+entries {
+  name: "items/arm3 ssc samuraimilitary.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/arm3 ssc samuraipunk.item.bytes"
+  size: 183
+}
+entries {
+  name: "items/arm3 ssc samuraistarter.item.bytes"
+  size: 191
+}
+entries {
+  name: "items/arm3 ssc samuraitrenchcoat.item.bytes"
+  size: 196
+}
+entries {
+  name: "items/arm3 ssc shamanpendant.item.bytes"
+  size: 197
+}
+entries {
+  name: "items/arm3 ssc shamanskirted.item.bytes"
+  size: 186
+}
+entries {
+  name: "items/arm3 ssc shamantotemcoat.item.bytes"
+  size: 191
+}
+entries {
+  name: "items/arm3 ssc shamanurban.item.bytes"
+  size: 183
+}
+entries {
+  name: "items/arm6 ssc adeptcombatvest.item.bytes"
+  size: 188
+}
+entries {
+  name: "items/arm6 ssc adeptninja.item.bytes"
+  size: 173
+}
+entries {
+  name: "items/arm6 ssc adeptstarter.item.bytes"
+  size: 156
+}
+entries {
+  name: "items/arm6 ssc adeptstealth.item.bytes"
+  size: 185
+}
+entries {
+  name: "items/arm6 ssc adeptstreetmonk.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/arm6 ssc classlessstarter.item.bytes"
+  size: 171
+}
+entries {
+  name: "items/arm6 ssc deckerfab.item.bytes"
+  size: 161
+}
+entries {
+  name: "items/arm6 ssc deckerfedora.item.bytes"
+  size: 172
+}
+entries {
+  name: "items/arm6 ssc deckerjacket.item.bytes"
+  size: 172
+}
+entries {
+  name: "items/arm6 ssc deckerstarter.item.bytes"
+  size: 176
+}
+entries {
+  name: "items/arm6 ssc deckerstreet.item.bytes"
+  size: 178
+}
+entries {
+  name: "items/arm6 ssc magecasual.item.bytes"
+  size: 164
+}
+entries {
+  name: "items/arm6 ssc magedark.item.bytes"
+  size: 159
+}
+entries {
+  name: "items/arm6 ssc mageredridinghood.item.bytes"
+  size: 206
+}
+entries {
+  name: "items/arm6 ssc mageslick.item.bytes"
+  size: 173
+}
+entries {
+  name: "items/arm6 ssc magestarter.item.bytes"
+  size: 171
+}
+entries {
+  name: "items/arm6 ssc magetraditional.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/arm6 ssc riggerflightsuit.item.bytes"
+  size: 200
+}
+entries {
+  name: "items/arm6 ssc riggergolden.item.bytes"
+  size: 167
+}
+entries {
+  name: "items/arm6 ssc riggerhawaiianshirt.item.bytes"
+  size: 199
+}
+entries {
+  name: "items/arm6 ssc riggerstarter.item.bytes"
+  size: 183
+}
+entries {
+  name: "items/arm6 ssc riggertoolbelt.item.bytes"
+  size: 191
+}
+entries {
+  name: "items/arm6 ssc riggertrenchcoat.item.bytes"
+  size: 181
+}
+entries {
+  name: "items/arm6 ssc samuraibunny.item.bytes"
+  size: 177
+}
+entries {
+  name: "items/arm6 ssc samuraimilitary.item.bytes"
+  size: 192
+}
+entries {
+  name: "items/arm6 ssc samuraipunk.item.bytes"
+  size: 180
+}
+entries {
+  name: "items/arm6 ssc samuraistarter.item.bytes"
+  size: 188
+}
+entries {
+  name: "items/arm6 ssc samuraitrenchcoat.item.bytes"
+  size: 193
+}
+entries {
+  name: "items/arm6 ssc shamanpendant.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/arm6 ssc shamanskirted.item.bytes"
+  size: 183
+}
+entries {
+  name: "items/arm6 ssc shamantotemcoat.item.bytes"
+  size: 188
+}
+entries {
+  name: "items/arm6 ssc shamanurban.item.bytes"
+  size: 180
+}
+entries {
+  name: "items/arm8 ssc adeptcombatvest.item.bytes"
+  size: 225
+}
+entries {
+  name: "items/arm8 ssc adeptninja.item.bytes"
+  size: 210
+}
+entries {
+  name: "items/arm8 ssc adeptstarter.item.bytes"
+  size: 193
+}
+entries {
+  name: "items/arm8 ssc adeptstealth.item.bytes"
+  size: 222
+}
+entries {
+  name: "items/arm8 ssc adeptstreetmonk.item.bytes"
+  size: 235
+}
+entries {
+  name: "items/arm8 ssc classlessstarter.item.bytes"
+  size: 208
+}
+entries {
+  name: "items/arm8 ssc deckerfab.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/arm8 ssc deckerfedora.item.bytes"
+  size: 209
+}
+entries {
+  name: "items/arm8 ssc deckerjacket.item.bytes"
+  size: 209
+}
+entries {
+  name: "items/arm8 ssc deckerstarter.item.bytes"
+  size: 213
+}
+entries {
+  name: "items/arm8 ssc deckerstreet.item.bytes"
+  size: 215
+}
+entries {
+  name: "items/arm8 ssc magecasual.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/arm8 ssc magedark.item.bytes"
+  size: 196
+}
+entries {
+  name: "items/arm8 ssc mageredridinghood.item.bytes"
+  size: 243
+}
+entries {
+  name: "items/arm8 ssc mageslick.item.bytes"
+  size: 210
+}
+entries {
+  name: "items/arm8 ssc magestarter.item.bytes"
+  size: 208
+}
+entries {
+  name: "items/arm8 ssc magetraditional.item.bytes"
+  size: 235
+}
+entries {
+  name: "items/arm8 ssc riggerflightsuit.item.bytes"
+  size: 237
+}
+entries {
+  name: "items/arm8 ssc riggergolden.item.bytes"
+  size: 204
+}
+entries {
+  name: "items/arm8 ssc riggerhawaiianshirt.item.bytes"
+  size: 236
+}
+entries {
+  name: "items/arm8 ssc riggerstarter.item.bytes"
+  size: 220
+}
+entries {
+  name: "items/arm8 ssc riggertoolbelt.item.bytes"
+  size: 228
+}
+entries {
+  name: "items/arm8 ssc riggertrenchcoat.item.bytes"
+  size: 218
+}
+entries {
+  name: "items/arm8 ssc samuraibunny.item.bytes"
+  size: 214
+}
+entries {
+  name: "items/arm8 ssc samuraimilitary.item.bytes"
+  size: 229
+}
+entries {
+  name: "items/arm8 ssc samuraipunk.item.bytes"
+  size: 217
+}
+entries {
+  name: "items/arm8 ssc samuraistarter.item.bytes"
+  size: 225
+}
+entries {
+  name: "items/arm8 ssc samuraitrenchcoat.item.bytes"
+  size: 230
+}
+entries {
+  name: "items/arm8 ssc shamanpendant.item.bytes"
+  size: 231
+}
+entries {
+  name: "items/arm8 ssc shamanskirted.item.bytes"
+  size: 220
+}
+entries {
+  name: "items/arm8 ssc shamantotemcoat.item.bytes"
+  size: 225
+}
+entries {
+  name: "items/arm8 ssc shamanurban.item.bytes"
+  size: 217
+}
+entries {
+  name: "items/behq_keycard.item.bytes"
+  size: 95
+}
+entries {
+  name: "items/book_invocationsdagon.item.bytes"
+  size: 121
+}
+entries {
+  name: "items/bound zombie spirit 6.item.bytes"
+  size: 548
+}
+entries {
+  name: "items/ch03_nanos.item.bytes"
+  size: 146
+}
+entries {
+  name: "items/ch04-animalcrate.item.bytes"
+  size: 147
+}
+entries {
+  name: "items/ch04-chskeletonkey.item.bytes"
+  size: 170
+}
+entries {
+  name: "items/ch04-controloverride.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/ch04-decryptedchip.item.bytes"
+  size: 1663
+}
+entries {
+  name: "items/ch04-empsensenetac.item.bytes"
+  size: 191
+}
+entries {
+  name: "items/ch04-encryptedchip.item.bytes"
+  size: 261
+}
+entries {
+  name: "items/ch04-hotelaccessmercer.item.bytes"
+  size: 160
+}
+entries {
+  name: "items/ch04-managersensenetac.item.bytes"
+  size: 165
+}
+entries {
+  name: "items/ch04-mercermagemsg.item.bytes"
+  size: 538
+}
+entries {
+  name: "items/ch04-sensoryupgrademodule.item.bytes"
+  size: 183
+}
+entries {
+  name: "items/ch05-letterward.item.bytes"
+  size: 390
+}
+entries {
+  name: "items/cyber arm empty.item.bytes"
+  size: 123
+}
+entries {
+  name: "items/cyber body empty.item.bytes"
+  size: 133
+}
+entries {
+  name: "items/cyber datajack empty.item.bytes"
+  size: 123
+}
+entries {
+  name: "items/cyber eye empty.item.bytes"
+  size: 135
+}
+entries {
+  name: "items/cyber leg empty.item.bytes"
+  size: 123
+}
+entries {
+  name: "items/cyber ssc alpha bonelacing1.item.bytes"
+  size: 219
+}
+entries {
+  name: "items/cyber ssc alpha bonelacing2.item.bytes"
+  size: 230
+}
+entries {
+  name: "items/cyber ssc alpha bonelacing3.item.bytes"
+  size: 230
+}
+entries {
+  name: "items/cyber ssc alpha boostedreflexes1.item.bytes"
+  size: 292
+}
+entries {
+  name: "items/cyber ssc alpha boostedreflexes2.item.bytes"
+  size: 323
+}
+entries {
+  name: "items/cyber ssc alpha boostedreflexes3.item.bytes"
+  size: 325
+}
+entries {
+  name: "items/cyber ssc alpha datajack.item.bytes"
+  size: 152
+}
+entries {
+  name: "items/cyber ssc alpha dermalplating1.item.bytes"
+  size: 209
+}
+entries {
+  name: "items/cyber ssc alpha dermalplating2.item.bytes"
+  size: 211
+}
+entries {
+  name: "items/cyber ssc alpha dermalplating3.item.bytes"
+  size: 212
+}
+entries {
+  name: "items/cyber ssc alpha dermalsheathing1.item.bytes"
+  size: 347
+}
+entries {
+  name: "items/cyber ssc alpha dermalsheathing2.item.bytes"
+  size: 348
+}
+entries {
+  name: "items/cyber ssc alpha dermalsheathing3.item.bytes"
+  size: 349
+}
+entries {
+  name: "items/cyber ssc alpha encephalon1.item.bytes"
+  size: 193
+}
+entries {
+  name: "items/cyber ssc alpha encephalon2.item.bytes"
+  size: 197
+}
+entries {
+  name: "items/cyber ssc alpha encephalon3.item.bytes"
+  size: 208
+}
+entries {
+  name: "items/cyber ssc alpha encephalon4.item.bytes"
+  size: 207
+}
+entries {
+  name: "items/cyber ssc alpha eyes.item.bytes"
+  size: 146
+}
+entries {
+  name: "items/cyber ssc alpha linguaacademic.item.bytes"
+  size: 207
+}
+entries {
+  name: "items/cyber ssc alpha linguacorporate.item.bytes"
+  size: 214
+}
+entries {
+  name: "items/cyber ssc alpha linguacorpsoc.item.bytes"
+  size: 214
+}
+entries {
+  name: "items/cyber ssc alpha linguasocialite.item.bytes"
+  size: 220
+}
+entries {
+  name: "items/cyber ssc alpha movebywire1.item.bytes"
+  size: 331
+}
+entries {
+  name: "items/cyber ssc alpha movebywire2.item.bytes"
+  size: 331
+}
+entries {
+  name: "items/cyber ssc alpha movebywire3.item.bytes"
+  size: 334
+}
+entries {
+  name: "items/cyber ssc alpha paineditor.item.bytes"
+  size: 301
+}
+entries {
+  name: "items/cyber ssc alpha rangefinder.item.bytes"
+  size: 190
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftbiotech1.item.bytes"
+  size: 200
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftbiotech2.item.bytes"
+  size: 202
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftbiotech3.item.bytes"
+  size: 203
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftclose1.item.bytes"
+  size: 209
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftclose2.item.bytes"
+  size: 211
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftclose3.item.bytes"
+  size: 212
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftdecking1.item.bytes"
+  size: 200
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftdecking2.item.bytes"
+  size: 202
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftdecking3.item.bytes"
+  size: 203
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftdodge1.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftdodge2.item.bytes"
+  size: 196
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftdodge3.item.bytes"
+  size: 197
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftdronecontrol1.item.bytes"
+  size: 218
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftdronecontrol2.item.bytes"
+  size: 219
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftdronecontrol3.item.bytes"
+  size: 221
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftranged1.item.bytes"
+  size: 212
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftranged2.item.bytes"
+  size: 214
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftranged3.item.bytes"
+  size: 215
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftthrowing1.item.bytes"
+  size: 203
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftthrowing2.item.bytes"
+  size: 205
+}
+entries {
+  name: "items/cyber ssc alpha skillsoftthrowing3.item.bytes"
+  size: 206
+}
+entries {
+  name: "items/cyber ssc alpha smartlink.item.bytes"
+  size: 459
+}
+entries {
+  name: "items/cyber ssc alpha subprocessor.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/cyber ssc alpha vehiclecontrolrig1.item.bytes"
+  size: 486
+}
+entries {
+  name: "items/cyber ssc alpha vehiclecontrolrig2.item.bytes"
+  size: 507
+}
+entries {
+  name: "items/cyber ssc alpha vehiclecontrolrig3.item.bytes"
+  size: 504
+}
+entries {
+  name: "items/cyber ssc alpha visionmag.item.bytes"
+  size: 180
+}
+entries {
+  name: "items/cyber ssc alpha wiredreflexes1.item.bytes"
+  size: 295
+}
+entries {
+  name: "items/cyber ssc alpha wiredreflexes2.item.bytes"
+  size: 297
+}
+entries {
+  name: "items/cyber ssc alpha wiredreflexes3.item.bytes"
+  size: 299
+}
+entries {
+  name: "items/cyber ssc arm alpha diagnostic.item.bytes"
+  size: 337
+}
+entries {
+  name: "items/cyber ssc arm alpha gyromount.item.bytes"
+  size: 207
+}
+entries {
+  name: "items/cyber ssc arm alpha medical.item.bytes"
+  size: 329
+}
+entries {
+  name: "items/cyber ssc arm alpha musclereplace1.item.bytes"
+  size: 193
+}
+entries {
+  name: "items/cyber ssc arm alpha musclereplace2.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/cyber ssc arm alpha musclereplace3.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/cyber ssc arm alpha musclereplace4.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/cyber ssc arm alpha1.item.bytes"
+  size: 171
+}
+entries {
+  name: "items/cyber ssc arm alpha2.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/cyber ssc arm basic1.item.bytes"
+  size: 171
+}
+entries {
+  name: "items/cyber ssc arm basic2.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/cyber ssc arm beta diagnostic.item.bytes"
+  size: 335
+}
+entries {
+  name: "items/cyber ssc arm beta gyromount.item.bytes"
+  size: 205
+}
+entries {
+  name: "items/cyber ssc arm beta medical.item.bytes"
+  size: 327
+}
+entries {
+  name: "items/cyber ssc arm beta musclereplace1.item.bytes"
+  size: 191
+}
+entries {
+  name: "items/cyber ssc arm beta musclereplace2.item.bytes"
+  size: 192
+}
+entries {
+  name: "items/cyber ssc arm beta musclereplace3.item.bytes"
+  size: 193
+}
+entries {
+  name: "items/cyber ssc arm beta musclereplace4.item.bytes"
+  size: 192
+}
+entries {
+  name: "items/cyber ssc arm beta1.item.bytes"
+  size: 169
+}
+entries {
+  name: "items/cyber ssc arm beta2.item.bytes"
+  size: 196
+}
+entries {
+  name: "items/cyber ssc arm delta diagnostic.item.bytes"
+  size: 337
+}
+entries {
+  name: "items/cyber ssc arm delta gyromount.item.bytes"
+  size: 207
+}
+entries {
+  name: "items/cyber ssc arm delta medical.item.bytes"
+  size: 329
+}
+entries {
+  name: "items/cyber ssc arm delta musclereplace1.item.bytes"
+  size: 193
+}
+entries {
+  name: "items/cyber ssc arm delta musclereplace2.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/cyber ssc arm delta musclereplace3.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/cyber ssc arm delta musclereplace4.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/cyber ssc arm delta1.item.bytes"
+  size: 171
+}
+entries {
+  name: "items/cyber ssc arm delta2.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/cyber ssc arm diagnostic.item.bytes"
+  size: 325
+}
+entries {
+  name: "items/cyber ssc arm gyromount.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/cyber ssc arm medical.item.bytes"
+  size: 316
+}
+entries {
+  name: "items/cyber ssc arm musclereplace1.item.bytes"
+  size: 181
+}
+entries {
+  name: "items/cyber ssc arm musclereplace2.item.bytes"
+  size: 182
+}
+entries {
+  name: "items/cyber ssc arm musclereplace3.item.bytes"
+  size: 183
+}
+entries {
+  name: "items/cyber ssc arm musclereplace4.item.bytes"
+  size: 182
+}
+entries {
+  name: "items/cyber ssc beta bonelacing1.item.bytes"
+  size: 218
+}
+entries {
+  name: "items/cyber ssc beta bonelacing2.item.bytes"
+  size: 228
+}
+entries {
+  name: "items/cyber ssc beta bonelacing3.item.bytes"
+  size: 228
+}
+entries {
+  name: "items/cyber ssc beta boostedreflexes1.item.bytes"
+  size: 290
+}
+entries {
+  name: "items/cyber ssc beta boostedreflexes2.item.bytes"
+  size: 321
+}
+entries {
+  name: "items/cyber ssc beta boostedreflexes3.item.bytes"
+  size: 323
+}
+entries {
+  name: "items/cyber ssc beta datajack.item.bytes"
+  size: 150
+}
+entries {
+  name: "items/cyber ssc beta dermalplating1.item.bytes"
+  size: 208
+}
+entries {
+  name: "items/cyber ssc beta dermalplating2.item.bytes"
+  size: 209
+}
+entries {
+  name: "items/cyber ssc beta dermalplating3.item.bytes"
+  size: 210
+}
+entries {
+  name: "items/cyber ssc beta dermalsheathing1.item.bytes"
+  size: 345
+}
+entries {
+  name: "items/cyber ssc beta dermalsheathing2.item.bytes"
+  size: 346
+}
+entries {
+  name: "items/cyber ssc beta dermalsheathing3.item.bytes"
+  size: 347
+}
+entries {
+  name: "items/cyber ssc beta encephalon1.item.bytes"
+  size: 191
+}
+entries {
+  name: "items/cyber ssc beta encephalon2.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/cyber ssc beta encephalon3.item.bytes"
+  size: 206
+}
+entries {
+  name: "items/cyber ssc beta encephalon4.item.bytes"
+  size: 205
+}
+entries {
+  name: "items/cyber ssc beta eyes.item.bytes"
+  size: 145
+}
+entries {
+  name: "items/cyber ssc beta linguaacademic.item.bytes"
+  size: 205
+}
+entries {
+  name: "items/cyber ssc beta linguacorporate.item.bytes"
+  size: 212
+}
+entries {
+  name: "items/cyber ssc beta linguacorpsoc.item.bytes"
+  size: 212
+}
+entries {
+  name: "items/cyber ssc beta linguasocialite.item.bytes"
+  size: 218
+}
+entries {
+  name: "items/cyber ssc beta movebywire1.item.bytes"
+  size: 329
+}
+entries {
+  name: "items/cyber ssc beta movebywire2.item.bytes"
+  size: 329
+}
+entries {
+  name: "items/cyber ssc beta movebywire3.item.bytes"
+  size: 332
+}
+entries {
+  name: "items/cyber ssc beta paineditor.item.bytes"
+  size: 299
+}
+entries {
+  name: "items/cyber ssc beta rangefinder.item.bytes"
+  size: 188
+}
+entries {
+  name: "items/cyber ssc beta skillsoftbiotech1.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/cyber ssc beta skillsoftbiotech2.item.bytes"
+  size: 200
+}
+entries {
+  name: "items/cyber ssc beta skillsoftbiotech3.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/cyber ssc beta skillsoftclose1.item.bytes"
+  size: 207
+}
+entries {
+  name: "items/cyber ssc beta skillsoftclose2.item.bytes"
+  size: 209
+}
+entries {
+  name: "items/cyber ssc beta skillsoftclose3.item.bytes"
+  size: 210
+}
+entries {
+  name: "items/cyber ssc beta skillsoftdecking1.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/cyber ssc beta skillsoftdecking2.item.bytes"
+  size: 200
+}
+entries {
+  name: "items/cyber ssc beta skillsoftdecking3.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/cyber ssc beta skillsoftdodge1.item.bytes"
+  size: 192
+}
+entries {
+  name: "items/cyber ssc beta skillsoftdodge2.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/cyber ssc beta skillsoftdodge3.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/cyber ssc beta skillsoftdronecontrol1.item.bytes"
+  size: 216
+}
+entries {
+  name: "items/cyber ssc beta skillsoftdronecontrol2.item.bytes"
+  size: 217
+}
+entries {
+  name: "items/cyber ssc beta skillsoftdronecontrol3.item.bytes"
+  size: 219
+}
+entries {
+  name: "items/cyber ssc beta skillsoftranged1.item.bytes"
+  size: 210
+}
+entries {
+  name: "items/cyber ssc beta skillsoftranged2.item.bytes"
+  size: 212
+}
+entries {
+  name: "items/cyber ssc beta skillsoftranged3.item.bytes"
+  size: 213
+}
+entries {
+  name: "items/cyber ssc beta skillsoftthrowing1.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/cyber ssc beta skillsoftthrowing2.item.bytes"
+  size: 203
+}
+entries {
+  name: "items/cyber ssc beta skillsoftthrowing3.item.bytes"
+  size: 204
+}
+entries {
+  name: "items/cyber ssc beta smartlink.item.bytes"
+  size: 457
+}
+entries {
+  name: "items/cyber ssc beta subprocessor.item.bytes"
+  size: 193
+}
+entries {
+  name: "items/cyber ssc beta vehiclecontrolrig1.item.bytes"
+  size: 484
+}
+entries {
+  name: "items/cyber ssc beta vehiclecontrolrig2.item.bytes"
+  size: 505
+}
+entries {
+  name: "items/cyber ssc beta vehiclecontrolrig3.item.bytes"
+  size: 502
+}
+entries {
+  name: "items/cyber ssc beta visionmag.item.bytes"
+  size: 179
+}
+entries {
+  name: "items/cyber ssc beta wiredreflexes1.item.bytes"
+  size: 293
+}
+entries {
+  name: "items/cyber ssc beta wiredreflexes2.item.bytes"
+  size: 295
+}
+entries {
+  name: "items/cyber ssc beta wiredreflexes3.item.bytes"
+  size: 297
+}
+entries {
+  name: "items/cyber ssc bonelacing1.item.bytes"
+  size: 207
+}
+entries {
+  name: "items/cyber ssc bonelacing2.item.bytes"
+  size: 218
+}
+entries {
+  name: "items/cyber ssc bonelacing3.item.bytes"
+  size: 218
+}
+entries {
+  name: "items/cyber ssc boostedreflexes1.item.bytes"
+  size: 279
+}
+entries {
+  name: "items/cyber ssc boostedreflexes2.item.bytes"
+  size: 311
+}
+entries {
+  name: "items/cyber ssc boostedreflexes3.item.bytes"
+  size: 313
+}
+entries {
+  name: "items/cyber ssc datajack.item.bytes"
+  size: 148
+}
+entries {
+  name: "items/cyber ssc delta bonelacing1.item.bytes"
+  size: 220
+}
+entries {
+  name: "items/cyber ssc delta bonelacing2.item.bytes"
+  size: 229
+}
+entries {
+  name: "items/cyber ssc delta bonelacing3.item.bytes"
+  size: 230
+}
+entries {
+  name: "items/cyber ssc delta boostedreflexes1.item.bytes"
+  size: 291
+}
+entries {
+  name: "items/cyber ssc delta boostedreflexes2.item.bytes"
+  size: 323
+}
+entries {
+  name: "items/cyber ssc delta boostedreflexes3.item.bytes"
+  size: 325
+}
+entries {
+  name: "items/cyber ssc delta datajack.item.bytes"
+  size: 152
+}
+entries {
+  name: "items/cyber ssc delta dermalplating1.item.bytes"
+  size: 210
+}
+entries {
+  name: "items/cyber ssc delta dermalplating2.item.bytes"
+  size: 211
+}
+entries {
+  name: "items/cyber ssc delta dermalplating3.item.bytes"
+  size: 212
+}
+entries {
+  name: "items/cyber ssc delta dermalsheathing1.item.bytes"
+  size: 347
+}
+entries {
+  name: "items/cyber ssc delta dermalsheathing2.item.bytes"
+  size: 348
+}
+entries {
+  name: "items/cyber ssc delta dermalsheathing3.item.bytes"
+  size: 349
+}
+entries {
+  name: "items/cyber ssc delta encephalon1.item.bytes"
+  size: 193
+}
+entries {
+  name: "items/cyber ssc delta encephalon2.item.bytes"
+  size: 197
+}
+entries {
+  name: "items/cyber ssc delta encephalon3.item.bytes"
+  size: 208
+}
+entries {
+  name: "items/cyber ssc delta encephalon4.item.bytes"
+  size: 207
+}
+entries {
+  name: "items/cyber ssc delta eyes.item.bytes"
+  size: 147
+}
+entries {
+  name: "items/cyber ssc delta linguaacademic.item.bytes"
+  size: 208
+}
+entries {
+  name: "items/cyber ssc delta linguacorporate.item.bytes"
+  size: 215
+}
+entries {
+  name: "items/cyber ssc delta linguacorpsoc.item.bytes"
+  size: 215
+}
+entries {
+  name: "items/cyber ssc delta linguasocialite.item.bytes"
+  size: 221
+}
+entries {
+  name: "items/cyber ssc delta movebywire1.item.bytes"
+  size: 331
+}
+entries {
+  name: "items/cyber ssc delta movebywire2.item.bytes"
+  size: 332
+}
+entries {
+  name: "items/cyber ssc delta movebywire3.item.bytes"
+  size: 334
+}
+entries {
+  name: "items/cyber ssc delta paineditor.item.bytes"
+  size: 301
+}
+entries {
+  name: "items/cyber ssc delta rangefinder.item.bytes"
+  size: 190
+}
+entries {
+  name: "items/cyber ssc delta skillsoftbiotech1.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/cyber ssc delta skillsoftbiotech2.item.bytes"
+  size: 202
+}
+entries {
+  name: "items/cyber ssc delta skillsoftbiotech3.item.bytes"
+  size: 203
+}
+entries {
+  name: "items/cyber ssc delta skillsoftclose1.item.bytes"
+  size: 210
+}
+entries {
+  name: "items/cyber ssc delta skillsoftclose2.item.bytes"
+  size: 211
+}
+entries {
+  name: "items/cyber ssc delta skillsoftclose3.item.bytes"
+  size: 212
+}
+entries {
+  name: "items/cyber ssc delta skillsoftdecking1.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/cyber ssc delta skillsoftdecking2.item.bytes"
+  size: 202
+}
+entries {
+  name: "items/cyber ssc delta skillsoftdecking3.item.bytes"
+  size: 203
+}
+entries {
+  name: "items/cyber ssc delta skillsoftdodge1.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/cyber ssc delta skillsoftdodge2.item.bytes"
+  size: 196
+}
+entries {
+  name: "items/cyber ssc delta skillsoftdodge3.item.bytes"
+  size: 197
+}
+entries {
+  name: "items/cyber ssc delta skillsoftdronecontrol1.item.bytes"
+  size: 219
+}
+entries {
+  name: "items/cyber ssc delta skillsoftdronecontrol2.item.bytes"
+  size: 219
+}
+entries {
+  name: "items/cyber ssc delta skillsoftdronecontrol3.item.bytes"
+  size: 221
+}
+entries {
+  name: "items/cyber ssc delta skillsoftranged1.item.bytes"
+  size: 213
+}
+entries {
+  name: "items/cyber ssc delta skillsoftranged2.item.bytes"
+  size: 214
+}
+entries {
+  name: "items/cyber ssc delta skillsoftranged3.item.bytes"
+  size: 215
+}
+entries {
+  name: "items/cyber ssc delta skillsoftthrowing1.item.bytes"
+  size: 204
+}
+entries {
+  name: "items/cyber ssc delta skillsoftthrowing2.item.bytes"
+  size: 205
+}
+entries {
+  name: "items/cyber ssc delta skillsoftthrowing3.item.bytes"
+  size: 206
+}
+entries {
+  name: "items/cyber ssc delta smartlink.item.bytes"
+  size: 460
+}
+entries {
+  name: "items/cyber ssc delta subprocessor.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/cyber ssc delta vehiclecontrolrig1.item.bytes"
+  size: 486
+}
+entries {
+  name: "items/cyber ssc delta vehiclecontrolrig2.item.bytes"
+  size: 507
+}
+entries {
+  name: "items/cyber ssc delta vehiclecontrolrig3.item.bytes"
+  size: 505
+}
+entries {
+  name: "items/cyber ssc delta visionmag.item.bytes"
+  size: 181
+}
+entries {
+  name: "items/cyber ssc delta wiredreflexes1.item.bytes"
+  size: 295
+}
+entries {
+  name: "items/cyber ssc delta wiredreflexes2.item.bytes"
+  size: 297
+}
+entries {
+  name: "items/cyber ssc delta wiredreflexes3.item.bytes"
+  size: 300
+}
+entries {
+  name: "items/cyber ssc dermalplating1.item.bytes"
+  size: 196
+}
+entries {
+  name: "items/cyber ssc dermalplating2.item.bytes"
+  size: 197
+}
+entries {
+  name: "items/cyber ssc dermalplating3.item.bytes"
+  size: 199
+}
+entries {
+  name: "items/cyber ssc dermalsheathing1.item.bytes"
+  size: 335
+}
+entries {
+  name: "items/cyber ssc dermalsheathing2.item.bytes"
+  size: 336
+}
+entries {
+  name: "items/cyber ssc dermalsheathing3.item.bytes"
+  size: 337
+}
+entries {
+  name: "items/cyber ssc encephalon1.item.bytes"
+  size: 180
+}
+entries {
+  name: "items/cyber ssc encephalon2.item.bytes"
+  size: 185
+}
+entries {
+  name: "items/cyber ssc encephalon3.item.bytes"
+  size: 196
+}
+entries {
+  name: "items/cyber ssc encephalon4.item.bytes"
+  size: 195
+}
+entries {
+  name: "items/cyber ssc eyes.item.bytes"
+  size: 134
+}
+entries {
+  name: "items/cyber ssc johnson trodes.item.bytes"
+  size: 188
+}
+entries {
+  name: "items/cyber ssc leg alpha1.item.bytes"
+  size: 200
+}
+entries {
+  name: "items/cyber ssc leg alpha2.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/cyber ssc leg basic1.item.bytes"
+  size: 200
+}
+entries {
+  name: "items/cyber ssc leg basic2.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/cyber ssc leg beta1.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/cyber ssc leg beta2.item.bytes"
+  size: 199
+}
+entries {
+  name: "items/cyber ssc leg delta1.item.bytes"
+  size: 200
+}
+entries {
+  name: "items/cyber ssc leg delta2.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/cyber ssc linguaacademic.item.bytes"
+  size: 194
+}
+entries {
+  name: "items/cyber ssc linguacorporate.item.bytes"
+  size: 202
+}
+entries {
+  name: "items/cyber ssc linguacorpsoc.item.bytes"
+  size: 201
+}
+entries {
+  name: "items/cyber ssc linguasocialite.item.bytes"
+  size: 208
+}
+entries {
+  name: "items/cyber ssc movebywire1.item.bytes"
+  size: 319
+}
+entries {
+  name: "items/cyber ssc movebywire2.item.bytes"
+  size: 319
+}
+entries {
+  name: "items/cyber ssc movebywire3.item.bytes"
+  size: 321
+}
+entries {
+  name: "items/cyber ssc nanos.item.bytes"
+  size: 151
+}
+entries {
+  name: "items/cyber ssc paineditor.item.bytes"
+  size: 288
+}
+entries {
+  name: "items/cyber ssc rangefinder.item.bytes"
+  size: 177
+}
+entries {
+  name: "items/cyber ssc skillsoftbiotech1.item.bytes"
+  size: 188
+}
+entries {
+  name: "items/cyber ssc skillsoftbiotech2.item.bytes"
+  size: 189
+}
+entries {
+  name: "items/cyber ssc skillsoftbiotech3.item.bytes"
+  size: 190
+}
+entries {
+  name: "items/cyber ssc skillsoftclose1.item.bytes"
+  size: 196
+}
+entries {
+  name: "items/cyber ssc skillsoftclose2.item.bytes"
+  size: 197
+}
+entries {
+  name: "items/cyber ssc skillsoftclose3.item.bytes"
+  size: 198
+}
+entries {
+  name: "items/cyber ssc skillsoftdecking1.item.bytes"
+  size: 188
+}
+entries {
+  name: "items/cyber ssc skillsoftdecking2.item.bytes"
+  size: 189
+}
+entries {
+  name: "items/cyber ssc skillsoftdecking3.item.bytes"
+  size: 190
+}
+entries {
+  name: "items/cyber ssc skillsoftdodge1.item.bytes"
+  size: 182
+}
+entries {
+  name: "items/cyber ssc skillsoftdodge2.item.bytes"
+  size: 183
+}
+entries {
+  name: "items/cyber ssc skillsoftdodge3.item.bytes"
+  size: 184
+}
+entries {
+  name: "items/cyber ssc skillsoftdronecontrol1.item.bytes"
+  size: 205
+}
+entries {
+  name: "items/cyber ssc skillsoftdronecontrol2.item.bytes"
+  size: 206
+}
+entries {
+  name: "items/cyber ssc skillsoftdronecontrol3.item.bytes"
+  size: 208
+}
+entries {
+  name: "items/cyber ssc skillsoftranged1.item.bytes"
+  size: 199
+}
+entries {
+  name: "items/cyber ssc skillsoftranged2.item.bytes"
+  size: 200
+}
+entries {
+  name: "items/cyber ssc skillsoftranged3.item.bytes"
+  size: 202
+}
+entries {
+  name: "items/cyber ssc skillsoftthrowing1.item.bytes"
+  size: 191
+}
+entries {
+  name: "items/cyber ssc skillsoftthrowing2.item.bytes"
+  size: 192
+}
+entries {
+  name: "items/cyber ssc skillsoftthrowing3.item.bytes"
+  size: 193
+}
+entries {
+  name: "items/cyber ssc smartlink.item.bytes"
+  size: 447
+}
+entries {
+  name: "items/cyber ssc subprocessor.item.bytes"
+  size: 182
+}
+entries {
+  name: "items/cyber ssc trodes.item.bytes"
+  size: 145
+}
+entries {
+  name: "items/cyber ssc vehiclecontrolrig1.item.bytes"
+  size: 472
+}
+entries {
+  name: "items/cyber ssc vehiclecontrolrig2.item.bytes"
+  size: 495
+}
+entries {
+  name: "items/cyber ssc vehiclecontrolrig3.item.bytes"
+  size: 492
+}
+entries {
+  name: "items/cyber ssc visionmag.item.bytes"
+  size: 168
+}
+entries {
+  name: "items/cyber ssc wiredreflexes1.item.bytes"
+  size: 283
+}
+entries {
+  name: "items/cyber ssc wiredreflexes2.item.bytes"
+  size: 285
+}
+entries {
+  name: "items/cyber ssc wiredreflexes3.item.bytes"
+  size: 287
+}
+entries {
+  name: "items/cyberdecknanos.item.bytes"
+  size: 406
+}
+entries {
+  name: "items/cyberdecknoobs.item.bytes"
+  size: 422
+}
+entries {
+  name: "items/deepgaze.item.bytes"
+  size: 659
+}
+entries {
+  name: "items/drugneuro.item.bytes"
+  size: 420
+}
+entries {
+  name: "items/ec_passcard.item.bytes"
+  size: 161
+}
+entries {
+  name: "items/family photo.item.bytes"
+  size: 293
+}
+entries {
+  name: "items/heal barrier.item.bytes"
+  size: 464
+}
+entries {
+  name: "items/healvp.item.bytes"
+  size: 520
+}
+entries {
+  name: "items/invocationstodagon.item.bytes"
+  size: 589
+}
+entries {
+  name: "items/library card.item.bytes"
+  size: 156
+}
+entries {
+  name: "items/matrix basic attack (ranged 3).item.bytes"
+  size: 471
+}
+entries {
+  name: "items/npc ssc boostedreflexes1.item.bytes"
+  size: 192
+}
+entries {
+  name: "items/npc ssc boostedreflexes2.item.bytes"
+  size: 208
+}
+entries {
+  name: "items/npc ssc boostedreflexes3.item.bytes"
+  size: 209
+}
+entries {
+  name: "items/npc ssc movebywire1.item.bytes"
+  size: 217
+}
+entries {
+  name: "items/npc ssc movebywire2.item.bytes"
+  size: 218
+}
+entries {
+  name: "items/npc ssc movebywire3.item.bytes"
+  size: 219
+}
+entries {
+  name: "items/npc ssc wiredreflexes1.item.bytes"
+  size: 191
+}
+entries {
+  name: "items/npc ssc wiredreflexes2.item.bytes"
+  size: 192
+}
+entries {
+  name: "items/npc ssc wiredreflexes3.item.bytes"
+  size: 192
+}
+entries {
+  name: "items/or_caramelsnack.item.bytes"
+  size: 93
+}
+entries {
+  name: "items/or_keycard.item.bytes"
+  size: 139
+}
+entries {
+  name: "items/or_packsmokes.item.bytes"
+  size: 76
+}
+entries {
+  name: "items/or_peanutsnack.item.bytes"
+  size: 90
+}
+entries {
+  name: "items/or_researchdevice.item.bytes"
+  size: 225
+}
+entries {
+  name: "items/or_soda.item.bytes"
+  size: 45
+}
+entries {
+  name: "items/or_water.item.bytes"
+  size: 74
+}
+entries {
+  name: "items/pi 1 ceska black scorpion (silencer) tdo.item.bytes"
+  size: 443
+}
+entries {
+  name: "items/pi 1 ceska black scorpion (smartlink) tdo.item.bytes"
+  size: 454
+}
+entries {
+  name: "items/pi 1 ceska black scorpion tdo.item.bytes"
+  size: 398
+}
+entries {
+  name: "items/pi 1 fichetti security 500 (silencer) tdo.item.bytes"
+  size: 394
+}
+entries {
+  name: "items/pi 1 fichetti security 500 (smartlink) tdo.item.bytes"
+  size: 399
+}
+entries {
+  name: "items/pi 1 fichetti security 500 tdo.item.bytes"
+  size: 343
+}
+entries {
+  name: "items/pi 2 ares predator (silencer) tdo.item.bytes"
+  size: 418
+}
+entries {
+  name: "items/pi 2 ares predator (smartlink) tdo.item.bytes"
+  size: 439
+}
+entries {
+  name: "items/pi 2 ares predator tdo.item.bytes"
+  size: 369
+}
+entries {
+  name: "items/pi 2 browning max-power (silencer) tdo.item.bytes"
+  size: 402
+}
+entries {
+  name: "items/pi 2 browning max-power (smartlink) tdo.item.bytes"
+  size: 408
+}
+entries {
+  name: "items/pi 2 browning max-power tdo.item.bytes"
+  size: 353
+}
+entries {
+  name: "items/pi 2 cavalier deputy (smartlink) tdo.item.bytes"
+  size: 425
+}
+entries {
+  name: "items/pi 2 cavalier deputy tdo.item.bytes"
+  size: 425
+}
+entries {
+  name: "items/pi 3 colt manhunter (silencer) tdo.item.bytes"
+  size: 431
+}
+entries {
+  name: "items/pi 3 colt manhunter (smartlink) tdo.item.bytes"
+  size: 452
+}
+entries {
+  name: "items/pi 3 colt manhunter tdo.item.bytes"
+  size: 396
+}
+entries {
+  name: "items/pi 3 ruger super warhawk (smartlink) tdo.item.bytes"
+  size: 456
+}
+entries {
+  name: "items/pi 3 ruger super warhawk tdo.item.bytes"
+  size: 400
+}
+entries {
+  name: "items/pi 3 ruger thunderbolt (silencer) tdo.item.bytes"
+  size: 410
+}
+entries {
+  name: "items/pi 3 ruger thunderbolt (smartlink) tdo.item.bytes"
+  size: 416
+}
+entries {
+  name: "items/pi 3 ruger thunderbolt tdo.item.bytes"
+  size: 361
+}
+entries {
+  name: "items/pi ssc arescrusader.item.bytes"
+  size: 436
+}
+entries {
+  name: "items/pi ssc areslightfire70.item.bytes"
+  size: 459
+}
+entries {
+  name: "items/pi ssc areslightfire70sil.item.bytes"
+  size: 480
+}
+entries {
+  name: "items/pi ssc arespredator.item.bytes"
+  size: 350
+}
+entries {
+  name: "items/pi ssc arespredatorii.item.bytes"
+  size: 550
+}
+entries {
+  name: "items/pi ssc aresviper.item.bytes"
+  size: 499
+}
+entries {
+  name: "items/pi ssc beretta200st.item.bytes"
+  size: 425
+}
+entries {
+  name: "items/pi ssc berettamodel101t.item.bytes"
+  size: 442
+}
+entries {
+  name: "items/pi ssc browningultra-power.item.bytes"
+  size: 534
+}
+entries {
+  name: "items/pi ssc ceskascorpion.item.bytes"
+  size: 348
+}
+entries {
+  name: "items/pi ssc ceskavz120.item.bytes"
+  size: 432
+}
+entries {
+  name: "items/pi ssc coltamericanl36.item.bytes"
+  size: 444
+}
+entries {
+  name: "items/pi ssc coltmanhunter.item.bytes"
+  size: 356
+}
+entries {
+  name: "items/pi ssc defiancesupershock.item.bytes"
+  size: 516
+}
+entries {
+  name: "items/pi ssc fichettisecurity500.item.bytes"
+  size: 318
+}
+entries {
+  name: "items/pi ssc fichettisecurity500a.item.bytes"
+  size: 470
+}
+entries {
+  name: "items/pi ssc narcojectpistol.item.bytes"
+  size: 386
+}
+entries {
+  name: "items/pi ssc rugersuperwarhawk.item.bytes"
+  size: 378
+}
+entries {
+  name: "items/pi ssc secold-100.item.bytes"
+  size: 497
+}
+entries {
+  name: "items/pi ssc streetlinespecial.item.bytes"
+  size: 480
+}
+entries {
+  name: "items/pi ssc tiffaniself-defender.item.bytes"
+  size: 497
+}
+entries {
+  name: "items/pi ssc waltherpalmpistol.item.bytes"
+  size: 501
+}
+entries {
+  name: "items/pr ic trace 1.item.bytes"
+  size: 484
+}
+entries {
+  name: "items/pr killer 1 (nano).item.bytes"
+  size: 612
+}
+entries {
+  name: "items/pr medic 1 (nano).item.bytes"
+  size: 561
+}
+entries {
+  name: "items/pr supression 1 (nano).item.bytes"
+  size: 447
+}
+entries {
+  name: "items/pr supression 2.item.bytes"
+  size: 423
+}
+entries {
+  name: "items/pr supression 3.item.bytes"
+  size: 423
+}
+entries {
+  name: "items/pr supression 4.item.bytes"
+  size: 423
+}
+entries {
+  name: "items/sh 1 benelli raffaello (smartlink) tdo.item.bytes"
+  size: 583
+}
+entries {
+  name: "items/sh 1 benelli raffaello tdo.item.bytes"
+  size: 528
+}
+entries {
+  name: "items/sh 1 ganger shotgun tdo.item.bytes"
+  size: 558
+}
+entries {
+  name: "items/sh 1 street sweeper tdo.item.bytes"
+  size: 487
+}
+entries {
+  name: "items/sh 2 mossberg cmdt (smartlink) tdo.item.bytes"
+  size: 588
+}
+entries {
+  name: "items/sh 2 mossberg cmdt tdo.item.bytes"
+  size: 533
+}
+entries {
+  name: "items/sh 2 remington 990 (smartlink) tdo.item.bytes"
+  size: 584
+}
+entries {
+  name: "items/sh 2 remington 990 tdo.item.bytes"
+  size: 529
+}
+entries {
+  name: "items/sh 3 defiance t-250 (smartlink) tdo.item.bytes"
+  size: 602
+}
+entries {
+  name: "items/sh 3 defiance t-250 tdo.item.bytes"
+  size: 547
+}
+entries {
+  name: "items/sh 3 enfield as-7 (smartlink) tdo.item.bytes"
+  size: 614
+}
+entries {
+  name: "items/sh 3 enfield as-7 tdo.item.bytes"
+  size: 559
+}
+entries {
+  name: "items/sh ssc defiancet-250.item.bytes"
+  size: 352
+}
+entries {
+  name: "items/sh ssc enfieldas-7.item.bytes"
+  size: 413
+}
+entries {
+  name: "items/sh ssc mossbergcmdt.item.bytes"
+  size: 397
+}
+entries {
+  name: "items/sh ssc remington990.item.bytes"
+  size: 325
+}
+entries {
+  name: "items/sh ssc remingtonroomsweeper.item.bytes"
+  size: 559
+}
+entries {
+  name: "items/sh ssc winchestermodel21.item.bytes"
+  size: 524
+}
+entries {
+  name: "items/shadowball.item.bytes"
+  size: 115
+}
+entries {
+  name: "items/smg 1 beretta model 70 tdo.item.bytes"
+  size: 456
+}
+entries {
+  name: "items/smg 1 uzi iii tdo.item.bytes"
+  size: 453
+}
+entries {
+  name: "items/smg 2 colt tz-110 tdo.item.bytes"
+  size: 480
+}
+entries {
+  name: "items/smg 2 ingram smartgun tdo.item.bytes"
+  size: 495
+}
+entries {
+  name: "items/smg 3 hk hk227 tdo.item.bytes"
+  size: 494
+}
+entries {
+  name: "items/smg 3 sck model 100 tdo.item.bytes"
+  size: 484
+}
+entries {
+  name: "items/smg ssc ak97carbine.item.bytes"
+  size: 460
+}
+entries {
+  name: "items/smg ssc berettamodel70.item.bytes"
+  size: 396
+}
+entries {
+  name: "items/smg ssc hk227-s.item.bytes"
+  size: 392
+}
+entries {
+  name: "items/smg ssc hk227.item.bytes"
+  size: 374
+}
+entries {
+  name: "items/smg ssc hkmp5tx.item.bytes"
+  size: 499
+}
+entries {
+  name: "items/smg ssc ingramsmartgun.item.bytes"
+  size: 413
+}
+entries {
+  name: "items/smg ssc sandlertmp.item.bytes"
+  size: 448
+}
+entries {
+  name: "items/smg ssc sckmodel100.item.bytes"
+  size: 376
+}
+entries {
+  name: "items/smg ssc uziiii.item.bytes"
+  size: 338
+}
+entries {
+  name: "items/sp spell blood feast.item.bytes"
+  size: 694
+}
+entries {
+  name: "items/sp spell blood leech.item.bytes"
+  size: 658
+}
+entries {
+  name: "items/spellheallightwounds.item.bytes"
+  size: 575
+}
+entries {
+  name: "items/spellhealmediumwounds.item.bytes"
+  size: 577
+}
+entries {
+  name: "items/spellhealseriouswounds.item.bytes"
+  size: 579
+}
+entries {
+  name: "items/spellregenerate1.item.bytes"
+  size: 683
+}
+entries {
+  name: "items/spellregenerate2.item.bytes"
+  size: 683
+}
+entries {
+  name: "items/sword 1 baseball bat tdo.item.bytes"
+  size: 345
+}
+entries {
+  name: "items/sword 1 crowbar tdo.item.bytes"
+  size: 320
+}
+entries {
+  name: "items/sword 1 machete tdo.item.bytes"
+  size: 402
+}
+entries {
+  name: "items/sword 1 rebar pipe tdo.item.bytes"
+  size: 356
+}
+entries {
+  name: "items/sword 2 axe tdo.item.bytes"
+  size: 353
+}
+entries {
+  name: "items/sword 2 katana tdo.item.bytes"
+  size: 371
+}
+entries {
+  name: "items/sword 3 jadesword tdo.item.bytes"
+  size: 386
+}
+entries {
+  name: "items/sword 3 katana tdo.item.bytes"
+  size: 405
+}
+entries {
+  name: "items/sword ssc lasercrescentaxe.item.bytes"
+  size: 225
+}
+entries {
+  name: "items/sword ssc monofilamentsword.item.bytes"
+  size: 270
+}
+entries {
+  name: "items/sword ssc stunbaton.item.bytes"
+  size: 245
+}
+entries {
+  name: "items/sword tdo baseballbat.item.bytes"
+  size: 231
+}
+entries {
+  name: "items/sword tdo machete.item.bytes"
+  size: 257
+}
+entries {
+  name: "items/trodes.item.bytes"
+  size: 135
+}
+entries {
+  name: "maps/barrens arena.srm.bytes"
+  size: 292235
+}
+entries {
+  name: "maps/barrens massacre.srm.bytes"
+  size: 78441
+}
+entries {
+  name: "maps/behq entrance.srm.bytes"
+  size: 201579
+}
+entries {
+  name: "maps/behq.srm.bytes"
+  size: 60562
+}
+entries {
+  name: "maps/ch02_dagontower.srm.bytes"
+  size: 80164
+}
+entries {
+  name: "maps/ch02_everett_d1.srm.bytes"
+  size: 252964
+}
+entries {
+  name: "maps/ch02_greenmoon.srm.bytes"
+  size: 7246
+}
+entries {
+  name: "maps/ch02_home.srm.bytes"
+  size: 30851
+}
+entries {
+  name: "maps/ch02_interiortemplate.srm.bytes"
+  size: 72436
+}
+entries {
+  name: "maps/ch02_museum.srm.bytes"
+  size: 99012
+}
+entries {
+  name: "maps/ch03_hideout.srm.bytes"
+  size: 84490
+}
+entries {
+  name: "maps/ch03_tacoma.srm.bytes"
+  size: 138627
+}
+entries {
+  name: "maps/ch03_zeitgeistoffice.srm.bytes"
+  size: 54016
+}
+entries {
+  name: "maps/ch04-coffinhotel.srm.bytes"
+  size: 107279
+}
+entries {
+  name: "maps/ch04-everett_d2_sensenet.srm.bytes"
+  size: 70525
+}
+entries {
+  name: "maps/ch04-velvetunderground.srm.bytes"
+  size: 113607
+}
+entries {
+  name: "maps/ch04-yakhouse.srm.bytes"
+  size: 32119
+}
+entries {
+  name: "maps/ch04_everett2_hotel.srm.bytes"
+  size: 57643
+}
+entries {
+  name: "maps/ch04_everett_d2.srm.bytes"
+  size: 148048
+}
+entries {
+  name: "maps/ch04_johnsonretreat.srm.bytes"
+  size: 59462
+}
+entries {
+  name: "maps/ch05-dunwich.srm.bytes"
+  size: 6456
+}
+entries {
+  name: "maps/ch05-dunwichmain.srm.bytes"
+  size: 165149
+}
+entries {
+  name: "maps/home sweet home.srm.bytes"
+  size: 12660
+}
+entries {
+  name: "maps/map_gauntlet.srm.bytes"
+  size: 38403
+}
+entries {
+  name: "maps/map_limbo.srm.bytes"
+  size: 60
+}
+entries {
+  name: "maps/new home sweet home.srm.bytes"
+  size: 26467
+}
+entries {
+  name: "maps/new scene.srm.bytes"
+  size: 16
+}
+entries {
+  name: "maps/ritual chamber.srm.bytes"
+  size: 47393
+}
+entries {
+  name: "maps/rooftop market.srm.bytes"
+  size: 124539
+}
+entries {
+  name: "maps/run_explosivecargo.srm.bytes"
+  size: 134346
+}
+entries {
+  name: "maps/run_zombietown.srm.bytes"
+  size: 101377
+}
+entries {
+  name: "maps/sewer section 1.srm.bytes"
+  size: 53581
+}
+entries {
+  name: "maps/shadowball arena.srm.bytes"
+  size: 41384
+}
+entries {
+  name: "maps/snf_map.srm.bytes"
+  size: 1385
+}
+entries {
+  name: "maps/sprawl empty map.srm.bytes"
+  size: 118501
+}
+entries {
+  name: "maps/starprecinct.srm.bytes"
+  size: 286894
+}
+entries {
+  name: "maps/stiletto hideout entrance.srm.bytes"
+  size: 18056
+}
+entries {
+  name: "maps/stiletto hideout.srm.bytes"
+  size: 42361
+}
+entries {
+  name: "maps/the bus station.srm.bytes"
+  size: 239976
+}
+entries {
+  name: "maps/the drop-off.srm.bytes"
+  size: 185703
+}
+entries {
+  name: "maps/the extraction.srm.bytes"
+  size: 199560
+}
+entries {
+  name: "maps/the funeral.srm.bytes"
+  size: 97956
+}
+entries {
+  name: "maps/the office run.srm.bytes"
+  size: 106175
+}
+entries {
+  name: "maps/the safehouse.srm.bytes"
+  size: 65668
+}
+entries {
+  name: "maps/the seamstress union.srm.bytes"
+  size: 38188
+}
+entries {
+  name: "maps/the secret lab.srm.bytes"
+  size: 68251
+}
+entries {
+  name: "maps/urban_brawl.srm.bytes"
+  size: 52519
+}
+entries {
+  name: "modes/bf rc1.mode.bytes"
+  size: 200
+}
+entries {
+  name: "modes/bf rc2.mode.bytes"
+  size: 200
+}
+entries {
+  name: "modes/bf rc3.mode.bytes"
+  size: 200
+}
+entries {
+  name: "modes/bf.mode.bytes"
+  size: 196
+}
+entries {
+  name: "modes/double.mode.bytes"
+  size: 96
+}
+entries {
+  name: "modes/fa rc1.mode.bytes"
+  size: 184
+}
+entries {
+  name: "modes/fa rc2.mode.bytes"
+  size: 184
+}
+entries {
+  name: "modes/fa rc3.mode.bytes"
+  size: 184
+}
+entries {
+  name: "modes/fa.mode.bytes"
+  size: 180
+}
+entries {
+  name: "modes/gun.mode.bytes"
+  size: 93
+}
+entries {
+  name: "modes/sa.mode.bytes"
+  size: 152
+}
+entries {
+  name: "modes/silenced bf rc1.mode.bytes"
+  size: 218
+}
+entries {
+  name: "modes/silenced bf rc2.mode.bytes"
+  size: 218
+}
+entries {
+  name: "modes/silenced bf rc3.mode.bytes"
+  size: 218
+}
+entries {
+  name: "modes/silenced bf.mode.bytes"
+  size: 214
+}
+entries {
+  name: "modes/silenced fa rc1.mode.bytes"
+  size: 202
+}
+entries {
+  name: "modes/silenced fa rc2.mode.bytes"
+  size: 202
+}
+entries {
+  name: "modes/silenced fa rc3.mode.bytes"
+  size: 202
+}
+entries {
+  name: "modes/silenced fa.mode.bytes"
+  size: 198
+}
+entries {
+  name: "modes/silenced sa.mode.bytes"
+  size: 176
+}
+entries {
+  name: "modes/silenced ss.mode.bytes"
+  size: 220
+}
+entries {
+  name: "modes/sn.mode.bytes"
+  size: 130
+}
+entries {
+  name: "modes/ss.mode.bytes"
+  size: 184
+}
+entries {
+  name: "props/barrens_vehicle_audihinloopen.pb.bytes"
+  size: 4800
+}
+entries {
+  name: "props/barrens_vehicle_ekon.pb.bytes"
+  size: 7730
+}
+entries {
+  name: "props/barrens_vehicle_ekonworn.pb.bytes"
+  size: 7783
+}
+entries {
+  name: "props/barrens_vehicle_peugeot4002.pb.bytes"
+  size: 6026
+}
+entries {
+  name: "props/barrens_vehicle_peugeot4002worn.pb.bytes"
+  size: 6155
+}
+entries {
+  name: "props/barrens_vehicle_peugeotrchybrid.pb.bytes"
+  size: 6201
+}
+entries {
+  name: "props/barrens_vehicle_peugeotrchybridworn.pb.bytes"
+  size: 5988
+}
+entries {
+  name: "props/barrens_vehicle_peugeotsolar888.pb.bytes"
+  size: 10641
+}
+entries {
+  name: "props/barrens_vehicle_toyotahybridx.pb.bytes"
+  size: 6005
+}
+entries {
+  name: "props/barrens_vehicle_toyotahybridxworn.pb.bytes"
+  size: 2836
+}
+entries {
+  name: "props/cemetery_misc_tree01.pb.bytes"
+  size: 16263
+}
+entries {
+  name: "props/cemetery_misc_tree03.pb.bytes"
+  size: 12917
+}
+entries {
+  name: "props/cemetery_misc_tree04.pb.bytes"
+  size: 21296
+}
+entries {
+  name: "props/cemetery_misc_tree05.pb.bytes"
+  size: 21905
+}
+entries {
+  name: "props/divebar_furniture_chair01.pb.bytes"
+  size: 5422
+}
+entries {
+  name: "props/docks_vehicle_helicopter.pb.bytes"
+  size: 17380
+}
+entries {
+  name: "props/telestrianestate_decor_columndragon01.pb.bytes"
+  size: 3735
+}
+entries {
+  name: "props/telestrianestate_furniture_baroqueendtable01cover.pb.bytes"
+  size: 3220
+}
+entries {
+  name: "props/telestrianestate_furniture_hallwaytable02.pb.bytes"
+  size: 1963
+}
+entries {
+  name: "props/telestrianestate_furniture_hallwaytable02cover.pb.bytes"
+  size: 1969
+}
+entries {
+  name: "scenes/barrens 9 blocks 2.srt.bytes"
+  size: 26847
+}
+entries {
+  name: "scenes/barrens arena.srt.bytes"
+  size: 255
+}
+entries {
+  name: "scenes/barrens massacre.srt.bytes"
+  size: 11276
+}
+entries {
+  name: "scenes/behq entrance.srt.bytes"
+  size: 8301
+}
+entries {
+  name: "scenes/behq.srt.bytes"
+  size: 19124
+}
+entries {
+  name: "scenes/ch02_dagontower.srt.bytes"
+  size: 25123
+}
+entries {
+  name: "scenes/ch02_everett_d1.srt.bytes"
+  size: 91869
+}
+entries {
+  name: "scenes/ch02_greenmoon.srt.bytes"
+  size: 12030
+}
+entries {
+  name: "scenes/ch02_home.srt.bytes"
+  size: 31169
+}
+entries {
+  name: "scenes/ch02_interiortemplate.srt.bytes"
+  size: 263
+}
+entries {
+  name: "scenes/ch02_museum.srt.bytes"
+  size: 24927
+}
+entries {
+  name: "scenes/ch03_hideout.srt.bytes"
+  size: 21478
+}
+entries {
+  name: "scenes/ch03_tacoma.srt.bytes"
+  size: 59362
+}
+entries {
+  name: "scenes/ch03_zeitgeistoffice.srt.bytes"
+  size: 48093
+}
+entries {
+  name: "scenes/ch04-coffinhotel.srt.bytes"
+  size: 82599
+}
+entries {
+  name: "scenes/ch04-everett_d2_sensenet.srt.bytes"
+  size: 51027
+}
+entries {
+  name: "scenes/ch04-velvetunderground.srt.bytes"
+  size: 48113
+}
+entries {
+  name: "scenes/ch04-yakhouse.srt.bytes"
+  size: 23195
+}
+entries {
+  name: "scenes/ch04_everett2_hotel.srt.bytes"
+  size: 30309
+}
+entries {
+  name: "scenes/ch04_everett_d2.srt.bytes"
+  size: 37700
+}
+entries {
+  name: "scenes/ch04_johnsonretreat.srt.bytes"
+  size: 19051
+}
+entries {
+  name: "scenes/ch05-dunwich.srt.bytes"
+  size: 7197
+}
+entries {
+  name: "scenes/ch05-dunwichmain.srt.bytes"
+  size: 56237
+}
+entries {
+  name: "scenes/home sweet home.srt.bytes"
+  size: 9061
+}
+entries {
+  name: "scenes/map_gauntlet.srt.bytes"
+  size: 28222
+}
+entries {
+  name: "scenes/map_limbo.srt.bytes"
+  size: 1882
+}
+entries {
+  name: "scenes/new home sweet home.srt.bytes"
+  size: 18125
+}
+entries {
+  name: "scenes/ritual chamber.srt.bytes"
+  size: 16888
+}
+entries {
+  name: "scenes/rooftop market.srt.bytes"
+  size: 50948
+}
+entries {
+  name: "scenes/run_explosivecargo.srt.bytes"
+  size: 57267
+}
+entries {
+  name: "scenes/run_zombietown.srt.bytes"
+  size: 49602
+}
+entries {
+  name: "scenes/sewer section 1.srt.bytes"
+  size: 1725
+}
+entries {
+  name: "scenes/shadowball arena.srt.bytes"
+  size: 7464
+}
+entries {
+  name: "scenes/snf_map.srt.bytes"
+  size: 22670
+}
+entries {
+  name: "scenes/starprecinct.srt.bytes"
+  size: 370
+}
+entries {
+  name: "scenes/stiletto hideout entrance.srt.bytes"
+  size: 10544
+}
+entries {
+  name: "scenes/stiletto hideout.srt.bytes"
+  size: 10367
+}
+entries {
+  name: "scenes/the bus station.srt.bytes"
+  size: 2217
+}
+entries {
+  name: "scenes/the drop-off.srt.bytes"
+  size: 7218
+}
+entries {
+  name: "scenes/the extraction.srt.bytes"
+  size: 46647
+}
+entries {
+  name: "scenes/the funeral.srt.bytes"
+  size: 33610
+}
+entries {
+  name: "scenes/the office run.srt.bytes"
+  size: 74271
+}
+entries {
+  name: "scenes/the seamstress union.srt.bytes"
+  size: 14825
+}
+entries {
+  name: "scenes/the secret lab.srt.bytes"
+  size: 9491
+}
+entries {
+  name: "stories/story.story.bytes"
+  size: 21885
+}

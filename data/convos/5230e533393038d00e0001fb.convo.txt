@@ -1,0 +1,91 @@
+idRef {
+  id: "5230e533393038d00e0001fb"
+}
+ui_name: "ch04-suspect1"
+nodes {
+  idRef {
+    id: "5230e53a393038d00e000201"
+  }
+  index: 0
+  text: "What do you want from me? You\'re not even a real cop! I\'m innocent!"
+  branches {
+    responseText: "Do you have an alibi?"
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Comparison (int)"
+            args {
+              call_value {
+                functionName: "Get Variable (int)"
+                args {
+                  string_value: "hintSuspect1"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (int)"
+            args {
+              call_value {
+                functionName: "Get Variable (int)"
+                args {
+                  string_value: "hintSuspect2"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Do you have an alibi?!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230e58a393038d00e000204"
+  }
+  index: 1
+  text: "Yes, I was in a vidphone call with my employer! You can check the vidlogs if you want!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

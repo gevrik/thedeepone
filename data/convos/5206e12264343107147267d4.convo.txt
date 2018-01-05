@@ -1,0 +1,130 @@
+idRef {
+  id: "5206e12264343107147267d4"
+}
+ui_name: "the_extraction_datastore"
+nodes {
+  idRef {
+    id: "5206e13364343107147267da"
+  }
+  index: 0
+  text: "This datastore contains information on the current prisoners."
+  branches {
+    responseText: "{{CC}}Cell 1 Status{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Cell 2 Status{{/CC}}"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520700716434319014726702"
+  }
+  index: 1
+  text: "Holding some suits daughter in this cell for ransom."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520700a26434319014726704"
+  }
+  index: 2
+  text: "Cell 2 is currently empty."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520700d56434319014726719"
+  }
+  index: 3
+  text: "This datastore contains information on the current prisoners."
+  branches {
+    responseText: "{{CC}}Cell 1 Status{{/CC}}"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "{{CC}}Cell 2 Status{{/CC}}"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520700d5643431901472671c"
+  }
+  index: 4
+  text: "Cell 1 is currently empty."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520700d5643431901472671f"
+  }
+  index: 5
+  text: "Holding some suit\'s daughter in this cell for ransom."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "correctCell"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "correctCell"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  nextNodeIndex: 3
+}

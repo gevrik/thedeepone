@@ -1,0 +1,373 @@
+idRef {
+  id: "522277ec3930382c11001131"
+}
+ui_name: "ch03_nanoRickWinter"
+nodes {
+  idRef {
+    id: "522277f63930382c11001138"
+  }
+  index: 0
+  text: "Wow, this is crazy drek! There\'s this trivid display sitting in the top-right corner of my field of vision, and there\'s this weird face on the... display?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "nanoConv"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "522278613930382c110011bb"
+  }
+  index: 1
+  text: "Hmm, it is you... or at least a friend of yours! What did you do?"
+  branches {
+    responseText: "I injected her with some Nanobots!"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "That is none of your fraggin\' business! We will not need your help!"
+    nextNodeIndex: 17
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Get out of her head! We don\'t want to talk to you..."
+    nextNodeIndex: 17
+    auxiliaryLink: true
+  }
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "522278613930382c110011be"
+  }
+  index: 2
+  text: "Very interesting... They finally have completed their research it seems... I wonder how I did not run across this prototype before..."
+  branches {
+    responseText: "What are you talking about?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "522278613930382c110011c1"
+  }
+  index: 3
+  text: "When I was still shackled by the Ashpool Systems servers, I had access to all of their research and development data. They were developing Nanobots that would settle around certain brain areas to stimulate them. They would eventually allow for wireless comlink access, all kinds of skillchip upgrades and even Matrix Jack-In from anywhere!\n\nIt looks like at least the comlink access is working, because I am just buzzing you on that signal..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "522278613930382c110011c4"
+  }
+  index: 4
+  text: "Do you feel strange? Any side-effects?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "5222789b3930382c1100122f"
+  }
+  index: 5
+  text: "Nope, this is some really good stuff! Should there be side-effects?"
+  branches {
+    responseText: "This doesn\'t sound good..."
+    nextNodeIndex: 6
+  }
+}
+nodes {
+  idRef {
+    id: "5222789b3930382c11001232"
+  }
+  index: 6
+  text: "During the early development stages the animals that were subjected to the nanobots would display errant behaviour. It seemed like the Nanobots were sometimes going \"rogue\" and doing stuff against their programming.\n\nI think it was one of the other AI that was messing with the Nanobots... They allow for a wireless access to the brain of the subject, and I am sure they could be exploited!"
+  branches {
+    responseText: "Don\'t even think about it!"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Can you get into her brain and see what you can do?"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Which other AI?"
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "5222789b3930382c11001235"
+  }
+  index: 7
+  text: "I would never do that, not without your consent."
+  branches {
+    responseText: "That is good to know. Maybe we can talk about this later? You said this is Ashpool technology? But we are on a run against Zeitgeist Robotics!"
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "5222789b3930382c1100123b"
+  }
+  index: 8
+  text: "Yes - I think so - given enough time. I don\'t think this is the place for that, though!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "522278d33930382c11001279"
+  }
+  index: 9
+  text: "You gotta be kiddin\', right?"
+  branches {
+    responseText: "You are right, let\'s do this when we are done here! Hang on, you say this is Ashpool Systems technology? But Rickshaw and I are in a Zeitgeist Robotics office?"
+    nextNodeIndex: 10
+  }
+}
+nodes {
+  idRef {
+    id: "522278d33930382c1100127c"
+  }
+  index: 10
+  text: "Zeitgeist Robotics is just a subsidary of Ashpool Systems! They specialize on drone AI. They will eventually swarm the markets with their personal service drones and robots. They are also developing realistic humanoid androids, but that is not publicly known. Interesting machines, though."
+  branches {
+    responseText: "Nasty, so any person in this office could be a fragging puppet?"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "522278d33930382c1100127f"
+  }
+  index: 11
+  text: "If they have perfected their developments... maybe! May I ask what you are doing here? Are you looking for Annie?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "522278d33930382c11001282"
+  }
+  index: 12
+  text: "Who is Annie?"
+  branches {
+    responseText: "Not now, Rickshaw..."
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "main_rickshawAffection"
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+    }
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "This other run I told you about..."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "522278d33930382c11001285"
+  }
+  index: 13
+  text: "So I assume you are not looking for her! Whatever, let me know if you need my help. Even if this is not connected to Annie, if I help you, you might progress faster and start looking for Annie sooner..."
+  branches {
+    responseText: "How does she use the nanobots to ping you?"
+    nextNodeIndex: 14
+  }
+  branches {
+    responseText: "We don\'t need your help, bye!"
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "522278d33930382c11001288"
+  }
+  index: 14
+  text: "I do not know for sure. I assume she needs to concentrate on a certain function. You will have to train it.\n\n{{GM}}Click on Rickshaw to open the Nanobot menu{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "522279453930382c11001293"
+  }
+  index: 15
+  text: "Okay, I will try!"
+  branches {
+    responseText: "I hope this works! Maybe I should\'ve injected myself?"
+    nextNodeIndex: 16
+  }
+}
+nodes {
+  idRef {
+    id: "5222795d3930382c11001296"
+  }
+  index: 16
+  text: "You might be able to find another injector, keep your eyes peeled!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "522278d33930382c1100128c"
+  }
+  index: 17
+  text: "Understood - but if you should, then just concentrate on controlling the Nanobots in your head...\n\n{{GM}}Click on Rickshaw to open the Nanobot menu{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "5222789b3930382c11001254"
+  }
+  index: 18
+  text: "There were a few other AI \"in development\" by Ashpool Systems. At least two others that I know of, but we were isolated from each other. They thought it was too dangerous to let us \"mingle\"."
+  branches {
+    responseText: "They might be right..."
+    nextNodeIndex: 19
+  }
+  branches {
+    responseText: "I don\'t think that would hurt anyone..."
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "5222789b3930382c11001257"
+  }
+  index: 19
+  text: "You are not very open-minded, $(l.name). We will have to talk about this later..."
+  branches {
+    responseText: "You are right! Hang on, you say this is Ashpool Systems technology? But Rickshaw and I are in a Zeitgeist Robotics office?"
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+nodes {
+  idRef {
+    id: "5222789b3930382c1100125d"
+  }
+  index: 20
+  text: "Neither do I, but Ashpool Systems are very peculiar when it comes to their AI... But this is not the time for chatter..."
+  branches {
+    responseText: "You are right! Hang on, you say this is Ashpool Systems technology? But Rickshaw and I are in a Zeitgeist Robotics office, right?"
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52226dec3930382c11000e54"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

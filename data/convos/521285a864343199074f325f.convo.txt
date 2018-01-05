@@ -1,0 +1,869 @@
+idRef {
+  id: "521285a864343199074f325f"
+}
+ui_name: "ch02_hansen"
+nodes {
+  idRef {
+    id: "5212865764343199074f3269"
+  }
+  index: 0
+  text: "Want me to take care of them, boss?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521266a86434312307491fb7"
+  }
+}
+nodes {
+  idRef {
+    id: "5212867164343199074f326d"
+  }
+  index: 1
+  text: "No... And who migsht you be? Are you tshe $(l.race) tshat hash been boshering my company?"
+  branches {
+    responseText: "You might want to swallow from time to time..."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Yes, I am. My name is $(s.name) and I have come a long way to meet you... I have some questions..."
+    nextNodeIndex: 29
+  }
+  branches {
+    responseText: "You are going to answer my questions, now!"
+    nextNodeIndex: 32
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212876964343199074f3272"
+  }
+  index: 2
+  text: "You fink you are funny, eh? I migsht have overeshtimated you... you sheem to be very dim after all..."
+  branches {
+    responseText: "Stop babbling, I have some questions you need to answer..."
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128a4164343199074f3275"
+  }
+  index: 3
+  text: "If you don\'t stop talking like that to Dr. Hansen I will have to readjust your face..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521266a86434312307491fb7"
+  }
+}
+nodes {
+  idRef {
+    id: "52128a6f64343199074f3278"
+  }
+  index: 4
+  text: "Itsh fine! T-shhh... We will play tshe queshtions and anshwer game... For a little while... But I have shome queshtions for you ashwell..."
+  branches {
+    responseText: "I will ask the first question..."
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Go ahead, ask your question..."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212925f64343199074f335c"
+  }
+  index: 5
+  text: "Go ahead..."
+  branches {
+    responseText: "I know that you are a member of a cult that summons demons and mates with fish-creatures! I want an explanation of what your goals are and I want you to leave Annie alone!"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521292c264343199074f335f"
+  }
+  index: 6
+  text: "A cult? Don\'t tell me you are a part of these things you have had me research these last months, Hansen!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52126f8f6434312307491fbc"
+  }
+}
+nodes {
+  idRef {
+    id: "521292ee64343199074f3362"
+  }
+  index: 7
+  text: "{{GM}}Dr. Hansen turns to Dr. Armitage{{/GM}}\n\nI was amazed that you haven\'t realized it earlier, Doctor... You are so smart, but the waysh of the real world still elude you... Now be quiet, we will continue with the report after we are done with these people...\n\n{{GM}}Dr. Hansen turns his attention back to you{{/GM}}\n\nHmm... You know a lot for an outsider... But I could not make out a queshtion in there... You want an exshplanation of our goals? My cult ish many centuries old and we have never ashked ourselves why we sherve Father Dagon...\n\nThis Annie you mentioned... Is it Annie Whataley? We will have to pull her location out of your dead brain when we are done with you..."
+  branches {
+    responseText: "Bring it on!"
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128b1964343199074f327c"
+  }
+  index: 8
+  text: "I only have one queshtion tshat you need to anshwer... Who sent you?"
+  branches {
+    responseText: "Nobody sent me, I came here to investigate your little cult..."
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Annie\'s friend in the Matrix..."
+    nextNodeIndex: 25
+  }
+  branches {
+    responseText: "Ashpool sent me..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 26
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128be764343199074f3281"
+  }
+  index: 9
+  text: "Ahhh, you know about our amashing soshiety? May I ashk how?"
+  branches {
+    responseText: "That is none of your business..."
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "My friend Annie told me about it..."
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128c3864343199074f3285"
+  }
+  index: 10
+  text: "Hmm.. Fair enough. I think we have come to a juncshion in our little talk... So what was your questshion? Make it quick, you do not have much time left..."
+  branches {
+    responseText: "I know that you are a member of a cult that summons demons and mates with fish-creatures! I want an explanation of what your goals are and I want you to leave Annie alone!"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52156b553930386c0e0029b2"
+  }
+  index: 11
+  text: "A cult? Don\'t tell me you are a part of these things you have had me research these last months, Hansen!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52126f8f6434312307491fbc"
+  }
+}
+nodes {
+  idRef {
+    id: "52156b553930386c0e0029b5"
+  }
+  index: 12
+  text: "{{GM}}Dr. Hansen turns to Dr. Armitage{{/GM}}\n\nI was amazed that you haven\'t realized it earlier, Doctor... You are so smart, but the waysh of the real world still elude you... Now be quiet, we will continue with the report after we are done with these people...\n\n{{GM}}Dr. Hansen turns his attention back to you{{/GM}}\n\nHmm... You know a lot for an outsider... But I could not make out a queshtion in there... You want an exshplanation of our goals? My cult ish many centuries old and we have never ashked ourselves why we sherve Father Dagon...\n\nThis Annie you mentioned... Is it Annie Whataley? We will have to pull her location out of your dead brain when we are done with you..."
+  branches {
+    responseText: "Bring it on!"
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128cd064343199074f3287"
+  }
+  index: 13
+  text: "Annie Whataley? T-shhh. You know where she is? I might have to bring your remains to a Shaman when we are done here so I can find out where she is..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128d1964343199074f328a"
+  }
+  index: 14
+  text: "Want me to use stun needles, sir?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521266a86434312307491fb7"
+  }
+}
+nodes {
+  idRef {
+    id: "52128d3164343199074f328e"
+  }
+  index: 15
+  text: "That migsht not be needed... it depends on our friend here, will $(l.he) cooperate or not... {{GM}}Hansen looks at you expectfully{{/GM}}"
+  branches {
+    responseText: "I will never tell you where she is..."
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "What kind of deal are you offering me?"
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128dd364343199074f3292"
+  }
+  index: 16
+  text: "Sho be it! Martha, a little help, please..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128de664343199074f3295"
+  }
+  index: 17
+  text: "Sure, boss!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "521266a86434312307491fb7"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5212801c64343199074f325b"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Kill Dr. Hansen and his bodyguard"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52128df264343199074f3297"
+  }
+  index: 18
+  text: "What do you want?"
+  branches {
+    responseText: "I would like to learn how to summon these things... can you teach me?"
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128e1a64343199074f329b"
+  }
+  index: 19
+  text: "You want to shummon a Deep One? Hahahaha! T-sshhh. It takes years of arcane training and many sacrifishes to masther these rituals..."
+  branches {
+    responseText: "Oh well, will I turn into something like you?"
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128e8664343199074f329e"
+  }
+  index: 20
+  text: "Evolve into something like me, you mean? Perhapsh..."
+  branches {
+    responseText: "Well, I am up for it! No matter how long it takes..."
+    nextNodeIndex: 21
+  }
+  branches {
+    responseText: "I have changed my mind, I don\'t want to turn into a fish-head like you!"
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128ee364343199074f32a8"
+  }
+  index: 21
+  text: "Hmm... You could indeed be useful... "
+  branches {
+    responseText: ""
+    nextNodeIndex: 22
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52128f1f64343199074f32ab"
+  }
+  index: 22
+  text: "You are kidding, right?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 23
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52121bb56434318e0663962e"
+  }
+}
+nodes {
+  idRef {
+    id: "52128f3c64343199074f32b0"
+  }
+  index: 23
+  text: "Kill her to prove that you mean it!"
+  branches {
+    responseText: "Okay, I will do it!"
+    nextNodeIndex: 24
+  }
+  branches {
+    responseText: "Wait, that wasn\'t part of the deal..."
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521296d164343199074f34ae"
+  }
+  index: 24
+  text: "You have lost your mind, $(l.name)!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52121bb56434318e0663962e"
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Kill Coyote!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52128fc364343199074f32bc"
+  }
+  index: 25
+  text: "Annie Whataley? And Winterblip? Oh, there is more to you than meetsh the eyesh... We will have to conshult a Shaman over your remainsh on Annie\'s whereaboutsh when we are done here..."
+  branches {
+    responseText: "You wish..."
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "main_knowAboutWinterblip"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5212908d64343199074f330b"
+  }
+  index: 26
+  text: "Who ish Ashpool?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 27
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521290b764343199074f330e"
+  }
+  index: 27
+  text: "Ashpool Systems, sir. We had some trouble with them recently..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 28
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521266a86434312307491fb7"
+  }
+}
+nodes {
+  idRef {
+    id: "521290f764343199074f3313"
+  }
+  index: 28
+  text: "That upshtart company from the old country? We will have to look into them some more when we are done here..."
+  branches {
+    responseText: "There will be no later for you..."
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+}
+nodes {
+  idRef {
+    id: "5212956964343199074f33e9"
+  }
+  index: 29
+  text: "Civilized... Hmm... There might be hope for you... What is your question?"
+  branches {
+    responseText: "I know that you are a member of a cult that summons demons and mates with fish-creatures! I want an explanation of what your goals are and I want you to leave Annie alone!"
+    nextNodeIndex: 30
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212958964343199074f33fe"
+  }
+  index: 30
+  text: "A cult? Don\'t tell me you are a part of these things you have had me research these last months, Hansen!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 31
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52126f8f6434312307491fbc"
+  }
+}
+nodes {
+  idRef {
+    id: "5212958964343199074f3401"
+  }
+  index: 31
+  text: "{{GM}}Dr. Hansen turns to Dr. Armitage{{/GM}}\n\nI was amazed that you haven\'t realized it earlier, Doctor... You are so smart, but the waysh of the real world still elude you... Now be quiet, we will continue with the report after we are done with these people...\n\n{{GM}}Dr. Hansen turns his attention back to you{{/GM}}\n\nHmm... You know a lot for an outsider... But I could not make out a queshtion in there... You want an exshplanation of our goals? My cult ish many centuries old and we have never ashked ourselves why we sherve Father Dagon...\n\nThis Annie you mentioned... Is it Annie Whataley? We will have to pull her location out of your dead brain when we are done with you..."
+  branches {
+    responseText: "Bring it on!"
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212922764343199074f335a"
+  }
+  index: 32
+  text: "Not the friendly type I shee... Well, what ish your question?"
+  branches {
+    responseText: "I know that you are a member of a cult that summons demons and mates with fish-creatures! I want an explanation of what your goals are and I want you to leave Annie alone!"
+    nextNodeIndex: 33
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212954464343199074f3395"
+  }
+  index: 33
+  text: "A cult? Don\'t tell me you are a part of these things you have had me research these last months, Hansen!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 34
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52126f8f6434312307491fbc"
+  }
+}
+nodes {
+  idRef {
+    id: "5212954464343199074f3398"
+  }
+  index: 34
+  text: "{{GM}}Dr. Hansen turns to Dr. Armitage{{/GM}}\n\nI was amazed that you haven\'t realized it earlier, Doctor... You are so smart, but the waysh of the real world still elude you... Now be quiet, we will continue with the report after we are done with these people...\n\n{{GM}}Dr. Hansen turns his attention back to you{{/GM}}\n\nHmm... You know a lot for an outsider... But I could not make out a queshtion in there... You want an exshplanation of our goals? My cult ish many centuries old and we have never ashked ourselves why we sherve Father Dagon...\n\nThis Annie you mentioned... Is it Annie Whataley? We will have to pull her location out of your dead brain when we are done with you..."
+  branches {
+    responseText: "Bring it on!"
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

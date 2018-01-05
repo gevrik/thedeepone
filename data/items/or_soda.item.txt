@@ -1,0 +1,8 @@
+id: "or_soda"
+type: ItemType_QuestItem
+uirep {
+  name: "Soda"
+  description: "Refreshing..."
+}
+credentials: 0
+sorting_group: "Quest"

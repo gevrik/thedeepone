@@ -1,0 +1,20 @@
+idRef {
+  id: "520820b06434312102fc4259"
+}
+ui_name: "ch02_museumDoor"
+nodes {
+  idRef {
+    id: "520820c16434312102fc425f"
+  }
+  index: 0
+  text: "{{GM}}We are sorry, but the museum is currently closed! The works will take around one month to complete.{{/GM}}"
+  branches {
+    responseText: "Drek. Well, maybe there is another way inside..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

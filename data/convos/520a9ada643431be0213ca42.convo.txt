@@ -1,0 +1,152 @@
+idRef {
+  id: "520a9ada643431be0213ca42"
+}
+ui_name: "ch02_jayceContact"
+nodes {
+  idRef {
+    id: "520a9b20643431be0213ca4c"
+  }
+  index: 0
+  text: "What is it?"
+  branches {
+    responseText: "I have this package for you..."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Nevermind me..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a9b3b643431be0213ca4f"
+  }
+  index: 1
+  text: "Oh, great! Thanks, Chummer. Send the lady my regards! Here\'s your delivery reward..."
+  branches {
+    responseText: "See you..."
+    actions {
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Target Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "520aa2cc643431be0213cb44"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hasJayceJob"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Deliver the package for Jaycelyne"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 25
+          }
+          args {
+            int_value: 50
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_jayceLevel"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

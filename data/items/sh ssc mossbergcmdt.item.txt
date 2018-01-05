@@ -1,0 +1,49 @@
+id: "sh SSC mossbergcmdt"
+type: ItemType_Shotgun
+uirep {
+  icon: "icon_gun_mossbergcmdt"
+  name: "Mossberg CMDT"
+  description: "Combat shotgun with an integral laser sight for +3% accuracy. SA/BF"
+}
+equipPrefabName: "TacticalShotgun"
+anim_type: AnimType_Shotgun
+coreAttribute: Attribute_Quickness
+coreSkill: Skill_RangedCombat
+coreSpecialization: Specialization_RC_Shotgun
+apCost: 1
+prereqStrings: "Player.SKILL.Skill_RangedCombat >= 1"
+maxAmmo: 8
+baseHPDamage: 16
+rangeModTable: 3
+rangeModTable: 3
+rangeModTable: 3
+rangeModTable: 3
+rangeModTable: 2
+rangeModTable: 1
+rangeModTable: 0
+rangeModTable: -1
+rangeModTable: -3
+rangeModTable: -5
+rangeModTable: -9
+rangeModTable: -13
+rangeModTable: -17
+rangeModTable: -21
+rangeModTable: -25
+rangeModTable: -29
+rangeModTable: -37
+effectModTable: 0.75
+effectModTable: 0.5
+effectModTable: 0.5
+effectModTable: 0.5
+effectModTable: 0.5
+effectModTable: 0.25
+noiseLevel: 12
+noiseRounds: 1
+ammoReloadAPCost: 1
+spreadAngle: 14.5
+abilityModes: "SA"
+abilityModes: "BF"
+affectsEnemy: true
+canTargetActor: true
+store_cost: 1400
+sorting_group: "SSC Shotguns"

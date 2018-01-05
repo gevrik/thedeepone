@@ -1,0 +1,364 @@
+idRef {
+  id: "520ffb8e64343161026cde0d"
+}
+ui_name: "or_worker3"
+nodes {
+  idRef {
+    id: "520ffb9564343161026cde13"
+  }
+  index: 0
+  text: "As you approach the programmer you see her close down some applications on her workstation"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "520ffc6764343161026cde27"
+  }
+  index: 1
+  text: "Hello! Nice to meet you. How can I help you?"
+  branches {
+    responseText: "I really need to access your terminal for a minute..."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "It\'s fine, I\'m leaving..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ffc6764343161026cde2a"
+  }
+  index: 2
+  text: "No can do! I\'m working and it\'s against the rules anyway..."
+  branches {
+    responseText: "I am from the IT department... The company has found unapproved software on your terminal... I am here to remove it...\n{{CC}}Intelligence: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "520ffcbb64343161026cde32"
+    }
+  }
+  branches {
+    responseText: "Listen, this is an emergency, my terminal overheated and I really just need to finish off one class... It won\'t be long I promise!\n{{CC}}Charisma: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "520ffdd664343161026cde5c"
+    }
+  }
+  branches {
+    responseText: "I bet I can help you with a problem that you\'re currently having with your project? I help you, you help me?\n{{CC}}Research Device{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "or_researchDevice"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520ffeec64343161026cde99"
+    }
+  }
+  branches {
+    responseText: "Okay, fine!"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ffca364343161026cde30"
+  }
+  index: 3
+  text: "Oh! Yeah, I dunno how they got there... Can\'t blame me! Please hurry I have some work to do!"
+  branches {
+    responseText: "Sure..."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "worker3distracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ffde664343161026cde63"
+  }
+  index: 4
+  text: "That sounds horrible! Okay, you can use it, but only for a few minutes. I will take a little break, this is much too hot in here..."
+  branches {
+    responseText: "Thanks!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "worker3distracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ffe3964343161026cde68"
+  }
+  index: 5
+  text: "I do have an issue with one of these methods... Can you help me with it?"
+  branches {
+    responseText: "{{GM}}You use the Research Device to solve the programming puzzle{{/GM}}\n\nThere you go, done! Now I can use it?"
+    actions {
+      ops {
+        functionName: "Remove Item from Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "or_researchDevice"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520ffe6464343161026cde6c"
+  }
+  index: 6
+  text: "Awesome! Yeah, of course, I hope you help me again in the future!"
+  branches {
+    responseText: "Sure..."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "worker3distracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

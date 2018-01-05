@@ -1,0 +1,8 @@
+id: "Family Photo"
+type: ItemType_QuestItem
+uirep {
+  name: "Family Photo"
+  description: "The photo is in black&white. The background shows some kind of rural building, a farm most likely. In front of the farm stand an old man and a young girl that looks like Annie. On the back of the card it says: \"October 1968, for Annie with love!\""
+}
+credentials: 0
+sorting_group: "Quest"

@@ -1,0 +1,8 @@
+id: "Library Card"
+type: ItemType_QuestItem
+uirep {
+  name: "Library Card"
+  description: "The name on the card is Wilbur Whateley. The date on the card is 2004. It was issued in Dunwich, Massachusetts."
+}
+credentials: 0
+sorting_group: "Quest"

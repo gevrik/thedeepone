@@ -1,0 +1,30 @@
+prefab_name: "Core/ElfFemale"
+character_sheet_id: "BaseCivilian"
+character_mod {
+  stats {
+    body: 0
+    quickness: 0
+    strength: 0
+    charisma: 0
+    intelligence: 0
+    willpower: 0
+    essence: 0
+    hp: 0
+    ap: 0
+    morale: 24
+    awareness: 24
+    protect_tether_range: 5
+    move_speed: 6
+  }
+  archetypeName: "Non-Combatant"
+}
+equipment {
+  prefab_name: "Outfit_Corporate Salaryman"
+}
+team_id: "Civilians"
+char_name: "Wage Slave"
+enabled_at_start: false
+pc_spawn_number: -1
+hiring_type: HiringType_None
+karma: 6
+hiring_cost_override: 3000

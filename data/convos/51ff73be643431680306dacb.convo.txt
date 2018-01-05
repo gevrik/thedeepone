@@ -1,0 +1,299 @@
+idRef {
+  id: "51ff73be643431680306dacb"
+}
+ui_name: "Summoning"
+nodes {
+  idRef {
+    id: "51ff73dd643431680306dad5"
+  }
+  index: 0
+  text: "Ph\'nglui mglw\'nafh Dagon R\'lyeh wgah\'nagl fhtagn!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fe84a36434310a0d13c3a0"
+  }
+}
+nodes {
+  idRef {
+    id: "51ff7762643431680306dada"
+  }
+  index: 1
+  text: "What is going on here?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fe4e236434319d0c06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "51ff7774643431680306dadf"
+  }
+  index: 2
+  text: "{{GM}}Annie\'s gaze is fixed on the small altar behind the Master Cultist. Her eyes are welling up with tears. You do not think that she will be of any use in this fight.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fe4e2f6434319d0c06daca"
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51ff7836643431680306dae4"
+  }
+  index: 3
+  text: "{{GM}}As you look onto the scene in horror, the shape of some humanoid creature manifests on the summoning circle. The predominant color of the creature is a greyish-green, though the belly is white. The skin looks shiny and slippery, but the ridge of its back is scaly. The form vaguely suggests an anthropoid, but the head is that of a fish, with prodigious bulging eyes that never close. At the sides of its neck are palpitating gills, and its long paws are webbed.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51fe84b96434310a0d13c3a1"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51ff7a62643431680306dae9"
+  }
+  index: 4
+  text: "Why have you shummoned me, Human?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fe84b96434310a0d13c3a1"
+  }
+}
+nodes {
+  idRef {
+    id: "51ff7a8e643431680306daee"
+  }
+  index: 5
+  text: "We need your help, someone is attacking us. They have the girl!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  sourceInSceneRef {
+    id: "51fe84a36434310a0d13c3a0"
+  }
+}
+nodes {
+  idRef {
+    id: "51ff7aab643431680306daf3"
+  }
+  index: 6
+  text: "Our daughter ish here? Where ish sheee?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  sourceInSceneRef {
+    id: "51fe84b96434310a0d13c3a1"
+  }
+}
+nodes {
+  idRef {
+    id: "51ff7acf643431680306daf8"
+  }
+  index: 7
+  text: "There, behind you..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fe84a36434310a0d13c3a0"
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Seek And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51ff7ae8643431680306dafc"
+  }
+  index: 8
+  text: "{{GM}}The creature turns towards you.{{/GM}}"
+}
+roots {
+  responseText: "As you approach you see a ritualistic circle in the back of this sewer tunnel. A cultist with an especially ornate robe is standing in front of it, chanting in a strange language that you do not understand."
+  nextNodeIndex: 0
+}

@@ -1,0 +1,263 @@
+idRef {
+  id: "521751243930385c02003b06"
+}
+ui_name: "ch03_rickshaw"
+nodes {
+  idRef {
+    id: "5217512b3930385c02003b0c"
+  }
+  index: 0
+  text: "Hoi, chummer! Glad you called back.... What\'s going on with you? I received this weird text message from you saying that I should not trust you any longer and that you are a backstabbing traitor... Everything alright with you?"
+  branches {
+    responseText: "Erm... Yes, ignore that message, I was just drunk..."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "I\'m not in the mood for talking right now, I will call you back later!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521751ad3930385c02003b0f"
+  }
+  index: 1
+  text: "Uh-huh! You shouldn\'t booze up, chum - such messages are not good for you cred!"
+  branches {
+    responseText: "Yeah - I know... So that\'s why you left me the message? You said something about a proposition..."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "I don\'t care... is that the only reason you left me a message?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521752243930385c02003b13"
+  }
+  index: 2
+  text: "Yeppers! I need some more bodies for a run! Pays big nuyen... and should be fun! You up for it, friend?"
+  branches {
+    responseText: "Sure, where do you need me to be?"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Maybe later. I will give you a call again..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521752cb3930385c02003b1d"
+  }
+  index: 3
+  text: "I have this little place where I hang out when I\'m not working... I\'ll send you a marker to the location for your PDA...\n\n{{GM}}You add Rickshaw\'s Hideout to your list of known locations{{/GM}}"
+  branches {
+    responseText: "Okay, I will be there as soon as possible..."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_knowRickshawHideout"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Visit Rickshaw in her hideout"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52175861393038440f001660"
+  }
+  index: 4
+  text: "Looking forward to it!"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521752573930385c02003b15"
+  }
+  index: 5
+  text: "You should care about your street rep as a runner... But hey, I got the right thing to build up that rep again!"
+  branches {
+    responseText: "Is that so?"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521758aa393038440f0016a5"
+  }
+  index: 6
+  text: "Hoi, chummer! Glad you called back.... What\'s going on with you? I received this weird text message from you, here is a copy:\n\n{{GM}}You can see that the message was sent from your terminal...{{/GM}}\n\n{{CC}}\"HELP! SOMEONE HELP! Attached is my location!\"\n(attachment removed){{/CC}}\n\nIs everything alright?"
+  branches {
+    responseText: "Erm... I believe that was a friend of mine who sent that message... Something happened in my hideout..."
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "I\'m not in the mood for talking right now, I will call you back later!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521758aa393038440f0016a8"
+  }
+  index: 7
+  text: "Uh-huh! You shouldn\'t booze up, chum - such messages are not good for you cred!"
+  branches {
+    responseText: "Yeah - I know... So that\'s why you left me the message? You said something about a proposition..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I don\'t care... is that the only reason you left me a message?"
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521758aa393038440f0016b5"
+  }
+  index: 8
+  text: "You should care about your street rep as a runner... But hey, I got the right thing to build up that rep again!"
+  branches {
+    responseText: "Is that so?"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedHansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 6
+}

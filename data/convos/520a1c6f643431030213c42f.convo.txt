@@ -1,0 +1,313 @@
+idRef {
+  id: "520a1c6f643431030213c42f"
+}
+ui_name: "ch02_ganger"
+nodes {
+  idRef {
+    id: "520a1cbd643431030213c43d"
+  }
+  index: 0
+  text: "Wot is it?"
+  branches {
+    responseText: "Do you all talk like that?"
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "520a2f43643431e50113c4df"
+    }
+  }
+  branches {
+    responseText: "I want you to stop mugging the civilians in this district!"
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Get rid of the ganger for the civilian"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Can I help you with something?"
+    nextNodeIndex: 6
+    onlyOnce: true
+    idRef {
+      id: "520a2fb1643431e50113c518"
+    }
+  }
+  branches {
+    responseText: "It\'s okay, I\'m leaving..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a2edd643431e50113c4c5"
+  }
+  index: 1
+  text: "Wot do you mean?"
+  branches {
+    responseText: "Nevermind..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a1d1d643431030213c441"
+  }
+  index: 2
+  text: "{{GM}}The ganger laughs{{/GM}}\n\nAnd why shud I?"
+  branches {
+    responseText: "I will kill you if you don\'t stop!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I will call the Star if yo don\'t stop."
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "I will beat you to pulp if you don\'t stop! {{CC}}Strength: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Oh, well. Nevermind..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a1de2643431030213c446"
+  }
+  index: 3
+  text: "Come get sum!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520a1e04643431030213c449"
+  }
+  index: 4
+  text: "Not if I kill you first!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520a1ffe643431030213c46b"
+  }
+  index: 5
+  text: "Erm, I\'m not looking for trouble! It\'s ok!"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a2f72643431e50113c4f9"
+  }
+  index: 6
+  text: "No, I am busy. Talk to the big boss at the parking garage in the South of this district if you\'re looking for werk!"
+  branches {
+    responseText: "Okay, I might..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: "{{CC}}Talk to the ganger{{/CC}}"
+  nextNodeIndex: 0
+}
+roots {
+  responseText: "{{CC}}Attack the ganger{{/CC}}"
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: -1
+}
+roots {
+  responseText: "{{CC}}Do nothing{{/CC}}"
+  nextNodeIndex: -1
+}

@@ -1,0 +1,14 @@
+minX: 0
+minZ: 0
+numX: 5
+numZ: 3
+props {
+  name: "office_floor_4x2corridor01"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}

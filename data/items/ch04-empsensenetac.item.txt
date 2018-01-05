@@ -1,0 +1,8 @@
+id: "ch04-empSenseNetAC"
+type: ItemType_QuestItem
+uirep {
+  name: "Employee Access Card"
+  description: "You got this access card to the employee areas of Sense/Net archives from one of their employees in the Everett Downtown district."
+}
+credentials: 0
+sorting_group: "Quest"

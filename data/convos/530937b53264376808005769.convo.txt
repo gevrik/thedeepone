@@ -1,0 +1,77 @@
+idRef {
+  id: "530937b53264376808005769"
+}
+ui_name: "ch04-jr_bouncer"
+nodes {
+  idRef {
+    id: "530937c2326437680800576f"
+  }
+  index: 0
+  text: "{{GM}}This Troll looks like she knows her way around a gun, she looks at you suspiciously as you approach the stairs.{{/GM}}\n\nNo admittunce for nun-members! Slot it!"
+  branches {
+    responseText: "I am here to see Mr. Johnson..."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Okay, I\'m leaving!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5309381f3264376808005773"
+  }
+  index: 1
+  text: "I knows nuthin about no Johnson... Slot it!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530938353264376808005778"
+  }
+  index: 2
+  text: "Never seen this one here before, so maybe we should not bother her..."
+  branches {
+    responseText: "But Johnson could be updstairs..."
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53092b1f3264376808005554"
+  }
+}
+nodes {
+  idRef {
+    id: "5309389432643768080057a3"
+  }
+  index: 3
+  text: "I doubt it, he usually hangs around downstairs... Upstairs is restricted to special customers of the club, and they won\'t let people like us up there..."
+  branches {
+    responseText: "Fair enough..."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53092b1f3264376808005554"
+  }
+}
+nodes {
+  idRef {
+    id: "530938eb32643768080057c0"
+  }
+  index: 4
+  text: "You still here?"
+  branches {
+    responseText: "We\'re leaving..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

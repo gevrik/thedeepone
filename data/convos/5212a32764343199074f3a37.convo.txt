@@ -1,0 +1,154 @@
+idRef {
+  id: "5212a32764343199074f3a37"
+}
+ui_name: "ch02_hansenAfterCoyoteDead"
+nodes {
+  idRef {
+    id: "5212a33264343199074f3a3d"
+  }
+  index: 0
+  text: "Very good, very good. T-shhh. You show promise... I hope you learn quickly...\n\nNow for the second sacrifice... the girl..."
+  branches {
+    responseText: "You want me to kill Annie, too?"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Dr. Hansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5212a3cb64343199074f3a40"
+  }
+  index: 1
+  text: "No, don\'t kill her... Bring her to me... T-shhh...\n\nWe will then discuss the terms of your training...\n\n{{GM}}Dr. Hansen turns to Dr. Armitage{{/GM}}\n\nArmitage, if you tell anyone about what you have sheen tonight you will die, undershtood?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212a45c64343199074f3a45"
+  }
+  index: 2
+  text: "Absolutely... I... err... I will go back to the studying the book you gave me..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  sourceInSceneRef {
+    id: "52126f8f6434312307491fbc"
+  }
+}
+nodes {
+  idRef {
+    id: "5212a46364343199074f3a4a"
+  }
+  index: 3
+  text: "That\'s a good Doctor right there..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "521266a86434312307491fb7"
+  }
+}
+nodes {
+  idRef {
+    id: "521374946434317f0b2650ea"
+  }
+  index: 4
+  text: "About that book that I gave you, Armitage... I have another use for it...\n\n{{GM}}Dr. Hansen turns his attention back to you{{/GM}}\n\nAs a token of appreciation I will give you this book... If you are able to learn how to use it then I can teach you more... It is very simple, but powerful magic...\n\nJust take it from that table over there before you leave..."
+  branches {
+    responseText: "Ok, thanks. We will meet in your offices in the DAGON CORP tower when I got Annie?"
+    nextNodeIndex: 5
+  }
+}
+nodes {
+  idRef {
+    id: "521374946434317f0b2650ed"
+  }
+  index: 5
+  text: "Indeed... Now let\'s leave the doctor to his studiesh..."
+  branches {
+    responseText: "Okay, I will see you in a bit..."
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Take the book"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "5212801c64343199074f325b"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

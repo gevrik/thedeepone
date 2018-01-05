@@ -1,0 +1,904 @@
+idRef {
+  id: "530949b8326437a0110069c5"
+}
+ui_name: "ch04-jr_outsideCorper"
+nodes {
+  idRef {
+    id: "530949d9326437a0110069cf"
+  }
+  index: 0
+  text: "My, oh my... who do we have here? I will give you a choice... it\'s up to you if this will be easy or hard...\n\nWhere is the hound?"
+  branches {
+    responseText: "Who wants to know?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Visit Mr. Johnson in his apartment"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53094a28326437a0110069d3"
+  }
+  index: 1
+  text: "I am the one asking the questions here, but let me just say that the hound\'s owners have tasked me with the hound\'s retrieval..."
+  branches {
+    responseText: "And who might that owner be? Maybe we can come to a mutual agreement?\n{{CC}}Charisma: 6{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Let us say that we have this hound, what is it worth to you?\n{{CC}}Etiquette: Corp{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 13
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I couldn\'t care less, I have a deal with a Mr. Johnson... and nobody else..."
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094ad0326437a0110069d9"
+  }
+  index: 2
+  text: "It is really none of your business, but I work for a large and influential corporation called Sense/Net... Now that you know who you are dealing with, will you cooperate and give us the hound?"
+  branches {
+    responseText: "What is it worth to you?"
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094afc326437a0110069db"
+  }
+  index: 3
+  text: "You want to negotiate? Fine... We will give you 5.000 Nuyen if you hand over the hound."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094b26326437a0110069de"
+  }
+  index: 4
+  text: "Our deal with Mr. Johnson was for 10.000 Nuyen, chummer!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53092b1f3264376808005554"
+  }
+}
+nodes {
+  idRef {
+    id: "53094b42326437a0110069e1"
+  }
+  index: 5
+  text: "Your Mr. Johnson is dead... and so is your deal with him... So what do you say?"
+  branches {
+    responseText: "5.000 Nuyen sounds good, but we don\'t have the hound with us..."
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "agreedReward"
+            }
+          }
+        }
+        args {
+          int_value: 5000
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "You heard what my partner said, 10.000 Nuyen or no deal!\n{{CC}}Charisma: 7{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 7
+        }
+      }
+    }
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094c56326437a0110069f6"
+  }
+  index: 6
+  text: "Where is it then?"
+  branches {
+    responseText: "It is in a safe place... We will get it right now and close the deal!"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094e36326437a011006aad"
+  }
+  index: 7
+  text: "I\'m not a fool! One of you will stay right here while the other fetches the hound..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094e9b326437a011006ab3"
+  }
+  index: 8
+  text: "It\'s fine... I\'ll stay here while you get that beast... I\'m sure they\'ll enjoy my company..."
+  branches {
+    responseText: "Ok, I will be back ASAP!"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53092b1f3264376808005554"
+  }
+}
+nodes {
+  idRef {
+    id: "53094ec2326437a011006ab6"
+  }
+  index: 9
+  text: "Don\'t try anything stupid or your friend here is dead!"
+  branches {
+    responseText: "See you soon!"
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "getDog"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094cb0326437a0110069f9"
+  }
+  index: 10
+  text: "Fine. 10.000 Nuyen it is... consider yourselves lucky. Now, where is the hound?"
+  branches {
+    responseText: "In a safehouse. We will get it right now and close the deal!"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "agreedReward"
+          }
+        }
+      }
+      args {
+        int_value: 10000
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53094c1c326437a0110069f4"
+  }
+  index: 11
+  text: "Your Mr. Johnson is dead... and so will you be if you don\'t cooperate!"
+  branches {
+    responseText: "This does not have to end badly for any of us... How about we make a deal?"
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094d89326437a011006a34"
+  }
+  index: 12
+  text: "I don\'t really feel like making a deal with filth like you drekheads!"
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53094db9326437a011006a57"
+  }
+  index: 13
+  text: "I hope you have made preparations for your funeral already!"
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isThug"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Seek And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Kill the Corp Goons!"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5309511e326437a011006b9e"
+  }
+  index: 14
+  text: "You quickly drive back to the hideout and somehow manage to get the hellhound into the van - it was surprisingly cooperative - as if it sensed the urgency of the situation... You return to the Johnson\'s Retreat and resume your position next to Rickshaw, who whispers to you: \"For a moment I thought you wouldn\'t be coming back!\""
+  branches {
+    responseText: ""
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "530b4e3b326437ac09003e56"
+  }
+  index: 15
+  text: "I see you have returned with the hound... Very good. Hand it over and I will give you your payment!"
+  branches {
+    responseText: "Ok, here you go! {{CC}}Hand over the hound and receive payment{{/CC}}"
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "You now what, I think I have changed my mind! {{CC}}Attack{{/CC}}"
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530b4e3b326437ac09003e59"
+  }
+  index: 16
+  text: "It was a pleasure doing business with you! Goodbye..."
+  branches {
+    responseText: "Yeah, later!"
+    actions {
+      ops {
+        functionName: "Add Nuyen"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "agreedReward"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5309522e326437bc130066bc"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Check if Mr. Johnson is really dead!"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Kill Actor"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5309522e326437bc130066bc"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "DeathMethod"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Kill Actor"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isThug"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "DeathMethod"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Actor Karma"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Delete Prop"
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "530944c5326437a01100685d"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Delete Prop"
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "530944b7326437a01100685c"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_hellyLost"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "dogFetched"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "dogFetched"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 14
+}

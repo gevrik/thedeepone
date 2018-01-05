@@ -1,0 +1,634 @@
+idRef {
+  id: "52001cf6643431bf03b523f9"
+}
+ui_name: "Annie Alive!"
+nodes {
+  idRef {
+    id: "52001d2c643431bf03b52407"
+  }
+  index: 0
+  text: "WOOOOAAHHH - finally you guys found me an access point! That was about time. My shell is very cumbersome - and this place... They sent me to the right place... My friend could never find me in these - how do you call them - Barrens."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52001d98643431bf03b5240c"
+  }
+  index: 1
+  text: "Annie! At last!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  sourceInSceneRef {
+    id: "520595f9643431320fe50a04"
+  }
+}
+nodes {
+  idRef {
+    id: "52001f1f643431bf03b52421"
+  }
+  index: 2
+  text: "Hoi, Coyote! Thanks for taking care of me all this time."
+  branches {
+    responseText: "Hoi, Annie. You have a lot of explaining to do..."
+    nextNodeIndex: 3
+  }
+}
+nodes {
+  idRef {
+    id: "52002002643431bf03b52438"
+  }
+  index: 3
+  text: "Sure. What do you want to know?"
+  branches {
+    responseText: "Who are you?"
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "52002739643431bf03b524d9"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5200204e643431bf03b5243c"
+  }
+  index: 4
+  text: "My name is Annie Whataley. I am from Dunwich, Massachusetts. It is a quiet little place, but the people who live there are special..."
+  branches {
+    responseText: "So you are related to the guy who attacked us in the Seamstress Union. Wilbur Whataley?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "gotDriverIntel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520026f0643431bf03b524d8"
+    }
+  }
+  branches {
+    responseText: "So you are the Annie on the photo we found in the Ritual Chamber?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "visitedRitualChamber"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 19
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5200269b643431bf03b524d5"
+    }
+  }
+  branches {
+    responseText: "And how are you connected to the person that attacked us in the Seamstres Union - that\'s how this whole thing got started."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "visitedRitualChamber"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "gotDriverIntel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520027b7643431bf03b524f4"
+    }
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+nodes {
+  idRef {
+    id: "520020fe643431bf03b52442"
+  }
+  index: 5
+  text: "Wilbur is my dad. I guess he came looking for me. I was kidnapped by some corporate goons - they want me to get them in contact with my friend here in the Matrix... But my friend caused all kind of trouble for these goons once they snatched me. They dropped me off at the Barrens Monorail a few days ago, because this district is so low-tech that my friend can\'t do much to them here. He managed to contact someone in the Seamstress Union before I lost contact, but this nice troll picked me up."
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+nodes {
+  idRef {
+    id: "520021b1643431bf03b52447"
+  }
+  index: 6
+  text: "That\'s Kluwe. Is he doing fine?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "520595f9643431320fe50a04"
+  }
+}
+nodes {
+  idRef {
+    id: "52002234643431bf03b5244e"
+  }
+  index: 7
+  text: "I hope so. The corporate goons hired some help from the Rusted Stilettos and stormed the place. The corps took your friends away and I was taken by the gangers for \"safekeeping\". You know the rest. Is Wilbur dead?"
+  branches {
+    responseText: "I am sorry, Annie. He hired some thugs and attacked us..."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+nodes {
+  idRef {
+    id: "5200227a643431bf03b52451"
+  }
+  index: 8
+  text: "I understand... He was one of these things anyway..."
+  branches {
+    responseText: "One of these things?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+nodes {
+  idRef {
+    id: "5200229d643431bf03b52454"
+  }
+  index: 9
+  text: "I told you that a lot of people from Dunwich are special. It is said that they have been consorting and breeding with half-demons from the bottom of the ocean. My father was such a half-breed, and I am supposed to be a half-breed, too. They told me that I have an arcane connection to some elder beings, but I have never felt them... Not like my friend here in the Matrix."
+  branches {
+    responseText: "You keep talking about your friend in the Matrix... Who is it?"
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+nodes {
+  idRef {
+    id: "5200234a643431bf03b52457"
+  }
+  index: 10
+  text: "I am not really supposed to talk about her, but you helped me, so I will tell you. This Aritifical Intelligence kept visiting me when I jacked-in. Said she enjoys my company, because I am a lot more intelligent than most people. She is a really good friend now, we have done a lot of Matrix runs together. I\'ve become really good - just need someone to protect me feeble meat when I\'m jacked."
+  branches {
+    responseText: "Very interesting. I think we will have a lot of fun together in the future."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+nodes {
+  idRef {
+    id: "520023ff643431bf03b5245a"
+  }
+  index: 11
+  text: "Does that mean you will keep taking care of me? Despite my demon-connection thingy?"
+  branches {
+    responseText: "Of course."
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "coyoteAffection"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "I don\'t think so, too much responsibility."
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "knowAboutAnnieNow"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520026be643431bf03b524d7"
+  }
+  index: 12
+  text: "YAY!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+nodes {
+  idRef {
+    id: "5200287e643431bf03b5254a"
+  }
+  index: 13
+  text: "YAY!"
+  branches {
+    responseText: "Should we get out of here?"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "520595f9643431320fe50a04"
+  }
+}
+nodes {
+  idRef {
+    id: "520028d8643431bf03b52578"
+  }
+  index: 14
+  text: "Well if you want me to, I could open this security door in the back? We need to be careful, though."
+  branches {
+    responseText: "Okay, let\'s see what those gangers are hiding in there."
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "Let\'s just get out of here!"
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+nodes {
+  idRef {
+    id: "5200299a643431bf03b525b0"
+  }
+  index: 15
+  text: "Just protect my useless meat while I crack that door node."
+  branches {
+    responseText: "You got it!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+nodes {
+  idRef {
+    id: "52002941643431bf03b5257c"
+  }
+  index: 16
+  text: "That\'s fine. Let me jack out."
+  branches {
+    responseText: "{{CC}}Leave the Brain-Eaters Hideout{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "New Home Sweet Home"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "BEHQcomplete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520027d0643431bf03b524f7"
+  }
+  index: 17
+  text: "You\'re cold, chummer. Don\'t worry Annie, I will keep taking care of you."
+  branches {
+    responseText: "Fair enough, Coyote - it\'s all on you."
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "520595f9643431320fe50a04"
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteAffection"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52002843643431bf03b52546"
+  }
+  index: 18
+  text: "We will be fine, let\'s get out of here!"
+  branches {
+    responseText: "Sure."
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "New Home Sweet Home"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "520595f9643431320fe50a04"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "BEHQcomplete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52002507643431bf03b52480"
+  }
+  index: 19
+  text: "Ha! No, how old do you think I am... That was my mother, her name was also Annie. The photo belonged to my dad, Wilbur Whataley. I guess he is the one who attacked you in that club."
+  branches {
+    responseText: "Okay, I understand."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51ffecdb643431bf03b523b1"
+  }
+}
+roots {
+  responseText: "As Annie connects to the Matrix you see the display of the system come alive. You can see Annie in the Matrix."
+  actions {
+    ops {
+      functionName: "Clear Camera Points of Interest"
+    }
+  }
+  nextNodeIndex: 0
+}

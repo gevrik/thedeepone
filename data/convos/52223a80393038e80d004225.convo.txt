@@ -1,0 +1,62 @@
+idRef {
+  id: "52223a80393038e80d004225"
+}
+ui_name: "run_extractionExit"
+nodes {
+  idRef {
+    id: "52223a8a393038e80d00422b"
+  }
+  index: 0
+  text: "Do you really want to head back to the market? The run is not complete yet! Mr. Johnson won\'t be happy if you leave..."
+  branches {
+    responseText: "{{CC}}Leave{{/CC}}"
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "determineFailurePayback"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Stay{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "52223bb9393038e80d004260"
+  }
+  index: 1
+  text: "The run has been aborted. You can now return to the Underground Market."
+  branches {
+    responseText: "{{CC}}Continue{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Rooftop Market"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

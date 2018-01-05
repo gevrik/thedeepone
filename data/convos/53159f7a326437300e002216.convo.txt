@@ -1,0 +1,750 @@
+idRef {
+  id: "53159f7a326437300e002216"
+}
+ui_name: "ch05-velcroft"
+nodes {
+  idRef {
+    id: "53159f84326437300e00221c"
+  }
+  index: 0
+  text: "{{GM}}As you enter the town\'s street you see a young woman leaving the nearby Stuffer Shack... She walks towards her car and spots your group - she immediatly fixes her gaze on Annie - and seems to be genuinly suprised... her already bulging eyes popping out some more!{{/GM}}\n\nAnnie, is that you? I can\'t believe it, we thought you were dead!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315a452326437300e00239d"
+  }
+  index: 1
+  text: "Oh... Great... Miss Velcroft! I am back!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a47d326437300e0023a1"
+  }
+  index: 2
+  text: "Erm... You talk now? I mean... don\'t get me wrong, it is nice to see that, but what happened? Oh, I will have to tell everyone about this, the whole town has been asking about you, Annie!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315a4ab326437300e0023a4"
+  }
+  index: 3
+  text: "Drek!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Remain unnoticed"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Screen Label Progress Bar (int)"
+      args {
+        string_value: "AvoidSpotting"
+      }
+      args {
+        string_value: "Avoid being spotted: $(scene.suspiciousCivs) / 4"
+      }
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "suspiciousCivs"
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5315a4b3326437300e0023a7"
+  }
+  index: 4
+  text: "Language, little lady!"
+  branches {
+    responseText: "{{CC}}Kill the woman before she can alert anyone else{{/CC}}"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "{{CC}}Knock out the woman before she can draw more attention to your group{{/CC}}"
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "No need to make a fuss about this, just go home and don\'t tell anyone that we are here..."
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315a528326437300e0023ac"
+  }
+  index: 5
+  text: "You quickly walk up to Miss Velcroft and shoot her in the head - her lifeless body slumps onto the tarmac."
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "weapons"
+          }
+          args {
+            string_value: "PistolSilenced"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Kill Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53159e15326437300e002214"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DeathMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5315a5b8326437300e0023b2"
+  }
+  index: 6
+  text: "Are you insane? What are you doing?"
+  branches {
+    responseText: "{{CC}}Ignore Annie and drag the body to the clearing in the woods where you landed the helicopter{{/CC}}"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "She would\'ve blown our cover, I had to frak her..."
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a5fc326437300e0023b6"
+  }
+  index: 7
+  text: "{{GM}}Annie follows you all the way back and never stops complaining about what you just did{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a6b5326437300e0023bd"
+  }
+  index: 8
+  text: "We can\'t go around and kill everyone in this town! First of all, I don\'t want it, these people might be weird and creepy, but not all of them are bad or involved in the order... Second of all, we will run into a lot of trouble if the local Lonestar office gets involved, and that is bound to happen if they find any corpses... We can\'t drag them all back here!"
+  branches {
+    responseText: "Let me handle this situation, you stay back and shut up!"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Okay, but how do we stay hidden?"
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a713326437300e0023e1"
+  }
+  index: 9
+  text: "Oh, yeah? In that case you can do your legwork on your own... I will stay here by the helicopter until you have come to your senses!"
+  branches {
+    responseText: "Fair enough... I will get you when we need you!"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "No, you are coming with me!"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a746326437300e0023e5"
+  }
+  index: 10
+  text: "Fine!"
+  branches {
+    responseText: "Fine!"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to become a Non-Combatant"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Control"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PlayerOrAI"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Teleport Actor"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Current Location of Prop"
+            args {
+              call_value {
+                functionName: "Get Map Item (Prop)"
+                args {
+                  string_value: "5314e73a3264377409002303"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeleportMethod"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a751326437300e0023e8"
+  }
+  index: 11
+  text: "I\'m not going anywhere unless you promise not to kill anyone else unless it is really, really neccessary!"
+  branches {
+    responseText: "Fine! But how are we going to stay hidden?"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a77e326437300e0023eb"
+  }
+  index: 12
+  text: "Am I the Shadowrunner or you? *sigh* I guess we stay out of the light and keep our distance from any residents that are running around. If we stay in the foggy parts without any light, they won\'t be able to recognize me!"
+  branches {
+    responseText: "Sounds good!"
+    nextNodeIndex: 19
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a7c3326437300e002417"
+  }
+  index: 13
+  text: "You quick rush over to the woman and knock her out. She slumps down the side of her car onto the ground."
+  branches {
+    responseText: ""
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "weapons"
+          }
+          args {
+            string_value: "PunchHit"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Kill Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53159e15326437300e002214"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DeathMethod"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5315a7fe326437300e002420"
+  }
+  index: 14
+  text: "Wow! Was that really neccessary? What are we going to do with her now?"
+  branches {
+    responseText: "We will tie her up and put her into the helicopter until we are done here..."
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a7fe326437300e002423"
+  }
+  index: 15
+  text: "Ah, so you intend to do that with everyone here in town if they see us?"
+  branches {
+    responseText: "If I have to..."
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "I would hope we don\'t have to, but how can we stay hidden?"
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a856326437300e002427"
+  }
+  index: 16
+  text: "I won\'t have that! At least I don\'t want to be a part of that... If you can\'t stop being such a brute I will stay at the heli until you guys are done with the legwork!"
+  branches {
+    responseText: "Ok, I will get you when I need you..."
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a8a9326437300e002432"
+  }
+  index: 17
+  text: "{{GM}}The woman lays her bulging eyes on you for the first time and gives you a quick look-over... She seems to get quite nervous now and stammers...{{/GM}}\n\nUh... Ok... Of course, I need to go now!\n\n{{GM}}Before you can react she jumps into the car, starts the ignition and speeds off into the low mists...{{/GM}}"
+  branches {
+    responseText: "Drek! This won\'t be good!"
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Delete Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5315a911326437300e002467"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "suspiciousCivs"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Arithmetic (int)"
+          args {
+            call_value {
+              functionName: "Get Variable (int)"
+              args {
+                string_value: "suspiciousCivs"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Arithmetic Ops"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Kill Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53159e15326437300e002214"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DeathMethod"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Screen Label Progress Bar (int)"
+      args {
+        string_value: "AvoidSpotting"
+      }
+      args {
+        string_value: "Avoid being spotted: $(scene.suspiciousCivs) / 4"
+      }
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "suspiciousCivs"
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5315a934326437300e00249b"
+  }
+  index: 18
+  text: "We will need to stay out of the light and keep our distance from the residents... Staying in this low fog should help! But we need to be careful!"
+  branches {
+    responseText: "You\'re right!"
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a96d326437300e00249e"
+  }
+  index: 19
+  text: "Do you want me to stay at the heli while you guys do the legwork? That might help, too!"
+  branches {
+    responseText: "Yes, that might be a good idea, I will get you when we need you!"
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "No, you\'re staying with the group!"
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+nodes {
+  idRef {
+    id: "5315a9c4326437300e0024a6"
+  }
+  index: 20
+  text: "Ok, but please be careful!"
+  branches {
+    responseText: "Sure!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5314e73a32643774090022f7"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

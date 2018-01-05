@@ -1,0 +1,225 @@
+idRef {
+  id: "530783e6326437f812007051"
+}
+ui_name: "ch04-vu_officeGuard"
+nodes {
+  idRef {
+    id: "53078401326437f81200705b"
+  }
+  index: 0
+  text: "Can I help you?"
+  branches {
+    responseText: "I would like to work with you guys!"
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "530785f4326437f8120070bf"
+    }
+  }
+  branches {
+    responseText: "The boss told me to fetch something from his office!\n{{CC}}Charisma: 6{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "530785f0326437f8120070be"
+    }
+  }
+  branches {
+    responseText: "There\'s someone causing trouble in the bar room! You should take a look at that..."
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "530785ec326437f8120070bd"
+    }
+  }
+  branches {
+    responseText: "It\'s nothing, I\'m going..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53078590326437f812007088"
+  }
+  index: 1
+  text: "You\'re talking to the wrong guy about that... The boss is currently not in the club, so you will have to wait..."
+  branches {
+    responseText: "Gotcha!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53078503326437f812007067"
+  }
+  index: 2
+  text: "Okay, but make it quick!"
+  branches {
+    responseText: "Will do!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "guardDistracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53078482326437f812007060"
+  }
+  index: 3
+  text: "My co-workers will take care of that person..."
+  branches {
+    responseText: "It doesn\'t look like it... that Cyberpsycho has already ripped them both apart!"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530784b5326437f812007063"
+  }
+  index: 4
+  text: "Cyberpsycho??? Thanks, I\'ll take a look!"
+  branches {
+    responseText: "Good luck!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "guardDistracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Point)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5234405a3930389c12002573"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specified Point (2D)"
+            args {
+              float_value: 51
+            }
+            args {
+              float_value: -40
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 7
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

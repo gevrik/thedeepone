@@ -1,0 +1,31 @@
+idRef {
+  id: "5218e4453930380408000f72"
+}
+ui_name: "ch03_rickshawWarStarts"
+nodes {
+  idRef {
+    id: "5218e44f3930380408000f78"
+  }
+  index: 0
+  text: "Right, so I\'ve been in one of these underworld gang wars already... They Triads and Yaks will fight each other until their war leader is dead...\n\nThe war leader will only show himself with some bodyguards when all of his minions have been killed, problem is that there will be more and more minions if we don\'t kill them fast..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5218e4f23930380408000f7b"
+  }
+  index: 1
+  text: "Neither the Triads nor the Yaks will attack us until we attack one of them, so we should side with one group until we have eliminated the other...\n\nWe can fight them all at once, but that will become very messy, very quickly... I\'ll leave it up to you which side we\'ll fight for, we\'ll have to fight the other side later anyway!"
+  branches {
+    responseText: "Gotcha!"
+    nextNodeIndex: -1
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

@@ -1,0 +1,65 @@
+prefab_name: "Core/HumanFemale"
+character_sheet_id: "Persona_Lv6_Decker"
+character_mod {
+  stats {
+    body: 4
+    quickness: 7
+    strength: 5
+    charisma: 7
+    intelligence: 4
+    willpower: 10
+    essence: 6
+    magic: 4
+    hp: 300
+    ap: 3
+    armor: 8
+    force: 4
+    morale: 24
+    awareness: 24
+    perception: 20
+    protect_tether_range: 5
+    move_speed: 6
+    is_fearless: 1
+  }
+  skills {
+    decking: 4
+    dodge: 2
+  }
+  specializations {
+    esp_control: 4
+  }
+  archetypeName: "Guard - Protect"
+  attitude: AttitudeBoss
+}
+equipment {
+  prefab_name: "Matrix Basic Attack (Ranged IC Lv 3)"
+}
+equipment {
+  prefab_name: "PR NPC Decker Medic 3"
+}
+equipment {
+  prefab_name: "PR NPC Decker Killer 3"
+}
+equipment {
+  prefab_name: "PR NPC Decker Blaster 3"
+}
+equipment {
+  prefab_name: "PR NPC Decker Killjoy 2"
+}
+equipment {
+  prefab_name: "PR NPC Decker Erosion 3"
+}
+equipment {
+  prefab_name: "RiggerHawaiianShirt"
+}
+team_id: "Civilians"
+char_name: "Annie"
+pc_spawn_number: -1
+spawn_type: SpawnType_Matrix
+hiring_type: HiringType_None
+portrait {
+  filename: "backer_humanfemale_grahamwilliams_tsilonsiereht"
+}
+dimension_name: "Matrix"
+karma: 388
+hiring_cost_override: 1000

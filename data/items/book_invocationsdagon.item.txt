@@ -1,0 +1,8 @@
+id: "book_invocationsdagon"
+type: ItemType_QuestItem
+uirep {
+  name: "Book: Invocations To Dagon"
+  description: "The author is called Derleth, it was written in 1952."
+}
+credentials: 0
+sorting_group: "Quest"

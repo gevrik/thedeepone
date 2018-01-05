@@ -1,0 +1,85 @@
+prefab_name: "Core/OrkFemale"
+character_sheet_id: "Lvl3_Merc_Human_CombatRigger"
+character_mod {
+  stats {
+    body: 1
+    quickness: 4
+    strength: 0
+    charisma: 0
+    intelligence: 5
+    willpower: 5
+    essence: 0
+    magic: 0
+    hp: 0
+    ap: 2
+    armor: 5
+    force: 0
+    morale: 10
+    discipline: 0
+    awareness: 5
+    perception: 20
+    authority: 0
+    protect_tether_range: 2
+    move_speed: 0
+  }
+  skills {
+    ranged_combat: 3
+    close_combat: 0
+    throwing_weapons: -1
+    spellcasting: 10
+    decking: 0
+    conjuring: 0
+    spirit_summoning: 0
+    drone_control: 6
+    biotech: 0
+    dodge: 8
+    etiquette_corporate: 0
+    etiquette_security: 0
+    etiquette_gang: 0
+    etiquette_socialite: 0
+    chi_casting: 0
+    etiquette_shadowrunner: 0
+    etiquette_street: 0
+    etiquette_academic: 0
+  }
+  specializations {
+    pistol: 6
+    rifle: 0
+    shotgun: -2
+    smg: 0
+    edged: 0
+    unarmed: 0
+    spirit_control: 0
+    esp_control: 0
+    drone_combat: 7
+  }
+  archetypeName: "Guard - Protect"
+  attitude: AttitudeCautious
+}
+equipment {
+  prefab_name: "DroneRepairKit_hi"
+}
+equipment {
+  prefab_name: "DeckerFedora"
+}
+equipment {
+  prefab_name: "DroneRepairKit_hi"
+}
+equipment {
+  prefab_name: "Pi 2 Browning Max-Power TDO"
+}
+equipment {
+  prefab_name: "DroneSupportS_Wolfhound"
+}
+equipment {
+  prefab_name: "Spell Heal 4"
+}
+team_id: "Gangers"
+char_name: "Brain-Eaters Controller"
+pc_spawn_number: -1
+hiring_type: HiringType_None
+cyberware_jack: "Datajack"
+cyberware_right_leg: "Obvious Cyberleg 2"
+portrait_code_override: "s5h6"
+karma: 403
+hiring_cost_override: 1000

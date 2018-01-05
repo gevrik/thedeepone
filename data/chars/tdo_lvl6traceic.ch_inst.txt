@@ -1,0 +1,28 @@
+prefab_name: "Matrix/SpiritESPKamikaze"
+character_sheet_id: "IC_Lv6_White_Ranged"
+character_mod {
+  stats {
+    hp: 230
+    morale: 24
+    awareness: 24
+    protect_tether_range: 5
+    move_speed: 6
+  }
+  archetypeName: "Guard - Seek And Destroy"
+  attitude: AttitudeAggressive
+}
+equipment {
+  prefab_name: "PR IC Trace 1"
+}
+team_id: "LoneStar"
+char_name: "White Tracer IC"
+enabled_at_start: false
+pc_spawn_number: -1
+spawn_type: SpawnType_Matrix
+hiring_type: HiringType_None
+portrait {
+  filename: ""
+}
+dimension_name: "Matrix"
+karma: 47
+hiring_cost_override: 1000

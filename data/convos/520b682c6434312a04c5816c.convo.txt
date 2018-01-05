@@ -1,0 +1,297 @@
+idRef {
+  id: "520b682c6434312a04c5816c"
+}
+ui_name: "ch02_riffContactComp"
+nodes {
+  idRef {
+    id: "520b68566434312a04c5817e"
+  }
+  index: 0
+  text: "{{GM}}This terminal is unsecured and you can access all of its applications{{/GM}}"
+  branches {
+    responseText: "{{CC}}Access Mail{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Access Notes{{/CC}}"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "{{CC}}Turn off the terminal{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find out more about the Riffruff Contact in the Housing Project"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_rrContactKilled"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520b68936434312a04c58181"
+  }
+  index: 1
+  text: "{{GM}}There are no mails in the inbox, and only a few mails in the sent items folder{{/GM}}"
+  branches {
+    responseText: "{{CC}}Dated three days ago, subject: \"Daily Report\"{{/CC}}"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Dated two days ago, subject: \"Daily Report\"{{/CC}}"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "{{CC}}Dated yesterday, subject: \"Daily Report\"{{/CC}}"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "{{CC}}Back to the main menu{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "520b69416434312a04c58187"
+  }
+  index: 2
+  text: "From: Riviera, Neil\nTo: report@ashpool.fr.eu\n\nOur subjects are causing more and more chaos in this district, so our investment was worth it.\n\nI have spent 25,000Y so far on equipment for the gang, that is less than expected after two weeks into our operation.\n\nUnfortunately we have not been able to target the high-priority staff of DAGON, as we would have expected by now.\n\nI will tell my contact within the gang to focus their efforts around the target in the future."
+  branches {
+    responseText: "{{CC}}Back to inbox{{/CC}}"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutAshpool"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520b6b616434312a04c58189"
+  }
+  index: 3
+  text: "From: Riviera, Neil\nTo: report@ashpool.fr.eu\n\nThe gangers have taken my orders about our high-priority targets wihtout complaint, but I am afraid we will have to rethink the plan very soon.\n\nOne of our high profile targets, Codename:Charlie, was seen delivering a package to the museum last night. I am sure that the package contained some new research material for Dr. Armitage to work on. We might have to use the gang leader to gain access to the museum and find out what kind of research material they are having him investigate. This could be invaluable for our operation.\n\nI will order our gangers to tail Dr. Armitage and to find a way for us to gain access to the museum when he is not there, so I can take a look around. "
+  branches {
+    responseText: "{{CC}}Back to inbox{{/CC}}"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutAshpool"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutArmitage"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520b6c886434312a04c5818b"
+  }
+  index: 4
+  text: "From: Riviera, Neil\nTo: report@ashpool.fr.eu\n\nOur minions are eager to please us, it seems like they like the Nuyen. To bolster their morale I have spent 5,000Y on new equipment that was delivered to the parking garage.\n\nReports suggest that Dr. Armitage almost never leaves the museum - he is working non-stop on the research material delivered to him by DAGON. This suggests that he is indeed working on high-priority projects that will be of interest to us. It is now more important to gain access to the museum and take a look at his research.\n\nI am requesting two additional Reavers, as I have no confidence in our minions to be up for an infiltration mission... I might also need a Decker to access the museums internal Matrix system.\n\nPlease reply with an ETA for the requested personnel."
+  branches {
+    responseText: "{{CC}}Back to inbox{{/CC}}"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutAshpool"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutArmitage"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520b6ddf6434312a04c5819f"
+  }
+  index: 5
+  text: "None of the notes seem to be of worth to you. There is an expense sheet and several shopping lists for the gangers, but that\'s about it. One note strikes you as odd, though... It reads:"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "520b6e296434312a04c581a2"
+  }
+  index: 6
+  text: "There is not dead which can eternal lie, and even yet, with strange aeons, even Death may die..."
+  branches {
+    responseText: "{{CC}}Back to the main menu{{/CC}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

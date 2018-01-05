@@ -1,0 +1,66 @@
+idRef {
+  id: "52242e873930388c0e007d79"
+}
+ui_name: "knucklez"
+nodes {
+  idRef {
+    id: "52242e9d3930388c0e007d7f"
+  }
+  index: 0
+  text: "So you want to fight in The Gauntlet?"
+  branches {
+    responseText: "Sure, let\'s go!"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "map_gauntlet"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Tell me how it works!"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Maybe later..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52242ecb3930388c0e007d86"
+  }
+  index: 1
+  text: "It\'s easy! You run around, kill many ghouls and try to keep those spirits alive for as long as possible!"
+  branches {
+    responseText: "Ghouls, spirits? What is this?!?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52242eee3930388c0e007d89"
+  }
+  index: 2
+  text: "The latest sprawl sport for runnas!\n\nWe gotz a few Shamans that can summon spirits which attract ghouls to them! The ghouls don\'t like these spirits and attack them!\n\nWe get our Shamans to summon 5 of those spirits, and then the ghouls attack them! 3 runners are sent into the cemetery, their goal is to keep the summoner spirits alive as long as possible!\n\nThe game ends when all summoners are dead or all ghouls are dead! If things get too hot you can leave, but only after a while {{GM}}10 rounds of combat{{/GM}}...\n\nOh, the summoner spirit in the center of the cemetery is immune to the ghouls until the other 4 outer spirits are dead! Thought you should know..."
+  branches {
+    responseText: "Sounds like fun!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

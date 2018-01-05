@@ -1,0 +1,401 @@
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  displayName: "Bozman"
+  idRef {
+    id: "522f87a6393038fc15006df2"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkMale"
+    character_sheet_id: "Lvl7_Dwarf_Adept"
+    character_mod {
+      stats {
+        body: 2
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: -1
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        is_fearless: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 2
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 2
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeBoss
+    }
+    equipment {
+      prefab_name: "RiggerTrenchcoat"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Counterstrike 1"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "DocWagonGold"
+    }
+    equipment {
+      prefab_name: "Sword 3 Katana TDO"
+    }
+    team_id: "Shadowrunners"
+    char_name: "Bozman"
+    patrolRoute: "Knifer_Garage"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    uninjurable: false
+    hiring_type: HiringType_Forced
+    portrait {
+      filename: "pc_orkmale_05a_punk"
+    }
+    description_bio: "The boss of the Riffruffers. His sword cleaves through Humies like a hot knife through butter!"
+    portrait_code_override: "s1h6b2"
+    karma: 248
+    hiring_cost_override: 1000
+    hiring_tag: "Adept"
+    is_prop_character: false
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 3
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  displayName: "Sam"
+  idRef {
+    id: "522f91073930384804004db8"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Lvl6_Human_Samurai"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        charisma: 1
+        intelligence: 1
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 0
+        throwing_weapons: 1
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 1
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 1
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "SamuraiTrenchcoat"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "DocWagonGold"
+    }
+    equipment {
+      prefab_name: "Sh 3 Enfield AS-7 TDO"
+    }
+    team_id: "Shadowrunners"
+    char_name: "DAGON Agent"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    uninjurable: false
+    hiring_type: HiringType_Forced
+    portrait {
+      filename: "pc_humanfemale_04a_whitebob"
+    }
+    portrait_code_override: "s4h6"
+    karma: 223
+    hiring_cost_override: 0
+    hiring_tag: "Samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  displayName: "Shannon Half-Sky"
+  idRef {
+    id: "522f96fb3930389008000121"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Story/StoryShaman"
+    character_sheet_id: "Story_Shaman"
+    character_mod {
+      stats {
+        body: 3
+        quickness: 1
+        strength: 0
+        charisma: 4
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 4
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 2
+        close_combat: 1
+        throwing_weapons: 0
+        spellcasting: 2
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 6
+        drone_control: 0
+        biotech: 0
+        dodge: 2
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 1
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 6
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Player"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "Bound Nature Spirit 6"
+    }
+    equipment {
+      prefab_name: "HealthPack_hi"
+    }
+    equipment {
+      prefab_name: "Spell Haste 2"
+    }
+    equipment {
+      prefab_name: "Spell Manabolt 2"
+    }
+    equipment {
+      prefab_name: "Spell Slow 2"
+    }
+    equipment {
+      prefab_name: "TotemBear"
+    }
+    equipment {
+      prefab_name: "Pi 3 Ruger Super Warhawk TDO"
+    }
+    team_id: "Shadowrunners"
+    char_name: "Shannon Half-Sky"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    portrait {
+      filename: "npc_humanfemale_shamaninvestigator"
+    }
+    description_bio: "She missed the thrill of the run and is available for spiritual guidance..."
+    karma: 6
+    hiring_cost_override: 1500
+    hiring_tag: "Shaman"
+    id: "tdo_shannon"
+  }
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "map_limbo"
+parentStory: ""
+scene_title: "New Scene"
+scene_subtitle: ""
+scene_synopsis: ""
+scene_image: ""
+scene_continue_button_skip: false
+scene_restore_runner_health: false
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: false
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Gangers"
+  affiliation: 1
+  affiliation: 0
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "LoneStar"
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Civilians"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+scene_dimensions {
+  dimension_name: "Matrix"
+  initial_alarm_state: 0
+  turns_per_round: 3
+}
+character_roster {
+}
+show_hiring_screen_on_scene_load: false
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 0
+hiring_minimum_karma: 0
+hiring_maximum_karma: 25
+roster_overrides {
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: false

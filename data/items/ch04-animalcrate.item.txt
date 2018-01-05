@@ -1,0 +1,8 @@
+id: "ch04-animalCrate"
+type: ItemType_QuestItem
+uirep {
+  name: "Biocrate"
+  description: "You got this biocrate from the Velvet Underground club, it is supposed to contain some kind of animal."
+}
+credentials: 0
+sorting_group: "Quest"

@@ -1,0 +1,217 @@
+idRef {
+  id: "521024fc64343161026ce2f6"
+}
+ui_name: "or_ceo"
+nodes {
+  idRef {
+    id: "5210250264343161026ce2fc"
+  }
+  index: 0
+  text: "What do you want? I am busy!"
+  branches {
+    responseText: "I need to use your workstation!"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Sorry! Bye."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5210253064343161026ce2ff"
+  }
+  index: 1
+  text: "Are you kidding me? Nobody uses that station except for me!"
+  branches {
+    responseText: "I really need to use it to publish a new product! If we don\'t do it now we will lose millions of nuyen!\n{{CC}}Intelligence: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "5210267b64343161026ce33c"
+    }
+  }
+  branches {
+    responseText: "It\'s a matter of life and death! We just had someone go batshit crazy, he hurt a lot of people, all of the terminals are down except yours!\n{{CC}}Charisma: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "5210269464343161026ce341"
+    }
+  }
+  branches {
+    responseText: "Okay then!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5210267c64343161026ce33e"
+  }
+  index: 2
+  text: "I understand! We can\'t lose that much... You can use it!"
+  branches {
+    responseText: "Thanks!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "ceoDistracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5210267f64343161026ce340"
+  }
+  index: 3
+  text: "Okay, that sounds urgent!"
+  branches {
+    responseText: "Thanks!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "ceoDistracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

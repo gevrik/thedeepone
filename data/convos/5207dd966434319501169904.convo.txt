@@ -1,0 +1,1042 @@
+idRef {
+  id: "5207dd966434319501169904"
+}
+ui_name: "ch02_annieMatrix"
+nodes {
+  idRef {
+    id: "5207dda3643431950116990a"
+  }
+  index: 0
+  text: "What\'s-up, chummer?"
+  branches {
+    responseText: "I like what you did here!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutMatrix"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I have some Nuyen to upgrade the system!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutMatrix"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "How are you, Annie?"
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Any news on the Cult you grew up around?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_investigate_cult"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 12
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Any news on the Corporation that kidnapped you?"
+    nextNodeIndex: 17
+  }
+  branches {
+    responseText: "CU, Annie!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207ddf7643431950116990d"
+  }
+  index: 1
+  text: "Thanks! I-have-been-busy-setting-this-up-in-hopes-of-my-special-friend-making-an-appearance.\n\nBut-nothing-so-far... I-think-the-system-needs-to-be-more-powerful-for-her-to-come-here.\n\nSo-if-you-have-any-spare-Nuyen-so-we-can-upgrade-this-system-just-let-me-know-and-I\'ll-do-the-work."
+  branches {
+    responseText: "Sounds good. I will let you know."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutMatrix"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Help Annie to upgrade your system"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5207deef6434319501169919"
+  }
+  index: 2
+  text: "Awesome. What-should-I-buy-next?"
+  branches {
+    responseText: "Upgrade the data node {{GM}}$(scene.currentDatanodes){{/GM}}\n{{CC}}2,500\302\245{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2500
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "system_dataNodes"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 10
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Upgrade the CPU node {{GM}}$(scene.currentCPU){{/GM}}\n{{CC}}5,000\302\245{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5000
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "system_cpuNodes"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Buy some white ICE {{GM}}$(scene.currentWhiteICE){{/GM}}\n{{CC}}2,500\302\245{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2500
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "system_whiteICE"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 10
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Arithmetic (int)"
+            args {
+              call_value {
+                functionName: "Get Story Variable (int)"
+                args {
+                  string_value: "51f4026a643431dd08e509ff"
+                }
+                args {
+                  string_value: "system_blackICE"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Arithmetic Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Arithmetic (int)"
+                args {
+                  int_value: 1
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Arithmetic Ops"
+                    }
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Story Variable (int)"
+                    args {
+                      string_value: "51f4026a643431dd08e509ff"
+                    }
+                    args {
+                      string_value: "system_whiteICE"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "system_cpuNodes"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Buy some Black ICE {{GM}}$(scene.currentBlackICE){{/GM}}\n{{CC}}5,000\302\245{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5000
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "system_blackICE"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Arithmetic (int)"
+            args {
+              call_value {
+                functionName: "Get Story Variable (int)"
+                args {
+                  string_value: "51f4026a643431dd08e509ff"
+                }
+                args {
+                  string_value: "system_blackICE"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Arithmetic Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Arithmetic (int)"
+                args {
+                  int_value: 1
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Arithmetic Ops"
+                    }
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Story Variable (int)"
+                    args {
+                      string_value: "51f4026a643431dd08e509ff"
+                    }
+                    args {
+                      string_value: "system_whiteICE"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "system_cpuNodes"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Nothing right now."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f66a0643431a601a406ef"
+  }
+  index: 3
+  text: "Ok-so-our-system-can-store-more-data. Oh sorry about that... I will run some datamining apps so we can earn a daily income. I will redirect the credit to your Credstick every day."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "system_dataNodes"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 2500
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "currentDatanodes"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f66e3643431a601a406f2"
+  }
+  index: 4
+  text: "Do you want to make another upgrade?"
+  branches {
+    responseText: "Let\'s see what we got..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Not right now."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f6714643431a601a40712"
+  }
+  index: 5
+  text: "This-is-good. We-can-get-more-ICE-with-the-increased-CPU-power... It might also attract my friend to this system!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "system_cpuNodes"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 5000
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "currentCPU"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f6760643431a601a4072e"
+  }
+  index: 6
+  text: "Do you want to make another upgrade?"
+  branches {
+    responseText: "Let\'s see what we got..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Not right now."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f6767643431a601a40736"
+  }
+  index: 7
+  text: "AHH-some-YTEES! Okay, will do."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "system_whiteICE"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 2500
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "520f6885643431a601a4085b"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "currentWhiteICE"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f6789643431a601a40739"
+  }
+  index: 8
+  text: "Do you want to make another upgrade?"
+  branches {
+    responseText: "Let\'s see what we got..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Not right now."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f6796643431a601a40741"
+  }
+  index: 9
+  text: "Uhhhh-nasty-stuff. But-okay-will-do-never-know-when-you-might-need-it!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "system_blackICE"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 5000
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "520f6aa1643431a601a4085f"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "currentBlackICE"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520f67b0643431a601a40744"
+  }
+  index: 10
+  text: "Do you want to make another upgrade?"
+  branches {
+    responseText: "Let\'s see what we got..."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Not right now."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207df55643431950116991e"
+  }
+  index: 11
+  text: "I-am-great, well-considering-my-dad-and-all... I-have-kept-myself-busy-here."
+  branches {
+    responseText: "I, see. I want to ask you about something else..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207e960643431e101e50a97"
+  }
+  index: 12
+  text: "Actually-yes. I-did-some-research-and-it-seems-they-moved-their-base-of-operations-from-Dunwich-to-a-small-town-called-Innsmouth.\n\nI-heard-it-was-because-of-the-heat-we-gave-them-down-in-the-sewers.\n\nInnsmouth-is-quite-far-away, so-I-dunno-if-we-should-chase-them-there..."
+  branches {
+    responseText: "What do you mean? They have another base?"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207e9d2643431e101e50a9a"
+  }
+  index: 13
+  text: "Not-really. BUT-after-the-whole-thing-went-wrong-for-them-here-in-Seattle-they-decided-to-move-everything-North, up-to-a-little-place-called-Everett.\n\nThe-cult-already-had-some-members-there, and-more-moved-in-recently.\n\nIf-you-want-to-chase-those-mad-fools-that\'s-where-I-would-start.\n\nBut-I-am-more-interested-in-making-contact-with-my-special-friend-here-in-the-Matrix."
+  branches {
+    responseText: "Annie you know you talk very fast..."
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207ea79643431e101e50ab6"
+  }
+  index: 14
+  text: "Oh-really? Sorry about that, I\'m always totally hyped up when I\'m jacked-in. So what is your plan?"
+  branches {
+    responseText: "Tell me more about this place called Everett."
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "I don\'t know, yet. Can we talk about something else?"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207ead7643431e101e50ab9"
+  }
+  index: 15
+  text: "Not much to say about it. Very small, reminds me of home. There\'s a lot of ganger activity in the area, so it\'s not as idyllic as it sounds. The cops are having problems dealing with the violence.\n\nThe cult members have infiltrated the normal society of the town as they usually do. You would have to do some detective work there to learn more about them. I can help you from here.\n\nI added an external input-output-port to this system, so you can access it from any Matrix Jack-In point that you can find. It is secure, don\'t worry."
+  branches {
+    responseText: "I think I will go there to find out more about the Cult."
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "Hmm. Maybe I should do something else first. Can we talk about something else?"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5207eb96643431e101e50ae4"
+  }
+  index: 16
+  text: "Okay! Sounds good. I will stay here and work on the system. Take care, $(l.name)."
+  branches {
+    responseText: "CU, Annie!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Go to Everett to investigate the cult"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_investigate_cult"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5207e8fb643431e101e50a7c"
+  }
+  index: 17
+  text: "Nothing-right-now.\n\nI-will-let-you-know-as-soon-as-I-dig-something-up.\n\nMy-special-friend-will-know-something-but-she-hasn\'t-made-an-appearance-yet!"
+  branches {
+    responseText: "Okay! Let\'s talk about something else."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

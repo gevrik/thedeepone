@@ -1,0 +1,233 @@
+idRef {
+  id: "520e9008643431df0c9f07a8"
+}
+ui_name: "ch02_brotherComp"
+nodes {
+  idRef {
+    id: "520e9012643431df0c9f07ae"
+  }
+  index: 0
+  text: "Most of the drives on this setup are encrypted, what will you do?"
+  branches {
+    responseText: "{{CC}}Decrypt the file system{{/CC}}\n{{GM}}Decking: 4{{/GM}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Contact Annie via your external IO Port and ask her for help{{/CC}}"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "{{CC}}Leave{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "520e9182643431df0c9f07d1"
+  }
+  index: 1
+  text: "Neocortex OS 2.3\n\n>"
+  branches {
+    responseText: "{{CC}}Access mail system{{/CC}}"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Access Recently open Documents{{/CC}}"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "{{CC}}Leave{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "520e9214643431df0c9f0805"
+  }
+  index: 2
+  text: "There is just one message in the inbox, it has already been read:\n\n> Sender: unknown\n> Recipient: tom.darson@dagon-corp.ucsa.com\n> Subject: Get out!\n\nGet out now! They are coming for you!\n\nSincerely,\nA friend..."
+  branches {
+    responseText: "{{CC}}Return to the main menu{{/CC}}"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "520e928d643431df0c9f0810"
+  }
+  index: 3
+  text: "You open several image files that show recent photographs of Dr. Alexander Hansen of DAGON CORP. The images have all been taken in the last few days.\n\nThe appearance of Dr. Hansen is very close to that of the Cultists you are hunting... His skin is scaly and his eyes bulge out like those of a fish. His nose has receeded a lot as well - you are sure that he is one of the cultists now."
+  branches {
+    responseText: "{{CC}}Return to the main menu{{/CC}}"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "knowHansenMutations"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutHansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520e910a643431df0c9f07c6"
+  }
+  index: 4
+  text: "What\'s-up-chummer?!?"
+  branches {
+    responseText: "Annie you are doing it again..."
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "520e90dc643431df0c9f07bc"
+  }
+}
+nodes {
+  idRef {
+    id: "520e9124643431df0c9f07c9"
+  }
+  index: 5
+  text: "Sorry about that! Hyper! Hyper! What can I do you for, $(l.name)?"
+  branches {
+    responseText: "Can you decrypt the drives on this computer?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "520e90dc643431df0c9f07bc"
+  }
+}
+nodes {
+  idRef {
+    id: "520e9147643431df0c9f07cc"
+  }
+  index: 6
+  text: "Done... Anything else?"
+  branches {
+    responseText: "Not now... Thanks, Annie."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "520e90dc643431df0c9f07bc"
+  }
+}
+nodes {
+  idRef {
+    id: "520e9161643431df0c9f07cf"
+  }
+  index: 7
+  text: "Anytime, boss."
+  branches {
+    responseText: "..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "520e90dc643431df0c9f07bc"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

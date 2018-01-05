@@ -1,0 +1,338 @@
+idRef {
+  id: "521578993930386c0e002b09"
+}
+ui_name: "ch02_hansenAssistant"
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b10"
+  }
+  index: 0
+  text: "Thanks... I never thought he would be... one of those things..."
+  branches {
+    responseText: "Take it easy... You\'re still alive, and he ain\'t."
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "521578bb3930386c0e002b37"
+    }
+  }
+  branches {
+    responseText: "You better tell me everything you know about this cult if you don\'t want to end like him!"
+    nextNodeIndex: 10
+    onlyOnce: true
+    idRef {
+      id: "5212a87964343199074f3b74"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Hansen\'s assistant"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b13"
+  }
+  index: 1
+  text: "Yes, thanks to you... His research... I should\'ve known..."
+  branches {
+    responseText: "What research did you do for him?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b16"
+  }
+  index: 2
+  text: "Very rare and old books... Written by madmen, but brilliant madmen... Their stories and prophecies, they will drive you insa... err.. to the edge of madness, but it is such important knowledge..."
+  branches {
+    responseText: "Are you feeling alright?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b19"
+  }
+  index: 3
+  text: "Yes, err... excuse me... I need to sit down..."
+  branches {
+    responseText: "Can you show me some of the books?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b1c"
+  }
+  index: 4
+  text: "There is only one left in the office... It is on the table over there in the conference room... The other books have been digitized, all the files are on my computer in the lobby..."
+  branches {
+    responseText: "I guess you don\'t mind if I take that book. We will also copy those files."
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b1f"
+  }
+  index: 5
+  text: "Err... Of course, I mean - the book is very brittle, you have to be very careful with it! You can access my computer at any time, it is not secured..."
+  branches {
+    responseText: "You are coming with me - this place is no longer safe for you..."
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Thanks. You should get out of town, Dr. Armitage..."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Take the book"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b22"
+  }
+  index: 6
+  text: "What do you mean?"
+  branches {
+    responseText: "More DAGON goons will be looking for their Dr. Hansen..."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b25"
+  }
+  index: 7
+  text: "I understand. I am coming with you."
+  branches {
+    responseText: "Let\'s go!"
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "5214dd9d3930385c0200013e"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_assistantInCrew"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b29"
+  }
+  index: 8
+  text: "What do you mean?"
+  branches {
+    responseText: "These DAGON goons will be looking for their Dr. Hansen..."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b2c"
+  }
+  index: 9
+  text: "I understand. I will leave... But I have to take a few books first..."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5214dd9d3930385c0200013e"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor Wander Range"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5214dd9d3930385c0200013e"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 8
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5214dd9d3930385c0200013e"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b2f"
+  }
+  index: 10
+  text: "Of course, of course... Anything you want to know..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521578a73930386c0e002b32"
+  }
+  index: 11
+  text: "This is a big mess, chummer! We better get out of here quickly..."
+  branches {
+    responseText: "We have a little bit of time, Hansen and his goons are dead..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  sourceInSceneRef {
+    id: "52121bb56434318e0663962e"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

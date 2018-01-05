@@ -1,0 +1,9436 @@
+minX: -64
+minZ: -16
+numX: 115
+numZ: 142
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a823a393038c80200089c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a823b393038c80200089d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a823f393038c80200089e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8241393038c80200089f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a824f393038c8020008a0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a824f393038c8020008a1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a824f393038c8020008a2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a824f393038c8020008a3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a824f393038c8020008a4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8266393038c8020008a6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8266393038c8020008a7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8266393038c8020008a8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8266393038c8020008a9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8266393038c8020008aa"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008ab"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008ac"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008ad"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008ae"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008af"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826b393038c8020008b9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008ba"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008bb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008bc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008bd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008be"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008bf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008c0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008c1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008c2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008c3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008c4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008c5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008c6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008c7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826d393038c8020008c8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008c9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008ca"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008cb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008cc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008cd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008ce"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008cf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008d0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008d1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008d2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008d3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008d4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008d5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008d6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a826e393038c8020008d7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008d8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008d9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008da"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008db"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008dc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008dd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008de"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008df"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008e0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008e1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008e2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008e3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008e4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008e5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8270393038c8020008e6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008e7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008e8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008e9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008ea"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008eb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008ec"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008ed"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008ee"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008ef"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008f0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008f1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008f2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008f3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008f4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8272393038c8020008f5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000905"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000906"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000907"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000908"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000909"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200090a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200090b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200090c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200090d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200090e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200090f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000910"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000911"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000912"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000913"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000914"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000915"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000916"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000917"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000918"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000919"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200091a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200091b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200091c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200091d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200091e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200091f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000920"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000921"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000922"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000923"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000924"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000925"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000926"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000927"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000928"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000929"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200092a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200092b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200092c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200092d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200092e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200092f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000930"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000931"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000932"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000933"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000934"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000935"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000936"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000937"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000938"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000939"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200093a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200093b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200093c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200093d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200093e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200093f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000940"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000941"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000942"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000943"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000944"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000945"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000946"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000947"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000948"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c802000949"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200094a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200094b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200094c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200094d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200094e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8281393038c80200094f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000950"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000951"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000952"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000953"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000954"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000955"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000956"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000957"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000958"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000959"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200095a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200095b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200095c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200095d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200095e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200095f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000960"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000961"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000962"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000963"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000964"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000965"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000966"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000967"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000968"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000969"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200096a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200096b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200096c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200096d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200096e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200096f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000970"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000971"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000972"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000973"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000974"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000975"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000976"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000977"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000978"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000979"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200097a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200097b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200097c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200097d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200097e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200097f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000980"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000981"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000982"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000983"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000984"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000985"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000986"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000987"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000988"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c802000989"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200098a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a828e393038c80200098b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009a2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009a4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009a5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009a7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009a8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009a9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ab"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ac"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ad"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ae"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009b0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009b1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009b2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009b3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009b4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009b6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009b7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009b8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009b9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ba"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009bb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009bc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009be"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009bf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009c0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009c1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009c2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009c3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009c4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009c5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009c7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009c8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009c9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ca"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009cb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009cc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009cd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ce"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009cf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009d1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009d2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009d3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009d4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009d5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009d6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009d7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009d8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009d9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009da"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009dc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009dd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009de"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009df"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009e0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009e1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009e3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009e4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009e5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009e6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009e7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009e8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009e9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ea"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009eb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ec"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ed"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ef"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009f9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009fa"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009fc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009fd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009fe"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c8020009ff"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a00"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a01"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a02"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a03"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a04"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a05"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a06"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a07"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a08"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a0a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a0b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a0c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a0d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a0e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a0f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a10"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a11"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a12"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a13"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a14"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a15"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a16"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a17"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 95
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a18"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a19"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a1a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a1b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a1c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a1d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a1e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a1f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a20"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a21"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a22"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a23"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a24"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a25"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a26"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a27"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a28"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a29"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a2a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a2b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a2c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a2d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a2e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a2f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a30"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a31"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a32"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a33"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a34"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a35"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a36"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a37"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a38"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a39"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a3a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a3b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a3c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a3d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a3e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a3f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a40"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a41"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a42"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a43"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a44"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a45"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a46"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a47"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a48"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a49"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a4a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a4b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a4c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a4d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a4e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a4f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a50"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a51"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a52"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a53"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a54"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a55"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a56"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a57"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a58"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a59"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a5a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a5b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a5c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a5d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a5e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a5f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a60"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a61"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a62"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a63"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a64"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a65"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a66"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a67"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a68"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a69"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a6a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a6b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a6c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a6d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a6e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a6f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a70"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a71"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a72"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a73"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a74"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a75"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a76"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a77"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a78"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a79"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d51393038c802000a7a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d52393038c802000a7b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d52393038c802000a7c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d52393038c802000a7d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d52393038c802000a7e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d52393038c802000a7f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8d52393038c802000a80"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8e8a393038c802000a87"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8e99393038c802000a89"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8ea0393038c802000a8b"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8ea2393038c802000a8c"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8eb3393038c802000a8e"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8eb6393038c802000a8f"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8eb8393038c802000a90"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8eba393038c802000a91"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8ebc393038c802000a92"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8ec0393038c802000a93"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8ec2393038c802000a94"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8ed5393038c802000a95"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8ed7393038c802000a96"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8ed9393038c802000a97"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8edb393038c802000a98"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000a99"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000a9a"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000a9b"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000a9c"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000a9d"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000a9e"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000a9f"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000aa0"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000aa1"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000aa2"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000aa3"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000aa4"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000aa5"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000aa6"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000aa7"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f50393038c802000aa8"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f6b393038c802000aa9"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a8f6d393038c802000aaa"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 23
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9181393038c802000b03"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 26
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9183393038c802000b04"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 29
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9184393038c802000b05"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 29
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9185393038c802000b06"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 26
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9187393038c802000b07"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 23
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9188393038c802000b08"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9192393038c802000b09"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9196393038c802000b0a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9198393038c802000b0b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9199393038c802000b0c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a919a393038c802000b0d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a919b393038c802000b0e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b0393038c802000b0f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b0393038c802000b10"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b0393038c802000b11"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b0393038c802000b12"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b0393038c802000b13"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b0393038c802000b14"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b2393038c802000b15"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b2393038c802000b16"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b2393038c802000b17"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b2393038c802000b18"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b2393038c802000b19"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b2393038c802000b1a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b4393038c802000b1b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b4393038c802000b1c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b4393038c802000b1d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b4393038c802000b1e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b4393038c802000b1f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b4393038c802000b20"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 47
+    y: 0
+    z: 27
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b8393038c802000b21"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 27
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b8393038c802000b22"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 47
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b8393038c802000b23"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 27
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b8393038c802000b24"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b8393038c802000b25"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91b8393038c802000b26"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91bf393038c802000b27"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91bf393038c802000b28"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91bf393038c802000b29"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91bf393038c802000b2a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91bf393038c802000b2b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91bf393038c802000b2c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c2393038c802000b2d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c2393038c802000b2e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c2393038c802000b2f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c2393038c802000b30"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c2393038c802000b31"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c2393038c802000b32"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c3393038c802000b33"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c3393038c802000b34"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c3393038c802000b35"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c3393038c802000b36"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c3393038c802000b37"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c3393038c802000b38"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c6393038c802000b39"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c6393038c802000b3a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c6393038c802000b3b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c6393038c802000b3c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c6393038c802000b3d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91c6393038c802000b3e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 47
+    y: 0
+    z: 48
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b3f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 47
+    y: 0
+    z: 45
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b40"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 48
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b41"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b42"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 44
+    y: 0
+    z: 45
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b43"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 48
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b44"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b45"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b46"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 45
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b47"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b48"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b49"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b4a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b4b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b4c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b4d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b4e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b4f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b50"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b51"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b52"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b53"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 29
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b54"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b55"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b56"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 26
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b57"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 29
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b58"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b59"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 23
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b5a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 26
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b5b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 23
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a91de393038c802000b5c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b5d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b5e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b5f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b60"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b61"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b62"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b63"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b64"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b65"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b66"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b67"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b68"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b69"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b6a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b6b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b6c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b6d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b6e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b6f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b70"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b71"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b72"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b73"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b74"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b75"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b76"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b77"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b78"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b79"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9206393038c802000b7a"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 14
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a921d393038c802000b7b"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9220393038c802000b7c"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a922e393038c802000b7d"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 44
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9230393038c802000b7e"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9232393038c802000b7f"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9234393038c802000b80"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9236393038c802000b81"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a924e393038c802000b82"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9250393038c802000b83"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9251393038c802000b84"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9253393038c802000b85"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 98
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a929d393038c802000b86"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 98
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a929e393038c802000b87"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92a3393038c802000b88"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92a5393038c802000b89"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92a6393038c802000b8a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92a7393038c802000b8b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ae393038c802000b8c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ae393038c802000b8d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ae393038c802000b8e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ae393038c802000b8f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ae393038c802000b90"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ae393038c802000b91"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92af393038c802000b92"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92af393038c802000b93"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92af393038c802000b94"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92af393038c802000b95"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92af393038c802000b96"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92af393038c802000b97"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b0393038c802000b98"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b0393038c802000b99"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b0393038c802000b9a"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b0393038c802000b9b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b0393038c802000b9c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b0393038c802000b9d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 116
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b2393038c802000b9e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 116
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b2393038c802000b9f"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 119
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b2393038c802000ba0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 119
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b2393038c802000ba1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: 122
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b2393038c802000ba2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 122
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92b2393038c802000ba3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 122
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000ba4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 122
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000ba5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 119
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000ba6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000ba7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 119
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000ba8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 116
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000ba9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000baa"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bab"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 116
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bac"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bad"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bae"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000baf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 113
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bb9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 110
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bba"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bbb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 104
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bbc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bbd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bbe"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 101
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bbf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 98
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bc0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 98
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92c3393038c802000bc1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -40
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92df393038c802000bc2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -40
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92e1393038c802000bc3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -43
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92e2393038c802000bc4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -43
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92e3393038c802000bc5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -46
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92e5393038c802000bc6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -46
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92e7393038c802000bc7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ec393038c802000bc8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ec393038c802000bc9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ec393038c802000bca"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 89
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ec393038c802000bcb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ec393038c802000bcc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ec393038c802000bcd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ee393038c802000bce"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ee393038c802000bcf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ee393038c802000bd0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ee393038c802000bd1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ee393038c802000bd2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ee393038c802000bd3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ef393038c802000bd4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ef393038c802000bd5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ef393038c802000bd6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ef393038c802000bd7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ef393038c802000bd8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92ef393038c802000bd9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -58
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92f2393038c802000bda"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -61
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92f2393038c802000bdb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -58
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92f2393038c802000bdc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92f2393038c802000bdd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -61
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92f2393038c802000bde"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92f2393038c802000bdf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -40
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -43
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -40
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -46
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -43
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000be9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bea"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -46
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000beb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bec"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bed"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bee"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bef"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -58
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -49
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -58
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -61
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf7"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf8"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bf9"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -61
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bfa"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bfb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bfc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a92fb393038c802000bfd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9307393038c802000bfe"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9308393038c802000bff"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9309393038c802000c00"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a930a393038c802000c01"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_01"
+  gridPoint {
+    x: -25
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a930b393038c802000c02"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_pillar02"
+  gridPoint {
+    x: -31
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "521a9313393038c802000c03"
+  }
+  lod: 0
+}

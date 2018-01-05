@@ -1,0 +1,416 @@
+idRef {
+  id: "5219f4163930382c12000f4b"
+}
+ui_name: "ch03_brox"
+nodes {
+  idRef {
+    id: "5219f41c3930382c12000f51"
+  }
+  index: 0
+  text: "{{GM}}The Dwarf is counting a roll of nuyen, showing crooked teeth through the big smile in his face. As you approach him he looks up...{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f75f3930382c12000f93"
+  }
+  index: 1
+  text: "Hoi, chummers! What can Brox do for you today?"
+  branches {
+    responseText: "I would like some information about this district of Tacoma..."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "So you are the local exterminator?"
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "I would like to access my stash!"
+    actions {
+      ops {
+        functionName: "Open Equip Screen"
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Can I take a look at your wares, please?"
+    nextNodeIndex: 17
+  }
+  branches {
+    responseText: "I\'m leaving!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f75f3930382c12000f96"
+  }
+  index: 2
+  text: "{{GM}}As Brox realizes that you are not customers his smile changes into a frown...{{/GM}}\n\nDo I look like the tourist office to you?"
+  branches {
+    responseText: "Hmm, I guess not, sorry for bothering you."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Couldn\'t you make an exception? I am new in town and have some work to do here...\n{{CC}}Charisma: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Listen, chummer. I have some \"work\" to do here in the shadows... You might be able to profit from this...\n{{CC}}Etiquette: Shadowrunner{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f75f3930382c12000f9a"
+  }
+  index: 3
+  text: "{{GM}}Brox sizes you up{{/GM}}\n\nI guess it can\'t hurt to be nice once in a decade..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f75f3930382c12000f9d"
+  }
+  index: 4
+  text: "So what do you want to know?"
+  branches {
+    responseText: "What do you know about this district of Tacoma?"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "What do you know about Zeitgeist Robotics?"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "Can we please talk about something else?"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f88f3930382c12000fef"
+  }
+  index: 5
+  text: "{{GM}}Brox snorts{{/GM}}\n\nBorn and bred here, so I know pretty much everything there is to know...\n\nThis particular district has been an industrial area for several decades, but things have gone downhill in the last few years... More and more warehouses and shops are closing, but the people here are cared for by their \"families\"..."
+  branches {
+    responseText: "Anything else about the people that live here?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "What do you mean with \"families\"?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f91c3930382c12000ff2"
+  }
+  index: 6
+  text: "{{GM}}Brox puts on a humble expression{{/GM}}\n\nMostly peeps with Asian roots, Chinese, Japanese and Koreans. Hard working peeps!"
+  branches {
+    responseText: "I see..."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f9853930382c12000ff5"
+  }
+  index: 7
+  text: "{{GM}}Brox grins{{/GM}}\n\nHa! Not as bright as I thought! The Yakuza and Triad take care of their peeps here..."
+  branches {
+    responseText: "Can you tell me more about the Triad?"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Can you tell me more about the Yakuza?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f9e43930382c12000ff9"
+  }
+  index: 8
+  text: "{{GM}}Brox strokes his beard{{/GM}}\n\nThe Chinese underworld organization of course... They look like business people, but in reality they\'re running the drug and weapons trade around here... They\'re very well trained and equipped, so try not to mess with them. They often bash heads with the Yakuza..."
+  branches {
+    responseText: "Thanks!"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219fa7c3930382c12000ffb"
+  }
+  index: 9
+  text: "{{GM}}Brox strokes his beard{{/GM}}\n\nThe Japanese underworld organization of course... They\'re as big as the Triad in Tacoma, and because of that most gang wars are between them and the Triads... They run the drug trade in Tacoma and they\'re using some of the warehouses in this district to store their product...\n\nThey\'re well trained and well equipped, so be careful not to get into a hassle with them!"
+  branches {
+    responseText: "Thanks!"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+}
+nodes {
+  idRef {
+    id: "5219fb073930382c1200101a"
+  }
+  index: 10
+  text: "{{GM}}Brox shrugs{{/GM}}\n\nHmm... One of the medium-sized corps that have a big corp tower in this district... I think their local outlet is run exclusively by their drones and robots... just a couple of meatbags around to oil the machines from time to time... "
+  branches {
+    responseText: "That\'s good to know..."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219fbbf3930382c1200101d"
+  }
+  index: 11
+  text: "{{GM}}Brox scratches his head{{/GM}}\n\nFunny that you\'re asking about them... You\'re the second person today that wanted to know about that corp..."
+  branches {
+    responseText: "Who did ask you about them?"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219fbe03930382c12001020"
+  }
+  index: 12
+  text: "{{GM}}A big grin fills Brox\'s face{{/GM}}\n\nNow, now... I wouldn\'t be successful in my trade if I would talk about my clients with other clients, wouldn\'t I?"
+  branches {
+    responseText: "I understand!"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Maybe this will change your mind?\n{{CC}}Offer 250 credits{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 250
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 250
+        }
+      }
+    }
+    nextNodeIndex: 13
+    onlyOnce: true
+    idRef {
+      id: "5219fd483930382c12001029"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219fc4d3930382c12001025"
+  }
+  index: 13
+  text: "{{GM}}That seemed to make Brox cooperative - he quickly stashes away the nuyen{{/GM}}\n\nHmm, actually yes... Never seen the other guy before anyway...\n\nOkay, it was some kind of Technomancer... long flowing robe, some cyber, strange aura surrounding this fellow... No corp badge or anything else that would give a hint to his affiliation... I guess it was an independant like you..."
+  branches {
+    responseText: "Thanks, good to know that someone else is looking into Zeitgeist Robotics..."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f75f3930382c12000fa3"
+  }
+  index: 14
+  text: "{{GM}}As you mention profits and the shadows you see a sparkle in Brox\'s eyes{{/GM}}\n\nI see... Well, why didn\'t you say that right away?"
+  branches {
+    responseText: "Have to be careful... you never know..."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f7a13930382c12000fc1"
+  }
+  index: 15
+  text: "{{GM}}Brox seems to lighten up a little as you mention his work{{/GM}}\n\nHell yeah I am! Always lots of work as an Exterminator these days...\n\nLast week I was on a job in the sewers below the Brotherhood temple here in Tacoma and there was this huge, giant bug there... Had to use my drones to get rid of that beast...\n\nI guess one should not wonder these days that the bugs are getting bigger and bigger..."
+  branches {
+    responseText: "Tell me about it..."
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f8733930382c12000fc9"
+  }
+  index: 16
+  text: "{{GM}}Brox rubs his hands together{{/GM}}\n\nBut I also peddle all kind of wares for those in-the-know around here... If you ever happen to \"find\" anything that could be worth anything, just let me know and I\'ll make you a good deal!"
+  branches {
+    responseText: "Good to know!"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5219f80e3930382c12000fc6"
+  }
+  index: 17
+  text: "{{GM}}Brox shows his crooked teeth with a smile{{/GM}}\n\nSure thing! Buy as much as you want!"
+  branches {
+    responseText: "Thanks!"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "522647c6393038ac0f00331f"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

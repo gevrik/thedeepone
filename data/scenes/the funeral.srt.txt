@@ -1,0 +1,6678 @@
+triggers {
+  name: "LOADMAP"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "StartText"
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            call_value {
+              functionName: "Append (string)"
+              args {
+                call_value {
+                  functionName: "Append (string)"
+                  args {
+                    call_value {
+                      functionName: "Append (string)"
+                      args {
+                        call_value {
+                          functionName: "Append (string)"
+                          args {
+                            call_value {
+                              functionName: "Convert (int) to (string)"
+                              args {
+                                call_value {
+                                  functionName: "Get Story Variable (int)"
+                                  args {
+                                    string_value: "51f4026a643431dd08e509ff"
+                                  }
+                                  args {
+                                    string_value: "ch02_minute"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          args {
+                            string_value: " Minute: "
+                          }
+                        }
+                      }
+                      args {
+                        call_value {
+                          functionName: "Convert (int) to (string)"
+                          args {
+                            call_value {
+                              functionName: "Get Story Variable (int)"
+                              args {
+                                string_value: "51f4026a643431dd08e509ff"
+                              }
+                              args {
+                                string_value: "ch02_hour"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  args {
+                    string_value: " Hour: "
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Convert (int) to (string)"
+                  args {
+                    call_value {
+                      functionName: "Get Story Variable (int)"
+                      args {
+                        string_value: "51f4026a643431dd08e509ff"
+                      }
+                      args {
+                        string_value: "ch02_day"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          args {
+            string_value: "Day: "
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "detTarget1"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Seek And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "521ea1893930387007000f5f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Move Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "583945b03235394005006a37"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "51fd42286434311d0a8d4264"
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Ambient Light Color"
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0.6
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (CameraRegion)"
+          args {
+            string_value: "51fd42286434311d0a8d4264"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Directional Light Color"
+      args {
+        float_value: 0.6
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (CameraRegion)"
+          args {
+            string_value: "51fd42286434311d0a8d4264"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51f524a9643431560a702e5e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "CheckComplete"
+  events {
+    ops {
+      functionName: "On Conversation Complete"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "amountSaved"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "51f568ae643431000b7c3cc2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51f56815643431000b7c3cc1"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onPlayerDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Don\'t die!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fbe4c36434312b08fa4d13"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onCoyoteResearch"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkCoyoteResearch"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteResearch"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteResearch"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkResearchDone"
+          }
+        }
+      }
+      args {
+        float_value: 0.01
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fdb4046434315c0b8fccb4"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "checkResearchDone"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkResearchDone"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteResearch"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteFoundChamber"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51ffce95643431bf03b513a2"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onNewTurn"
+  events {
+    ops {
+      functionName: "On New Round"
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewHour"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "52084f986434312102fc4339"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onNewHour"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewHour"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 60
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_minute"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkNewDay"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "520850006434312102fc433a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onCheckNewDay"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkNewDay"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 24
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_day"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_hour"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "d1_atmHacked"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "run_ZT_complete"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5208d8b8643431790313c39a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onDetTar1"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "detTarget1"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 1
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "detTarget2"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9b333930387007000f47"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onDetTar2"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "detTarget2"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 1
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkDupe2"
+          }
+        }
+      }
+      args {
+        float_value: 0.01
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9b9e3930387007000f48"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onChkDupe2"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkDupe2"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target1"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "detTarget2"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9bc73930387007000f49"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "detTarget3"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onDetTar3"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "detTarget3"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 1
+          }
+          args {
+            int_value: 6
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkDupe3"
+          }
+        }
+      }
+      args {
+        float_value: 0.01
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9c2b3930387007000f4a"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onChkDupe3"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkDupe3"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target1"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target2"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport11"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9c463930387007000f4b"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "detTarget3"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onTele11"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport11"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f529d5643431a10a7c3c56"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport12"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9cfc3930387007000f4c"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport12"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele12"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport12"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f52e25643431a10a7c3c5d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport13"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9def3930387007000f4d"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport13"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele13"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport13"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f549b0643431a10a7c3d43"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport14"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9e213930387007000f4e"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport14"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele14"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport14"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f54aff643431a10a7c3d46"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport15"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9e633930387007000f4f"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport15"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele15"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport15"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 5
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f54b7f643431a10a7c3d49"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport16"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9e7a3930387007000f50"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport16"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele16"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport15"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f54c58643431a10a7c3d4d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport21"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9e9a3930387007000f51"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport21"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele21"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport21"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f529d5643431a10a7c3c56"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport22"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9edb3930387007000f52"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport22"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele22"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport22"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f52e25643431a10a7c3c5d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport23"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9edb3930387007000f53"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport23"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele23"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport23"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f549b0643431a10a7c3d43"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport24"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9edb3930387007000f54"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport24"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele24"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport24"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f54aff643431a10a7c3d46"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport25"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9edb3930387007000f55"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport25"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele25"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport25"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 5
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f54b7f643431a10a7c3d49"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport26"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9edb3930387007000f56"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport26"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele26"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport26"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f54c58643431a10a7c3d4d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport31"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9edb3930387007000f57"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport31"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele31"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport31"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f529d5643431a10a7c3c56"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport32"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9f993930387007000f58"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport32"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele33"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport33"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f549b0643431a10a7c3d43"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport34"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9f993930387007000f5a"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport34"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele34"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport34"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f54aff643431a10a7c3d46"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport35"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9f993930387007000f5b"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport35"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele35"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport35"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 5
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f54b7f643431a10a7c3d49"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport36"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9f993930387007000f5c"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport36"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele36"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport36"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f54c58643431a10a7c3d4d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "All Survivors ported!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9f993930387007000f5d"
+  }
+  elseActions {
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "All Survivors ported!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onTele32"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "teleport32"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "target3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f52e25643431a10a7c3c5d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport33"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521e9f993930387007000f59"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "teleport33"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "checkAllGhoulsDead"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Team Survival Percentage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 100
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Goal"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Kill all of the ghouls"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Kill all of the ghouls"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea0db3930387007000f5e"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "onModPickup"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "583945b03235394005006a37"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "randomMod"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 1
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkMod1"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "583945b03235394005006a37"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea4bd3930387007000f62"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onCheckMod1"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkMod1"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "randomMod"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "mods_weapon"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You have found a weapon module!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea54d3930387007000f63"
+  }
+  elseActions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "checkMod2"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onCheckMod2"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "checkMod2"
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "randomMod"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "mods_armor"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You have found an armor module!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea5993930387007000f64"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onAmbush1"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "521ea60f3930387007000f65"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "521ea6593930387007000f67"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Last Created Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "521ea6ac3930387007000f68"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "521ea6593930387007000f67"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Last Created Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "521ea6ac3930387007000f68"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "ambusher"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You hear more shuffling behind you..."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea63d3930387007000f66"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onAmbush2"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "521ea7113930387007000f69"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "521ea6593930387007000f67"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Last Created Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "521ea72f3930387007000f6b"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "521ea6593930387007000f67"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Last Created Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "521ea72f3930387007000f6b"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "ambusher"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You hear more shuffling behind you..."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea7203930387007000f6a"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onAmbush3"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "521ea7953930387007000f6c"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "521ea6593930387007000f67"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Last Created Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "521ea7c33930387007000f6e"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "521ea6593930387007000f67"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Last Created Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "521ea7c33930387007000f6e"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "ambusher"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text at Screen Position"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You hear more shuffling behind you..."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "521ea7a93930387007000f6d"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onExit"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "669b2d7b323539d010007e88"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "5221f8fa643431cb0a794ca3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5221fa2d643431cb0a794cc9"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+regions {
+  name: "New Region"
+  position {
+    x: -46
+    y: -58
+    width: 82
+    height: 86
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "51fd42286434311d0a8d4264"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: "graveyard-day"
+  combat_music: "Seattle-Set9-Combat"
+  default_music: "Seattle-Set9-Legwork"
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "region1"
+  position {
+    x: -7
+    y: -1
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521e98d73930387007000f40"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "region2"
+  position {
+    x: 30
+    y: 2
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521e99033930387007000f41"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "region3"
+  position {
+    x: 4
+    y: -21
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521e99173930387007000f42"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "region4"
+  position {
+    x: -15
+    y: -39
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521e99303930387007000f43"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "region5"
+  position {
+    x: -40
+    y: -30
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521e99423930387007000f44"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "region6"
+  position {
+    x: -31
+    y: -56
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521e99603930387007000f45"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "ambush1"
+  position {
+    x: -5
+    y: 6
+    width: 19
+    height: 4
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521ea60f3930387007000f65"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "spawn1"
+  position {
+    x: -14
+    y: 16
+    width: 5
+    height: 6
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521ea6ac3930387007000f68"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "ambush2"
+  position {
+    x: -4
+    y: -8
+    width: 19
+    height: 4
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521ea7113930387007000f69"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "spawn2"
+  position {
+    x: 20
+    y: 0
+    width: 5
+    height: 6
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521ea72f3930387007000f6b"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "ambush3"
+  position {
+    x: -30
+    y: -22
+    width: 28
+    height: 5
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521ea7953930387007000f6c"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "spawn3"
+  position {
+    x: -22
+    y: -6
+    width: 7
+    height: 5
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "521ea7c33930387007000f6e"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: -14
+    y: 0
+    z: 19
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51f51e83643431560a702e57"
+  }
+  lod: 0
+  character_instance {
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 10
+    y: 0
+    z: 15
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "51f52140643431560a702e5d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv6_Human_Pistol"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        is_fearless: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 96
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -7
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "notSaved"
+  displayName: "Survivor1"
+  idRef {
+    id: "51f529d5643431a10a7c3c56"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51f56081643431000b7c3c5d"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 24
+        awareness: 24
+        protect_tether_range: 5
+        move_speed: 6
+      }
+      archetypeName: "Non-Combatant"
+    }
+    equipment {
+      prefab_name: "Outfit_Scientist"
+    }
+    team_id: "Civilians"
+    char_name: "Wage Slave"
+    GeneralTags: "notSaved"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    karma: 6
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 31
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_N
+  GeneralTags: "notSaved"
+  displayName: "Survivor2"
+  idRef {
+    id: "51f52e25643431a10a7c3c5d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51f56081643431000b7c3c5d"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 24
+        awareness: 24
+        protect_tether_range: 5
+        move_speed: 6
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Non-Combatant"
+    }
+    equipment {
+      prefab_name: "DeckerFedora"
+    }
+    team_id: "Civilians"
+    char_name: "Wage Slave"
+    GeneralTags: "notSaved"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    karma: 6
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -21
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "notSaved"
+  displayName: "Survivor3"
+  idRef {
+    id: "51f549b0643431a10a7c3d43"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51f56081643431000b7c3c5d"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/ElfFemale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 24
+        awareness: 24
+        protect_tether_range: 5
+        move_speed: 6
+      }
+      archetypeName: "Non-Combatant"
+    }
+    equipment {
+      prefab_name: "Outfit_Corporate Salaryman"
+    }
+    team_id: "Civilians"
+    char_name: "Wage Slave"
+    GeneralTags: "notSaved"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    karma: 6
+    hiring_cost_override: 3000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -39
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "notSaved"
+  displayName: "Survivor4"
+  idRef {
+    id: "51f54aff643431a10a7c3d46"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51f56081643431000b7c3c5d"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/ElfMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 24
+        awareness: 24
+        protect_tether_range: 5
+        move_speed: 6
+      }
+      archetypeName: "Non-Combatant"
+    }
+    equipment {
+      prefab_name: "Outfit_Corporate Salaryman"
+    }
+    team_id: "Civilians"
+    char_name: "Wage Slave"
+    GeneralTags: "notSaved"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    karma: 6
+    hiring_cost_override: 3000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -40
+    y: 0
+    z: -30
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "notSaved"
+  displayName: "Survivor5"
+  idRef {
+    id: "51f54b7f643431a10a7c3d49"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51f56081643431000b7c3c5d"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/DwarfFemale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 24
+        awareness: 24
+        protect_tether_range: 5
+        move_speed: 6
+      }
+      archetypeName: "Non-Combatant"
+    }
+    equipment {
+      prefab_name: "Outfit_Cult Follower"
+    }
+    team_id: "Civilians"
+    char_name: "Wage Slave"
+    GeneralTags: "notSaved"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    karma: 6
+    hiring_cost_override: 3000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -30
+    y: 0
+    z: -56
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "notSaved"
+  displayName: "Survivor6"
+  idRef {
+    id: "51f54c58643431a10a7c3d4d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "51f56081643431000b7c3c5d"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/DwarfMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 24
+        awareness: 24
+        protect_tether_range: 5
+        move_speed: 6
+      }
+      archetypeName: "Non-Combatant"
+    }
+    equipment {
+      prefab_name: "Outfit_Cult Follower"
+    }
+    team_id: "Civilians"
+    char_name: "Wage Slave"
+    GeneralTags: "notSaved"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    karma: 6
+    hiring_cost_override: 3000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -1
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul1"
+  idRef {
+    id: "51f54c93643431a10a7c3d4f"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 10
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul2"
+  idRef {
+    id: "51f54c9a643431a10a7c3d50"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul3"
+  idRef {
+    id: "51f54c9e643431a10a7c3d51"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 20
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul4"
+  idRef {
+    id: "51f54ca5643431a10a7c3d52"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 7
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul5"
+  idRef {
+    id: "51f54cad643431a10a7c3d53"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -15
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul6"
+  idRef {
+    id: "51f54cb8643431a10a7c3d54"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul7"
+  idRef {
+    id: "51f54cbe643431a10a7c3d55"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -23
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul8"
+  idRef {
+    id: "51f54cc7643431a10a7c3d56"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul9"
+  idRef {
+    id: "51f54ccb643431a10a7c3d57"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -12
+    y: 0
+    z: -26
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul10"
+  idRef {
+    id: "51f54cd0643431a10a7c3d58"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul11"
+  idRef {
+    id: "51f54cd6643431a10a7c3d59"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul12"
+  idRef {
+    id: "51f54cdf643431a10a7c3d5a"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -24
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul13"
+  idRef {
+    id: "51f54ce5643431a10a7c3d5b"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -35
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul14"
+  idRef {
+    id: "51f54ceb643431a10a7c3d5c"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul15"
+  idRef {
+    id: "51f54ced643431a10a7c3d5d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -21
+    y: 0
+    z: -26
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul16"
+  idRef {
+    id: "51f54cf4643431a10a7c3d5e"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -28
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul17"
+  idRef {
+    id: "51f54cf9643431a10a7c3d5f"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -22
+    y: 0
+    z: -34
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul18"
+  idRef {
+    id: "51f54cfd643431a10a7c3d60"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -21
+    y: 0
+    z: -47
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul19"
+  idRef {
+    id: "51f54d05643431a10a7c3d61"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -23
+    y: 0
+    z: -50
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul20"
+  idRef {
+    id: "51f54d08643431a10a7c3d62"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -48
+  }
+  orientation: ORIENTATION_S
+  displayName: "Ghoul21"
+  idRef {
+    id: "51f54d0b643431a10a7c3d63"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 1
+        strength: 1
+        hp: 0
+        ap: 1
+        armor: 1
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: -2
+        move_speed: 2
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -4
+        close_combat: 3
+        throwing_weapons: -4
+      }
+      specializations {
+        pistol: -1
+        edged: 0
+        unarmed: 4
+      }
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    enabled_at_start: true
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 70
+    hiring_cost_override: 1000
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -51
+  }
+  orientation: ORIENTATION_S
+  displayName: "mysteriousFigure"
+  idRef {
+    id: "521ea1893930387007000f5f"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Lvl6_Human_Mage"
+    character_mod {
+      stats {
+        body: 6
+        quickness: 3
+        strength: 5
+        charisma: 5
+        intelligence: 5
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 2
+        force: 0
+        morale: 24
+        discipline: 0
+        awareness: 19
+        perception: 20
+        authority: 0
+        protect_tether_range: 5
+        move_speed: 0
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -5
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 4
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 5
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: -5
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeBoss
+      attackRandom: AttackStyle_BestOnly
+    }
+    equipment {
+      prefab_name: "MageSlick"
+    }
+    equipment {
+      prefab_name: "Spell Heal 5"
+    }
+    equipment {
+      prefab_name: "Spell Powerbolt 3"
+    }
+    equipment {
+      prefab_name: "Spell Ignore Armor"
+    }
+    equipment {
+      prefab_name: "Spell Dispel Magic 1"
+    }
+    equipment {
+      prefab_name: "Spell Confusion"
+    }
+    equipment {
+      prefab_name: "Spell Armor 3"
+    }
+    team_id: "Gangers"
+    char_name: "Mysterious Stranger"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_humanfemale_00_faceless"
+    }
+    portrait_code_override: "s6h2c4"
+    karma: 334
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 24
+    y: 0
+    z: -64
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "isGhoul"
+  GeneralTags: "ambusher"
+  displayName: "ambusher"
+  idRef {
+    id: "521ea6593930387007000f67"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Creature/CreatureGhoulHumanMale"
+    character_sheet_id: "Lonestar_Lv6_Human_Pistol"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        is_fearless: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "GhoulFistPoison"
+    }
+    team_id: "Gangers"
+    char_name: "Ghoul"
+    GeneralTags: "isGhoul"
+    GeneralTags: "ambusher"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    spawn_type: SpawnType_Normal
+    hiring_type: HiringType_None
+    portrait {
+      filename: ""
+    }
+    karma: 96
+    hiring_cost_override: 1000
+  }
+}
+variables {
+  string_value: "Here we go, Ghoul hunting..."
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "StartText"
+    typeName: "string"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "amountSaved"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "target1"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "target2"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "target3"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "randomMod"
+    typeName: "int"
+  }
+}
+mapEvents: "checkCoyoteResearch"
+mapEvents: "checkResearchDone"
+mapEvents: "checkNewHour"
+mapEvents: "checkNewDay"
+mapEvents: "detTarget1"
+mapEvents: "checkDupe2"
+mapEvents: "detTarget2"
+mapEvents: "detTarget3"
+mapEvents: "checkDupe3"
+mapEvents: "teleport11"
+mapEvents: "teleport12"
+mapEvents: "teleport13"
+mapEvents: "teleport14"
+mapEvents: "teleport15"
+mapEvents: "teleport16"
+mapEvents: "teleport21"
+mapEvents: "teleport22"
+mapEvents: "teleport23"
+mapEvents: "teleport24"
+mapEvents: "teleport25"
+mapEvents: "teleport26"
+mapEvents: "teleport31"
+mapEvents: "teleport32"
+mapEvents: "teleport33"
+mapEvents: "teleport34"
+mapEvents: "teleport35"
+mapEvents: "teleport36"
+mapEvents: "checkMod1"
+mapEvents: "checkMod2"
+goals {
+  name: "Find the surviving funeral party members"
+  type: GoalType_Primary
+  status: GoalStatus_Started
+  description: "Three surviving party members have hidden themselves on the cemetery. Find them all to complete the run."
+}
+goals {
+  name: "Kill all of the ghouls"
+  type: GoalType_Secondary
+  status: GoalStatus_Started
+  description: "Ghouls are becoming a real plague on the cemeteries of Seattle. Eliminate them all for a bonus payment."
+}
+goals {
+  name: "Don\'t die!"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "The Funeral"
+parentStory: ""
+scene_title: "The Funeral"
+scene_subtitle: "Uninvited guests..."
+scene_synopsis: "Mr. Johnson has told you about a corporate funeral that is happening right now. There were quite a few important corporate employees present when a group of ghouls attacked. Most of the funeral party was eaten, but three important people managed to hide themselves in the cemetery. Find them all."
+scene_image: "loadingimage_c17-s0"
+scene_continue_button_skip: false
+scene_restore_runner_health: true
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: false
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Gangers"
+  affiliation: 1
+  affiliation: 0
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "LoneStar"
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Civilians"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+character_roster {
+}
+show_hiring_screen_on_scene_load: false
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 1
+hiring_minimum_karma: 6
+hiring_maximum_karma: 8
+hire_from_content_pack: "518d7672643431b03f0041aa"
+roster_overrides {
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: false

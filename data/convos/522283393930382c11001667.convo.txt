@@ -1,0 +1,32 @@
+idRef {
+  id: "522283393930382c11001667"
+}
+ui_name: "ch03_winterblipPDA"
+nodes {
+  idRef {
+    id: "5222836d3930382c1100166d"
+  }
+  index: 0
+  text: "So you do need my help?"
+  branches {
+    responseText: "Just trying if this thing works!"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Yes, can I ask you a few questions?"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5223bc7f3930388403001681"
+  }
+  index: 1
+  text: "Not at the moment! There is another strange presence in this system... I have to leave before Ashpool can trace me! You\'re on your own!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

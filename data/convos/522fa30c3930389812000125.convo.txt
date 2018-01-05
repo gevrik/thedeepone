@@ -1,0 +1,37 @@
+idRef {
+  id: "522fa30c3930389812000125"
+}
+ui_name: "merchant-flake"
+nodes {
+  idRef {
+    id: "522fa313393038981200012b"
+  }
+  index: 0
+  text: "Want some drones? Try to catch one! Hehehehe!"
+  branches {
+    responseText: "Let me see what you got."
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "522f9ec0393038ec05002214"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "See ya!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

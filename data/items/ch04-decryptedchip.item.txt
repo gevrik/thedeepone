@@ -1,0 +1,8 @@
+id: "ch04-decryptedChip"
+type: ItemType_QuestItem
+uirep {
+  name: "Decrypted Message Chip"
+  description: "Ashpool Systems Inc. Secured Datafile\nFor specified eyes only\nRecipient: Rick Mercer\n\nSubject: Asset protection and target research\n\nYour mission is to protect the flatline of Johnny Clean (see attachment) that is stored in the Sense/Net building in Everett. We suspect that the flatline has become the target of a group of individuals that have been responsible for the incident in our Tacoma Zeitgeist Robotics office.\n\nWe want you to investigate who these people are, they have already stolen some of our assets and are highly dangerous. Once you have enough data on the subjects please contact you handler at Ashpool Systems for further instructions and backup. I repeat, these people you are investigating are very dangerous, do not seek an open confrontation with them! We have already established the handle of the main target, $(l.his) handle is $(l.name).\n\nWe have booked rooms in the Tacoma Industrial District Coffin Hotel and the Everett Downtown Hotel for you, paid for 30 days in advance.\n\nATTACHMENTS:\n\nAshpool Systems Inc. Secured Datafile\nFor classified eyes only\n\nSubject Name: Unknown\nKnown Alias: Johnny Clean\nStatus: deceased (digitized)\n\nBackground: Former member of the group Echo Mirage, retrieved from Seamstress Union in Seattle together with subject Annie Whataley.\n\nHeavy resistance during interrogation sessions, we finally decided to use his personality and memory for our prototype flatline chips. The process was successful. Johnny Clean is now the first flatline in the galaxy.\n\nThe flatline is currently stored under heavy guard in the Sense/Net archives in Everett."
+}
+credentials: 0
+sorting_group: "Quest"

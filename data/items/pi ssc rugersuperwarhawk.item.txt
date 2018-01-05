@@ -1,0 +1,42 @@
+id: "pi SSC rugersuperwarhawk"
+type: ItemType_Pistol
+uirep {
+  icon: "icon_gun_rugersuperwarhawk"
+  name: "Ruger Super Warhawk"
+  description: "Heavy Revolver, like an elephant gun for a cowboy. Reloading takes +1AP, SS"
+}
+equipPrefabName: "RevolverPistol"
+anim_type: AnimType_Pistol
+coreAttribute: Attribute_Quickness
+coreSkill: Skill_RangedCombat
+coreSpecialization: Specialization_RC_Pistol
+apCost: 1
+prereqStrings: "Player.SKILL.Skill_RangedCombat >= 1"
+maxAmmo: 6
+baseHPDamage: 14
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: 0
+rangeModTable: -1
+rangeModTable: -1
+rangeModTable: -2
+rangeModTable: -3
+rangeModTable: -4
+rangeModTable: -6
+rangeModTable: -8
+rangeModTable: -12
+rangeModTable: -16
+rangeModTable: -20
+rangeModTable: -24
+rangeModTable: -28
+rangeModTable: -32
+rangeModTable: -40
+noiseLevel: 10
+noiseRounds: 1
+ammoReloadAPCost: 2
+abilityModes: "SS"
+affectsEnemy: true
+canTargetActor: true
+store_cost: 300
+sorting_group: "SSC Pistols"

@@ -1,0 +1,230 @@
+idRef {
+  id: "51f461566434312909169bbe"
+}
+ui_name: "Coyote Debriefing"
+nodes {
+  idRef {
+    id: "51f461676434312909169bc4"
+  }
+  index: 0
+  text: "Where did they come from, and who were they? Did someone follow you?"
+  branches {
+    responseText: "I don\'t think so..."
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "51f461a36434312909169bc6"
+    }
+  }
+  branches {
+    responseText: "Possible, but unlikely..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Look at the corpse of that mage... He looks kinda mutated..."
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f445ee6434312909169a34"
+  }
+}
+nodes {
+  idRef {
+    id: "51f461a56434312909169bc8"
+  }
+  index: 1
+  text: "Hmm, drek. Then these guys could have something to do with the disappearance of our friends, maybe?"
+  branches {
+    responseText: "Too bad they didn\'t leave us any chance to question them..."
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "51f461f06434312909169bca"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f445ee6434312909169a34"
+  }
+}
+nodes {
+  idRef {
+    id: "51f461f26434312909169bcc"
+  }
+  index: 2
+  text: "Yep, but don\'t worry, I can find out who hired these gangers... But we can\'t stay here, they might come back with more. That mage was nasty.\n\nListen, I know of a place that we can use as our base. A few runners and merchants use it. It\'s in the docks. I will activate my ganger contacts and meet you there when I am done - you could go on a Johnson Run in the meantime...\n\nHere are some nuyen for you... you are helping me finding our old crew, right?"
+  branches {
+    responseText: "Of course, and thanks for the dough, I can use it. I will see you at the Market. Take care, Coyote."
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Discuss the assault with Coyote"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Head to the Market"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "521edb06393038fc0e0000d7"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f445ee6434312909169a34"
+  }
+  actions {
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 7500
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "521b73dc3930384410003cc5"
+  }
+  index: 3
+  text: "See you soon, $(l.name)! I won\'t be long, one quick Johnson run for you and I will be at the market!"
+  branches {
+    responseText: "See ya, Coyote!"
+    actions {
+      ops {
+        functionName: "Kill Actor"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "51f445ee6434312909169a34"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "DeathMethod"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521b74423930384410003cc8"
+  }
+  index: 4
+  text: "You\'re right, $(l.name)! His skin has these scaly patches and his eyes... like those of a fish...\n\nDid they follow you here?"
+  branches {
+    responseText: "I doubt it..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

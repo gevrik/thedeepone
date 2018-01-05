@@ -1,0 +1,79 @@
+idRef {
+  id: "51f5854f643431000b7c3cf4"
+}
+ui_name: "Drop-Off End"
+nodes {
+  idRef {
+    id: "51f58557643431000b7c3cfa"
+  }
+  index: 0
+  text: "{{GM}}The last Lonestar officer has died. The crates are now secure and you can return to the Market.{{/GM}}"
+  branches {
+    responseText: "Return to the Underground Market"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Rooftop Market"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 500
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "amountMissions"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

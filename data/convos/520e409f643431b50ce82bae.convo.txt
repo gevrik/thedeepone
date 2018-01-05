@@ -1,0 +1,50 @@
+idRef {
+  id: "520e409f643431b50ce82bae"
+}
+ui_name: "snf_win"
+nodes {
+  idRef {
+    id: "520e40b1643431b50ce82bb8"
+  }
+  index: 0
+  text: "You have eliminated all of the Gangers and Lonestars, your client can now sweep the area for any remaining crates that were missing...\n\n{{GM}}THE GAME MIGHT SHOW A BLACK SCREEN WHEN YOU LEAVE THIS MAP! PLEASE RESTART THE CLIENT IF THIS HAPPENS! YOUR PROGRESS WAS SAVED, NOTHING WILL BE LOST! HBS HAS FIXED THIS PROBLEM IN VERSION 1.0.5 OF THE GAME CLIENT (CURRENTLY ON STEAM BETA PROGRAM){{/GM}}"
+  branches {
+    responseText: "{{CC}}Return to the Market{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Rooftop Market"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "amountMissions"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

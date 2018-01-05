@@ -1,0 +1,281 @@
+idRef {
+  id: "51f438fe643431290916990c"
+}
+ui_name: "Coyote Call"
+nodes {
+  idRef {
+    id: "51f43efa64343129091699ce"
+  }
+  index: 0
+  text: "{{GM}}You turn on your vid-phone and are happily surprised to see a familiar face. It is Coyote from Seattle. Her face is sad, but as she sees you a smile appears on her face.{{/GM}}\n\nHoi, $(l.name)! Long time no see!"
+  branches {
+    responseText: "Hoi Coyote! Long time no see indeed! How is life treating you? Still with Paco?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Dependent Story Variable (bool)"
+            args {
+              call_value {
+                functionName: "Get Previous Story Variable (bool)"
+                args {
+                  string_value: "518d7674643431b03f0041ab"
+                }
+                args {
+                  string_value: "c09_GinoDead"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "bool"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "52221577393038780e0073d1"
+    }
+  }
+  branches {
+    responseText: "Hoi Coyote! What\'s up?"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Hoi Coyote! How are things? How is Gino?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Dependent Story Variable (bool)"
+            args {
+              call_value {
+                functionName: "Get Previous Story Variable (bool)"
+                args {
+                  string_value: "518d7674643431b03f0041ab"
+                }
+                args {
+                  string_value: "c09_GinoAlive"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "bool"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f4342364343129091698bb"
+  }
+}
+nodes {
+  idRef {
+    id: "51f440a864343129091699ef"
+  }
+  index: 1
+  text: "{{GM}}Her face becomes dark as you mention Paco.{{/GM}}\n\nI am afraid that Paco and Gino join the same fate... but I haven\'t called to talk about Paco. There is nothing we can do for him, ...them now!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521b6c713930384410003beb"
+  }
+  index: 2
+  text: "It\'s about the Union... I am afraid I have bad news..."
+  branches {
+    responseText: "I don\'t like where this is going... Is everything alright?"
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "52221598393038780e0073d2"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521b6c713930384410003bee"
+  }
+  index: 3
+  text: "Not really... Are you busy?"
+  branches {
+    responseText: "Not really..."
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "5222159e393038780e0073d3"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521b6c713930384410003bf1"
+  }
+  index: 4
+  text: "Good! You up for a little trip up to Seatlle? I promise there are no bugs involved this time!"
+  branches {
+    responseText: "Can you give me something more to go on?"
+    nextNodeIndex: 5
+    onlyOnce: true
+    idRef {
+      id: "522215a2393038780e0073d4"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521b6c713930384410003bf4"
+  }
+  index: 5
+  text: "I am afraid that I won\'t be able to speak over this unsecured connection... It would be best if you would come here ASAP. It is very important, chummer."
+  branches {
+    responseText: "Sure, Coyote. I will be there as soon as I can!"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Answer the vid phone"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Check your stash and go to Seattle"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    onlyOnce: true
+    idRef {
+      id: "522215ac393038780e0073d5"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521b6d8c3930384410003c1d"
+  }
+  index: 6
+  text: "Gino is doing fine... Still have to keep an eye on him, so he doesn\'t fall back into old habits..."
+  branches {
+    responseText: "You looked worried when I switched on the phone... What\'s up?"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

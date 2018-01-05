@@ -1,0 +1,2737 @@
+idRef {
+  id: "52090d0c643431d70313c3d1"
+}
+ui_name: "ch02_riffrougher_boss"
+nodes {
+  idRef {
+    id: "52090d17643431d70313c3d7"
+  }
+  index: 0
+  text: "Wot you want?"
+  branches {
+    responseText: "You guys are a new gang. I didn\'t know that there was a gang in Everett...\n{{CC}}Etiquette: Gang{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Who are you?"
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "52091663643431d70313c536"
+    }
+  }
+  branches {
+    responseText: "I will eliminate your gang!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I need some information..."
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "I\'m leaving..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a31b1643431e50113c592"
+  }
+  index: 1
+  text: "{{GM}}The Ork is impressed by your gang knowledge and seems to brihgten up.{{/GM}}\n\nYap, we new here in Everett. We small, but well-funded, also very loyal. You seem to be alright!"
+  branches {
+    responseText: "I would like some information..."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52091620643431d70313c521"
+  }
+  index: 2
+  text: "I\'m sumune you shouldn\'t mess with! That is all you need to know..."
+  branches {
+    responseText: "Oh. Okay!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52091680643431d70313c538"
+  }
+  index: 3
+  text: "{{GM}}The Ork laughs and twirls his axe in his hand - his two bodyguards approach and you see at least a dozen other faces appear in the car park\'s windows...{{/GM}}\n\nYou and which army? You\'re funny! Now get out of here!\n\n{{GM}}It would be foolish to attack him here at his base. You would need to decimate the number of his gang\'s members before you could attack him. One thing is for sure, you have not made a new friend today...{{/GM}}"
+  branches {
+    responseText: "You have been warned!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5209153a643431d70313c4e1"
+  }
+  index: 4
+  text: "And why should I tell you anything?"
+  branches {
+    responseText: "If you tell me about your gang I might want to put my muscle into your club...\n{{CC}}Strength: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520a351c643431e50113c734"
+    }
+  }
+  branches {
+    responseText: "I might be interested in joining your gang if I\'d knew a little more about it...\n{{CC}}Charisma: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 24
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520a3523643431e50113c735"
+    }
+  }
+  branches {
+    responseText: "Listen, I might have same Intel for you if you cooperate with me...\n{{CC}}Intelligence: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 25
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520a3526643431e50113c736"
+    }
+  }
+  branches {
+    responseText: "Need the help of a Meatshield in your gang?\n{{CC}}Body: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 27
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520a352a643431e50113c737"
+    }
+  }
+  branches {
+    responseText: "I am a Hotshot gunslinger. Need someone like that?\n{{CC}}Quickness: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 28
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520a3532643431e50113c738"
+    }
+  }
+  branches {
+    responseText: "I am sure you might need the help of someone who controls arcane powers?\n{{CC}}Willpower: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 29
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520a356b643431e50113c797"
+    }
+  }
+  branches {
+    responseText: "I am a Decker, I can get you information from the Matrix if you help me...\n{{CC}}Decking: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 31
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520a5cb7643431e50113dab6"
+    }
+  }
+  branches {
+    responseText: "How about 200 Nuyen?\n{{CC}}Offer credstick{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 200
+        }
+      }
+    }
+    nextNodeIndex: 33
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520a358c643431e50113c799"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520929c8643431d70313c69d"
+  }
+  index: 5
+  text: "Huh... yeah, muscle always good! So you help us if I answer your questions?"
+  branches {
+    responseText: "Maybe... sometime... But first I need some info!"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52092a1a643431d70313c6aa"
+  }
+  index: 6
+  text: "Okay, you got it, chum. Wot do you wanna know?"
+  branches {
+    responseText: "Tell me something about your gang!"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Have you noticed any Cult activity lately in Everett?"
+    nextNodeIndex: 14
+    onlyOnce: true
+    idRef {
+      id: "520a392e643431e50113c97c"
+    }
+  }
+  branches {
+    responseText: "What can you tell me about Everett?"
+    nextNodeIndex: 16
+    onlyOnce: true
+    idRef {
+      id: "520a3971643431e50113c97f"
+    }
+  }
+  branches {
+    responseText: "So how can I help your gang?"
+    nextNodeIndex: 22
+  }
+  branches {
+    responseText: "I\'m leaving."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossFriend"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52092ca1643431d70313c713"
+  }
+  index: 7
+  text: "We\'re da Riffroughers! Dats wot people used ta call us anyway... so why not make it our own name?"
+  branches {
+    responseText: "So you have not been the leader of this gang for a long time?"
+    nextNodeIndex: 8
+    onlyOnce: true
+    idRef {
+      id: "52092fde643431d70313c754"
+    }
+  }
+  branches {
+    responseText: "Can anyone join the gang?"
+    nextNodeIndex: 13
+    onlyOnce: true
+    idRef {
+      id: "52092fe1643431d70313c755"
+    }
+  }
+  branches {
+    responseText: "Let\'s talk about something else..."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52092ce6643431d70313c717"
+  }
+  index: 8
+  text: "We only formed after a friend of mine convinced me dat the metahumies in Everett are not treated right! We used to meet as a group before, but now we decided to fight back! Dem stinkin\' corpers in this town won\'t be laughing for much longer!"
+  branches {
+    responseText: "Who is that friend of yours?"
+    nextNodeIndex: 9
+    onlyOnce: true
+    idRef {
+      id: "520a3135643431e50113c590"
+    }
+  }
+  branches {
+    responseText: "Which corporation do you hate so much?"
+    nextNodeIndex: 10
+    onlyOnce: true
+    idRef {
+      id: "52092dff643431d70313c728"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52092d6d643431d70313c71b"
+  }
+  index: 9
+  text: "{{GM}}The Ork shrugs{{/GM}} Just a friend... You nosey chumsky!"
+  branches {
+    responseText: "Anyways..."
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutGangBenefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Discover more about the Riffrougher\'s Benefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52092db7643431d70313c727"
+  }
+  index: 10
+  text: "They been runnin\' this town ever since I can think! They called DAGON CORP and they make our lives miserable! Only hire Orks and Trolls for the bad work, never for the good work!"
+  branches {
+    responseText: "So that is the target of your activities, yes?"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52092e68643431d70313c736"
+  }
+  index: 11
+  text: "Mostly... We terrorizing the warehouse where most of the wageslaves in this district live. Their HQ is that big tower in the north-west of this district, but it is too heavily guarded for us!"
+  branches {
+    responseText: "Maybe I can help with that? I have ways of getting in and out of places unnoticed..."
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "I see..."
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52092eda643431d70313c74b"
+  }
+  index: 12
+  text: "Ya! Maybe... but first you will have to earn my trust, chum!"
+  branches {
+    responseText: "So how can I help your gang?"
+    nextNodeIndex: 22
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52092fba643431d70313c753"
+  }
+  index: 13
+  text: "No! Only metahumans allowed in the Riffers! No stinkin\' Humans... dey wot causes all dem problems for us metas."
+  branches {
+    responseText: "Okay, good to know."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a38ad643431e50113c941"
+  }
+  index: 14
+  text: "Cult? Haha, no. I have noticed a lot of gang activity, tho!\n\n{{GM}}The Ork\'s bodyguards chuckle{{/GM}}"
+  branches {
+    responseText: "I was just wondering..."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I have it on very good authority that there is a Cult active in Everett..."
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a38f9643431e50113c946"
+  }
+  index: 15
+  text: "No cult we have seen! And why you talking about authority? You some ex-star or wot?"
+  branches {
+    responseText: "Nevermind..."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a393e643431e50113c97e"
+  }
+  index: 16
+  text: "Everett\'s a quiet little place. Everything is run by DAGON CORP and we\'ve had enough of that! There are several nice places in the district, do you want to know about a specific one?"
+  branches {
+    responseText: "Tell me about the Monorail station."
+    nextNodeIndex: 17
+    onlyOnce: true
+    idRef {
+      id: "520a3d6a643431e50113cbfc"
+    }
+  }
+  branches {
+    responseText: "Tell me about the museum."
+    nextNodeIndex: 18
+    onlyOnce: true
+    idRef {
+      id: "520a3a5e643431e50113c991"
+    }
+  }
+  branches {
+    responseText: "Ok, that\'s all the district info I need."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a398b643431e50113c983"
+  }
+  index: 17
+  text: "The station is very small, not many people come or go. Most peeps dat live here also work here, and there\'s no reason for any sprawlers to come here... Sometimes good eatin\' in da Stuffer Shack next to it, tho."
+  branches {
+    responseText: "Okay."
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a39f0643431e50113c98e"
+  }
+  index: 18
+  text: "Dunno much about dat! Books... Old, rotten books in dere... One thing tho... Run by some Doctor or sumwut... He receives a lot of Nuyen for research from the DAGON CORP, so we decided to harrass him... Don\'t want him around no more..."
+  branches {
+    responseText: "Interesting..."
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Maybe I can help you with this Doctor?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_gangLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a3aad643431e50113c9a3"
+  }
+  index: 19
+  text: "Hmm, yah! Mebbe... He don\'t know you so dats gud. Mebbe you can scare him away from Everett? Dat would be great."
+  branches {
+    responseText: "Sure, I will get rid of him for you. Tell me more about him."
+    nextNodeIndex: 20
+  }
+  branches {
+    responseText: "Hmm, not sure about that. Maybe later."
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a3af2643431e50113c9a8"
+  }
+  index: 20
+  text: "When he is not in the museum you can sometimes catch him on his way home. He lives in the eastern region of the district, just south of the asylum."
+  branches {
+    responseText: "Can you help me get into the museum?"
+    nextNodeIndex: 21
+  }
+  branches {
+    responseText: "Okay. I will see what I can do."
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a3be0643431e50113c9ad"
+  }
+  index: 21
+  text: "Hmm, lemme think... Yah, mebbe. Just talk to the security guy Roy, he\'s a Troll and I know him. Tell him that I sent you and he might let you in."
+  branches {
+    responseText: "Thanks, that\'s good."
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52092f28643431d70313c74e"
+  }
+  index: 22
+  text: "Well you can help by spreading the chaos in this district. If the wageslaves don\'t feel safe they will lose faith in DAGON CORP, some will leave town, opening up jobs for us metas. We don\'t want to get dem hurt, tho - just a good scare! And if the Star show up we get some real action - and then we don\'t hold back. They shoot at us, we shoot back!"
+  branches {
+    responseText: "Okay, I will help your gang!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_helpingGangers"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_helpingGangers"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Help the Riffrougher spread Chaos in this district"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 23
+  }
+  branches {
+    responseText: "I have to think about this..."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a3ce4643431e50113cb7b"
+  }
+  index: 23
+  text: "Great. There are always some civilians running around, so just do your thing!"
+  branches {
+    responseText: "Gotcha!"
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520929cd643431d70313c69f"
+  }
+  index: 24
+  text: "Oh, yeah? Hmm, we could use someone like you! So you join if I answer your stuff?"
+  branches {
+    responseText: "Maybe... I will have to think about it... Anyways, will you answer my questions?"
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520929d2643431d70313c6a1"
+  }
+  index: 25
+  text: "You think you\'re smart, eh? We have our very own spies in this town, no need for you!"
+  branches {
+    responseText: "Spies? Where do you have spies?"
+    nextNodeIndex: 26
+  }
+  branches {
+    responseText: "Okay, I\'m leaving."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52092ab8643431d70313c6ae"
+  }
+  index: 26
+  text: "Our big benefactor has some spy friends! You too nosey, you go away!"
+  branches {
+    responseText: "Shame!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutGangBenefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Discover more about the Riffrougher\'s Benefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520929d5643431d70313c6a3"
+  }
+  index: 27
+  text: "Riffers always need meatshields, hehehehe! You look like you tough! You will help us if I answer your stuff?"
+  branches {
+    responseText: "I might, from time to time, but not unless you tell me what I want to know..."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520929d8643431d70313c6a5"
+  }
+  index: 28
+  text: "You good with the Shootas, eh? You would fit into the Shoota division of my gang! Or maybe you can gank sumune for us from time ta time?"
+  branches {
+    responseText: "I could, but first I need some information..."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520929da643431d70313c6a7"
+  }
+  index: 29
+  text: "We no need no stinkin\' magic user in my gang! Have big friend who help with magic. You go away and never come back! Or we show you our magic!"
+  branches {
+    responseText: "Oh well, it was worth a try..."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "A big friend? Who is it?"
+    nextNodeIndex: 30
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a3315643431e50113c5c4"
+  }
+  index: 30
+  text: "The man upstairs! Gives me orders! You so nosey, get away you git!"
+  branches {
+    responseText: "Bye..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutGangBenefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Discover more about the Riffrougher\'s Benefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520a0fd9643431030213c429"
+  }
+  index: 31
+  text: "I don\'t need sumune like dat! Big boss has his own Wizkids..."
+  branches {
+    responseText: "I thought you were the \"big boss\"?"
+    nextNodeIndex: 32
+  }
+  branches {
+    responseText: "Ah, okay. Shame!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a1001643431030213c42c"
+  }
+  index: 32
+  text: "I be da big boss of da streets, but deres another boss up high... But you too nosey! Get away!"
+  branches {
+    responseText: "Ok, I will leave..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutGangBenefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Discover more about the Riffrougher\'s Benefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520a33a5643431e50113c61e"
+  }
+  index: 33
+  text: "We gots enough Nuyens from our big friend, no need for yours..."
+  branches {
+    responseText: "A big friend? And who might that be?"
+    nextNodeIndex: 34
+  }
+  branches {
+    responseText: "Okay, sorry."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a33ef643431e50113c622"
+  }
+  index: 34
+  text: "Big benefactor who made gang possible. Now you leave you nosey git!"
+  branches {
+    responseText: "Bye."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutGangBenefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Discover more about the Riffrougher\'s Benefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52091781643431d70313c594"
+  }
+  index: 35
+  text: "Get out of my sight before I slash you into neat little pieces!"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520917b8643431d70313c597"
+  }
+  index: 36
+  text: "I\'m not talking to you, humie! Get yer ugly mug out of my face! The big boss doesn\'t like humies either!"
+  branches {
+    responseText: "I thought you were the big boss?"
+    nextNodeIndex: 37
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a4499643431e50113d528"
+  }
+  index: 37
+  text: "I\'m street boss, I take orders from big boss! Now get away!"
+  branches {
+    responseText: "Bye!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutGangBenefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Discover more about the Riffrougher\'s Benefactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520a35f0643431e50113c852"
+  }
+  index: 38
+  text: "Hoi, chummer."
+  branches {
+    responseText: "Hoi - I wanted to talk to you about something..."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a43a0643431e50113d3b0"
+  }
+  index: 39
+  text: "Hmm, I\'m not talkin to humies normally, but you been helping us out by takin care of dem Stars and causing Chaos in this district."
+  branches {
+    responseText: "Chaos is my mode and modus, chummer... Maybe you can help me out?"
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a5a7c643431e50113da21"
+  }
+  index: 40
+  text: "You been messing with a lot my gang members! Are you helping or not?"
+  branches {
+    responseText: "I came here to kill you..."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_gangLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: -10
+        }
+      }
+    }
+    nextNodeIndex: 41
+  }
+  branches {
+    responseText: "I came here to kill you!"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_gangLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          int_value: -10
+        }
+      }
+    }
+    nextNodeIndex: 42
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I had to kill them! Can we talk or not?"
+    nextNodeIndex: 43
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a5c63643431e50113dab5"
+  }
+  index: 41
+  text: "{{GM}}The Ork just laughs at you as his gang members jump out of the garage and gather around him...{{/GM}}\n\nYou are a funny one! So you want to destroy us? Fair enuff, at least I know you\'re an enemy now!\n\n{{GM}}There are still too many gang members in this district for you to safely attack him, you will have to do something about that if you want to attack the Gang Leader.{{GM}}"
+  branches {
+    responseText: "{{CC}}Retreat{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossFriend"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Help the Riffrougher spread Chaos in this district"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "520a5cef643431e50113db4b"
+  }
+  index: 42
+  text: "Give it your best shot then!"
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "520845736434312102fc4322"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "520840e56434312102fc4320"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "520840ef6434312102fc4321"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_madeRRBossFriend"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_madeRRBossEnemy"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Help the Riffrougher spread Chaos in this district"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a5bb3643431e50113dab2"
+  }
+  index: 43
+  text: "Only if you stop killin my members and start spreading more Chaos!"
+  branches {
+    responseText: "Okay..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossFriend"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_gangLevel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: -6
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_gangLevel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+  }
+  nextNodeIndex: 35
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossFriend"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_gangLevel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+  }
+  nextNodeIndex: 36
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossFriend"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_gangLevel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: -6
+      }
+    }
+  }
+  nextNodeIndex: 38
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossEnemy"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossFriend"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_gangLevel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+  }
+  nextNodeIndex: 39
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_madeRRBossFriend"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_gangLevel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        int_value: -6
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_helpingGangers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 40
+}

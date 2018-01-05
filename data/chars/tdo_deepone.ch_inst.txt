@@ -1,0 +1,74 @@
+prefab_name: "Seattle:Story/Pitezel"
+character_sheet_id: "Boss_Pitezel"
+character_mod {
+  stats {
+    body: 2
+    quickness: 0
+    strength: 5
+    charisma: -5
+    intelligence: 0
+    willpower: 3
+    essence: 0
+    magic: 0
+    hp: 0
+    ap: 0
+    armor: 5
+    force: 0
+    morale: 0
+    discipline: 0
+    awareness: 0
+    perception: 20
+    authority: 0
+    protect_tether_range: 0
+    move_speed: -1
+    is_fearless: 1
+  }
+  skills {
+    ranged_combat: -5
+    close_combat: 5
+    throwing_weapons: -5
+    spellcasting: -3
+    decking: 0
+    conjuring: -3
+    spirit_summoning: 0
+    drone_control: 0
+    biotech: -1
+    dodge: 6
+    etiquette_corporate: 0
+    etiquette_security: 0
+    etiquette_gang: 0
+    etiquette_socialite: 0
+    chi_casting: 0
+    etiquette_shadowrunner: 0
+    etiquette_street: 0
+    etiquette_academic: 0
+  }
+  specializations {
+    pistol: -1
+    rifle: 0
+    shotgun: 0
+    smg: 0
+    edged: 0
+    unarmed: 10
+    spirit_control: 0
+    esp_control: 0
+    drone_combat: 0
+  }
+  archetypeName: "Guard - Hunt And Destroy"
+  attitude: AttitudeBoss
+  vulnerabilities {
+  }
+}
+equipment {
+  prefab_name: "GhoulFistPoison"
+}
+team_id: "LoneStar"
+char_name: "Deep One"
+enabled_at_start: false
+pc_spawn_number: -1
+hiring_type: HiringType_None
+portrait {
+  filename: "deepOne"
+}
+karma: 367
+hiring_cost_override: 1000

@@ -1,0 +1,45 @@
+prefab_name: "Creature/CreatureGhoulHumanMale"
+character_sheet_id: "Lonestar_Lv4_Human_Pistol"
+character_mod {
+  stats {
+    body: 1
+    quickness: 1
+    strength: 1
+    hp: 0
+    ap: 1
+    armor: 1
+    morale: 0
+    discipline: 0
+    awareness: 0
+    perception: 0
+    authority: 0
+    protect_tether_range: -2
+    move_speed: 2
+    is_fearless: 1
+  }
+  skills {
+    ranged_combat: -4
+    close_combat: 3
+    throwing_weapons: -4
+  }
+  specializations {
+    pistol: -1
+    edged: 0
+    unarmed: 4
+  }
+}
+equipment {
+  prefab_name: "GhoulFistPoison"
+}
+team_id: "NeutralGhouls"
+char_name: "Ghoul"
+GeneralTags: "isGhoul"
+enabled_at_start: true
+pc_spawn_number: -1
+spawn_type: SpawnType_Normal
+hiring_type: HiringType_None
+portrait {
+  filename: ""
+}
+karma: 70
+hiring_cost_override: 1000

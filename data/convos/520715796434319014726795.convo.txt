@@ -1,0 +1,46 @@
+idRef {
+  id: "520715796434319014726795"
+}
+ui_name: "the_extraction_failed"
+nodes {
+  idRef {
+    id: "52071587643431901472679b"
+  }
+  index: 0
+  text: "You have activated the wrong prison door! You will not be able to complete this run because the system is on lockdown now! Try again harder next time. Mr. Johnson is not happy and he wants his advance back! Ouch - that was an expensive failure..."
+  branches {
+    responseText: "Return to the Market"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Rooftop Market"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "determineFailurePayback"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

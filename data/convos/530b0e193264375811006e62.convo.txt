@@ -1,0 +1,1417 @@
+idRef {
+  id: "530b0e193264375811006e62"
+}
+ui_name: "ch04-ev2_hotelReceptionist"
+nodes {
+  idRef {
+    id: "530b0e2d3264375811006e6c"
+  }
+  index: 0
+  text: "Can I help you?"
+  branches {
+    responseText: "Yes, I am here to see a Mr. Rick Mercer!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_johnsonComplete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "What is going on here, why are there so many securities?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "I would like to book a room!"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "{{CC}}Attack the securities{{/CC}}"
+    actions {
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "530b13a0326437ac09003a74"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "530b141b326437ac09003a75"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isBG"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Display Text over Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "530b0ad13264375811006e5e"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TextPopupStyle"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "It\'s them! Kill \'em!"
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 0
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "530b0cb93264375811006e61"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "cower"
+            }
+            args {
+              string_value: "cower"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Display Text at Screen Position"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TextPopupStyle"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Two additional bodyguards appear out of thin air in the lobby, they must\'ve been using some kind of cloaking device!"
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 5
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 0
+        }
+      }
+      ops {
+        functionName: "Suspend Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "combatStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Investigate Rick Mercer"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Find Rick Mercer"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Nevermind, I\'m leaving!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530b0ffb3264375811006e94"
+  }
+  index: 1
+  text: "Oh! Mr. Mercer is not receiving any visitors at the moment... Sorry!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530b10123264375811006e97"
+  }
+  index: 2
+  text: "You notice that the securities fixed you with their stare as you mentioned the name Rick Mercer."
+  branches {
+    responseText: "But I have this access card and I am supposed to meet him here!"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch04-hotelAccessMercer"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I see, is there any way I can convince you to let me see him?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  sourceInSceneRef {
+    id: "530b0ad13264375811006e5e"
+  }
+}
+nodes {
+  idRef {
+    id: "530b103c3264375811006e9a"
+  }
+  index: 3
+  text: "Oh! This access card is used to access the elevator throught he side entrance of the hotel on the southern side of the tower."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530b10903264375811006e9d"
+  }
+  index: 4
+  text: "{{GM}}The receptionist looks around at the security forces and then back to you.{{/GM}}\n\nI am sorry, I\'m afraid that\'s impossible! May I ask you to leave the hotel now if you don\'t have any further business here?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530b10e23264375811006ea4"
+  }
+  index: 5
+  text: "Hey! Time for you to leave - NOW!"
+  branches {
+    responseText: "{{CC}}Attack the securities{{/CC}}"
+    actions {
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "530b13a0326437ac09003a74"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "530b141b326437ac09003a75"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isBG"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Display Text over Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "530b0ad13264375811006e5e"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TextPopupStyle"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "It\'s them! Kill \'em!"
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 0
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "530b0cb93264375811006e61"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "cower"
+            }
+            args {
+              string_value: "cower"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Display Text at Screen Position"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TextPopupStyle"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Two additional bodyguards appear out of thin air in the lobby, they must\'ve been using some kind of cloaking device!"
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 5
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 0
+        }
+      }
+      ops {
+        functionName: "Suspend Team\'s Turn"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "combatStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Investigate Rick Mercer"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Find Rick Mercer"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Sure..."
+    actions {
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "530b13a0326437ac09003a74"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "530b141b326437ac09003a75"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "isBG"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Display Text over Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "530b0ad13264375811006e5e"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TextPopupStyle"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "It\'s them! Kill \'em!"
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 0
+        }
+      }
+      ops {
+        functionName: "Set Animation State Of Actor To Animation Modifier"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "AnimationState"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "530b0cb93264375811006e61"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (AnimationModifiers)"
+            args {
+              string_value: "cower"
+            }
+            args {
+              string_value: "cower"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Display Text at Screen Position"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TextPopupStyle"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Two additional bodyguards appear out of thin air in the lobby, they must\'ve been using some kind of cloaking device!"
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 5
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 0
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "combatStarted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Investigate Rick Mercer"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Find Rick Mercer"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "530b0ad13264375811006e5e"
+  }
+}
+nodes {
+  idRef {
+    id: "530b0e593264375811006e71"
+  }
+  index: 6
+  text: "We have a very important guest at the moment, I am sure you will understand that I can\'t disclose any further information about this..."
+  branches {
+    responseText: "Ahh, come on - you can tell me, I won\'t tell anyone!\n{{CC}}Charisma: 5{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "I understand completely!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530b0ee43264375811006e86"
+  }
+  index: 7
+  text: "Hmm, well - it\'s not a celebrity or some other public figure, but this guy came here with his MIB entourage and they haven\'t left the building since then... To be honest, they\'re a bit annoying with their constant staring and their chromed looks!"
+  branches {
+    responseText: "I see... What is the name of that person?"
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530b0f2f3264375811006e89"
+  }
+  index: 8
+  text: "I can\'t really tell you that, I might lose my job!"
+  branches {
+    responseText: "You know you can trust me, I won\'t tell anyone - why would I?\n{{CC}}Charisma: 7{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 7
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Of course, I understand!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530b0f693264375811006e8e"
+  }
+  index: 9
+  text: "Hmm... Okay! You seem to be an honest person! Name\'s Mercer... Rick Mercer - never heard of the guy, did you?"
+  branches {
+    responseText: "Yes, I did... but nevermind, thanks for the info!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Can\'t say I did... Thanks!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530b0ea03264375811006e75"
+  }
+  index: 10
+  text: "I am sorry, but all of our rooms are currently booked - if you leave me your contact details we will inform you about any vacancies for future visits to Downtown Everett!"
+  branches {
+    responseText: "Hmm, let me think about that!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

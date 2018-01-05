@@ -1,0 +1,40 @@
+idRef {
+  id: "51f47d06643431c7091698ac"
+}
+ui_name: "Tech Shop"
+nodes {
+  idRef {
+    id: "51f47d0f643431c7091698b2"
+  }
+  index: 0
+  text: "I\'ve got cutting-edge gear here, chummer."
+  branches {
+    responseText: "Whatcha got?"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51f47ccc643431c7091698ab"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Nevermind me."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f47ccc643431c7091698ab"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

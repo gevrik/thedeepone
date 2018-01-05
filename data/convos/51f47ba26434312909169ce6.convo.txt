@@ -1,0 +1,40 @@
+idRef {
+  id: "51f47ba26434312909169ce6"
+}
+ui_name: "Outfitter Shop"
+nodes {
+  idRef {
+    id: "51f47bad6434312909169cec"
+  }
+  index: 0
+  text: "If you are looking for new clothing I can help you..."
+  branches {
+    responseText: "I could use some new threads, let me have a look."
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51f47b656434312909169ce5"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Nothing for now."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f47b656434312909169ce5"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

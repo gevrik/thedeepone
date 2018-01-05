@@ -1,0 +1,56 @@
+id: "Silenced Meatshot"
+uirep {
+  icon: "icon_chainshot"
+  name: "Silenced Meatshot"
+  description: "Silenced burst that causes internal bleeding for -5 HP for 5 rounds. -15% ACC"
+}
+anim_action: AnimAction_Attack
+apCostMod: 1
+prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO > 2"
+damageBucket {
+  successEntries {
+    weight: 0.25
+    value: 2
+  }
+  successEntries {
+    weight: 0.25
+    value: 1.75
+  }
+  successEntries {
+    weight: 0.5
+    value: 1.5
+  }
+  failureEntries {
+    weight: 0.5
+    value: 1
+  }
+  failureEntries {
+    weight: 0.5
+    value: 0.75
+  }
+}
+attackRatingMod: -15
+offensiveAbility: true
+ammoCost: 3
+effectDuration: 5
+repetition: 3
+fxrep {
+  preActionFxName: ""
+  actionFxName: "SilencedGunBurstFireActionEmpty"
+  postActionFxName: ""
+  hitReactionFxName: "GunBurstHitReaction"
+  missReactionFxName: "GunBurstMissReaction"
+}
+toHitFunction: "actorWeaponAttackToHit"
+damageFunction: "weaponDamage"
+activationStatusEffects {
+  uirep {
+    icon: "icon_chainshot"
+    name: "Bleeding Internally"
+  }
+  stackingCategory: "HP"
+  statMods {
+    attribute: Attribute_HP
+    intModValue: -5
+  }
+}

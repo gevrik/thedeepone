@@ -1,0 +1,45 @@
+id: "smg SSC hk227"
+type: ItemType_SMG
+uirep {
+  icon: "icon_gun_hk227"
+  name: "Heckler & Koch HK227"
+  description: "SMG with laser sight for +3% accuracy, stock and gas vent. RC III, SA/BF/FA"
+}
+equipPrefabName: "TacticalSMG"
+anim_type: AnimType_SMG
+coreAttribute: Attribute_Quickness
+coreSkill: Skill_RangedCombat
+coreSpecialization: Specialization_RC_Smg
+apCost: 1
+prereqStrings: "Player.SKILL.Skill_RangedCombat >= 1"
+maxAmmo: 28
+baseHPDamage: 9
+baseAPDamage: 0
+rangeModTable: 3
+rangeModTable: 3
+rangeModTable: 3
+rangeModTable: 3
+rangeModTable: 3
+rangeModTable: 2
+rangeModTable: 2
+rangeModTable: 1
+rangeModTable: -1
+rangeModTable: -3
+rangeModTable: -5
+rangeModTable: -9
+rangeModTable: -13
+rangeModTable: -17
+rangeModTable: -21
+rangeModTable: -25
+rangeModTable: -29
+rangeModTable: -37
+noiseLevel: 9
+noiseRounds: 1
+ammoReloadAPCost: 1
+abilityModes: "SA"
+abilityModes: "BF RC3"
+abilityModes: "FA RC3"
+affectsEnemy: true
+canTargetActor: true
+store_cost: 1500
+sorting_group: "SSC SMGs"

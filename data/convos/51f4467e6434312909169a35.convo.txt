@@ -1,0 +1,357 @@
+idRef {
+  id: "51f4467e6434312909169a35"
+}
+ui_name: "Coyote Briefing"
+nodes {
+  idRef {
+    id: "51f446a46434312909169a3b"
+  }
+  index: 0
+  text: "Hoi, $(l.name)! About time you showed up!\n\n{{GM}}Coyote smiles and winks at you, it is obvious she is kidding.{{/GM}}"
+  branches {
+    responseText: "I came as fast as possible. What is going on with the Union? Is the place closed? And where is everyone else?"
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "521b6ea53930384410003c66"
+    }
+  }
+  branches {
+    responseText: "Good to see you too, $(l.name)! I could hear you swear from the other side of the hideout!"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I will take a look around real quick..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "51f446ee6434312909169a3f"
+  }
+  index: 1
+  text: "I have no clue what all this drek is about... I was... well, you call it my crusade, I had to go in deep this time... I was gone for two weeks tops.\n\nWhen I came back to spend my newly acquired nuyen the place was like this. I mean the job wasn\'t stellar, but I miss the crew! I have no idea where they are..."
+  branches {
+    responseText: "So you have no idea what happened? Hmm... This is strange. Have you taken a look around? Any clues?"
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "521b6ef53930384410003c67"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "51f447426434312909169a43"
+  }
+  index: 2
+  text: "Yeah, I turned everything upside-down looking for clues... but I couldn\'t find jack-drek... I\'m not so good at this investigation thing..."
+  branches {
+    responseText: "So you have no plan what to do next?"
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "521b6f163930384410003c68"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "51f4479d6434312909169a47"
+  }
+  index: 3
+  text: "I was hoping you would come up with a bright idea..."
+  branches {
+    responseText: "Hmm, I am a bit confused about all of this. Let me think..."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "51f447e76434312909169a4a"
+  }
+  index: 4
+  text: "As you walk up and down the floor pondering what to do you hear a rumbling sound and then the earth starts shaking, followed by a loud boom from the entrance of the Safehouse."
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f449546434312909169a58"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "51f445ee6434312909169a34"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f450ed6434312909169ad3"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f44edb6434312909169aab"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Coyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Investigate what happened"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "51f458f86434312909169b50"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "51f445ee6434312909169a34"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51f445ee6434312909169a34"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Seek And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "weapons"
+          }
+          args {
+            string_value: "GrenadeFrag"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Apply Camera Shake"
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 1
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

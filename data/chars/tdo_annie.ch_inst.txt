@@ -1,0 +1,83 @@
+prefab_name: "Core/HumanFemale"
+character_sheet_id: "Generic_Lv6_Human_Melee"
+character_mod {
+  stats {
+    body: -1
+    quickness: 3
+    strength: -3
+    charisma: 0
+    intelligence: 14
+    willpower: -1
+    essence: 0
+    magic: 0
+    hp: 0
+    ap: 1
+    armor: 0
+    force: 0
+    morale: 24
+    discipline: 0
+    awareness: 24
+    perception: -20
+    authority: 0
+    protect_tether_range: 5
+    move_speed: 0
+    is_fearless: 1
+  }
+  skills {
+    ranged_combat: -2
+    close_combat: 5
+    throwing_weapons: -4
+    spellcasting: 0
+    decking: 0
+    conjuring: 0
+    spirit_summoning: 0
+    drone_control: 0
+    biotech: 0
+    dodge: 3
+    etiquette_corporate: 0
+    etiquette_security: 0
+    etiquette_gang: 0
+    etiquette_socialite: 0
+    chi_casting: 0
+    etiquette_shadowrunner: 0
+    etiquette_street: 0
+    etiquette_academic: 0
+  }
+  specializations {
+    pistol: 0
+    rifle: 0
+    shotgun: 0
+    smg: 0
+    edged: 6
+    unarmed: 0
+    spirit_control: 0
+    esp_control: 0
+    drone_combat: 0
+  }
+  archetypeName: "Non-Combatant"
+  attitude: AttitudeCautious
+  attackRandom: AttackStyle_BestOnly
+}
+equipment {
+  prefab_name: "CyberdeckExcalibur"
+}
+equipment {
+  prefab_name: "DroneSupportS_Wolfhound"
+}
+equipment {
+  prefab_name: "DroneSupportB_RoboDoc"
+}
+equipment {
+  prefab_name: "RiggerHawaiianShirt"
+}
+team_id: "Civilians"
+char_name: "Annie"
+pc_spawn_number: -1
+hiring_type: HiringType_None
+cyberware_jack: "Datajack"
+portrait {
+  filename: "backer_humanfemale_grahamwilliams_tsilonsiereht"
+}
+portrait_code_override: "s6h1c4"
+karma: 334
+hiring_cost_override: 1000

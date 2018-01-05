@@ -1,0 +1,258 @@
+idRef {
+  id: "51ffb4d7643431bf03b50fff"
+}
+ui_name: "Annie Photo"
+nodes {
+  idRef {
+    id: "51ffb4e3643431bf03b51006"
+  }
+  index: 0
+  text: "{{GM}}Annie is pacing around the room, staring at the floor. She stops as you approach her, the photo in hand.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd7e9e6434313b0b9efbf0"
+  }
+}
+nodes {
+  idRef {
+    id: "51ffb58c643431bf03b51018"
+  }
+  index: 1
+  text: "{{GM}}You kneel down in front of Annie.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Show Annie the photo{{/CC}}"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Hoi, Annie. I want to show you something."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd7e9e6434313b0b9efbf0"
+  }
+}
+nodes {
+  idRef {
+    id: "51ffb5bb643431bf03b5102f"
+  }
+  index: 2
+  text: "{{GM}}You put the photo on the ground so that Annie can see it. There is no reaction for a while, then you hear her sobbing. She raises her head, you see tears streaming down her face, but there is still that dull look in her eyes.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Give Annie the photo{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Family Photo"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "{{CC}}Keep the photo.{{/CC}} Hmm, that didn\'t do any good it seems."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd7e9e6434313b0b9efbf0"
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Show Annie the photo you found in the Ritual Chamber"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51ffb674643431bf03b51035"
+  }
+  index: 3
+  text: "{{GM}}Annie snatches the photo from her hands and holds it to her chest. She seems to be happy. The tears dry up, but there is no change in her condition. She continues pacing, staring at the floor.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Family Photo"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51ffb6ce643431bf03b51038"
+  }
+  index: 4
+  text: "That seemed to calm her down. Do you think it is her on the photo?"
+  branches {
+    responseText: "That\'s impossible!"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Who knows, maybe?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd7b966434313b0b9efbed"
+  }
+}
+nodes {
+  idRef {
+    id: "51ffb798643431bf03b51064"
+  }
+  index: 5
+  text: "You\'re right. Maybe it\'s her mother or grand-mother?"
+  branches {
+    responseText: "That sounds more likely. We need to solve this riddle. The sooner, the better."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd7b966434313b0b9efbed"
+  }
+}
+nodes {
+  idRef {
+    id: "51ffb7ad643431bf03b51066"
+  }
+  index: 6
+  text: "That\'s a scary thought."
+  branches {
+    responseText: "Indeed. Now I really need to know what is going on here."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd7b966434313b0b9efbed"
+  }
+}
+nodes {
+  idRef {
+    id: "51ffb58c643431bf03b5101c"
+  }
+  index: 7
+  text: "{{GM}}Annie does not react, she is still staring at the floor.{{/GM}}"
+  branches {
+    responseText: "Hmm. Okay then."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd7e9e6434313b0b9efbf0"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

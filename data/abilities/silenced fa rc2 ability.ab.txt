@@ -1,0 +1,44 @@
+id: "Silenced FA RC2 Ability"
+uirep {
+  icon: "icon_auto"
+  name: "Silenced Full Auto Fire RC2"
+  description: "10 attacks in one round. -35% to hit on each attack due to recoil. RC 2."
+}
+anim_action: AnimAction_Attack
+apCostMod: 1
+prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO > 9"
+damageBucket {
+  successEntries {
+    weight: 0.25
+    value: 2.5
+  }
+  successEntries {
+    weight: 0.25
+    value: 2.25
+  }
+  successEntries {
+    weight: 0.5
+    value: 2
+  }
+  failureEntries {
+    weight: 0.5
+    value: 1
+  }
+  failureEntries {
+    weight: 0.5
+    value: 0.5
+  }
+}
+attackRatingMod: -35
+offensiveAbility: true
+ammoCost: 10
+repetition: 10
+fxrep {
+  preActionFxName: ""
+  actionFxName: "GunFullAutoFireAction"
+  postActionFxName: ""
+  hitReactionFxName: "GunHitReaction"
+  missReactionFxName: "GunMissReaction"
+}
+toHitFunction: "actorWeaponAttackToHit"
+damageFunction: "weaponDamage"

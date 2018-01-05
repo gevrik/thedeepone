@@ -1,0 +1,3420 @@
+id: "The Deep One"
+variables {
+  name: "amountMissions"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "amountMissions"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "annieFound"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "annieFound"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "annieWithPlayer"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "annieWithPlayer"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "armitageInCrew"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "armitageInCrew"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "BEHQcomplete"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "BEHQcomplete"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "busStationStarted"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "busStationStarted"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_accessBrotherComp"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_accessBrotherComp"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_accessToDagonTower"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_accessToDagonTower"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_accessToMuseum"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_accessToMuseum"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_armitageFilesCopied"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_armitageFilesCopied"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_assistantInCrew"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_assistantInCrew"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_beatEightball"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_beatEightball"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_civLevel"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_civLevel"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch02_dagonLevel"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_dagonLevel"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch02_day"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_day"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch02_dist1explored"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_dist1explored"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_finsleyJackIn"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_finsleyJackIn"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_gangEliminated"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_gangEliminated"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_gangLevel"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_gangLevel"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch02_getGangMoney"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_getGangMoney"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_hasJayceJob"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_hasJayceJob"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_helpingGangers"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_helpingGangers"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_hour"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_hour"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch02_investigate_cult"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_investigate_cult"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_investigateMuseum"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_investigateMuseum"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_jayceLevel"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_jayceLevel"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutArmitage"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutArmitage"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutAshpool"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutAshpool"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutClub"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutClub"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutDagonCorp"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutDagonCorp"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutGangBenefactor"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutGangBenefactor"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutHansen"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutHansen"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutMatrix"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutMatrix"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutMuseum"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutMuseum"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutStrangeCEO"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutStrangeCEO"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAboutTechStore"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAboutTechStore"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowAnnieMatrix"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowAnnieMatrix"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_knowsAboutRR"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_knowsAboutRR"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_lonestarLevel"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_lonestarLevel"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch02_madeRRBossEnemy"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_madeRRBossEnemy"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_madeRRBossFriend"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_madeRRBossFriend"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_minute"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_minute"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch02_rrContactKilled"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_rrContactKilled"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_starThreat"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_starThreat"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch02_tippedMeryll"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_tippedMeryll"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_wasInClub"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_wasInClub"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_wasInMuseum"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_wasInMuseum"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch02_wasInTower"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch02_wasInTower"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_accessToOffice"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_accessToOffice"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_gatherIntelAshpool"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_gatherIntelAshpool"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_hideoutVisited"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_hideoutVisited"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_knowRickshawHideout"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_knowRickshawHideout"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_levelTriad"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_levelTriad"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch03_levelYakuza"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_levelYakuza"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch03_nanoRick"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_nanoRick"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_nanoSelf"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_nanoSelf"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_rickShawRunBriefed"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_rickShawRunBriefed"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_strengthTriad"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_strengthTriad"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch03_strengthYakuza"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_strengthYakuza"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch03_uwWarEnded"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_uwWarEnded"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_wasInZROffice"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_wasInZROffice"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch03_zeitgeistPayload"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch03_zeitgeistPayload"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_AnnieFound"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_AnnieFound"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_chipDecrypted"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_chipDecrypted"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_coffinHFullAcc"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_coffinHFullAcc"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_coffinRented"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_coffinRented"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_enterHotelSide"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_enterHotelSide"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_enterSenseSide"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_enterSenseSide"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_ev2_sensen_employee"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_ev2_sensen_employee"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_ev2_sensen_manager"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_ev2_sensen_manager"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_fenceKilled"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_fenceKilled"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_findHellyJohnson"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_findHellyJohnson"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_flatlineFound"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_flatlineFound"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_hellyJhonnyDone"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_hellyJhonnyDone"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_hellyLost"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_hellyLost"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_hellyRescued"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_hellyRescued"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_investigateSensenet"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_investigateSensenet"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_jobFaction"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_jobFaction"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch04_jobType"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_jobType"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch04_johnsonComplete"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_johnsonComplete"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_killedCorpGoons"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_killedCorpGoons"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_knowAboutCoffinHotel"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_knowAboutCoffinHotel"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_knowAboutMercer"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_knowAboutMercer"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_knowsAboutFlatline"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_knowsAboutFlatline"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_knowsHellyIsClean"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_knowsHellyIsClean"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_mafiaLevel"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_mafiaLevel"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch04_mercerKilled"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_mercerKilled"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_metHelly"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_metHelly"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_motelInvestigated"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_motelInvestigated"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_parkingComplete"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_parkingComplete"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_rescueHelly"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_rescueHelly"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_rickshawJohnsonResearch"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_rickshawJohnsonResearch"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_rickshawResearch"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_rickshawResearch"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_targetHouse"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_targetHouse"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "ch04_wasInCoffinHotel"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_wasInCoffinHotel"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_wasInEmpHouse"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_wasInEmpHouse"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_wasInHotel"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_wasInHotel"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_wasInSense"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_wasInSense"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_wasInTriadHouse"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_wasInTriadHouse"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch04_wasInYakHouse"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch04_wasInYakHouse"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "ch05_knowsAboutWard"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ch05_knowsAboutWard"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "chapter1complete"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "chapter1complete"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "chapter2complete"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "chapter2complete"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "chapter2started"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "chapter2started"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "chapter3complete"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "chapter3complete"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "chapter3started"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "chapter3started"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "chapter4complete"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "chapter4complete"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "chapter4started"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "chapter4started"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "chapter5started"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "chapter5started"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "coyoteAffection"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "coyoteAffection"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "coyoteArrived"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "coyoteArrived"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "coyoteBriefedStation"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "coyoteBriefedStation"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "CoyoteDate"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "CoyoteDate"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "coyoteFoundChamber"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "coyoteFoundChamber"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "coyoteIntel"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "coyoteIntel"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "CoyoteRejected"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "CoyoteRejected"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "coyoteResearch"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "coyoteResearch"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "d1_atmHacked"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "d1_atmHacked"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "gauntletScore"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "gauntletScore"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "gotCaptainIntel"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "gotCaptainIntel"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "gotDriverIntel"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "gotDriverIntel"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "gotGangerIntel"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "gotGangerIntel"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "gotoBEHQ"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "gotoBEHQ"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "gotoChamber"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "gotoChamber"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "gotSporkyIntel"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "gotSporkyIntel"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "hansenRewardReceived"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "hansenRewardReceived"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "hasDateWithCaptain"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "hasDateWithCaptain"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "hasSettled"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "hasSettled"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "hideoutStarted"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "hideoutStarted"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "karmaActorsKilled"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "karmaActorsKilled"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "killDagonAgent"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "killDagonAgent"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "killedCoyote"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "killedCoyote"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "killedHansen"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "killedHansen"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "killedRRBoss"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "killedRRBoss"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "knowAboutAnnieNow"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "knowAboutAnnieNow"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "knowAboutBossContact"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "knowAboutBossContact"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "knowAnnieAutism"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "knowAnnieAutism"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "knowHansenMutations"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "knowHansenMutations"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "knowsAboutChamber"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "knowsAboutChamber"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "knowsAboutMods"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "knowsAboutMods"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "knowsFlatPassage"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "knowsFlatPassage"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "madeCaptainEnemy"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "madeCaptainEnemy"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "madeCaptainFriend"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "madeCaptainFriend"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "madeDriverEnemy"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "madeDriverEnemy"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "madeDriverFriend"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "madeDriverFriend"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "main_enzoHire"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "main_enzoHire"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "main_givenZoexNanos"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "main_givenZoexNanos"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "main_johnsonTrodes"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "main_johnsonTrodes"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "main_knowAboutWinterblip"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "main_knowAboutWinterblip"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "main_rickshawAffection"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "main_rickshawAffection"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "main_terchanHire"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "main_terchanHire"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "metSporky"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "metSporky"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "metZoeMarket"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "metZoeMarket"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "metZoex"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "metZoex"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "mods_armor"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "mods_armor"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "mods_weapon"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "mods_weapon"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "monorailComplete"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "monorailComplete"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "newFlat"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "newFlat"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "oweSporkyFavour"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "oweSporkyFavour"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "PKilledRRBoss"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "PKilledRRBoss"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "run_ZT_complete"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "run_ZT_complete"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "run_ZT_saved"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "run_ZT_saved"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "showedCoyoteCard"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "showedCoyoteCard"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "storyStep"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "storyStep"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "suspiciousZoex"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "suspiciousZoex"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "system_blackICE"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "system_blackICE"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "system_cpuNodes"
+  typeName: "int"
+  defaultValue {
+    int_value: 1
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "system_cpuNodes"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "system_dataNodes"
+  typeName: "int"
+  defaultValue {
+    int_value: 1
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "system_dataNodes"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "system_whiteICE"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "system_whiteICE"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "visitedRitualChamber"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "visitedRitualChamber"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "willHelpMeryll"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "willHelpMeryll"
+      typeName: "bool"
+    }
+  }
+}
+description: "One year after the Dead Man\'s Switch run has ended you are back in the gutter. Your bank account has seen better days and it is about time to get another job... You are not aware yet that your journey might drag you deeper into the abyss than you ever could have imaged... \n\nPlease import your Dead Man\'s Switch character. There might be minor spoilers for the main campaign if you have not finished it yet. \n\nThis module features: \n\n35 scenes \ndiverging storylines \n9 repeatable Mr Johnson runs \nsandbox gameplay \nover 10-hours of playtime \nCustomized Weapons and Cyberware\nUnique and exclusive items (storyline rewards, new decks, new programs, new drugs) \nThrilling and challenging combat scenes \nA world that changes depending on your actions \nStealth- and face-based gameplay \nweapon and armor mods (crafting) \ncustom hirelings (unlocked as you play) \n\nThe current version is 3.11 (04.03.2014) \n\nThere are now about ten hours of play-time in the module. There are several repeatable missions available from a Mr. Johnson. So if you need some gear or Karma, talk to your friendly neighbourhood Johnson."
+startScene: ""
+allowCharacterImport: true
+allowImportedEquipment: false
+allowCharacterGen: false
+allowFallbackCharacter: false
+fallbackCharacterName: "c12_samurai"
+useDefaultEquipment: true
+defaultCharacterEquipment: "tdo_start"
+storyKarmaLevel: 200
+resalePercent: 75
+upgradeToThreeApLevel: 117
+upgradeToFourApLevel: 320
+show_conversation_triggering_actor: true
+character_roster {
+  roster_entries {
+    reference_id: "lvl1_dwarf_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_dwarf_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_elf_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_elf_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_human_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_human_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_dwarf_combatdecker"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_dwarf_supportmage"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_elf_technoshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_human_allmagic"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_human_assassin"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_human_burnedoutmage"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_human_combatadept"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_human_combatrigger"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_human_cyberwarrior"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_human_techmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_human_utilityman"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_human_weaponmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_ork_urbanshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_troll_brute"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_merc_troll_techmage"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_ork_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_troll_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl1_troll_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_dwarf_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_dwarf_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_dwarf_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_elf_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_elf_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_human_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_human_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_human_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_dwarf_combatdecker"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_dwarf_supportmage"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_elf_technoshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_human_allmagic"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_human_assassin"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_human_burnedoutmage"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_human_combatadept"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_human_combatrigger"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_human_cyberwarrior"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_human_techmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_human_utilityman"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_human_weaponmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_ork_urbanshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_troll_brute"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_merc_troll_tech mage"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_ork_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_troll_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_troll_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl2_troll_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 2
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_dwarf_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_dwarf_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_dwarf_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_elf_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_elf_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_human_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_human_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_human_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_dwarf_combatdecker"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_dwarf_supportmage"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_elf_technoshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_human_allmagic"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_human_assassin"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_human_burnedoutmage"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_human_combatadept"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_human_combatrigger"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_human_cyberwarrior"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_human_techmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_human_utilityman"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_human_weaponmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_ork_urbanshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_troll_brute"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_merc_troll_techmage"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_ork_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_ork_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_troll_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_troll_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_troll_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl3_troll_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 3
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_dwarf_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_dwarf_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_dwarf_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_dwarf_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_elf_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_elf_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_elf_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_human_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_human_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_human_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_human_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_dwarf_combatdecker"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_dwarf_supportmage"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_elf_technoshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_human_allmagic"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_human_assassin"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_human_burnedoutmage"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_human_combatadept"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_human_combatrigger"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_human_cyberwarrior"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_human_techmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_human_utilityman"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_human_weaponmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_ork_urbanshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_troll_brute"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_merc_troll_techmage"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_ork_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_ork_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_ork_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_troll_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_troll_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_troll_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl4_troll_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 4
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_dwarf_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_dwarf_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_dwarf_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_dwarf_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_elf_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_elf_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_elf_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_elf_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_human_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_human_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_human_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_human_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_human_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_dwarf_combatdecker"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_dwarf_supportmage"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_elf-technoshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_human_allmagic"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_human_assassin"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_human_burnedoutmage"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_human_combatadept"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_human_combatrigger"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_human_cyberwarrior"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_human_techmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_human_utilityman"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_human_weaponmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_ork_urbanshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_troll_brute"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_merc_troll_techmage"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_ork_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_ork_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_ork_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_ork_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 145
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_troll_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_troll_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_troll_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl5_troll_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_dwarf_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_dwarf_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_dwarf_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_dwarf_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_dwarf_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_elf_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_elf_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_elf_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_elf_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_elf_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_human_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_human_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_human_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_human_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_human_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_dwarf_combatdecker"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_dwarf_supportmage"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_elf_technoshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_human_allmagic"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_human_assassin"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_human_burnedoutmage"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_human_combatadept"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_human_combatrigger"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_human_cyberwarrior"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_human_techmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_human_utilityman"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_human_weaponmaster"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_ork_urbanshaman"
+    hiring_conditions {
+    }
+    hiring_cost: 5
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_troll_brute"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_merc_troll_techmage"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_ork_adept"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_ork_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_ork_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_ork_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_troll_decker"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_troll_mage"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_troll_rigger"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_troll_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "lvl6_troll_shaman"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+  roster_entries {
+    reference_id: "tdo_flake"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "51f4026a643431dd08e509ff"
+  }
+  roster_entries {
+    reference_id: "tdo_hire_adeptzemke"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "51f4026a643431dd08e509ff"
+  }
+  roster_entries {
+    reference_id: "tdo_hire_deckerkrash"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "51f4026a643431dd08e509ff"
+  }
+  roster_entries {
+    reference_id: "tdo_hire_magewooqui"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "51f4026a643431dd08e509ff"
+  }
+  roster_entries {
+    reference_id: "tdo_shannon"
+    hiring_conditions {
+    }
+    hiring_cost: 6
+    content_pack_source: "51f4026a643431dd08e509ff"
+  }
+}

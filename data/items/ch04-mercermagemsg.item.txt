@@ -1,0 +1,8 @@
+id: "ch04-mercerMageMsg"
+type: ItemType_QuestItem
+uirep {
+  name: "Corp Mage\'s Comlink"
+  description: "You found this comlink on the Corp Mage outside of the Johnson\'s Retreat, it reads:\n\nSamael,\n\nAccording to my contacts the Hound has been stolen from the Velvet Underground by a group of runners that has been causing us a lot of trouble. The Johnson that hired our guys frequents the Johnson\'s Retreat Club in the Barrens. Go there and find out where the Hound is, by any means neccessary. When you have it, come and see me in the Everett Downtown District Hotel.\n\n- Rick Mercer"
+}
+credentials: 0
+sorting_group: "Quest"

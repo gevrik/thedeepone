@@ -1,0 +1,8 @@
+id: "ch04-hotelAccessMercer"
+type: ItemType_QuestItem
+uirep {
+  name: "Everett Downtown Hotel Access Card"
+  description: "This card allows access through the side entrance of the Hotel in Downtown Everett."
+}
+credentials: 0
+sorting_group: "Quest"

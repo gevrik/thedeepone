@@ -1,0 +1,707 @@
+idRef {
+  id: "51fd46316434311d0a8d4266"
+}
+ui_name: "Brain Eater Station"
+nodes {
+  idRef {
+    id: "51fd46716434311d0a8d4270"
+  }
+  index: 0
+  text: "Got a problem, chummer?"
+  branches {
+    responseText: "Not yet."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "The Brain-Eaters. You are a new gang around here, right? Can you tell me something more about you guys? {{CC}}Etiquette: Gang{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "52015de8643431de06d7d6e7"
+    }
+  }
+  branches {
+    responseText: "Nope. See ya!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd46cc6434311d0a8d4273"
+  }
+  index: 1
+  text: "Not yet? Wuts dat supposed to mean? You want to start a problem with the Brain-Eaters? You suicidal or sumthin?"
+  branches {
+    responseText: "Is your Ork skull really that thick? Tell me what I want to know or you\'re toast."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd49066434311d0a8d428f"
+  }
+  index: 2
+  text: "You crazy or sumthin? You see that sewer entrance there? There\'s at least a dozen more Eaters down there. Make one false move and we\'ll eat your brain!"
+  branches {
+    responseText: "{{GM}}Starting a fight in the barrens without your backup would be crazy. You decide to back off, for now.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Gain information from the Brain-Eaters Ganger"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "finishedGanger"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You would be dead before they get here!"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd476c6434311d0a8d4276"
+  }
+  index: 3
+  text: "Sure. We are a mixed-race gang operating in the Touristville area. The Star let us get away with it because we\342\200\231re fairly tame as thrill gangs go. We are techies. Interested in scavenging the remains of Redmond\342\200\231s technological Infrastructure. Our colors are black over white and each gang member wears a distinctive Fedora. We are heavily into smuggling and are the sole group of shadow-deckers operating out of the Redmond Barrens. Our headquarters has Matrix jackpoints, computer hardware and pirated software. Also got connections to the Yakuza."
+  branches {
+    responseText: "Sounds like you guys are expanding. Why come to the Barrens?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fd48816434311d0a8d428b"
+  }
+  index: 4
+  text: "We help the Yakuza to expand their operations here. In return we get some wiz high-tech toys that fell from the \"back of a truck\"."
+  branches {
+    responseText: "Ha! I see. Do you mind if I ask you some questions?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd49886434311d0a8d4292"
+  }
+  index: 5
+  text: "Go ahead - you cool, chum! What do you need ta know?"
+  branches {
+    responseText: "Have you seen a strangely speaking mage from out-of-town around?"
+    nextNodeIndex: 6
+    onlyOnce: true
+    idRef {
+      id: "51fd4d976434311d0a8d436c"
+    }
+  }
+  branches {
+    responseText: "What happened here?"
+    nextNodeIndex: 8
+    onlyOnce: true
+    idRef {
+      id: "51fd4f576434311d0a8d4386"
+    }
+  }
+  branches {
+    responseText: "I need to go, it was good talking to you."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd4cf66434311d0a8d436a"
+  }
+  index: 6
+  text: "Yeah. He was asking if we do mercenary work. I sent him to some of our recruits that need the bucks. Dunno what happened after that. Don\'t care about it either. The guy was living in the sewers... created himself some fucked up setting with lots of bones and other ritualistic stuff around. Most of the Eaters find that wiz, but I\'m not into this shit, just in it for the bucks."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd4da26434311d0a8d4370"
+  }
+  index: 7
+  text: "I think the Star found out about his little hideout. They\'ve locked down the whole station because they think he is still around - haven\'t seen him in a while, though."
+  branches {
+    responseText: "I have another question."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd4e026434311d0a8d4380"
+  }
+  index: 8
+  text: "Totally fragged up drek. This funny guy from outta town built himself some ritual site down below the Monorail station. Haven\'t seen the guy in a while, checked out the sewers after the coppers were done with it. Some real crazy drek."
+  branches {
+    responseText: "Can you tell me where that room is and how to get there?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd4eca6434311d0a8d4383"
+  }
+  index: 9
+  text: "Hmm. Yeah, I might, but here\'s a word of warning. More of those guys like our little ritual master have shown up and they\'re roaming in the sewers. You might run into some trouble."
+  branches {
+    responseText: "Not really worried about that, can you tell me where it is?"
+    nextNodeIndex: 10
+    onlyOnce: true
+    idRef {
+      id: "52015dfa643431de06d7d6e8"
+    }
+  }
+  branches {
+    responseText: "Maybe you want to join me? I can make it worth your while?"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2000
+        }
+      }
+    }
+    nextNodeIndex: 11
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "52015e13643431de06d7d6e9"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd502e6434311d0a8d43cb"
+  }
+  index: 10
+  text: "{{GM}}The ganger gives you a detailed description of the location of the ritualistic room. You remember every detail and are pretty sure that you could find it from anywhere in the Barrens now.{{/GM}}"
+  branches {
+    responseText: "Ok, I got it. Thanks, chum. About the other thing..."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "gotGangerIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gain information from the Brain-Eaters Ganger"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Investigate the Ritual Chamber in the sewers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "finishedGanger"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fd4fd16434311d0a8d43c8"
+  }
+  index: 11
+  text: "I\'d love to earn some bug Nuyen, but I am \"on-duty\". Maybe another time?"
+  branches {
+    responseText: "Sure. Tell me where the sewer room is?"
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd552b6434310f0b8fb507"
+  }
+  index: 12
+  text: "Get outta here before I call my chummers and we make a sieve out of you!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd556f6434310f0b8fb50a"
+  }
+  index: 13
+  text: "Hoi, chummer. Going to the sewers anytime soon?"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd3e6e6434311d0a8d4263"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "gotGangerIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "finishedGanger"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 12
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "finishedGanger"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "gotGangerIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 13
+}

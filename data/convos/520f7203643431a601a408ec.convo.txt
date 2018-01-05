@@ -1,0 +1,300 @@
+idRef {
+  id: "520f7203643431a601a408ec"
+}
+ui_name: "or_receptionist"
+nodes {
+  idRef {
+    id: "520f720a643431a601a408f2"
+  }
+  index: 0
+  text: "Can I help you?"
+  branches {
+    responseText: "I need access to the upper floors..."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "I have come to chew bubbglegum and kick ass, and I am all out of bubblegum! {{CC}}Attack the guards!{{/CC}}"
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "bubblegum"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Nothing at the moment..."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f728d643431a601a408f7"
+  }
+  index: 1
+  text: "Well, unless you\'re an employee or have an appointment I\'m afraid you will have to stay downstairs! Why not take one of our interactive leaflets from the visitor area behind you?"
+  branches {
+    responseText: "I am an employee!"
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "520f82d8643431a601a40c9d"
+    }
+  }
+  branches {
+    responseText: "I have an appointment!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I see, thanks."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f730b643431a601a40907"
+  }
+  index: 2
+  text: "Then you should have a keycard! If you lost your keycard, take a form from the drawers behind me and fill it out, I\'ll run it through the system then...\n\n{{GM}}You realise that you have no way of adding yourself to their system as an employee before you can actually access their system...{{/GM}}"
+  branches {
+    responseText: "Okay! Always these damn forms..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f7361643431a601a4090b"
+  }
+  index: 3
+  text: "With whom and what is your name?"
+  branches {
+    responseText: "With... the boss, my name is not important..."
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "520f84ab643431a601a40d2d"
+    }
+  }
+  branches {
+    responseText: "With Petra Smith. My name is Jesse Smith..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "helpedPetra"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "or_keycard"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "elevatorLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520f9045643431d5015d135b"
+    }
+  }
+  branches {
+    responseText: "Nevermind..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f7393643431a601a40910"
+  }
+  index: 4
+  text: "I have no appointments under that name... Sorry, you will have to come back another time..."
+  branches {
+    responseText: "Hmpf..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520f7812643431a601a40996"
+  }
+  index: 5
+  text: "Okay. Here, take this keycard. It is limited to only a few uses, so be careful. Petra Smith works on the first floor, so the card only works for that floor."
+  branches {
+    responseText: "Thanks!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gain access to the elevator"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "elevatorLevel"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "or_keycard"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

@@ -1,0 +1,746 @@
+idRef {
+  id: "530e20863264375401006cf5"
+}
+ui_name: "ch04-AnnieRickshaw"
+nodes {
+  idRef {
+    id: "530e20903264375401006cfb"
+  }
+  index: 0
+  text: "So... What will you do with me now?"
+  branches {
+    responseText: "You\'re going to Dr. Hansen... You know I have a deal with him..."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "What do you think we should do?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e26b63264375401007578"
+  }
+  index: 1
+  text: "You bastard! I hope you will choke on the \"power\" he gives you! If he gives you anything!\n\nGet out of my face you drekhead!"
+  branches {
+    responseText: "I liked you better when you didn\'t talk so much!"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e26e6326437540100757b"
+  }
+  index: 2
+  text: "Erm... You know, there\'s still this Hellhound living in my hideout! We\'re not going to do anything before we can get this thing out of here!"
+  branches {
+    responseText: "Rickshaw..."
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "530e2729326437540100757e"
+  }
+  index: 3
+  text: "Don\'t Rickshaw me, chummer! You owe me, remember?!?"
+  branches {
+    responseText: "You are right!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+nodes {
+  idRef {
+    id: "530e274c3264375401007581"
+  }
+  index: 4
+  text: "So you\'re not handing me over to that monster Hansen?"
+  branches {
+    responseText: "No, what do you want to do?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e27633264375401007584"
+  }
+  index: 5
+  text: "I still haven\'t forgiven you for what you have done, and I prolly never will - but if you really don\'t want to work with Hansen anymore... There is only one thing that we should do... can do... to stop all of this!\n\nWe should go to my hometown Dunwich and face the cult there!"
+  branches {
+    responseText: "That sounds like a good idea!"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e260e3264375401007574"
+  }
+  index: 6
+  text: "Sooo... Now that you have found me, what do you want to do with me?"
+  branches {
+    responseText: "I still have this deal with Dr. Hansen, and I plan on going through with it!"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "I\'m not going through with my deal with Hansen... What do you think we should do?"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e27f332643754010075a3"
+  }
+  index: 7
+  text: "You bastard! I hope you will choke on the \"power\" he gives you! If he gives you anything!\n\nSlot off!"
+  branches {
+    responseText: "Lets go now!\n{{GM}}Start Chapter 5{{/GM}}"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "We will go soon, but I have to do something else first!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "531398cc3264375c01003c7f"
+  }
+  index: 8
+  text: "As you get ready to leave the hideout you hear the sounds of combat coming from outside! You peek through the garage door of your hideout and see that an army of Ashpool mercenaries has invaded the compound, killing everyone they come across. You see them searching the garages one by one, it won\'t be long before they will find you..."
+  branches {
+    responseText: "{{CC}}Call Dr. Hansen{{/CC}}"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "531399c53264375c01003c82"
+  }
+  index: 9
+  text: "{{GM}}You quickly punch in the code that Dr. Hansen gave you and are kinda relieved when his mutated face appears on the screen...{{/GM}}\n\nYes? Have you found the girl?"
+  branches {
+    responseText: "I did, but we have a problem here... Ashpool has found our base of operations and they\'ve sent what looks to be an army to deal with us, I\'m not sure if we can get out of here!"
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53139a133264375c01003cae"
+  }
+}
+nodes {
+  idRef {
+    id: "53139a7d3264375c01003cdc"
+  }
+  index: 10
+  text: "I see... I will send an extraction team via helicopter, they will be there in a few minutes - try not to die while they are enroute to you!"
+  branches {
+    responseText: "Roger!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter4complete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter5started"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53139a133264375c01003cae"
+  }
+}
+nodes {
+  idRef {
+    id: "53139abc3264375c01003cdf"
+  }
+  index: 11
+  text: "{{GM}}Your band of runners gets ready to fight off the Ashpool agents while your extraction team is on the way... Luckily, they arrive just in time before the Ashpool mercenaries can find you... The chopper pilot urges you inside for the getaway!{{/GM}}\n\n\"Hurry up, we\'ve got a long flight ahead of us! We\'re going to the east coast - some place called Dunwich, you\'ll meet Hansen there!\""
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "530e282632643754010075a6"
+  }
+  index: 12
+  text: "You\'re asking me? Hmm... I will never forgive you for what you did to Coyote... But if you want to end this, we need to go to my hometown Dunwich and confront this cult... End this once and for all!"
+  branches {
+    responseText: "Alright, lets do this... I\'m ready to go!\n{{GM}}Start Chapter 5{{/GM}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter4complete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter5started"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 17
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Ok, but I need to do something else first!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e28a532643754010075f2"
+  }
+  index: 13
+  text: "Thanks again for saving me, chummer! You\'re the best!"
+  branches {
+    responseText: "It is very nice to... see you like this, Annie!"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e28a532643754010075f5"
+  }
+  index: 14
+  text: "Ha, yeah! Something must\'ve changed when they tried to hook me up into this machine! I\'m not complaining - I\'m finally FREE!\n\nBut you now what... I really want to finish this! Lets go to my hometown of Dunwich and confront this cult! End this story once and for all!"
+  branches {
+    responseText: "Lets go now!"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e29503264375401007635"
+  }
+  index: 15
+  text: "Thanks again for saving me, chummer! You\'re the best! I knew you could do it!"
+  branches {
+    responseText: "Don\'t mention it, Annie! I\'m glad you\'re okay! In fact, you seem to be more than OK!"
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530e29503264375401007638"
+  }
+  index: 16
+  text: "Ha, yeah! Something must\'ve changed when they tried to hook me up into this machine! I\'m not complaining - I\'m finally FREE! Finally!\n\nBut you now what... I really want to finish this! Lets go to my hometown of Dunwich and confront this cult! End this story once and for all!"
+  branches {
+    responseText: "Lets go now!\n{{GM}}Start Chapter 5{{/GM}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter4complete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter5started"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 17
+  }
+  branches {
+    responseText: "We will go soon, but I have to do something else first!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314bc373264370810006fef"
+  }
+  index: 17
+  text: "Rickshaw has the solution for this long trip stashed in the neighboring garage to her hideout. She ushers you over and opens the doors, revealing a worn but functionally looking helicopter."
+  branches {
+    responseText: "Nice, why didn\'t you mention it earlier?"
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5314bc7b3264370810006ff2"
+  }
+  index: 18
+  text: "Haven\'t used it in a while, but she should fly fine... Will get us to the east coast in no time... It won\'t be a comfortable ride, but beggars can\'t be choosers, right?"
+  branches {
+    responseText: "Correct! Lets go!"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "ch05-dunwichmain"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "52178a0b3930380005003d6d"
+  }
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_hellyJhonnyDone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_hellyJhonnyDone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 6
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_hellyJhonnyDone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 13
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_hellyJhonnyDone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 15
+}

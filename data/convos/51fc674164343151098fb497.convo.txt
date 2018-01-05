@@ -1,0 +1,761 @@
+idRef {
+  id: "51fc674164343151098fb497"
+}
+ui_name: "Homeless Dwarf"
+nodes {
+  idRef {
+    id: "51fc67c664343151098fb4a1"
+  }
+  index: 0
+  text: "Got some spare Nuyen, chummer?"
+  branches {
+    responseText: "Maybe... if you have some information for me."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "How is life on the street these days, chummer? {{CC}}Etiquette: Street{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 18
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc68d864343151098fb4ac"
+  }
+  index: 1
+  text: "For the right price I can tell you about anything that\'s going on here at the station..."
+  branches {
+    responseText: "Ok, how much will it cost me?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "metSporky"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc6b4564343151098fb4b8"
+  }
+  index: 2
+  text: "20 Nuyen and I\'ll tell you everything you want to know - if I know it."
+  branches {
+    responseText: "Fine, here\'s the Nuyen."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 20
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I can\'t afford that right now."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc6beb64343151098fb4bc"
+  }
+  index: 3
+  text: "{{GM}}The Dwarf pockets his credstick, takes an apple from his jacket and bites into it.{{/GM}}\n\nOkay, chummer - what do you wanna know?"
+  branches {
+    responseText: "Have you seen a strange-looking Human dark mage around here in the last 24 hours, or spoken to one? The guy has some kind of speech issue, he squelches and slurps a lot."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+  actions {
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 20
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc6c7664343151098fb4d1"
+  }
+  index: 4
+  text: "Just come back when you can!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "metSporky"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc68f564343151098fb4ae"
+  }
+  index: 5
+  text: "You bumming too, chum? You don\'t look like no dreg to me!"
+  branches {
+    responseText: "It has been a while... I have had my rough spots in life. Listen, you don\'t happen to have seen or talked to a strange outsider lately?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "metSporky"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc698f64343151098fb4b1"
+  }
+  index: 6
+  text: "Lots of outsiders arrive here, and the majority of them are strange... What was so strange about them?"
+  branches {
+    responseText: "The guy was wearing a very dark mage outfit and his speech is squelched and slurpy."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc6a1864343151098fb4b4"
+  }
+  index: 7
+  text: "Well yeah, there was this guy... He talked like his mouth was always full of water or some other fluid. Pretty darn distracting. He was showing around an image of a young girl and asking if anyone had seen her. Of course old Sporky doesn\'t just tell any damn dark mage if he has seen any young girls around."
+  branches {
+    responseText: "Very interesting, you don\'t happen to know where he came from? And about that girl, have you seen a lonely girl around here lately? Absent minded, as if in a trance?"
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc6d4c64343151098fb4ee"
+  }
+  index: 8
+  text: "The answer to both questions is yes, but more info will cost you 20 Nuyen!"
+  branches {
+    responseText: "Fine, here\'s your 20 Nuyen. Now talk..."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 20
+        }
+      }
+    }
+    nextNodeIndex: 9
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I can\'t afford that right now, can I give you something else? Or do something for you?"
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc6e5164343151098fb4f2"
+  }
+  index: 9
+  text: "{{GM}}The Dwarf quickly stashes away his credstick, takes out an apple and bites into it.{{/GM}}\n\nSo this girl, she showed up here in front of the station in the middle of the night a few days back. Seems totally lost the little one. Didn\'t last long, though. Big limo shows up, big Troll in a suit and fancy hornjob gets out and ushers the girl into the limo. They drove off towards the bad part of the Barrens. All I know.\n\nNow to where the guy came from... I don\'t really know myself, but I know that the Rickshaw Driver over there drove him off after he talked to the ganger at the crossroads. I also happen to know that Missy lightened one of his bag. You got to be careful around her, quick elven fingers. She might know where he came from.\n\nThat\'s all I know, chummer."
+  branches {
+    responseText: "Wiz intel, chum."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+  actions {
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 20
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "gotSporkyIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gather information from the Homeless Dwarf"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "finishedDwarf"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc6f9264343151098fb50e"
+  }
+  index: 10
+  text: "Hmpf. Actually, there is nothing you can do for me right now. But if we call it a favour I\'ll tell you what you wanna know..."
+  branches {
+    responseText: "That\'s fine. I\'ll owe you one. Now spill it."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc703364343151098fb52d"
+  }
+  index: 11
+  text: "{{GM}}The Dwarf rubs his hands together.{{/GM}}\n\nSo this girl, she showed up here in front of the station in the middle of the night a few days back. Seems totally lost the little one. Didn\'t last long, though. Big limo shows up, big Troll in a suit and fancy hornjob gets out and ushers the girl into the limo. They drove off towards the bad part of the Barrens. All I know.\n\nNow to where the guy came from... I don\'t really know myself, but I know that the Rickshaw Driver over there drove him off after he talked to the ganger at the crossroads. I also happen to know that Missy lightened one of his bag. You got to be careful around her, quick elven fingers. She might know where he came from.\n\nThat\'s all I know, chummer."
+  branches {
+    responseText: "Thanks. That was useful information."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "oweSporkyFavour"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "gotSporkyIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Gather information from the Homeless Dwarf"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "finishedDwarf"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc728664343151098fb5cd"
+  }
+  index: 12
+  text: "So did you manage to get me the Nuyen for the intel?"
+  branches {
+    responseText: "Yes, my credstick is ready."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 20
+        }
+      }
+    }
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Not yet."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc738d64343151098fb64d"
+  }
+  index: 13
+  text: "How are you, chummer? I hope you find the girl, or that guy... Whatever!"
+  branches {
+    responseText: "Thanks, Sporky."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fc627c64343143098fb56d"
+  }
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "metSporky"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "gotSporkyIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "metSporky"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 12
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "gotSporkyIntel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 13
+}

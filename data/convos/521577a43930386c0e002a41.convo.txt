@@ -1,0 +1,155 @@
+idRef {
+  id: "521577a43930386c0e002a41"
+}
+ui_name: "ch02_hansenACoyDTower"
+nodes {
+  idRef {
+    id: "521577b63930386c0e002a48"
+  }
+  index: 0
+  text: "Very good, very good. T-shhh. You show promise... I hope you learn quickly...\n\nNow for the second sacrifice... the girl..."
+  branches {
+    responseText: "You want me to kill Annie, too?"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Dr. Hansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "521577b63930386c0e002a4b"
+  }
+  index: 1
+  text: "No, don\'t kill her... Bring her to me... T-shhh...\n\nWe will then discuss the terms of your training...\n\n{{GM}}Dr. Hansen turns to his assistant{{/GM}}\n\nIf you tell anyone about what you have sheen tonight you will die, undershtood?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521577b63930386c0e002a4e"
+  }
+  index: 2
+  text: "Absolutely... I... err... I will go back to the studying the book you gave me..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5214dd9d3930385c0200013e"
+  }
+}
+nodes {
+  idRef {
+    id: "521577b63930386c0e002a51"
+  }
+  index: 3
+  text: "That\'s a good girl right there..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5214de4f3930385c02000143"
+  }
+}
+nodes {
+  idRef {
+    id: "521577b63930386c0e002a54"
+  }
+  index: 4
+  text: "About that book that I gave you... I have another use for it...\n\n{{GM}}Dr. Hansen turns his attention back to you{{/GM}}\n\nAs a token of appreciation I will give you this book... If you are able to learn how to use it then I can teach you more... It is very simple, but powerful magic...\n\nJust take it from that table over there in the conference room before you leave..."
+  branches {
+    responseText: "Ok, thanks. We will meet in your offices in the DAGON CORP tower when I got Annie?"
+    nextNodeIndex: 5
+  }
+}
+nodes {
+  idRef {
+    id: "521577b63930386c0e002a57"
+  }
+  index: 5
+  text: "Indeed... Leave now and get the girl.."
+  branches {
+    responseText: "Okay, I will see you in a bit..."
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Take the book"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "5214de443930385c02000142"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

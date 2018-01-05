@@ -1,0 +1,720 @@
+idRef {
+  id: "52263e78393038ac0f00320e"
+}
+ui_name: "ch04-tacomaTriad"
+nodes {
+  idRef {
+    id: "52263e81393038ac0f003214"
+  }
+  index: 0
+  text: "{{GM}}The Triad member grins as you approach, she seems to be relaxed{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5226413b393038ac0f003258"
+  }
+  index: 1
+  text: "Hoi! Whatcha want, friend?"
+  branches {
+    responseText: "Can you tell me about the Triad\'s operation here in Tacoma?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Can I help you with any Yakuza drek? {{GM}}mission{{/GM}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobType"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "Do you have any news for me?\n{{CC}}Triad reputation: 3{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch03_levelTriad"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_knowAboutCoffinHotel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_knowAboutCoffinHotel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "I\'m leaving!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5226413b393038ac0f00325b"
+  }
+  index: 2
+  text: "Not really, I\'m just a warrior... You would have to talk to a higher ranking member about that...\n\nAll I know is that we are supposed to make the Yak\'s lives as hard as possible in this district!"
+  branches {
+    responseText: "Okay, I guess I will have to help you guys out if I want to gain reputation to meet a higher ranked member?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5226413b393038ac0f00325e"
+  }
+  index: 3
+  text: "Hai! You can help us with the Yak\'s here and maybe eventually you\'ll get the attention of one of our bosses..."
+  branches {
+    responseText: "Okay, thanks."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5226414f393038ac0f00326d"
+  }
+  index: 4
+  text: "Hai! There is always something we can do to make their lives miserable..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_jobType"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 1
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_targetHouse"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 1
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch04_jobFaction"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52264cbf393038ac0f0033a5"
+  }
+  index: 5
+  text: "Go to the house in the northwest region of this district that I marked for you on your PDA and enter the house..."
+  branches {
+    responseText: "What do you want me to do?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobType"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 6
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "What do you want me to do?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobType"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 7
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "What do you want me to do?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch04_jobType"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52264ce7393038ac0f0033a9"
+  }
+  index: 6
+  text: "A merchant lives there, he is friendly with the Yaks and we want to him to pay us protection money from now on!\n\nI want you to get that money for us... You can keep half of it, but make sure not to kill the guy... Killing merchants is bad for business and might lead to another gang war!"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52264d31393038ac0f0033c6"
+  }
+  index: 7
+  text: "A few Yakuza warriors use this house as their base of operations at the moment.\n\nI want you to go in and eliminate them..."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52264d86393038ac0f0033c9"
+  }
+  index: 8
+  text: "The place is used a safehouse and they are prolly hiding some weapons or other stuff in there that\'s valuable.\n\nI want you to place these explosives at the marked positions and then get out of the house, if you know what I mean..."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230a062393038e80d005d22"
+  }
+  index: 9
+  text: "Actually, yes. There\'s this corp guy who has been asking people questions about the incident at the Zeitgeist Robotics building... I know you had something to do with that, right?"
+  branches {
+    responseText: "I might have had something to do with that... why?"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "You are wrong, I had nothing to do with that!"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230a0c6393038e80d005d26"
+  }
+  index: 10
+  text: "Well in that case you might want to check him out, he lives in the coffin hotel in the eastern part of this district, but be careful, he looked like he could handle himself and others, if you know what I mean..."
+  branches {
+    responseText: "Thanks, I might take a look."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5230a14f393038e80d005d2a"
+  }
+  index: 11
+  text: "Of course not!"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52263ea5393038ac0f003217"
+  }
+  index: 12
+  text: "{{GM}}The Triad member eyes you suspiciously as you approach. She steadies her weapon{{/GM}}\n\nWhat do you want? You been causing too much trouble for us, drekhead!"
+  branches {
+    responseText: "{{CC}}Attack{{/CC}}"
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "triadA"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "triad1"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 5
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Display Text over Actor"
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TextPopupStyle"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "We have a slotted Yak-lover going postal here!"
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 0
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Leave{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch03_levelTriad"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch03_levelTriad"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 12
+}

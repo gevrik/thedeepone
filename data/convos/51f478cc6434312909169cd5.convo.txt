@@ -1,0 +1,40 @@
+idRef {
+  id: "51f478cc6434312909169cd5"
+}
+ui_name: "Vax Shop"
+nodes {
+  idRef {
+    id: "51f478d96434312909169cdb"
+  }
+  index: 0
+  text: "I sell gear for mages? Want to have a look?"
+  branches {
+    responseText: "Show me the stuff!"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51f4789d6434312909169cd3"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Not now."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f4789d6434312909169cd3"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

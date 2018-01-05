@@ -1,0 +1,8 @@
+id: "or_researchDevice"
+type: ItemType_QuestItem
+uirep {
+  name: "Research Device"
+  description: "This device can be used to research questions that someone asks you to get a correct answer. This device only works a few times before the questioner will get suspicious."
+}
+credentials: 0
+sorting_group: "Quest"

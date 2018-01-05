@@ -1,0 +1,317 @@
+idRef {
+  id: "52100a8d64343161026ce0ed"
+}
+ui_name: "or_worker5"
+nodes {
+  idRef {
+    id: "52100a9464343161026ce0f3"
+  }
+  index: 0
+  text: "{{GM}}This looks like a supervisor, he has a big desk and an important chair.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52100b4a64343161026ce119"
+  }
+  index: 1
+  text: "I have not seen your face before, you must be a new recruit!"
+  branches {
+    responseText: "Indeed! I wanted to look at your terminal for a second..."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Erm, yes. I\'m leaving!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52100b7064343161026ce11d"
+  }
+  index: 2
+  text: "Ha! I guess you are new to the office world... This is my terminal, the supervisor\'s terminal... You\'re not allowed to even touch it!"
+  branches {
+    responseText: "Well, your supervisor has told me to look at your terminal, so sorry, I have to do it!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Isn\'t it corporate customs to induct your new recruits at the supervisor\'s desk?\n{{CC}}Etiquette: Corporate{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 13
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 5
+    onlyOnce: true
+    idRef {
+      id: "52100d4164343161026ce177"
+    }
+  }
+  branches {
+    responseText: "I guess I will leave then..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52100bb164343161026ce120"
+  }
+  index: 3
+  text: "Hehe! I am sure you don\'t even know who my supervisor is!"
+  branches {
+    responseText: "{{CC}}Use the research device to find out the name of this employee\'s supervisor{{/CC}}\n{{GM}}Use up research device{{/GM}}"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "or_researchDevice"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "52100c8264343161026ce147"
+    }
+  }
+  branches {
+    responseText: "Hmm... yeah... worth a try..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52100c3764343161026ce143"
+  }
+  index: 4
+  text: "Oh... yes, I guess I was wrong... You can examine my terminal, I have nothing to hide! I will get a coffee in the meantime..."
+  branches {
+    responseText: "It won\'t take long..."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "worker5distracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Prop)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5210056064343161026cdff7"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "52100e1664343161026ce1bc"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52100d3064343161026ce176"
+  }
+  index: 5
+  text: "You are right... Well, you sit down while I get us a cup of soycaf!"
+  branches {
+    responseText: "Take your time..."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "worker5distracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Prop)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5210056064343161026cdff7"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "52100e1664343161026ce1bc"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

@@ -1,0 +1,33 @@
+idRef {
+  id: "521b00fc39303888120026a7"
+}
+ui_name: "ch03_part1end"
+nodes {
+  idRef {
+    id: "521b01ae39303888120026b7"
+  }
+  index: 0
+  text: "This concludes part 1 of chapter 3. Please wait for the next update to be released!\n\nYou will not have to repeat the fight, you will be able to enter the office right-away the next time."
+  branches {
+    responseText: "{{CC}}Go to the Underground Market{{/CC}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "Rooftop Market"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

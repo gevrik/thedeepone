@@ -1,0 +1,8 @@
+id: "ch04-managerSenseNetAC"
+type: ItemType_QuestItem
+uirep {
+  name: "Sense/Net Manager Access Card"
+  description: "You found this access card for the manager entrance to the Sense/Net archives on Rick Mercer."
+}
+credentials: 0
+sorting_group: "Quest"

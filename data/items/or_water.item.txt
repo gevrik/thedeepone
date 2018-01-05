@@ -1,0 +1,8 @@
+id: "or_water"
+type: ItemType_QuestItem
+uirep {
+  name: "Glass of Water"
+  description: "A fresh, cold glass of water..."
+}
+credentials: 0
+sorting_group: "Quest"

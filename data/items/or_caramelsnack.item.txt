@@ -1,0 +1,8 @@
+id: "or_caramelSnack"
+type: ItemType_QuestItem
+uirep {
+  name: "Caramel Snack Bar"
+  description: "A yummy caramel and chocolate snack bar."
+}
+credentials: 0
+sorting_group: "Quest"

@@ -1,0 +1,110 @@
+idRef {
+  id: "530a4b55326437c4110044bf"
+}
+ui_name: "ch04-ev2_carThiefThank"
+nodes {
+  idRef {
+    id: "530a4b63326437c4110044c5"
+  }
+  index: 0
+  text: "Thanks a lot for helping me out! They would\'ve certainly killed me!"
+  branches {
+    responseText: "It\'s fine, just tell me where your fence lives!"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "530a5312326437580c004293"
+  }
+  index: 1
+  text: "Ok - sure, I will have to get outta town anyway! Follow me and I\'ll bring you to his house - but then I\'ll slot it!"
+  branches {
+    responseText: "Sure. Lets go!"
+    actions {
+      ops {
+        functionName: "Set Actor In Passive Mode"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "530a286f3264375013004291"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Patrol"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "530a286f3264375013004291"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (PatrolRoute)"
+            args {
+              string_value: "530a4baf326437c411004542"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Trigger"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "530a4ede326437c411004666"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

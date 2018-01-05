@@ -1,0 +1,294 @@
+idRef {
+  id: "51fc112b6434312b08fa4db1"
+}
+ui_name: "Coyote Annie Found"
+nodes {
+  idRef {
+    id: "51fc11346434312b08fa4db7"
+  }
+  index: 0
+  text: "{{GM}}Coyote approaches you while Annie is busy humming a strange melody.{{/GM}}\n\nWhat do you think happened to her? She does not seem normal, does she? Do you think they put some BTL into her brain? I have seen a lot of chipheads, but she seems different."
+  branches {
+    responseText: "I am not sure. Could be - very likely even. Remember the Rusted Stilettos use direct upload BTL. She\'s got a plug in her head. Maybe they fed her some of the really crazy drek?"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fbe3d56434312b08fa4d11"
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "51fc01c96434312b08fa4d1c"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc122b6434312b08fa4dba"
+  }
+  index: 1
+  text: "Yeah, it could be. But I dunno. My older sister has a daughter that behaves just like Annie. She is autistic. Wiz kid, but can\'t deal with the real world."
+  branches {
+    responseText: "Nonsense, she is high on some Ganger drek is all!"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "You have an older sister? Is she as beautiful as you?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "coyoteAffection"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Yes, she shows the behaviour patterns of an autistic child. I think you are right. Good spot, Coyote! But that doesn\'t really help us, does it?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 11
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fbe3d56434312b08fa4d11"
+  }
+}
+nodes {
+  idRef {
+    id: "51fc13556434312b08fa4dc6"
+  }
+  index: 2
+  text: "{{GM}}Coyote is clearly annoyed at your rebuttal.{{/GM}}\n\nOkay, if you say so, chummer...\n\nSo what\'s the plan now?"
+  branches {
+    responseText: "Yeah, we just need to wait a little and she will be clear again. I hope."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fbe3d56434312b08fa4d11"
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteAffection"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc13d56434312b08fa4dc9"
+  }
+  index: 3
+  text: "{{GM}}Coyote blushes.{{/GM}}\n\nI am not beautiful, have you looked at the scar in my face? That was the day I met you. But I don\'t want to talk about it now. We are busy, aren\'t we?"
+  branches {
+    responseText: "You are right, we should return to the Market and see if we can communicate with her there. Or maybe there is someone there who could help her."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fbe3d56434312b08fa4d11"
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "coyoteAffection"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc14846434312b08fa4dcc"
+  }
+  index: 4
+  text: "Not at the moment, but maybe there\'s someone at the Market who can help her? It\'s worth a try..."
+  branches {
+    responseText: "Sounds like a good idea. We should get out of here."
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fbe3d56434312b08fa4d11"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "knowAnnieAutism"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fc14d36434312b08fa4dcf"
+  }
+  index: 5
+  text: "Let\'s roll."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fbe3d56434312b08fa4d11"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

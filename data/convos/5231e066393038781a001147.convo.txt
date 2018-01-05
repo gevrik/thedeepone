@@ -1,0 +1,52 @@
+idRef {
+  id: "5231e066393038781a001147"
+}
+ui_name: "ch04-matrixSafeData"
+nodes {
+  idRef {
+    id: "5231e077393038781a00114d"
+  }
+  index: 0
+  text: "YOCM Customer Database"
+  branches {
+    responseText: "Room #1: Gloria Roth"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Room #2: vacant"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Room #3: vacant"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Room #4: Tom Green"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Room #5: Diana White"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Room #6: vacant"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Room #7: Dennis Gatow"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Room #8: Felix Bloom"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Room #9: Claire Kundam"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

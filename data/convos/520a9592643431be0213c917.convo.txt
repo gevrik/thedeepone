@@ -1,0 +1,672 @@
+idRef {
+  id: "520a9592643431be0213c917"
+}
+ui_name: "ch02_jaycelyn"
+nodes {
+  idRef {
+    id: "520a95b1643431be0213c91d"
+  }
+  index: 0
+  text: "Hoi, chummer! What can I do ya for?"
+  branches {
+    responseText: "I would like some information..."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Can I see what you offer?"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Do you have any work for me? {{CC}}mission{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_hasJayceJob"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "Are there any other places that sell gear in this district?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutTechStore"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "I\'m going!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a9657643431be0213c92f"
+  }
+  index: 1
+  text: "Okay, shoot. What do you wanna know?"
+  branches {
+    responseText: "What can you tell me about the Riffruffers?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowsAboutRR"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520bad306434318004c58a29"
+    }
+  }
+  branches {
+    responseText: "You know anything about the museum?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutMuseum"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520bad426434318004c58a2a"
+    }
+  }
+  branches {
+    responseText: "What is going on with this DAGON CORP?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutDagonCorp"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520bad4e6434318004c58a2b"
+    }
+  }
+  branches {
+    responseText: "Can you tell me more about this club?"
+    nextNodeIndex: 5
+    onlyOnce: true
+    idRef {
+      id: "520bad6a6434318004c58a2c"
+    }
+  }
+  branches {
+    responseText: "Do you know Dr. Armitage?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutArmitage"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520baf306434318004c58b0d"
+    }
+  }
+  branches {
+    responseText: "Do you know someone called Dr. Alexander Hansen?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutHansen"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 7
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520baf366434318004c58b0e"
+    }
+  }
+  branches {
+    responseText: "Do you know a company called Ashpool Systems?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_knowAboutAshpool"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520bae576434318004c58aa2"
+    }
+  }
+  branches {
+    responseText: "Can we talk about something else?"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a96c0643431be0213c947"
+  }
+  index: 2
+  text: "Bunch of thick-headed Metas who chose the wrong side to fight for... It\'s not like they have a chance against a corp like DAGON... Their leader tried to recruit me a few times, but I know where the Nuyens are..."
+  branches {
+    responseText: "Indeed."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a970a643431be0213c954"
+  }
+  index: 3
+  text: "Never been there..."
+  branches {
+    responseText: "Aha, okay."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a9721643431be0213c958"
+  }
+  index: 4
+  text: "They pretty much running the business-side of town... I run the criminal underground side, hahahaha! I stay out of their way, they stay out of mine. Simple."
+  branches {
+    responseText: "Sounds good."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a975e643431be0213c95c"
+  }
+  index: 5
+  text: "This club is my base of operations. It\'s safe from both the Star and the gangers. I usually have some stuff to sell, if not, come back later. Club is pretty well-visited, all the wageslaves come here after work."
+  branches {
+    responseText: "Okay, thanks."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520bae7a6434318004c58aa6"
+  }
+  index: 6
+  text: "Ah, yes. Our local super-academic. He runs the museum - has been for ages... A real, how did they call these people... bookworm, yes that\'s it. Hahaha! That guy is always doing work for DAGON CORP - it\'s been so much that he had to close down the museum... Almost never see him anymore since they\'ve been running this town..."
+  branches {
+    responseText: "Thanks, I have another question."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520bad9d6434318004c58a37"
+  }
+  index: 7
+  text: "Hmm... nope! Oh, wait! Isn\'t that one of the beasts at DAGON CORP? Should be their head of Research&Development... And since that place is pretty much all R&D he must be one important wageslave..."
+  branches {
+    responseText: "Okay, thanks."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520bacef6434318004c58a25"
+  }
+  index: 8
+  text: "Nope, never heard of them..."
+  branches {
+    responseText: "Shame!"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a95ee643431be0213c922"
+  }
+  index: 9
+  text: "Sure. Have a look..."
+  branches {
+    responseText: "{{GM}}The Ork Shaman opens her coat to reveal some wares...{{/GM}}"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "520a93f6643431be0213c916"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a97f0643431be0213c9a4"
+  }
+  index: 10
+  text: "Hmm, I need someone to deliver a passage to one of my contacts in the district... Are you up for that?"
+  branches {
+    responseText: "Sure, tell me where to bring it and I\'m on my way there..."
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Deliver the package for Jaycelyne"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "ch02_hasJayceJob"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Waypoint on Prop"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PrimaryOrSecondary"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "520a8c19643431be0213c83a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Maybe later."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520a9833643431be0213c9a9"
+  }
+  index: 11
+  text: "Ok. And don\'t try anything funny, the box is secured, so you can\'t get to what\'s inside..."
+  branches {
+    responseText: "Sure, don\'t worry."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520aa95f643431be0213cc39"
+  }
+  index: 12
+  text: "There is a tech store in the southeastern region of this district - next to the fruit market."
+  branches {
+    responseText: "Thanks!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_knowAboutTechStore"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

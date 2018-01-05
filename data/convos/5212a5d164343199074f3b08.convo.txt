@@ -1,0 +1,338 @@
+idRef {
+  id: "5212a5d164343199074f3b08"
+}
+ui_name: "ch02_armitage"
+nodes {
+  idRef {
+    id: "5212a5e364343199074f3b12"
+  }
+  index: 0
+  text: "Err... I mean... thanks... I never thought he would be... one of those things..."
+  branches {
+    responseText: "Take it easy, Dr. Armitage. You\'re still alive, and he ain\'t."
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "5212a88064343199074f3b75"
+    }
+  }
+  branches {
+    responseText: "You better tell me everything you know about this cult if you don\'t want to end like him!"
+    nextNodeIndex: 10
+    onlyOnce: true
+    idRef {
+      id: "5212a87964343199074f3b74"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Talk to Dr. Armitage"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5212a62564343199074f3b17"
+  }
+  index: 1
+  text: "Yes, thanks to you... His research... I should\'ve known..."
+  branches {
+    responseText: "What research did you do for him?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212a63e64343199074f3b1a"
+  }
+  index: 2
+  text: "Very rare and old books... Written by madmen, but brilliant madmen... Their stories and prophecies, they will drive you insa... err.. to the edge of madness, but it is such important knowledge..."
+  branches {
+    responseText: "Are you feeling alright, Dr. Armitage?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212a69164343199074f3b1d"
+  }
+  index: 3
+  text: "Yes, err... excuse me... I need to sit down..."
+  branches {
+    responseText: "Can you show me some of the books?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212a6d264343199074f3b22"
+  }
+  index: 4
+  text: "There is only one left in the museum, Hansen\'s guards took all the others earlier tonight... The book is on the table over there... The other books have been digitized, all the files are on my computer in my office..."
+  branches {
+    responseText: "I guess you don\'t mind if I take that book. We will also copy those files."
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212a70164343199074f3b25"
+  }
+  index: 5
+  text: "Err... Of course, I mean - the book is very brittle, you have to be very careful with it! You can access my computer at any time, it is not secured..."
+  branches {
+    responseText: "You are coming with me, Doctor - this place is no longer safe for you..."
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Thanks. You should get out of town, Dr. Armitage..."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Take the book"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5212a73964343199074f3b29"
+  }
+  index: 6
+  text: "What do you mean?"
+  branches {
+    responseText: "These DAGON goons will be looking for their Dr. Hansen..."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212a75d64343199074f3b2c"
+  }
+  index: 7
+  text: "I understand. I am coming with you."
+  branches {
+    responseText: "Let\'s go!"
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "52126f8f6434312307491fbc"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "armitageInCrew"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212a7ad64343199074f3b35"
+  }
+  index: 8
+  text: "What do you mean?"
+  branches {
+    responseText: "These DAGON goons will be looking for their Dr. Hansen..."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212a7ad64343199074f3b38"
+  }
+  index: 9
+  text: "I understand. I will leave... But I have to take a few books first..."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52126f8f6434312307491fbc"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor Wander Range"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "52126f8f6434312307491fbc"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 8
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "52126f8f6434312307491fbc"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5212a6bb64343199074f3b1f"
+  }
+  index: 10
+  text: "Of course, of course... Anything you want to know..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5212a85264343199074f3b57"
+  }
+  index: 11
+  text: "This is a big mess, chummer! We better get out of here quickly..."
+  branches {
+    responseText: "We have a little bit of time, Hansen and his goons are dead..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  sourceInSceneRef {
+    id: "52121bb56434318e0663962e"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

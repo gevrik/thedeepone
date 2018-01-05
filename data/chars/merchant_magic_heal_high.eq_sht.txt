@@ -1,0 +1,10 @@
+unique_id: "Merchant_Magic_Heal_High"
+equipment {
+  prefab_name: "SpellHealLightWounds"
+}
+equipment {
+  prefab_name: "SPellHealMediumWounds"
+}
+equipment {
+  prefab_name: "SpellHealSeriousWounds"
+}

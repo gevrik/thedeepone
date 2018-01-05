@@ -1,0 +1,44 @@
+idRef {
+  id: "5223374d3930387811002f31"
+}
+ui_name: "ch03_publicMatrixConsole"
+nodes {
+  idRef {
+    id: "5223375a3930387811002f37"
+  }
+  index: 0
+  text: "ZEIT OS 3.0\n\nPlease make a selection:"
+  branches {
+    responseText: "{{CC}}Read Zeitgeist Robotics Product Informations{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Public Matrix Jack-In{{/CC}}"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Leave{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "522337f93930387811002f4c"
+  }
+  index: 1
+  text: "{{GM}}WIP{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "522338013930387811002f4e"
+  }
+  index: 2
+  text: "Who will enter the Matrix?"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

@@ -1,0 +1,57 @@
+idRef {
+  id: "51f476e16434312909169cc1"
+}
+ui_name: "Myrna Shop"
+nodes {
+  idRef {
+    id: "51f476f06434312909169cc7"
+  }
+  index: 0
+  text: "Do you want to buy some stuff?"
+  branches {
+    responseText: "Yes, let me see what you have to offer."
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51f474b46434312909169cbf"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I would like to get some cyberwear."
+    actions {
+      ops {
+        functionName: "Open Cyberware Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51f474b46434312909169cbf"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Nothing for now."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51f474b46434312909169cbf"
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

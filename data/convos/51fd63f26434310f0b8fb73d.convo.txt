@@ -1,0 +1,706 @@
+idRef {
+  id: "51fd63f26434310f0b8fb73d"
+}
+ui_name: "Zoex Market"
+nodes {
+  idRef {
+    id: "51fd64076434310f0b8fb747"
+  }
+  index: 0
+  text: "Hoi, chummer. Looking for some equipment mods?"
+  branches {
+    responseText: "Have we met before?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "metZoex"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "suspiciousZoex"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "51fd67ba6434310f0b8fb7e9"
+    }
+  }
+  branches {
+    responseText: "Ha! Look who we have here: my stalker. Now you also followed me here!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "metZoex"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "suspiciousZoex"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "51fd665f6434310f0b8fb757"
+    }
+  }
+  branches {
+    responseText: "How do equipment mods work?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd62f96434310f0b8fb73b"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd65076434310f0b8fb74c"
+  }
+  index: 1
+  text: "I don\'t think so. If we have, then it was a coincidence."
+  branches {
+    responseText: "Strange. I am pretty sure we ran into each other before."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd62f96434310f0b8fb73b"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd65506434310f0b8fb74f"
+  }
+  index: 2
+  text: "What are you on about? We have not met before..."
+  branches {
+    responseText: "Ahhh. Still denying it. So if we have never met, how do I know that you are \"Zoex\"?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd62f96434310f0b8fb73b"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd65d26434310f0b8fb752"
+  }
+  index: 3
+  text: "Zoex is a regular here. She sells these fancy equipment modifiers. Don\'t ask me, she can explain the whole thing to you a lot better than I could."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fb75eb643431e3059ef96e"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd66226434310f0b8fb755"
+  }
+  index: 4
+  text: "I could, but why would I show someone who accuses me of stalking them?"
+  branches {
+    responseText: "Hmm. It\'s fine, but I will keep an eye on you. Now about those mods..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  sourceInSceneRef {
+    id: "51fd62f96434310f0b8fb73b"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd69806434310f0b8fb810"
+  }
+  index: 5
+  text: "You can use them one of your pieces of equipment to enhance them. I can create damage mods, or accuracy mods. I can also mod your outfit or your deck. All I need are the ingredients for the mod and a little Nuyen for my trouble..."
+  branches {
+    responseText: "That sounds amazing. So what do you actually need to create those mods?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd62f96434310f0b8fb73b"
+  }
+}
+nodes {
+  idRef {
+    id: "51fd6a116434310f0b8fb84f"
+  }
+  index: 6
+  text: "You can find these things during your runs, but you need to know what to look for. I will give you a little crash-course now. From now on, you will be able to see the ingredients that I need. Just bring some to me and I will create the mods for you. Oh, I also offer a lot of new gear from the Street Samurai Catalog. My good mate Tracker has opened this new source of equipment for us... Let me know if you want to take a look..."
+  branches {
+    responseText: "Thanks, this is good drek! {{CC}}Zoex teaches you which items to look out for on your runs.{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd62f96434310f0b8fb73b"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "knowsAboutMods"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "51fd6acf6434310f0b8fb896"
+  }
+  index: 7
+  text: "Hoi, chummer. You have $(scene.currentWMods) weapon mods and $(scene.currentAMods) armor mods! Unfortunately I\'m currently not able to help you with these, as I am waiting for some specialized equipment to arrive that is needed to modify your weapons and mods.\n\nCheck back soon!"
+  branches {
+    responseText: "I would like to see the new gear you offer."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter1complete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51fd62f96434310f0b8fb73b"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Can I get some Cyberware?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "chapter1complete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Open Cyberware Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "51fd62f96434310f0b8fb73b"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "No, but I have these Nanobots! Do you know what they do exactly?"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch03_nanos"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Nevermind. I will be back later."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "51fd62f96434310f0b8fb73b"
+  }
+}
+nodes {
+  idRef {
+    id: "5223c58f39303884030019a9"
+  }
+  index: 8
+  text: "Let me have a look! Very interesting... Where did you get that? Hang on, I don\'t really want to know. If you let me hang on to them I can find out what they do! What do you say?"
+  branches {
+    responseText: "No way! I\'ll keep them!"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Ok, how long will it take?"
+    actions {
+      ops {
+        functionName: "Remove Item from Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "ch03_nanos"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "51f4026a643431dd08e509ff"
+            }
+            args {
+              string_value: "main_givenZoexNanos"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "You can have them for 20.000 nuyen!"
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "I have to think about it!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5223c5e539303884030019af"
+  }
+  index: 9
+  text: "That\'s okay! Just let me know if you change your mind..."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5223c5f639303884030019b1"
+  }
+  index: 10
+  text: "Not sure. I will drop you a message on your vidphone when I know..."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5223c63c39303884030019b3"
+  }
+  index: 11
+  text: "Deal! Here\'s the nuyen!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "ch03_nanos"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 20000
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "knowsAboutMods"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "knowsAboutMods"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 7
+}

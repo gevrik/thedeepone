@@ -1,0 +1,8 @@
+id: "ch03_nanos"
+type: ItemType_QuestItem
+uirep {
+  name: "Nanobot Injector"
+  description: "You found this Nanobot Injector in the storage facility of the Zeitgeist Robotics office in Tacoma."
+}
+credentials: 0
+sorting_group: "Quest"

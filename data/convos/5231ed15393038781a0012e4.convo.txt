@@ -1,0 +1,95 @@
+idRef {
+  id: "5231ed15393038781a0012e4"
+}
+ui_name: "ch04-payphoneCH"
+nodes {
+  idRef {
+    id: "5231ed1e393038781a0012ea"
+  }
+  index: 0
+  text: "Who do you want to call?"
+  branches {
+    responseText: "{{CC}}Call Krash Override for Matrix support!{{/CC}}\n{{GM}}1,500 nuyen{{/GM}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1500
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 1500
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "5231eda2393038781a0012fc"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Control"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5231eda2393038781a0012fc"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PlayerOrAI"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    onlyOnce: true
+    idRef {
+      id: "5231f9e7393038781a001778"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Hang up{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

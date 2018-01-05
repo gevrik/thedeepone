@@ -1,0 +1,76 @@
+id: "Bound Zombie Spirit 6"
+type: ItemType_Consumable
+uirep {
+  icon: "icon_naturespirit"
+  name: "Force 6 Zombie Fetish"
+  description: "Summons a Force 6 Zombie Spirit. The fetish is consumed when used."
+  thumbnail: ""
+}
+equipPrefabName: ""
+anim_type: AnimType_Spell
+coreAttribute: Attribute_Magic
+coreSkill: Skill_SpiritSummoning
+coreSpecialization: Specialization_None
+forceRating: 6
+apCost: 0
+prereqStrings: "Player.SKILL.Skill_SpiritSummoning >= 1"
+maxAmmo: 0
+baseHPDamage: 0
+baseAPDamage: 0
+rangeModTable: 1
+rangeModTable: 1
+rangeModTable: 1
+rangeModTable: 1
+noiseLevel: 0
+noiseRounds: 0
+ammoReloadAPCost: 0
+spreadAngle: 0
+modelessAbilities: "SummonSpirit"
+affectsFriendly: true
+affectsEnemy: false
+affectsDecker: false
+canTargetSelf: true
+canTargetActor: false
+canTargetOccupiedGridPoint: false
+canTargetUnoccupiedGridPoint: true
+additionalTargets: -1
+isBuff: false
+isDebuff: false
+cooldown: 0
+cooldown_category: ""
+isMagic: true
+effectDuration: -1
+effectRadius: 0
+effectOnTile: false
+fxrep {
+  preActionFxName: ""
+  actionFxName: "BoundSpiritSummonAction"
+  postActionFxName: ""
+  hitReactionFxName: "GenericEmptyReaction"
+  missReactionFxName: "GunMissReaction"
+}
+character_sheet_id: "Ghoul Standard"
+equipment_sheet_id: "tdo_ghoulWeapon"
+character_prefab_id: "CreatureGhoulHumanMale"
+character_ui_name: "Risen"
+decking_default_weapon: ""
+decking_hardening: 0
+decking_body: 0
+decking_evasion: 0
+decking_max_ip: 0
+decking_max_ap: 0
+decking_program_limit: 0
+decking_esp_limit: 0
+reactions_per_use: 0
+credentials: 0
+ai_priority: 0
+intended_user: IntendedUser_Player
+cyberware_type: CyberwareType_None
+gear_bundle: ""
+outfit_texture: ""
+gear_prefab: ""
+gear_covers_arms: false
+gear_covers_hair: false
+gear_covers_face: false
+store_cost: 2500
+sorting_group: "Bound Spirits"

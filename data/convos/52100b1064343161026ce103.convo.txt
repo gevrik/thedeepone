@@ -1,0 +1,238 @@
+idRef {
+  id: "52100b1064343161026ce103"
+}
+ui_name: "or_worker6"
+nodes {
+  idRef {
+    id: "52100b1664343161026ce109"
+  }
+  index: 0
+  text: "{{GM}}This guy is browsing pron on his workstation. He quickly closes the window as you approach{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "52100e9664343161026ce1f1"
+  }
+  index: 1
+  text: "Wow! You scared me! What\'s going on?"
+  branches {
+    responseText: "I need to use your workstation..."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Nothing, bye."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52100ebf64343161026ce1f5"
+  }
+  index: 2
+  text: "And why should I let you?"
+  branches {
+    responseText: "Look, I won\'t tell the super that you\'re browsing dirt during office hours and you get a little tip for your trouble...\n{{CC}}Bribe: 100\302\245{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "52100f4a64343161026ce1fa"
+    }
+  }
+  branches {
+    responseText: "Because I am nice and I won\'t tell the supervisor about what you\'re looking at...\n{{CC}}Charisma: 4{{/CC}}"
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "52100f9464343161026ce20e"
+    }
+  }
+  branches {
+    responseText: "Nevermind, I\'m gone..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "52100f0f64343161026ce1f8"
+  }
+  index: 3
+  text: "Fair enough. You can use it... I\'m getting coffee..."
+  branches {
+    responseText: "Do that!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "worker6distracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Prop)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5210056064343161026ce00d"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "52100e1664343161026ce1bc"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 100
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "52100f9564343161026ce210"
+  }
+  index: 4
+  text: "Fair enough. You can use it... I\'m getting coffee..."
+  branches {
+    responseText: "Do that!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "worker6distracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Prop)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5210056064343161026ce00d"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "52100e1664343161026ce1bc"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

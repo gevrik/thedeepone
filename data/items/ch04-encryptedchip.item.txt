@@ -1,0 +1,8 @@
+id: "ch04-encryptedChip"
+type: ItemType_QuestItem
+uirep {
+  name: "Encrypted Datachip"
+  description: "You found this chip in the Coffin Motel in Tacoma Industrial District. It belonged to the person that was asking about your run in the Zeitgeist Office. You could try to decypher it in your home system!"
+}
+credentials: 0
+sorting_group: "Quest"

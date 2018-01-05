@@ -1,0 +1,8 @@
+id: "ec_passcard"
+type: ItemType_QuestItem
+uirep {
+  name: "Security Passcard"
+  description: "This security passcard belonged to the overseer at the docks, it allows access to the small maintenance office."
+}
+credentials: 0
+sorting_group: "Quest"

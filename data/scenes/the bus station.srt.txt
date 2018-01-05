@@ -1,0 +1,358 @@
+triggers {
+  name: "letItRain"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Environmental Effect Amount"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "EnvironmentalEffects"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 200
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "51fc4952643431a208265577"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+regions {
+  name: "New Region"
+  position {
+    x: -108
+    y: 26
+    width: 45
+    height: 24
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "51fc44d8643431a208265504"
+  }
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: "Seattle-Set3-Legwork"
+  loop_combat_music: true
+  loop_default_music: true
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: -89
+    y: 0
+    z: 28
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51fc451d643431a208265505"
+  }
+  character_instance {
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -88
+    y: 0
+    z: 27
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51fc4528643431a208265506"
+  }
+  character_instance {
+    prefab_name: "Story/CoyoteUgly"
+    character_sheet_id: "Story_Coyote_Lv4"
+    equipment_sheet_id: "Story_Coyote_Lv5"
+    character_mod {
+      stats {
+        body: 3
+        quickness: 3
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 2
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 2
+        close_combat: 1
+        throwing_weapons: 3
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 1
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 2
+        rifle: 0
+        shotgun: 2
+        smg: 0
+        edged: 1
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+    }
+    team_id: "Shadowrunners"
+    char_name: "Coyote"
+    GeneralTags: "isCoyote"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_left_arm: "Obvious Cyberarm"
+    portrait {
+      filename: "NPC_HumanFemale_CoyoteHealed"
+    }
+    description_bio: "Part time runner, full time badass. Product of the streets who mixes a mean cocktail."
+    karma: 203
+    hiring_cost_override: 1200
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -90
+    y: 0
+    z: 28
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "51fc452e643431a208265507"
+  }
+  character_instance {
+    prefab_name: "Core/HumanFemale"
+    character_sheet_id: "Generic_Lv6_Human_Melee"
+    character_mod {
+      stats {
+        body: -1
+        quickness: 3
+        strength: -3
+        charisma: 0
+        intelligence: 14
+        willpower: -1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 0
+        force: 0
+        morale: 24
+        discipline: 0
+        awareness: 24
+        perception: -20
+        authority: 0
+        protect_tether_range: 5
+        move_speed: 0
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: -2
+        close_combat: 5
+        throwing_weapons: -4
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 3
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 6
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeCautious
+      attackRandom: AttackStyle_BestOnly
+    }
+    equipment {
+      prefab_name: "CyberdeckExcalibur"
+    }
+    equipment {
+      prefab_name: "DroneSupportS_Wolfhound"
+    }
+    equipment {
+      prefab_name: "DroneSupportB_RoboDoc"
+    }
+    equipment {
+      prefab_name: "RiggerHawaiianShirt"
+    }
+    equipment {
+      prefab_name: "Sword 3 Katana"
+    }
+    team_id: "Shadowrunners"
+    char_name: "Annie"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    cyberware_jack: "Datajack"
+    portrait {
+      filename: "backer_humanfemale_grahamwilliams_tsilonsiereht"
+    }
+    portrait_code_override: "s6h1c4"
+    karma: 334
+    hiring_cost_override: 1000
+  }
+}
+goals {
+  name: "Find some clues to the stranger\'s identity"
+  type: GoalType_Primary
+  status: GoalStatus_Started
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "The Bus Station"
+parentStory: ""
+scene_title: "The Monorail Station"
+scene_subtitle: "Fishing for clues..."
+scene_synopsis: "The mage that attacked you in the basement of the Seamstress Union was reported to have an out-of-town accent. Many new arrivals of the Barrens take the Monorail to get here.\n\nThe usual low-lives of the Barrens should have seen someone. And if the stranger talked to anyone, his squelching voice might have drawn some attention.\n\nA monorail train clunks along loudly as you arrive at the station."
+scene_image: "loadingimage_c11-s2"
+scene_continue_button_skip: false
+scene_restore_runner_health: false
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: false
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Gangers"
+  affiliation: 1
+  affiliation: 0
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "LoneStar"
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Civilians"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+show_hiring_screen_on_scene_load: false
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 0
+hiring_minimum_karma: 0
+hiring_maximum_karma: 0
+roster_overrides {
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: false

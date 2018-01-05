@@ -1,0 +1,236 @@
+idRef {
+  id: "521e6f293930380c110026cd"
+}
+ui_name: "Yamatetsu Agent"
+nodes {
+  idRef {
+    id: "521e6f313930380c110026d3"
+  }
+  index: 0
+  text: "Hello! Can I interest you in our experimental skill reprogramming project called Eclipse Phase?"
+  branches {
+    responseText: "What is Yamatetsu?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "I want to reprogram my skillset!\n{{CC}}Nuyen: 1000{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1000
+        }
+      }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "resetToken"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 1000
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "resetToken"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "I\'m leaving!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521e6f8b3930380c110026d8"
+  }
+  index: 1
+  text: "Our motto is: \"Your mind is software, program it!\"\n\nI don\'t want to bore you with the details, so I will just summarize it in layman\'s terms:\n\nWe have revolutionized skillset reprogramming! Thanks to our research we can offer a full skill reset for affordable prices! We hope to be able to also offer full-body replacements for your mind!"
+  branches {
+    responseText: "Is it safe?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521e70133930380c110026db"
+  }
+  index: 2
+  text: "It is completely safe... well, almost completely safe... There is a chance of a very small memory loss, but it is so small that it is negligible... We have reduced our prices while customers are still experiencing this small memory loss from time to time!"
+  branches {
+    responseText: "Anything I have to keep in mind before reprogramming?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521e70923930380c110026de"
+  }
+  index: 3
+  text: "Yes, please leave all of your equipment in your stash! Some of your items might be removed on reprogramming, so it is much safer to leave them in the stash!"
+  branches {
+    responseText: "Thanks for the info!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "521e72eb3930380c11002701"
+  }
+  index: 4
+  text: "Thank you! Now activate the bio vat next to me to reprogram your mind!"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5223c50f393038840300197a"
+  }
+  index: 5
+  text: "Sorry, the Reprogramming is currently disabled! Please come again later!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "reskillDisabled"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "reskillDisabled"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 5
+}

@@ -1,0 +1,320 @@
+idRef {
+  id: "520fb85c643431fe016cdc58"
+}
+ui_name: "or_worker1"
+nodes {
+  idRef {
+    id: "520fb86c643431fe016cdc5e"
+  }
+  index: 0
+  text: "{{GM}}As you approach the programmer you notice him cursing{{/GM}}\n\nThis goddamn function isn\'t behaving as expected... Oh my, the deadline is closing in on me... How can I ever finish this bloody project!?!?\n\nIf only I hadn\'t forgotten my smokes at home..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520fb957643431fe016cdc74"
+  }
+  index: 1
+  text: "Hoi! You must be new here! Sorry I don\'t have much time, I have to finish this project!"
+  branches {
+    responseText: "Yeah... Kinda new... Listen, can you let me use your console for a minute or two?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Nevermind me!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520fb957643431fe016cdc77"
+  }
+  index: 2
+  text: "Sorry, that is strictly against company policy!"
+  branches {
+    responseText: "I understand."
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "520fb9e7643431fe016cdc85"
+    }
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Couldn\'t you make an exception? This is very important! Look, I will use my own keycard, too!\n{{CC}}Charisma: 4{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "520fbaf4643431fe016cdcb0"
+    }
+  }
+  branches {
+    responseText: "Okay, how about I give you this pack of smokes if you let me use it?\n{{CC}}Give pack of smokes{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "or_packSmokes"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "520fba97643431fe016cdc9c"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520fba37643431fe016cdc98"
+  }
+  index: 3
+  text: "I guess if you use your own keycard it\'s no problem.\n\n{{GM}}The programmer logs off from his console{{/GM}}"
+  branches {
+    responseText: "I won\'t be long!"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "worker1distracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "520fba14643431fe016cdc95"
+  }
+  index: 4
+  text: "Hmm... I could really use a smoke... The whole pack you say? Deal! But hurry up, I need finish this damn project!"
+  branches {
+    responseText: "Enjoy your smoke! I will be gone when you come back!"
+    actions {
+      ops {
+        functionName: "Set Actor In Passive Mode"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Target Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Target Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "520fbe88643431fe016cdd51"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "worker1distracted"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "or_packSmokes"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

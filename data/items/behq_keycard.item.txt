@@ -1,0 +1,8 @@
+id: "behq_keycard"
+type: ItemType_QuestItem
+uirep {
+  name: "Access Keycard"
+  description: "This keycard can be used to open a secured door."
+}
+credentials: 0
+sorting_group: "Quest"

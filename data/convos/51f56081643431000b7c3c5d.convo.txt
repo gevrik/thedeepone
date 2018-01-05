@@ -1,0 +1,86 @@
+idRef {
+  id: "51f56081643431000b7c3c5d"
+}
+ui_name: "Funeral Survivor"
+nodes {
+  idRef {
+    id: "51f56088643431000b7c3c63"
+  }
+  index: 0
+  text: "Thank you so much for taking care of those monsters for us!"
+  branches {
+    responseText: "Get out of here!"
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "amountSaved"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Teleport Actor"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Target Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Current Location of Prop"
+            args {
+              call_value {
+                functionName: "Get Map Item (Prop)"
+                args {
+                  string_value: "51f5470a643431a10a7c3d40"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeleportMethod"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

@@ -1,0 +1,610 @@
+idRef {
+  id: "5314fadc3264374c07002215"
+}
+ui_name: "ch05-annieNice"
+nodes {
+  idRef {
+    id: "5314fae43264374c0700221b"
+  }
+  index: 0
+  text: "Here we are! My home town... not much to look at I\'m afraid! Oh well - I couldn\'t get out of this droolhole fast enough, and now I\'m back here..."
+  branches {
+    responseText: "Do we have any leads?"
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "5315033a3264374c070024d8"
+    }
+  }
+  branches {
+    responseText: "Tell me something about the town..."
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "531503373264374c070024d7"
+    }
+  }
+  branches {
+    responseText: "This will be over soon, do you think you will make it?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Lets go!"
+    actions {
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "5315037d3264374c0700250e"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "531504b93264374c0700250f"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "531504d43264374c07002510"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "531504db3264374c07002511"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "531504e83264374c07002512"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Activate Actor Spawner"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor Reference)"
+            args {
+              string_value: "531504ef3264374c07002513"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "531502693264374c0700248b"
+  }
+  index: 1
+  text: "I didn\'t really care much about the town and its people before... you know! Everyone is creepy and most certainly a member of the Esoteric Order of Dagon, so we need to be really careful."
+  branches {
+    responseText: "Yes, we should - but we need some intel..."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "531502d33264374c0700248e"
+  }
+  index: 2
+  text: "Well if we can somehow find out who runs the show we can strike!"
+  branches {
+    responseText: "That\'s right, time to investigate!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315017c3264374c07002441"
+  }
+  index: 3
+  text: "I don\'t know the town very well... I never really... noticed many things before... I can only remember my parents house and the tech store, where I spent a lot of time..."
+  branches {
+    responseText: "Nothing else?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "531501df3264374c07002444"
+  }
+  index: 4
+  text: "The place is not much to look at, you\'ll see... Lots of abandoned houses and decaying factories... "
+  branches {
+    responseText: "So where could the cult members be?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "531502183264374c07002447"
+  }
+  index: 5
+  text: "We are in Dunwich, pretty much everyone in this town is a hybrid... If you know what I mean... So they are everywhere..."
+  branches {
+    responseText: "This is going to be a problem..."
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5315023d3264374c0700244a"
+  }
+  index: 6
+  text: "Yes, I am sure they\'ll recognise me! I should stay back and we should stay out of sight of people if we can!"
+  branches {
+    responseText: "Agreed!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314fb753264374c07002220"
+  }
+  index: 7
+  text: "Well, since I\'m their queen or something they will not try hurt me, so that is good - because my drones will hurt them!"
+  branches {
+    responseText: "That\'s the spirit! But we couldn\'t take your drones..."
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Just don\'t get too overconfident!"
+    nextNodeIndex: 8
+    onlyOnce: true
+    idRef {
+      id: "531503513264374c070024d9"
+    }
+  }
+  branches {
+    responseText: "Their magic might put you back into your daydreaming state..."
+    nextNodeIndex: 12
+    onlyOnce: true
+    idRef {
+      id: "5314fea63264374c070022f3"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314fcf43264374c07002260"
+  }
+  index: 8
+  text: "Hmpf... Okay... Anything else?"
+  branches {
+    responseText: "We need to get you a drone or two..."
+    nextNodeIndex: 9
+    onlyOnce: true
+    idRef {
+      id: "5314fe203264374c070022df"
+    }
+  }
+  branches {
+    responseText: "No, just stay back and don\'t get into trouble!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314fd4d3264374c07002285"
+  }
+  index: 9
+  text: "There\'s a tech-store in town, we could check it out."
+  branches {
+    responseText: "Ok, sounds good."
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "Maybe we should rather keep a low profile and forget about the drones until we can loot some..."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314fd993264374c07002289"
+  }
+  index: 10
+  text: "Ok, I uploaded the location to your PDA - it\'s not far!"
+  branches {
+    responseText: "Wiz! That will help!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Get some drones for Annie!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5314fdae3264374c0700228b"
+  }
+  index: 11
+  text: "Well, I\'ll still upload the location to your PDA if you change your mind..."
+  branches {
+    responseText: "Hmm... Fine!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Get some drones for Annie!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5314fbf23264374c07002225"
+  }
+  index: 12
+  text: "That is a problem, true! Maybe we can find a way to make myself immune to their spells?"
+  branches {
+    responseText: "Maybe, do you have any idea how?"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314fc233264374c07002228"
+  }
+  index: 13
+  text: "There are quite a few \"wizzies\" in this town, it\'s DAGON HQ after all! Some of the more determined members might have spells that will help us... Maybe... My father was wiz, so maybe we should check out my old house?"
+  branches {
+    responseText: "Good idea, we will do that!"
+    nextNodeIndex: 14
+  }
+  branches {
+    responseText: "Sounds dangerous, there might be a trap, we will have to scout it out..."
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5314fca63264374c0700222c"
+  }
+  index: 14
+  text: "Ok, I just shared the address on your PDA."
+  branches {
+    responseText: "Great!"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Investigate Annie\'s House"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5314fcb63264374c0700222e"
+  }
+  index: 15
+  text: "You might be right, anyways - I uploaded the location of my house to your PDA if you want to check it out!"
+  branches {
+    responseText: "Okay..."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Investigate Annie\'s House"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "531505123264374c07002549"
+  }
+  index: 16
+  text: "As you prepare to head towards town, you hear rustling sounds between the trees... Shadowy figures slump at you..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "531505463264374c0700254c"
+  }
+  index: 17
+  text: "So the tales are true..."
+  branches {
+    responseText: "What tales, Annie?"
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "531505613264374c0700254f"
+  }
+  index: 18
+  text: "I thought they were just bedtime stories that we are told to stay out of the woods... Some of the hybrids are born... different, degenerated... They are barely Human and they are banished to live in the woods around Dunwich... I think we have caught the attention of a few..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "531505a83264374c07002552"
+  }
+  index: 19
+  text: "{{GM}}One of the figures steps into the lights of the helicopter, you can see it\'s degenerated face and fish-like movements...{{/GM}}"
+  branches {
+    responseText: "They\'ve got us surrounded, get ready!"
+    actions {
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Survive the ambush"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5315037d3264374c0700250e"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

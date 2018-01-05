@@ -1,0 +1,399 @@
+idRef {
+  id: "5212aae464343199074f3c7f"
+}
+ui_name: "ch02_armitageComp"
+nodes {
+  idRef {
+    id: "5212aaf664343199074f3c89"
+  }
+  index: 0
+  text: "The computer is unsecured, it is running an ancient Operating System, but it has a Matrix connection point."
+  branches {
+    responseText: "{{CC}}Upload all research files to your Home System{{/CC}} {{GM}}Decking: 3{{/GM}}"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Contact Annie about uploading the research files to your home system{{/CC}}"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5212ab8264343199074f3c94"
+  }
+  index: 1
+  text: "You upload all of Armitage\'s research documents to your Home System"
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_armitageFilesCopied"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Upload Armitage\'s research data"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Leave the museum"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5212abdf64343199074f3ca8"
+  }
+  index: 2
+  text: "Hoi-chummer! What\'s-up? You-have-to-tell-me-about-everything..."
+  branches {
+    responseText: "Annie! Calm down..."
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5212abae64343199074f3c9e"
+  }
+}
+nodes {
+  idRef {
+    id: "5212ac0164343199074f3cab"
+  }
+  index: 3
+  text: "Oh, sure... Sorry. What\'s up?"
+  branches {
+    responseText: "Can you create a copy of all the files on this computer on our system?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5212abae64343199074f3c9e"
+  }
+}
+nodes {
+  idRef {
+    id: "5212ac2564343199074f3cae"
+  }
+  index: 4
+  text: "Done! Anything else?"
+  branches {
+    responseText: "No, I will see you in person soon!"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5212abae64343199074f3c9e"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "ch02_armitageFilesCopied"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Upload Armitage\'s research data"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5212ac3564343199074f3cb1"
+  }
+  index: 5
+  text: "Can\'t wait! Be careful!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5212abae64343199074f3c9e"
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Leave the museum"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5212af6f64343199074f3d8a"
+  }
+  index: 6
+  text: "WHAT-THE-FRAG-HAVE-YOU-DONE! I-HATE-YOU!"
+  branches {
+    responseText: "What do you mean?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5212abae64343199074f3c9e"
+  }
+}
+nodes {
+  idRef {
+    id: "5212af9c64343199074f3d8d"
+  }
+  index: 7
+  text: "I-saw-what-you-did! Coyote-had-a-new-pair-of-eyes-with-recording-feature... We-got-it-for-her-while-you-were-doing-legwork... If-only-I-had-known-about-what-you-are-planning!"
+  branches {
+    responseText: "Sorry, Annie - but who can resist learning how to summon demons out of thin air?"
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5212abae64343199074f3c9e"
+  }
+}
+nodes {
+  idRef {
+    id: "5212afec64343199074f3d91"
+  }
+  index: 8
+  text: "You-fool! I-am-leaving-now... But-let-me-tell-you-one-thing! I-will-hunt-you-till-the-end-of-my-days!\n\n{{GM}}The display goes black...{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5212abae64343199074f3c9e"
+  }
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedHansen"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "51f4026a643431dd08e509ff"
+          }
+          args {
+            string_value: "killedCoyote"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 6
+}
